@@ -27,7 +27,7 @@ class oilWidget: PKWidget {
         stackView.orientation = .horizontal
         stackView.alignment = .centerY
         stackView.distribution = .fill
-        stackView.spacing = 1
+        stackView.spacing = 2
     }
     
     deinit {
@@ -61,6 +61,7 @@ class oilWidget: PKWidget {
         stackView.addArrangedSubview(item.view)
         stackView.height(30)
     }
+    
     @objc private func printMessage() {
         NSLog("[oilWidget]: Hello, World!")
     }

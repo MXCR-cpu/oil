@@ -14,6 +14,9 @@
 		883EBC2D2A11FBBE00235B35 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2C2A11FBBE00235B35 /* AppKit.framework */; };
 		883EBC2F2A11FC1200235B35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2E2A11FC1200235B35 /* Foundation.framework */; };
 		883EBC312A11FD1900235B35 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC302A11FD1900235B35 /* Item.swift */; };
+		88860EB02A123AC8002822E1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88860EAF2A123AC8002822E1 /* SpriteKit.framework */; };
+		88860EB42A12672A002822E1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88860EB32A12672A002822E1 /* SwiftUI.framework */; };
+		88860EB72A126909002822E1 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2C2A11FBBE00235B35 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		883EBC2C2A11FBBE00235B35 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		883EBC2E2A11FC1200235B35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		883EBC302A11FD1900235B35 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		88860EAF2A123AC8002822E1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		88860EB32A12672A002822E1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,9 +36,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88860EB72A126909002822E1 /* AppKit.framework in Frameworks */,
 				883EBC2D2A11FBBE00235B35 /* AppKit.framework in Frameworks */,
+				88860EB02A123AC8002822E1 /* SpriteKit.framework in Frameworks */,
 				883EBC272A11F86400235B35 /* SystemKit in Frameworks */,
 				883EBC242A11F81300235B35 /* PockKit in Frameworks */,
+				88860EB42A12672A002822E1 /* SwiftUI.framework in Frameworks */,
 				883EBC2F2A11FC1200235B35 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +97,8 @@
 		883EBC2B2A11FBBE00235B35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88860EB32A12672A002822E1 /* SwiftUI.framework */,
+				88860EAF2A123AC8002822E1 /* SpriteKit.framework */,
 				883EBC2E2A11FC1200235B35 /* Foundation.framework */,
 				883EBC2C2A11FBBE00235B35 /* AppKit.framework */,
 			);
