@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC1A2A11F80000235B35 /* oilWidget.swift */; };
+		883EBC242A11F81300235B35 /* PockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 883EBC232A11F81300235B35 /* PockKit */; };
+		883EBC272A11F86400235B35 /* SystemKit in Frameworks */ = {isa = PBXBuildFile; productRef = 883EBC262A11F86400235B35 /* SystemKit */; };
+		883EBC2A2A11F94600235B35 /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC292A11F94600235B35 /* CPU.swift */; };
+		883EBC2D2A11FBBE00235B35 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2C2A11FBBE00235B35 /* AppKit.framework */; };
+		883EBC2F2A11FC1200235B35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2E2A11FC1200235B35 /* Foundation.framework */; };
+		883EBC312A11FD1900235B35 /* oilItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC302A11FD1900235B35 /* oilItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		883EBC162A11F80000235B35 /* oil.pock */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oil.pock; sourceTree = BUILT_PRODUCTS_DIR; };
+		883EBC1A2A11F80000235B35 /* oilWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilWidget.swift; sourceTree = "<group>"; };
+		883EBC1C2A11F80000235B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		883EBC292A11F94600235B35 /* CPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
+		883EBC2C2A11FBBE00235B35 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		883EBC2E2A11FC1200235B35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		883EBC302A11FD1900235B35 /* oilItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		883EBC122A11F80000235B35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				883EBC2D2A11FBBE00235B35 /* AppKit.framework in Frameworks */,
+				883EBC272A11F86400235B35 /* SystemKit in Frameworks */,
+				883EBC242A11F81300235B35 /* PockKit in Frameworks */,
+				883EBC2F2A11FC1200235B35 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		883EBC0C2A11F80000235B35 = {
+			isa = PBXGroup;
+			children = (
+				883EBC182A11F80000235B35 /* oil */,
+				883EBC172A11F80000235B35 /* Products */,
+				883EBC2B2A11FBBE00235B35 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		883EBC172A11F80000235B35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				883EBC162A11F80000235B35 /* oil.pock */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		883EBC182A11F80000235B35 /* oil */ = {
+			isa = PBXGroup;
+			children = (
+				883EBC1C2A11F80000235B35 /* Info.plist */,
+				883EBC192A11F80000235B35 /* Sources */,
+			);
+			path = oil;
+			sourceTree = "<group>";
+		};
+		883EBC192A11F80000235B35 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				883EBC322A12155800235B35 /* Utilities */,
+				883EBC302A11FD1900235B35 /* oilItem.swift */,
+				883EBC282A11F92E00235B35 /* Sections */,
+				883EBC1A2A11F80000235B35 /* oilWidget.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		883EBC282A11F92E00235B35 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				883EBC292A11F94600235B35 /* CPU.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		883EBC2B2A11FBBE00235B35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				883EBC2E2A11FC1200235B35 /* Foundation.framework */,
+				883EBC2C2A11FBBE00235B35 /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		883EBC322A12155800235B35 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		883EBC152A11F80000235B35 /* oil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 883EBC1F2A11F80000235B35 /* Build configuration list for PBXNativeTarget "oil" */;
+			buildPhases = (
+				883EBC112A11F80000235B35 /* Sources */,
+				883EBC122A11F80000235B35 /* Frameworks */,
+				883EBC132A11F80000235B35 /* Resources */,
+				883EBC142A11F80000235B35 /* [PK] Install widget */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = oil;
+			packageProductDependencies = (
+				883EBC232A11F81300235B35 /* PockKit */,
+				883EBC262A11F86400235B35 /* SystemKit */,
+			);
+			productName = oil;
+			productReference = 883EBC162A11F80000235B35 /* oil.pock */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		883EBC0D2A11F80000235B35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					883EBC152A11F80000235B35 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 883EBC102A11F80000235B35 /* Build configuration list for PBXProject "oil" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 883EBC0C2A11F80000235B35;
+			packageReferences = (
+				883EBC222A11F81300235B35 /* XCRemoteSwiftPackageReference "pockkit" */,
+				883EBC252A11F86400235B35 /* XCRemoteSwiftPackageReference "SystemKit" */,
+			);
+			productRefGroup = 883EBC172A11F80000235B35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				883EBC152A11F80000235B35 /* oil */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		883EBC132A11F80000235B35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		883EBC142A11F80000235B35 /* [PK] Install widget */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[PK] Install widget";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Install widget.\necho \"[${PRODUCT_NAME}.pock] Starting installation\"\nFILEPATH=$TARGET_BUILD_DIR/$PRODUCT_NAME.pock \nopen \"$FILEPATH\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		883EBC112A11F80000235B35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				883EBC312A11FD1900235B35 /* oilItem.swift in Sources */,
+				883EBC2A2A11F94600235B35 /* CPU.swift in Sources */,
+				883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		883EBC1D2A11F80000235B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		883EBC1E2A11F80000235B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		883EBC202A11F80000235B35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AY25L8K9U7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = oil/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application\\ Support/Pock/Widgets";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mxcr.cpu.oil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = pock;
+			};
+			name = Debug;
+		};
+		883EBC212A11F80000235B35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AY25L8K9U7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = oil/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application\\ Support/Pock/Widgets";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mxcr.cpu.oil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = pock;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		883EBC102A11F80000235B35 /* Build configuration list for PBXProject "oil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				883EBC1D2A11F80000235B35 /* Debug */,
+				883EBC1E2A11F80000235B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		883EBC1F2A11F80000235B35 /* Build configuration list for PBXNativeTarget "oil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				883EBC202A11F80000235B35 /* Debug */,
+				883EBC212A11F80000235B35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		883EBC222A11F81300235B35 /* XCRemoteSwiftPackageReference "pockkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pock/pockkit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.1;
+			};
+		};
+		883EBC252A11F86400235B35 /* XCRemoteSwiftPackageReference "SystemKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gao-sun/SystemKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		883EBC232A11F81300235B35 /* PockKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 883EBC222A11F81300235B35 /* XCRemoteSwiftPackageReference "pockkit" */;
+			productName = PockKit;
+		};
+		883EBC262A11F86400235B35 /* SystemKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 883EBC252A11F86400235B35 /* XCRemoteSwiftPackageReference "SystemKit" */;
+			productName = SystemKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 883EBC0D2A11F80000235B35 /* Project object */;
+}

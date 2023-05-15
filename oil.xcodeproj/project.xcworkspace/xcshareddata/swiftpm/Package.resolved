@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "pockkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pock/pockkit.git",
+      "state" : {
+        "revision" : "cd7cd2b7a7d0b4875eebb25b129449d8023b1f3f",
+        "version" : "0.3.1"
+      }
+    },
+    {
+      "identity" : "systemkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gao-sun/SystemKit",
+      "state" : {
+        "branch" : "master",
+        "revision" : "60fbc2e3ccb54850046703d4e32ab6ecccbaf046"
+      }
+    },
+    {
+      "identity" : "tinyconstraints",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/roberthein/TinyConstraints.git",
+      "state" : {
+        "revision" : "3262e5c591d4ab6272255df2087a01bbebd138dc",
+        "version" : "4.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}
