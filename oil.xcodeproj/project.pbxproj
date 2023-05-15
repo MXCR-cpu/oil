@@ -13,7 +13,7 @@
 		883EBC2A2A11F94600235B35 /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC292A11F94600235B35 /* CPU.swift */; };
 		883EBC2D2A11FBBE00235B35 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2C2A11FBBE00235B35 /* AppKit.framework */; };
 		883EBC2F2A11FC1200235B35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2E2A11FC1200235B35 /* Foundation.framework */; };
-		883EBC312A11FD1900235B35 /* oilItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC302A11FD1900235B35 /* oilItem.swift */; };
+		883EBC312A11FD1900235B35 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC302A11FD1900235B35 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		883EBC292A11F94600235B35 /* CPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
 		883EBC2C2A11FBBE00235B35 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		883EBC2E2A11FC1200235B35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		883EBC302A11FD1900235B35 /* oilItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilItem.swift; sourceTree = "<group>"; };
+		883EBC302A11FD1900235B35 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				883EBC322A12155800235B35 /* Utilities */,
-				883EBC302A11FD1900235B35 /* oilItem.swift */,
+				883EBC302A11FD1900235B35 /* Item.swift */,
 				883EBC282A11F92E00235B35 /* Sections */,
 				883EBC1A2A11F80000235B35 /* oilWidget.swift */,
 			);
@@ -200,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				883EBC312A11FD1900235B35 /* oilItem.swift in Sources */,
+				883EBC312A11FD1900235B35 /* Item.swift in Sources */,
 				883EBC2A2A11F94600235B35 /* CPU.swift in Sources */,
 				883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */,
 			);
