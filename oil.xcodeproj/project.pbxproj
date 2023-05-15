@@ -22,6 +22,7 @@
 		88860EBE2A12B087002822E1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBD2A12B087002822E1 /* Preferences.swift */; };
 		88860EC02A12B1F5002822E1 /* oilWidgetPreferencePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */; };
 		88860EC62A12B823002822E1 /* oilWidgetPreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88860EC42A12B823002822E1 /* oilWidgetPreferencePane.xib */; };
+		88860EC92A12D792002822E1 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 88860EC82A12D792002822E1 /* Defaults */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88860EC92A12D792002822E1 /* Defaults in Frameworks */,
 				88860EB72A126909002822E1 /* AppKit.framework in Frameworks */,
 				883EBC2D2A11FBBE00235B35 /* AppKit.framework in Frameworks */,
 				88860EB02A123AC8002822E1 /* SpriteKit.framework in Frameworks */,
@@ -163,6 +165,7 @@
 			packageProductDependencies = (
 				883EBC232A11F81300235B35 /* PockKit */,
 				883EBC262A11F86400235B35 /* SystemKit */,
+				88860EC82A12D792002822E1 /* Defaults */,
 			);
 			productName = oil;
 			productReference = 883EBC162A11F80000235B35 /* oil.pock */;
@@ -195,6 +198,7 @@
 			packageReferences = (
 				883EBC222A11F81300235B35 /* XCRemoteSwiftPackageReference "pockkit" */,
 				883EBC252A11F86400235B35 /* XCRemoteSwiftPackageReference "SystemKit" */,
+				88860EC72A12D792002822E1 /* XCRemoteSwiftPackageReference "Defaults" */,
 			);
 			productRefGroup = 883EBC172A11F80000235B35 /* Products */;
 			projectDirPath = "";
@@ -455,6 +459,14 @@
 				kind = branch;
 			};
 		};
+		88860EC72A12D792002822E1 /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -467,6 +479,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 883EBC252A11F86400235B35 /* XCRemoteSwiftPackageReference "SystemKit" */;
 			productName = SystemKit;
+		};
+		88860EC82A12D792002822E1 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88860EC72A12D792002822E1 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
