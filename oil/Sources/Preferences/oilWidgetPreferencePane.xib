@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="showCpuGraph" destination="RUW-NR-BhP" id="Dhu-zA-jc3"/>
                 <outlet property="showCpuNumber" destination="Vm9-7C-gQh" id="XVl-mF-eOM"/>
+                <outlet property="view" destination="c22-O7-iKe" id="eQA-au-e6h"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -17,62 +18,73 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="aTE-4N-b5W">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqj-LG-Zmz">
+                    <rect key="frame" x="0.0" y="-20" width="480" height="272"/>
                     <subviews>
-                        <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="RUW-NR-BhP">
-                            <rect key="frame" x="18" y="231" width="202" height="22"/>
+                        <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="aTE-4N-b5W">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <button verticalHuggingPriority="749" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vm9-7C-gQh">
+                                    <rect key="frame" x="18" y="231" width="202" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="200" id="sXf-En-FJk"/>
+                                        <constraint firstAttribute="height" constant="20" id="z4a-DH-h44"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="check" title="Show Cpu Number" bezelStyle="regularSquare" imagePosition="left" state="on" tag="1" inset="2" id="zPt-ND-WkN">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="didChangeCheckboxValue:" target="-2" id="bLo-2N-dID"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="RUW-NR-BhP">
+                                    <rect key="frame" x="18" y="191" width="202" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="200" id="bQh-Br-dxe"/>
+                                        <constraint firstAttribute="height" constant="20" id="f16-3g-tbo"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="check" title="Show Cpu Bar Graph" bezelStyle="regularSquare" imagePosition="left" state="on" tag="2" inset="2" id="dbT-a9-pRZ">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="didChangeCheckboxValue:" target="-2" id="KPz-CE-b2h"/>
+                                    </connections>
+                                </button>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="20" id="6kV-zV-luY"/>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="b6l-7k-Isx"/>
-                                <constraint firstAttribute="width" constant="200" id="lfr-IX-Mfb"/>
+                                <constraint firstItem="RUW-NR-BhP" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="20" id="B7Z-HO-Dut"/>
+                                <constraint firstItem="Vm9-7C-gQh" firstAttribute="top" secondItem="aTE-4N-b5W" secondAttribute="top" constant="20" id="GbW-6t-ePI"/>
+                                <constraint firstItem="RUW-NR-BhP" firstAttribute="top" secondItem="Vm9-7C-gQh" secondAttribute="bottom" constant="20" id="MAY-ae-3pn"/>
+                                <constraint firstItem="Vm9-7C-gQh" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="20" id="OxZ-U0-4tZ"/>
+                                <constraint firstItem="RUW-NR-BhP" firstAttribute="top" secondItem="Vm9-7C-gQh" secondAttribute="bottom" constant="20" id="sQO-If-v4J"/>
+                                <constraint firstItem="Vm9-7C-gQh" firstAttribute="top" secondItem="aTE-4N-b5W" secondAttribute="top" constant="20" id="sYR-wZ-n5M"/>
                             </constraints>
-                            <buttonCell key="cell" type="check" title="showCpuGraph" alternateTitle="Show Cpu Bar Graph" bezelStyle="regularSquare" imagePosition="left" state="on" tag="2" inset="2" id="dbT-a9-pRZ">
-                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                            <connections>
-                                <action selector="didChangeCheckboxValue:" target="-2" id="KPz-CE-b2h"/>
-                            </connections>
-                        </button>
-                        <button verticalHuggingPriority="749" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vm9-7C-gQh">
-                            <rect key="frame" x="18" y="191" width="202" height="22"/>
-                            <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="322-a9-z8q"/>
-                                <constraint firstAttribute="width" constant="200" id="OJl-z2-y3N"/>
-                                <constraint firstAttribute="height" constant="20" id="hGe-Mj-G7V"/>
-                            </constraints>
-                            <buttonCell key="cell" type="check" title="showCpuNumber" alternateTitle="Show Cpu Number" bezelStyle="regularSquare" imagePosition="left" state="on" tag="1" inset="2" id="zPt-ND-WkN">
-                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                            <connections>
-                                <action selector="didChangeCheckboxValue:" target="-2" id="bLo-2N-dID"/>
-                            </connections>
-                        </button>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="RUW-NR-BhP" firstAttribute="top" secondItem="aTE-4N-b5W" secondAttribute="top" constant="20" id="5kT-Ou-wj5"/>
-                        <constraint firstItem="RUW-NR-BhP" firstAttribute="top" secondItem="aTE-4N-b5W" secondAttribute="top" constant="20" id="a2f-c9-pYE"/>
-                        <constraint firstItem="Vm9-7C-gQh" firstAttribute="top" secondItem="RUW-NR-BhP" secondAttribute="bottom" constant="20" id="aWS-um-Rdo"/>
-                        <constraint firstItem="Vm9-7C-gQh" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="20" id="hvW-lG-i6H"/>
-                        <constraint firstItem="Vm9-7C-gQh" firstAttribute="top" secondItem="RUW-NR-BhP" secondAttribute="bottom" constant="20" id="plP-ju-eFh"/>
-                        <constraint firstItem="RUW-NR-BhP" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="20" id="y6W-Qe-nJo"/>
-                    </constraints>
                     <visibilityPriorities>
-                        <integer value="1000"/>
                         <integer value="1000"/>
                     </visibilityPriorities>
                     <customSpacing>
                         <real value="3.4028234663852886e+38"/>
-                        <real value="3.4028234663852886e+38"/>
                     </customSpacing>
                 </stackView>
             </subviews>
-            <connections>
-                <outlet property="nextKeyView" destination="aTE-4N-b5W" id="vQF-2l-4Cc"/>
-            </connections>
+            <constraints>
+                <constraint firstItem="oqj-LG-Zmz" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="47q-eQ-w9e"/>
+                <constraint firstItem="oqj-LG-Zmz" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="iK9-bT-F3w"/>
+                <constraint firstAttribute="trailing" secondItem="oqj-LG-Zmz" secondAttribute="trailing" id="kVB-AZ-Ejy"/>
+            </constraints>
             <point key="canvasLocation" x="54" y="148"/>
         </customView>
         <buttonCell type="check" title="showCpuNumber" alternateTitle="Show Cpu Number" bezelStyle="regularSquare" imagePosition="left" state="on" tag="1" inset="2" id="YcE-P2-v54">

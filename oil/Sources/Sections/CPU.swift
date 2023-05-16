@@ -9,12 +9,14 @@ import Foundation
 import AppKit
 import SystemKit
 import SwiftUI
+import Defaults
 
 internal class CPUItem: StatusItem {
     private var system: System = System()
     private var barGraph: BarGraph = BarGraph()
     private var refreshTimer: Timer?
     private var run: Bool = true
+    private var preferenceHistory: [Bool] = [true, true]
     private var usageHistory: [Double] = []
     private var stackView: NSStackView = NSStackView(frame: .zero)
     private var bodyView: NSStackView = NSStackView(frame: .zero)
@@ -67,17 +69,18 @@ internal class CPUItem: StatusItem {
     }
 
     private func configureStackView() {
+        bodyView.addArrangedSubview(barGraph.view)
         stackView.orientation = .horizontal
         stackView.alignment = .centerY
         stackView.distribution = .fillProportionally
         stackView.spacing = 2
         stackView.addArrangedSubview(valueLabel)
         stackView.addArrangedSubview(bodyView)
-        bodyView.addArrangedSubview(barGraph.view)
     }
 
     private func repeatCall() {
         reload()
+        preferenceUpdate()
         graphRedraw()
         if run {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -86,7 +89,23 @@ internal class CPUItem: StatusItem {
         }
     }
     private func graphRedraw() {
+        if !Defaults[.shouldDisplayCpuGraph] { return }
         barGraph.generateGraph(data: usageHistory)
+    }
+    
+    private func preferenceUpdate() {
+        if Defaults[.shouldDisplayCpuGraph] &&
+            !stackView.arrangedSubviews.contains(bodyView) {
+            stackView.addArrangedSubview(bodyView)
+        } else if !Defaults[.shouldDisplayCpuGraph] && stackView.arrangedSubviews.contains(bodyView) {
+            stackView.removeArrangedSubview(bodyView)
+        }
+        if Defaults[.shouldDisplayCpuNumber] &&
+            !stackView.arrangedSubviews.contains(valueLabel) {
+            stackView.insertArrangedSubview(valueLabel, at: 0)
+        } else if !Defaults[.shouldDisplayCpuNumber] && stackView.arrangedSubviews.contains(valueLabel) {
+            stackView.removeArrangedSubview(valueLabel)
+        }
     }
 }
 

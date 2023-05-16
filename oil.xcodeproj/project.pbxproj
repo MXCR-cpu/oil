@@ -40,8 +40,6 @@
 		88860EBA2A12ADA5002822E1 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		88860EBD2A12B087002822E1 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilWidgetPreferencePane.swift; sourceTree = "<group>"; };
-		88BD7A612A134B3E006F7DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = examplePane.xib; sourceTree = "<group>"; };
-		88BD7A682A134F78006F7DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = another_example.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				8829C7BC2A12F883009DE392 /* oilWidgetPreferencePane.xib */,
-				88BD7A602A134B3E006F7DF6 /* examplePane.xib */,
-				88BD7A672A134F78006F7DF6 /* another_example.xib */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -269,25 +265,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		88BD7A602A134B3E006F7DF6 /* examplePane.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				88BD7A612A134B3E006F7DF6 /* Base */,
-			);
-			name = examplePane.xib;
-			sourceTree = "<group>";
-		};
-		88BD7A672A134F78006F7DF6 /* another_example.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				88BD7A682A134F78006F7DF6 /* Base */,
-			);
-			name = another_example.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		883EBC1D2A11F80000235B35 /* Debug */ = {
