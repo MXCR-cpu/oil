@@ -9,8 +9,8 @@ import Foundation
 import AppKit
 
 protocol Graph {
-    var stepSize: Int { get }
     var view: NSView { get }
+    var stepSize: Int { get }
     var historyLength: Int { get }
     func generateGraph(data: [Double])
 }

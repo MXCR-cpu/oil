@@ -14,6 +14,8 @@ import Defaults
 internal class CPUItem: StatusItem {
     private var system: System = System()
     private var barGraph: BarGraph = BarGraph()
+    private var usage:
+        (system: Double, user: Double, idle: Double, nice: Double) = (0.0, 0.0, 0.0, 0.0)
     private var refreshTimer: Timer?
     private var run: Bool = true
     private var preferenceHistory: [Bool] = [true, true]
@@ -36,15 +38,12 @@ internal class CPUItem: StatusItem {
     func action() {}
 
     func reload() {
-        let usage = system.usageCPU()
-        valueLabel.stringValue = String(
-            format: "%02.0f%%",
-            usage.system + usage.user
-        )
-        valueLabel.sizeToFit()
+        usage = system.usageCPU()
         usageHistory = (
             usageHistory + [usage.system + usage.user]
         ).suffix(barGraph.historyLength)
+        updateLabel()
+        updateGraph()
     }
 
     func didLoad() {
@@ -83,7 +82,9 @@ internal class CPUItem: StatusItem {
         preferenceUpdate()
         graphRedraw()
         if run {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            DispatchQueue.main.asyncAfter(
+                deadline: .now() + Double(Defaults[.refreshRate])
+            ) {
                 self.repeatCall()
             }
         }
@@ -98,13 +99,39 @@ internal class CPUItem: StatusItem {
             !stackView.arrangedSubviews.contains(bodyView) {
             stackView.addArrangedSubview(bodyView)
         } else if !Defaults[.shouldDisplayCpuGraph] && stackView.arrangedSubviews.contains(bodyView) {
-            stackView.removeArrangedSubview(bodyView)
+            removeViewFromStackView(view: bodyView)
         }
         if Defaults[.shouldDisplayCpuNumber] &&
             !stackView.arrangedSubviews.contains(valueLabel) {
             stackView.insertArrangedSubview(valueLabel, at: 0)
         } else if !Defaults[.shouldDisplayCpuNumber] && stackView.arrangedSubviews.contains(valueLabel) {
-            stackView.removeArrangedSubview(valueLabel)
+            removeViewFromStackView(view: valueLabel)
+        }
+    }
+    
+    private func removeViewFromStackView(view: NSView) {
+        let labelPos: Int = stackView.arrangedSubviews.firstIndex(of: view) ?? -1
+        stackView.removeArrangedSubview(view)
+        if labelPos >= 0 {
+            stackView.subviews.remove(at: labelPos)
+        }
+    }
+    
+    private func updateLabel() {
+        valueLabel.stringValue = String(
+            format: "%02.0f%%",
+            usage.system + usage.user
+        )
+        //valueLabel.sizeToFit()
+    }
+    
+    private func updateGraph() {
+        if barGraph.stepSize != Defaults[.cpuGraphWidth] ||
+            barGraph.historyLength != Defaults[.cpuGraphBoxCount] {
+            bodyView.removeArrangedSubview(barGraph.view)
+            bodyView.subviews.remove(at: 0)
+            barGraph = BarGraph()
+            bodyView.addArrangedSubview(barGraph.view)
         }
     }
 }

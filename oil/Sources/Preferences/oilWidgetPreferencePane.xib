@@ -41,14 +41,14 @@
                                     <constraints>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="RU1-Jg-OOU"/>
                                     </constraints>
-                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="1.0 sec" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="jJt-hF-Wkp">
+                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="1 sec" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="jJt-hF-Wkp">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         <objectValues>
-                                            <string>1.0</string>
-                                            <string>3.0</string>
-                                            <string>5.0</string>
+                                            <string>1</string>
+                                            <string>3</string>
+                                            <string>5</string>
                                         </objectValues>
                                     </comboBoxCell>
                                     <connections>

@@ -70,9 +70,9 @@ class oilWidgetPreferencePane:
         default:
             return
         }
-        Defaults[key] = (
-            combobox.enclosingMenuItem?.state.rawValue ?? defaultValue
-        ) as Int
+        Defaults[key] = Int(
+            "\(combobox.objectValueOfSelectedItem ?? defaultValue)"
+        ) ?? defaultValue
         loadBoxStates()
     }
 }
