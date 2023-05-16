@@ -15,36 +15,64 @@ class oilWidgetPreferencePane:
     NSViewController,
     PKWidgetPreference {
     static var nibName: NSNib.Name = "oilWidgetPreferencePane"
+    @IBOutlet weak var refreshRate: NSComboBox!
     @IBOutlet weak var showCpuNumber: NSButton!
     @IBOutlet weak var showCpuGraph: NSButton!
+    @IBOutlet weak var cpuGraphWidth: NSComboBox!
+    @IBOutlet weak var cpuGraphBoxCount: NSComboBox!
     
     func reset() {
-        loadCheckboxState()
+        loadBoxStates()
     }
         
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.superview?.wantsLayer = true
         self.view.wantsLayer = true
-        self.loadCheckboxState()
+        self.loadBoxStates()
     }
     
-    private func loadCheckboxState() {
+    private func loadBoxStates() {
+        self.refreshRate.enclosingMenuItem?.state = .init(rawValue: Defaults[.refreshRate])
         self.showCpuNumber.state = Defaults[.shouldDisplayCpuNumber] ? .on : .off
         self.showCpuGraph.state = Defaults[.shouldDisplayCpuGraph] ? .on : .off
+        self.cpuGraphWidth.enclosingMenuItem?.state = .init(rawValue: Defaults[.cpuGraphWidth])
+        self.cpuGraphBoxCount.enclosingMenuItem?.state = .init(rawValue: Defaults[.cpuGraphBoxCount])
     }
     
     @IBAction func didChangeCheckboxValue(_ checkbox: NSButton) {
         var key: Defaults.Key<Bool>
         switch checkbox.tag {
-            case 1:
-                key = .shouldDisplayCpuNumber
-            case 2:
-                key = .shouldDisplayCpuGraph
-            default:
-                return
+        case 2:
+            key = .shouldDisplayCpuNumber
+        case 3:
+            key = .shouldDisplayCpuGraph
+        default:
+            return
         }
         Defaults[key] = checkbox.state == .on
-        loadCheckboxState()
+        loadBoxStates()
+    }
+    
+    @IBAction func didChangeComboBoxValue(_ combobox: NSComboBox) {
+        var key: Defaults.Key<Int>
+        var defaultValue: Int
+        switch combobox.tag {
+        case 1:
+            key = .refreshRate
+            defaultValue = 1
+        case 31:
+            key = .cpuGraphBoxCount
+            defaultValue = 5
+        case 32:
+            key = .cpuGraphWidth
+            defaultValue = 10
+        default:
+            return
+        }
+        Defaults[key] = (
+            combobox.enclosingMenuItem?.state.rawValue ?? defaultValue
+        ) as Int
+        loadBoxStates()
     }
 }

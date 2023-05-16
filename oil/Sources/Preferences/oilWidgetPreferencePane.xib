@@ -7,6 +7,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="oilWidgetPreferencePane" customModule="oil" customModuleProvider="target">
             <connections>
+                <outlet property="cpuGraphBoxCount" destination="tuC-SG-9Us" id="Gja-j3-BDg"/>
+                <outlet property="cpuGraphWidth" destination="ZQw-U2-WSY" id="EG2-i5-v2k"/>
+                <outlet property="refreshRate" destination="YrJ-vb-3LJ" id="JDe-2o-hiR"/>
                 <outlet property="showCpuGraph" destination="RUW-NR-BhP" id="Dhu-zA-jc3"/>
                 <outlet property="showCpuNumber" destination="Vm9-7C-gQh" id="XVl-mF-eOM"/>
                 <outlet property="view" destination="c22-O7-iKe" id="eQA-au-e6h"/>
@@ -33,7 +36,7 @@
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YrJ-vb-3LJ">
+                                <comboBox verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="YrJ-vb-3LJ">
                                     <rect key="frame" x="87" y="30" width="54" height="23"/>
                                     <constraints>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="RU1-Jg-OOU"/>
@@ -48,6 +51,9 @@
                                             <string>5.0</string>
                                         </objectValues>
                                     </comboBoxCell>
+                                    <connections>
+                                        <action selector="didChangeComboBoxValue:" target="-2" id="Oes-dI-uQK"/>
+                                    </connections>
                                 </comboBox>
                             </subviews>
                             <edgeInsets key="edgeInsets" left="20" right="0.0" top="20" bottom="0.0"/>
@@ -86,7 +92,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <subviews>
-                                <button verticalHuggingPriority="749" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vm9-7C-gQh">
+                                <button verticalHuggingPriority="749" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="Vm9-7C-gQh">
                                     <rect key="frame" x="18" y="231" width="202" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="200" id="sXf-En-FJk"/>
@@ -100,7 +106,7 @@
                                         <action selector="didChangeCheckboxValue:" target="-2" id="bLo-2N-dID"/>
                                     </connections>
                                 </button>
-                                <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="RUW-NR-BhP">
+                                <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="RUW-NR-BhP">
                                     <rect key="frame" x="18" y="191" width="202" height="22"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="200" id="bQh-Br-dxe"/>
@@ -125,7 +131,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tuC-SG-9Us">
+                                        <comboBox verticalHuggingPriority="750" tag="31" translatesAutoresizingMaskIntoConstraints="NO" id="tuC-SG-9Us">
                                             <rect key="frame" x="136" y="-2" width="167" height="23"/>
                                             <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="5" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="K3j-wx-t13">
                                                 <font key="font" metaFont="system"/>
@@ -144,6 +150,9 @@
                                                     <string>10</string>
                                                 </objectValues>
                                             </comboBoxCell>
+                                            <connections>
+                                                <action selector="didChangeComboBoxValue:" target="-2" id="cYV-Lp-dOe"/>
+                                            </connections>
                                         </comboBox>
                                     </subviews>
                                     <constraints>
@@ -173,7 +182,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <comboBox verticalHuggingPriority="750" id="ZQw-U2-WSY">
+                                        <comboBox verticalHuggingPriority="750" tag="32" id="ZQw-U2-WSY">
                                             <rect key="frame" x="134" y="-3" width="99" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="10" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="LYF-bg-mky">
@@ -189,6 +198,9 @@
                                                     <string>25</string>
                                                 </objectValues>
                                             </comboBoxCell>
+                                            <connections>
+                                                <action selector="didChangeComboBoxValue:" target="-2" id="Joh-Rg-vtv"/>
+                                            </connections>
                                         </comboBox>
                                     </subviews>
                                     <constraints>
