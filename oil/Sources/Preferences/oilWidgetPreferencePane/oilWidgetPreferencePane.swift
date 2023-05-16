@@ -9,6 +9,7 @@
 import Cocoa
 import Defaults
 import PockKit
+import AppKit
 
 class oilWidgetPreferencePane:
     NSViewController,

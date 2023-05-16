@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8829C7BD2A12F883009DE392 /* oilWidgetPreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8829C7BC2A12F883009DE392 /* oilWidgetPreferencePane.xib */; };
 		883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC1A2A11F80000235B35 /* oilWidget.swift */; };
 		883EBC242A11F81300235B35 /* PockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 883EBC232A11F81300235B35 /* PockKit */; };
 		883EBC272A11F86400235B35 /* SystemKit in Frameworks */ = {isa = PBXBuildFile; productRef = 883EBC262A11F86400235B35 /* SystemKit */; };
@@ -21,11 +22,11 @@
 		88860EBB2A12ADA5002822E1 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBA2A12ADA5002822E1 /* Graph.swift */; };
 		88860EBE2A12B087002822E1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBD2A12B087002822E1 /* Preferences.swift */; };
 		88860EC02A12B1F5002822E1 /* oilWidgetPreferencePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */; };
-		88860EC62A12B823002822E1 /* oilWidgetPreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88860EC42A12B823002822E1 /* oilWidgetPreferencePane.xib */; };
 		88860EC92A12D792002822E1 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 88860EC82A12D792002822E1 /* Defaults */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8829C7BC2A12F883009DE392 /* oilWidgetPreferencePane.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = oilWidgetPreferencePane.xib; path = /Users/iMac/Desktop/Dev/Swift_Dev/oil/oil/Sources/Preferences/oilWidgetPreferencePane.xib; sourceTree = "<absolute>"; };
 		883EBC162A11F80000235B35 /* oil.pock */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oil.pock; sourceTree = BUILT_PRODUCTS_DIR; };
 		883EBC1A2A11F80000235B35 /* oilWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilWidget.swift; sourceTree = "<group>"; };
 		883EBC1C2A11F80000235B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,7 +40,8 @@
 		88860EBA2A12ADA5002822E1 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		88860EBD2A12B087002822E1 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilWidgetPreferencePane.swift; sourceTree = "<group>"; };
-		88860EC52A12B823002822E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = oilWidgetPreferencePane.xib; sourceTree = "<group>"; };
+		88BD7A612A134B3E006F7DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = examplePane.xib; sourceTree = "<group>"; };
+		88BD7A682A134F78006F7DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = another_example.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,17 +132,27 @@
 		88860EBC2A12AF5D002822E1 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				88860EC32A12B823002822E1 /* Base.lproj */,
+				88BD7A5E2A134009006F7DF6 /* oilWidgetPreferencePane */,
 				88860EBD2A12B087002822E1 /* Preferences.swift */,
-				88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
 		};
-		88860EC32A12B823002822E1 /* Base.lproj */ = {
+		88BD7A5E2A134009006F7DF6 /* oilWidgetPreferencePane */ = {
 			isa = PBXGroup;
 			children = (
-				88860EC42A12B823002822E1 /* oilWidgetPreferencePane.xib */,
+				88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */,
+				88BD7A5F2A134016006F7DF6 /* Base.lproj */,
+			);
+			path = oilWidgetPreferencePane;
+			sourceTree = "<group>";
+		};
+		88BD7A5F2A134016006F7DF6 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				8829C7BC2A12F883009DE392 /* oilWidgetPreferencePane.xib */,
+				88BD7A602A134B3E006F7DF6 /* examplePane.xib */,
+				88BD7A672A134F78006F7DF6 /* another_example.xib */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -214,7 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88860EC62A12B823002822E1 /* oilWidgetPreferencePane.xib in Resources */,
+				8829C7BD2A12F883009DE392 /* oilWidgetPreferencePane.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +249,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Install widget.\necho \"[${PRODUCT_NAME}.pock] Starting installation\"\nFILEPATH=$TARGET_BUILD_DIR/$PRODUCT_NAME.pock \nopen \"$FILEPATH\"";
+			shellScript = "# Install widget.\necho \"[${PRODUCT_NAME}.pock] Starting installation\"\nFILEPATH=$TARGET_BUILD_DIR/$PRODUCT_NAME.pock \nopen \"$FILEPATH\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -259,12 +271,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		88860EC42A12B823002822E1 /* oilWidgetPreferencePane.xib */ = {
+		88BD7A602A134B3E006F7DF6 /* examplePane.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				88860EC52A12B823002822E1 /* Base */,
+				88BD7A612A134B3E006F7DF6 /* Base */,
 			);
-			name = oilWidgetPreferencePane.xib;
+			name = examplePane.xib;
+			sourceTree = "<group>";
+		};
+		88BD7A672A134F78006F7DF6 /* another_example.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88BD7A682A134F78006F7DF6 /* Base */,
+			);
+			name = another_example.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
