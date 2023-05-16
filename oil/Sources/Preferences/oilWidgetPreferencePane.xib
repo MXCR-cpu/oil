@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+        <capability name="Combo buttons" minToolsVersion="14.0" minSystemVersion="13.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,12 +16,66 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="480" height="594"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqj-LG-Zmz">
-                    <rect key="frame" x="0.0" y="-20" width="480" height="272"/>
+                    <rect key="frame" x="0.0" y="172" width="480" height="422"/>
                     <subviews>
+                        <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOZ-uQ-fje">
+                            <rect key="frame" x="0.0" y="350" width="157" height="72"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="2TZ-ii-94Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="82" height="16"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Refresh Rate" id="7xn-f6-p6f">
+                                        <font key="font" usesAppearanceFont="YES"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <comboButton verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="center" title="Button" imageScaling="proportionallyDown" translatesAutoresizingMaskIntoConstraints="NO" id="F85-ZZ-74R">
+                                    <rect key="frame" x="85" y="30" width="75" height="24"/>
+                                    <menu key="menu" id="UOL-pu-leE">
+                                        <items>
+                                            <menuItem title="Item 1" id="Ux7-eN-85A"/>
+                                            <menuItem title="Item 2" id="iyw-hj-qNv"/>
+                                        </items>
+                                    </menu>
+                                </comboButton>
+                            </subviews>
+                            <edgeInsets key="edgeInsets" left="20" right="0.0" top="20" bottom="0.0"/>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                        <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="jYy-jm-K8s">
+                            <rect key="frame" x="20" y="250" width="49" height="92"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="mHZ-g4-vjB">
+                                    <rect key="frame" x="20" y="42" width="31" height="16"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="CPU" id="0PF-d2-Ga2">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <edgeInsets key="edgeInsets" left="20" right="0.0" top="0.0" bottom="0.0"/>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
                         <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="aTE-4N-b5W">
                             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -31,7 +86,7 @@
                                         <constraint firstAttribute="width" constant="200" id="sXf-En-FJk"/>
                                         <constraint firstAttribute="height" constant="20" id="z4a-DH-h44"/>
                                     </constraints>
-                                    <buttonCell key="cell" type="check" title="Show Cpu Number" bezelStyle="regularSquare" imagePosition="left" state="on" tag="1" inset="2" id="zPt-ND-WkN">
+                                    <buttonCell key="cell" type="check" title="Show Usage Percentage" bezelStyle="regularSquare" imagePosition="left" state="on" tag="1" inset="2" id="zPt-ND-WkN">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -45,7 +100,7 @@
                                         <constraint firstAttribute="width" constant="200" id="bQh-Br-dxe"/>
                                         <constraint firstAttribute="height" constant="20" id="f16-3g-tbo"/>
                                     </constraints>
-                                    <buttonCell key="cell" type="check" title="Show Cpu Bar Graph" bezelStyle="regularSquare" imagePosition="left" state="on" tag="2" inset="2" id="dbT-a9-pRZ">
+                                    <buttonCell key="cell" type="check" title="Show Usage Graph" bezelStyle="regularSquare" imagePosition="left" state="on" tag="2" inset="2" id="dbT-a9-pRZ">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -53,20 +108,94 @@
                                         <action selector="didChangeCheckboxValue:" target="-2" id="KPz-CE-b2h"/>
                                     </connections>
                                 </button>
+                                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFF-0W-hdi">
+                                    <rect key="frame" x="80" y="152" width="206" height="20"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2dw-qV-i0F">
+                                            <rect key="frame" x="-2" y="4" width="133" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Number of Segments" id="sVw-qo-bU9">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <comboButton verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="center" title="Button" imageScaling="proportionallyDown" translatesAutoresizingMaskIntoConstraints="NO" id="fIo-0r-gGu">
+                                            <rect key="frame" x="134" y="-2" width="75" height="24"/>
+                                            <menu key="menu" id="Qe4-5p-6wk">
+                                                <items>
+                                                    <menuItem title="Item 1" id="PkX-CY-pfo"/>
+                                                    <menuItem title="Item 2" id="rne-Zd-ZPJ"/>
+                                                </items>
+                                            </menu>
+                                        </comboButton>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="2f3-JK-zHU"/>
+                                    </constraints>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
+                                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tO1-7N-WuP">
+                                    <rect key="frame" x="80" y="112" width="193" height="20"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qr5-HL-t4E">
+                                            <rect key="frame" x="-2" y="4" width="120" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Width of Segments" id="BiJ-l3-TKO">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <comboButton verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="center" title="Button" imageScaling="proportionallyDown" translatesAutoresizingMaskIntoConstraints="NO" id="bML-Yn-jLU">
+                                            <rect key="frame" x="121" y="-2" width="75" height="24"/>
+                                            <menu key="menu" id="ETU-Uz-DoU">
+                                                <items>
+                                                    <menuItem title="Item 1" id="LaG-un-A2n"/>
+                                                    <menuItem title="Item 2" id="lRW-B9-mgG"/>
+                                                </items>
+                                            </menu>
+                                        </comboButton>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="tkv-vV-3gC"/>
+                                    </constraints>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
                             </subviews>
                             <constraints>
+                                <constraint firstItem="EFF-0W-hdi" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="80" id="0Zb-d3-RBe"/>
+                                <constraint firstItem="tO1-7N-WuP" firstAttribute="top" secondItem="EFF-0W-hdi" secondAttribute="bottom" constant="20" id="3uM-bH-PEQ"/>
                                 <constraint firstItem="RUW-NR-BhP" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="20" id="B7Z-HO-Dut"/>
                                 <constraint firstItem="Vm9-7C-gQh" firstAttribute="top" secondItem="aTE-4N-b5W" secondAttribute="top" constant="20" id="GbW-6t-ePI"/>
                                 <constraint firstItem="RUW-NR-BhP" firstAttribute="top" secondItem="Vm9-7C-gQh" secondAttribute="bottom" constant="20" id="MAY-ae-3pn"/>
                                 <constraint firstItem="Vm9-7C-gQh" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="20" id="OxZ-U0-4tZ"/>
+                                <constraint firstItem="tO1-7N-WuP" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="80" id="cdv-VP-bSZ"/>
                                 <constraint firstItem="RUW-NR-BhP" firstAttribute="top" secondItem="Vm9-7C-gQh" secondAttribute="bottom" constant="20" id="sQO-If-v4J"/>
                                 <constraint firstItem="Vm9-7C-gQh" firstAttribute="top" secondItem="aTE-4N-b5W" secondAttribute="top" constant="20" id="sYR-wZ-n5M"/>
+                                <constraint firstItem="EFF-0W-hdi" firstAttribute="top" secondItem="RUW-NR-BhP" secondAttribute="bottom" constant="20" id="ybh-AA-1tt"/>
                             </constraints>
                             <visibilityPriorities>
                                 <integer value="1000"/>
                                 <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
                             </visibilityPriorities>
                             <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                             </customSpacing>
@@ -74,18 +203,21 @@
                     </subviews>
                     <visibilityPriorities>
                         <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
                     </visibilityPriorities>
                     <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>
                     </customSpacing>
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="oqj-LG-Zmz" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="47q-eQ-w9e"/>
-                <constraint firstItem="oqj-LG-Zmz" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="iK9-bT-F3w"/>
-                <constraint firstAttribute="trailing" secondItem="oqj-LG-Zmz" secondAttribute="trailing" id="kVB-AZ-Ejy"/>
+                <constraint firstItem="oqj-LG-Zmz" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="3Aa-YR-HxX"/>
+                <constraint firstItem="oqj-LG-Zmz" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="Dlp-s0-fJm"/>
             </constraints>
-            <point key="canvasLocation" x="54" y="148"/>
+            <point key="canvasLocation" x="54" y="67"/>
         </customView>
         <buttonCell type="check" title="showCpuNumber" alternateTitle="Show Cpu Number" bezelStyle="regularSquare" imagePosition="left" state="on" tag="1" inset="2" id="YcE-P2-v54">
             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>

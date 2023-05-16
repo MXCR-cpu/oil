@@ -121,8 +121,8 @@
 		883EBC322A12155800235B35 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				88860EB82A127F9E002822E1 /* BarGraph.swift */,
 				88860EBA2A12ADA5002822E1 /* Graph.swift */,
+				88BD7A6A2A136221006F7DF6 /* Graphs */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -151,6 +151,14 @@
 				8829C7BC2A12F883009DE392 /* oilWidgetPreferencePane.xib */,
 			);
 			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		88BD7A6A2A136221006F7DF6 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				88860EB82A127F9E002822E1 /* BarGraph.swift */,
+			);
+			path = Graphs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
