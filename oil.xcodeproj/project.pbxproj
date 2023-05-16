@@ -130,8 +130,8 @@
 		88860EBC2A12AF5D002822E1 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				88BD7A5E2A134009006F7DF6 /* oilWidgetPreferencePane */,
 				88860EBD2A12B087002822E1 /* Preferences.swift */,
+				88BD7A5E2A134009006F7DF6 /* oilWidgetPreferencePane */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";

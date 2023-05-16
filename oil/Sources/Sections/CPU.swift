@@ -38,7 +38,7 @@ internal class CPUItem: StatusItem {
     func reload() {
         let usage = system.usageCPU()
         valueLabel.stringValue = String(
-            format: "%3.0f%%",
+            format: "%02.0f%%",
             usage.system + usage.user
         )
         valueLabel.sizeToFit()
