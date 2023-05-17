@@ -23,6 +23,7 @@
 		88860EBE2A12B087002822E1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBD2A12B087002822E1 /* Preferences.swift */; };
 		88860EC02A12B1F5002822E1 /* oilWidgetPreferencePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */; };
 		88860EC92A12D792002822E1 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 88860EC82A12D792002822E1 /* Defaults */; };
+		88EB38F32A145227004D60EE /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB38F22A145227004D60EE /* Options.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		88860EBA2A12ADA5002822E1 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		88860EBD2A12B087002822E1 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilWidgetPreferencePane.swift; sourceTree = "<group>"; };
+		88EB38F22A145227004D60EE /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		883EBC322A12155800235B35 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				88EB38F22A145227004D60EE /* Options.swift */,
 				88860EBA2A12ADA5002822E1 /* Graph.swift */,
 				88BD7A6A2A136221006F7DF6 /* Graphs */,
 			);
@@ -266,6 +269,7 @@
 				88860EB92A127F9E002822E1 /* BarGraph.swift in Sources */,
 				883EBC312A11FD1900235B35 /* oilItem.swift in Sources */,
 				88860EBE2A12B087002822E1 /* Preferences.swift in Sources */,
+				88EB38F32A145227004D60EE /* Options.swift in Sources */,
 				883EBC2A2A11F94600235B35 /* CPU.swift in Sources */,
 				883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */,
 				88860EBB2A12ADA5002822E1 /* Graph.swift in Sources */,

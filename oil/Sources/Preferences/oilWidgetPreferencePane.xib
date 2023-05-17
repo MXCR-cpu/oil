@@ -8,6 +8,8 @@
         <customObject id="-2" userLabel="File's Owner" customClass="oilWidgetPreferencePane" customModule="oil" customModuleProvider="target">
             <connections>
                 <outlet property="cpuGraphBoxCount" destination="tuC-SG-9Us" id="Gja-j3-BDg"/>
+                <outlet property="cpuGraphFunction" destination="JzU-te-6uI" id="pR3-Ph-n9C"/>
+                <outlet property="cpuGraphType" destination="2sB-zZ-2Z6" id="asx-jZ-jAN"/>
                 <outlet property="cpuGraphWidth" destination="ZQw-U2-WSY" id="EG2-i5-v2k"/>
                 <outlet property="refreshRate" destination="YrJ-vb-3LJ" id="JDe-2o-hiR"/>
                 <outlet property="showCpuGraph" destination="RUW-NR-BhP" id="Dhu-zA-jc3"/>
@@ -22,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqj-LG-Zmz">
-                    <rect key="frame" x="0.0" y="172" width="480" height="422"/>
+                    <rect key="frame" x="0.0" y="172" width="686" height="422"/>
                     <subviews>
                         <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOZ-uQ-fje">
                             <rect key="frame" x="0.0" y="350" width="138" height="72"/>
@@ -89,7 +91,7 @@
                             </customSpacing>
                         </stackView>
                         <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="aTE-4N-b5W">
-                            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                            <rect key="frame" x="0.0" y="0.0" width="686" height="272"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <subviews>
                                 <button verticalHuggingPriority="749" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="Vm9-7C-gQh">
@@ -124,15 +126,16 @@
                                     <rect key="frame" x="80" y="152" width="300" height="20"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2dw-qV-i0F">
-                                            <rect key="frame" x="-2" y="4" width="133" height="16"/>
+                                            <rect key="frame" x="-2" y="4" width="63" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Number of Segments" id="sVw-qo-bU9">
                                                 <font key="font" usesAppearanceFont="YES"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <comboBox verticalHuggingPriority="750" tag="31" translatesAutoresizingMaskIntoConstraints="NO" id="tuC-SG-9Us">
-                                            <rect key="frame" x="136" y="-2" width="167" height="23"/>
+                                        <comboBox verticalHuggingPriority="750" tag="31" id="tuC-SG-9Us">
+                                            <rect key="frame" x="66" y="-1" width="167" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="5" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="K3j-wx-t13">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -218,15 +221,106 @@
                                         <real value="3.4028234663852886e+38"/>
                                     </customSpacing>
                                 </stackView>
+                                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e6e-Ha-vPo">
+                                    <rect key="frame" x="80" y="72" width="300" height="20"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l3F-2o-WEg">
+                                            <rect key="frame" x="-2" y="4" width="75" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Graph Type" id="tWl-nL-0qP">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JzU-te-6uI">
+                                            <rect key="frame" x="76" y="-4" width="228" height="25"/>
+                                            <popUpButtonCell key="cell" type="push" title="Bar" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" tag="331" imageScaling="proportionallyDown" inset="2" selectedItem="YQf-Pl-O1o" id="iSH-oe-Hby">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" id="5Dv-Bx-1Bj">
+                                                    <items>
+                                                        <menuItem title="Bar" tag="331" id="YQf-Pl-O1o"/>
+                                                        <menuItem title="Line" tag="332" id="H19-dZ-JbC"/>
+                                                        <menuItem title="Spline" tag="333" id="HOn-3b-fHd">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                            <connections>
+                                                <action selector="didChangeComboBoxValueGraphType:" target="-2" id="C4R-Qw-ASx"/>
+                                            </connections>
+                                        </popUpButton>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="AXp-7h-RLo"/>
+                                        <constraint firstAttribute="height" constant="20" id="SN8-vu-oPN"/>
+                                    </constraints>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
+                                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GPJ-Wm-WTb">
+                                    <rect key="frame" x="80" y="32" width="300" height="20"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B03-bH-LMk">
+                                            <rect key="frame" x="-2" y="4" width="98" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Graph Function" id="uLc-a5-V23">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2sB-zZ-2Z6">
+                                            <rect key="frame" x="99" y="-4" width="205" height="25"/>
+                                            <popUpButtonCell key="cell" type="push" title="Linear" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="341" imageScaling="proportionallyDown" inset="2" selectedItem="VIf-Cj-jU7" id="kDA-fj-H36">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" id="AE0-vv-0Ts">
+                                                    <items>
+                                                        <menuItem title="Linear" state="on" tag="341" id="VIf-Cj-jU7"/>
+                                                        <menuItem title="Square Root" tag="342" id="hS8-oq-Tpp"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                            <connections>
+                                                <action selector="didChangeComboBoxValueGraphFunction:" target="-2" id="JjZ-kY-Fbf"/>
+                                            </connections>
+                                        </popUpButton>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="300" id="G3h-L1-P2i"/>
+                                        <constraint firstAttribute="height" constant="20" id="nMQ-9M-7fd"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="w1z-g8-x8h"/>
+                                    </constraints>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="EFF-0W-hdi" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="80" id="0Zb-d3-RBe"/>
+                                <constraint firstItem="GPJ-Wm-WTb" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="80" id="0i6-GS-jkA"/>
                                 <constraint firstItem="tO1-7N-WuP" firstAttribute="top" secondItem="EFF-0W-hdi" secondAttribute="bottom" constant="20" id="3uM-bH-PEQ"/>
                                 <constraint firstItem="RUW-NR-BhP" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="20" id="B7Z-HO-Dut"/>
+                                <constraint firstItem="GPJ-Wm-WTb" firstAttribute="top" secondItem="e6e-Ha-vPo" secondAttribute="bottom" constant="20" id="FBe-V3-M3i"/>
                                 <constraint firstItem="Vm9-7C-gQh" firstAttribute="top" secondItem="aTE-4N-b5W" secondAttribute="top" constant="20" id="GbW-6t-ePI"/>
                                 <constraint firstItem="RUW-NR-BhP" firstAttribute="top" secondItem="Vm9-7C-gQh" secondAttribute="bottom" constant="20" id="MAY-ae-3pn"/>
                                 <constraint firstItem="Vm9-7C-gQh" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="20" id="OxZ-U0-4tZ"/>
+                                <constraint firstItem="e6e-Ha-vPo" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="80" id="YYb-hK-l8b"/>
                                 <constraint firstItem="tO1-7N-WuP" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="80" id="cdv-VP-bSZ"/>
+                                <constraint firstAttribute="trailing" secondItem="e6e-Ha-vPo" secondAttribute="trailing" constant="306" id="had-w6-ePi"/>
+                                <constraint firstItem="e6e-Ha-vPo" firstAttribute="top" secondItem="tO1-7N-WuP" secondAttribute="bottom" constant="20" id="iOY-tz-Jaf"/>
                                 <constraint firstItem="RUW-NR-BhP" firstAttribute="top" secondItem="Vm9-7C-gQh" secondAttribute="bottom" constant="20" id="sQO-If-v4J"/>
                                 <constraint firstItem="Vm9-7C-gQh" firstAttribute="top" secondItem="aTE-4N-b5W" secondAttribute="top" constant="20" id="sYR-wZ-n5M"/>
                                 <constraint firstItem="EFF-0W-hdi" firstAttribute="top" secondItem="RUW-NR-BhP" secondAttribute="bottom" constant="20" id="ybh-AA-1tt"/>
@@ -236,8 +330,12 @@
                                 <integer value="1000"/>
                                 <integer value="1000"/>
                                 <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
                             </visibilityPriorities>
                             <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
@@ -274,5 +372,35 @@
             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
             <font key="font" metaFont="system"/>
         </buttonCell>
+        <comboBoxCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="5" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="cKI-lf-OCy">
+            <font key="font" metaFont="system"/>
+            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+            <objectValues>
+                <string>1</string>
+                <string>2</string>
+                <string>3</string>
+                <string>4</string>
+                <string>5</string>
+                <string>6</string>
+                <string>7</string>
+                <string>8</string>
+                <string>9</string>
+                <string>10</string>
+            </objectValues>
+        </comboBoxCell>
+        <comboBoxCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="10" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="tri-74-HmL">
+            <font key="font" metaFont="system"/>
+            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+            <objectValues>
+                <string>1</string>
+                <string>5</string>
+                <string>10</string>
+                <string>15</string>
+                <string>20</string>
+                <string>25</string>
+            </objectValues>
+        </comboBoxCell>
     </objects>
 </document>

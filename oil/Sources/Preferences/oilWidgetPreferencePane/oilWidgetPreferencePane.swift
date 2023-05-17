@@ -20,6 +20,12 @@ class oilWidgetPreferencePane:
     @IBOutlet weak var showCpuGraph: NSButton!
     @IBOutlet weak var cpuGraphWidth: NSComboBox!
     @IBOutlet weak var cpuGraphBoxCount: NSComboBox!
+    @IBOutlet weak var cpuGraphType: NSPopUpButton!
+    @IBOutlet weak var cpuGraphFunction: NSPopUpButton!
+    /*
+    @IBOutlet weak var cpuGraphType: NSComboBox!
+    @IBOutlet weak var cpuGraphFunction: NSComboBox!
+    */
     
     func reset() {
         loadBoxStates()
@@ -33,11 +39,23 @@ class oilWidgetPreferencePane:
     }
     
     private func loadBoxStates() {
-        self.refreshRate.enclosingMenuItem?.state = .init(rawValue: Defaults[.refreshRate])
+        self.refreshRate.enclosingMenuItem?.state = .init(
+            rawValue: Defaults[.refreshRate]
+        )
         self.showCpuNumber.state = Defaults[.shouldDisplayCpuNumber] ? .on : .off
         self.showCpuGraph.state = Defaults[.shouldDisplayCpuGraph] ? .on : .off
-        self.cpuGraphWidth.enclosingMenuItem?.state = .init(rawValue: Defaults[.cpuGraphWidth])
-        self.cpuGraphBoxCount.enclosingMenuItem?.state = .init(rawValue: Defaults[.cpuGraphBoxCount])
+        self.cpuGraphWidth.enclosingMenuItem?.state = .init(
+            rawValue: Defaults[.cpuGraphWidth]
+        )
+        self.cpuGraphBoxCount.enclosingMenuItem?.state = .init(
+            rawValue: Defaults[.cpuGraphBoxCount]
+        )
+        self.cpuGraphType.enclosingMenuItem?.state = .init(
+            rawValue: Defaults[.cpuGraphType].rawValue
+        )
+        self.cpuGraphFunction.enclosingMenuItem?.state = .init(
+            rawValue: Defaults[.cpuGraphFunction].rawValue
+        )
     }
     
     @IBAction func didChangeCheckboxValue(_ checkbox: NSButton) {
@@ -73,6 +91,20 @@ class oilWidgetPreferencePane:
         Defaults[key] = Int(
             "\(combobox.objectValueOfSelectedItem ?? defaultValue)"
         ) ?? defaultValue
+        loadBoxStates()
+    }
+    
+    @IBAction func didChangeComboBoxValueGraphType(_ popupbutton: NSPopUpButton) {
+        Defaults[.cpuGraphType] = GraphType(
+            rawValue: popupbutton.tag - 330
+        ) ?? .bar
+        loadBoxStates()
+    }
+
+    @IBAction func didChangeComboBoxValueGraphFunction(_ popupbutton: NSPopUpButton) {
+        Defaults[.cpuGraphFunction] = GraphFunction(
+            rawValue: popupbutton.tag - 340
+        ) ?? .linear
         loadBoxStates()
     }
 }

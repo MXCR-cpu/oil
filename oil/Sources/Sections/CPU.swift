@@ -122,7 +122,6 @@ internal class CPUItem: StatusItem {
             format: "%02.0f%%",
             usage.system + usage.user
         )
-        //valueLabel.sizeToFit()
     }
     
     private func updateGraph() {
