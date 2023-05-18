@@ -12,5 +12,5 @@ protocol Graph {
     var view: NSView { get }
     var stepSize: Int { get }
     var historyLength: Int { get }
-    func generateGraph(data: [Double])
+    func generateGraph(data: [Int])
 }

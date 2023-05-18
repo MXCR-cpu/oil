@@ -16,6 +16,7 @@ class oilWidgetPreferencePane:
     PKWidgetPreference {
     static var nibName: NSNib.Name = "oilWidgetPreferencePane"
     @IBOutlet weak var refreshRate: NSComboBox!
+
     @IBOutlet weak var showCpuNumber: NSButton!
     @IBOutlet weak var showCpuGraph: NSButton!
     @IBOutlet weak var cpuGraphWidth: NSComboBox!

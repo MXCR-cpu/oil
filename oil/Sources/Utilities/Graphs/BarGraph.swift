@@ -13,16 +13,19 @@ class BarGraph: Graph {
     internal var view: NSView = NSView(
         frame: NSRect(x: 0, y: 0, width: 0, height: 0)
     )
-    internal var stepSize: Int = Defaults[.cpuGraphWidth]
-    internal var historyLength: Int = Defaults[.cpuGraphBoxCount]
+    internal var stepSize: Int
+    internal var historyLength: Int
     
-    init() {}
+    init(stepSize: Int, historyLength: Int) {
+        self.stepSize = stepSize
+        self.historyLength = historyLength
+    }
     
     deinit {
         view = NSView(frame: .zero)
     }
     
-    func generateGraph(data: [Double]) {
+    func generateGraph(data: [Int]) {
         for i in 0...(data.count-1) {
             let boxLayer: CALayer = CALayer()
             boxLayer.frame = NSRect(
@@ -30,7 +33,7 @@ class BarGraph: Graph {
                 y: 0,
                 width: stepSize,
                 height: max(
-                    Int(18 * (data[data.count-1-i] / 100)),
+                    Int((18 * Double(data[data.count-1-i])) / 100),
                     1
                 )
             )

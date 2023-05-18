@@ -27,7 +27,7 @@ class oilWidget: PKWidget {
         stackView.orientation = .horizontal
         stackView.alignment = .centerY
         stackView.distribution = .fill
-        stackView.spacing = 2
+        stackView.spacing = 5
     }
     
     deinit {
@@ -55,10 +55,14 @@ class oilWidget: PKWidget {
     
     @objc private func loadStatusElement() {
         clearItems()
-        let item = CPUItem()
-        item.didLoad()
-        loadedItems.append(item)
-        stackView.addArrangedSubview(item.view)
+        let cpu_item = CPUItem()
+        cpu_item.didLoad()
+        loadedItems.append(cpu_item)
+        stackView.addArrangedSubview(cpu_item.view)
+        let gpu_item = GPUItem()
+        gpu_item.didLoad()
+        loadedItems.append(gpu_item)
+        stackView.addArrangedSubview(gpu_item.view)
         stackView.height(30)
     }
     

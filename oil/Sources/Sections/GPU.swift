@@ -1,25 +1,27 @@
 //
-//  CPU.swift
+//  GPU.swift
 //  oil
 //
-//  Created by Maximus on 5/14/23.
+//  Created by Maximus on 5/17/23.
 //
 
 import Foundation
 import AppKit
-import SystemKit
-import SwiftUI
 import Defaults
 import IOKit
-import TinyConstraints
+//import os
 
-internal class CPUItem: StatusItem {
-    private var system: System = System()
+internal class GPUItem: StatusItem {
+    /*
+    private var logger: Logger = Logger(
+        subsystem: Bundle.main.bundleIdentifier!,
+        category: "GPU_oil"
+    )
+    */
+    private var gpu: GPUConnection = GPUConnection()
     private var barGraph: BarGraph = BarGraph(
-        stepSize: Defaults[.cpuGraphWidth],
-        historyLength: Defaults[.cpuGraphBoxCount])
-    private var usage:
-        (system: Double, user: Double, idle: Double, nice: Double) = (0.0, 0.0, 0.0, 0.0)
+        stepSize: Defaults[.gpuGraphWidth],
+        historyLength: Defaults[.gpuGraphBoxCount])
     private var refreshTimer: Timer?
     private var run: Bool = true
     private var usageHistory: [Int] = []
@@ -32,7 +34,7 @@ internal class CPUItem: StatusItem {
         return true
     }
     var title: String {
-        return "CPUItem"
+        return "GPUItem"
     }
     var view: NSView {
         return stackView
@@ -41,9 +43,9 @@ internal class CPUItem: StatusItem {
     func action() {}
 
     func reload() {
-        usage = system.usageCPU()
+        gpu.reload()
         usageHistory = (
-            usageHistory + [Int((usage.system + usage.user))]
+            usageHistory + [(gpu.usage ?? 0)]
         ).suffix(barGraph.historyLength)
         updateLabel()
         updateGraph()
@@ -60,7 +62,19 @@ internal class CPUItem: StatusItem {
         run = false
     }
     
-    /// Utility
+    private func repeatCall() {
+        reload()
+        preferenceUpdate()
+        graphRedraw()
+        if run {
+            DispatchQueue.main.asyncAfter(
+                deadline: .now() + Double(Defaults[.refreshRate])
+            ) {
+                self.repeatCall()
+            }
+        }
+    }
+    
     private func configureValueLabel() {
         valueLabel.font = NSFont.monospacedDigitSystemFont(
             ofSize: 13,
@@ -75,7 +89,7 @@ internal class CPUItem: StatusItem {
         bodyView.orientation = .horizontal
         bodyView.alignment = .centerY
         bodyView.distribution = .fillProportionally
-        bodyView.width(CGFloat(Defaults[.cpuGraphWidth] * Defaults[.cpuGraphBoxCount]))
+        bodyView.width(CGFloat(Defaults[.gpuGraphWidth] * Defaults[.gpuGraphBoxCount]))
         stackView.orientation = .horizontal
         stackView.alignment = .centerY
         stackView.distribution = .fillProportionally
@@ -83,36 +97,23 @@ internal class CPUItem: StatusItem {
         stackView.addArrangedSubview(valueLabel)
         stackView.addArrangedSubview(bodyView)
     }
-
-    private func repeatCall() {
-        reload()
-        preferenceUpdate()
-        graphRedraw()
-        if run {
-            DispatchQueue.main.asyncAfter(
-                deadline: .now() + Double(Defaults[.refreshRate])
-            ) {
-                self.repeatCall()
-            }
-        }
-    }
-
+    
     private func graphRedraw() {
-        if !Defaults[.shouldDisplayCpuGraph] { return }
+        if !Defaults[.shouldDisplayGpuGraph] { return }
         barGraph.generateGraph(data: usageHistory)
     }
     
     private func preferenceUpdate() {
-        if Defaults[.shouldDisplayCpuGraph] &&
+        if Defaults[.shouldDisplayGpuGraph] &&
             !stackView.arrangedSubviews.contains(bodyView) {
             stackView.addArrangedSubview(bodyView)
-        } else if !Defaults[.shouldDisplayCpuGraph] && stackView.arrangedSubviews.contains(bodyView) {
+        } else if !Defaults[.shouldDisplayGpuGraph] && stackView.arrangedSubviews.contains(bodyView) {
             removeViewFromStackView(view: bodyView)
         }
-        if Defaults[.shouldDisplayCpuNumber] &&
+        if Defaults[.shouldDisplayGpuNumber] &&
             !stackView.arrangedSubviews.contains(valueLabel) {
             stackView.insertArrangedSubview(valueLabel, at: 0)
-        } else if !Defaults[.shouldDisplayCpuNumber] && stackView.arrangedSubviews.contains(valueLabel) {
+        } else if !Defaults[.shouldDisplayGpuNumber] && stackView.arrangedSubviews.contains(valueLabel) {
             removeViewFromStackView(view: valueLabel)
         }
     }
@@ -128,20 +129,19 @@ internal class CPUItem: StatusItem {
     private func updateLabel() {
         valueLabel.stringValue = String(
             format: "%02d%%",
-            Int(usage.system + usage.user)
+            gpu.usage ?? 0
         )
     }
     
     private func updateGraph() {
-        if barGraph.stepSize != Defaults[.cpuGraphWidth] ||
-            barGraph.historyLength != Defaults[.cpuGraphBoxCount] {
+        if barGraph.stepSize != Defaults[.gpuGraphWidth] ||
+            barGraph.historyLength != Defaults[.gpuGraphBoxCount] {
             bodyView.removeArrangedSubview(barGraph.view)
             bodyView.subviews.remove(at: 0)
             barGraph = BarGraph(
-                stepSize: Defaults[.cpuGraphWidth],
-                historyLength: Defaults[.cpuGraphBoxCount])
+                stepSize: Defaults[.gpuGraphWidth],
+                historyLength: Defaults[.gpuGraphBoxCount])
             bodyView.addArrangedSubview(barGraph.view)
         }
     }
 }
-
