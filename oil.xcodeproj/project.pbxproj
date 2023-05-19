@@ -40,6 +40,10 @@
 		88EB39212A172AA5004D60EE /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39202A172AA5004D60EE /* CPU.swift */; };
 		88EB39232A17F471004D60EE /* Fan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39222A17F471004D60EE /* Fan.swift */; };
 		88EB39252A17F5D4004D60EE /* TextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39242A17F5D4004D60EE /* TextItem.swift */; };
+		88EB39282A1827F1004D60EE /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39272A1827F1004D60EE /* System.swift */; };
+		88EB392A2A182902004D60EE /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39292A182902004D60EE /* Memory.swift */; };
+		88EB392C2A182DBD004D60EE /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB392B2A182DBD004D60EE /* Double.swift */; };
+		88EB392E2A1831A6004D60EE /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB392D2A1831A6004D60EE /* Disk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +77,10 @@
 		88EB39202A172AA5004D60EE /* CPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
 		88EB39222A17F471004D60EE /* Fan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fan.swift; sourceTree = "<group>"; };
 		88EB39242A17F5D4004D60EE /* TextItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextItem.swift; sourceTree = "<group>"; };
+		88EB39272A1827F1004D60EE /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		88EB39292A182902004D60EE /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		88EB392B2A182DBD004D60EE /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		88EB392D2A1831A6004D60EE /* Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +174,7 @@
 				88EB39062A16DDB8004D60EE /* SMCControl.swift */,
 				88EB39002A162BCA004D60EE /* IOHelper.swift */,
 				88EB38F22A145227004D60EE /* Options.swift */,
+				88EB39272A1827F1004D60EE /* System.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -221,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				88EB39152A16E328004D60EE /* NSNotification.swift */,
+				88EB392B2A182DBD004D60EE /* Double.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -231,6 +241,8 @@
 				88EB39202A172AA5004D60EE /* CPU.swift */,
 				88EB38F62A14C89A004D60EE /* GPU.swift */,
 				88EB39222A17F471004D60EE /* Fan.swift */,
+				88EB39292A182902004D60EE /* Memory.swift */,
+				88EB392D2A1831A6004D60EE /* Disk.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -348,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88EB392A2A182902004D60EE /* Memory.swift in Sources */,
 				88EB390C2A16DF66004D60EE /* Refreshable.swift in Sources */,
 				88EB39012A162BCA004D60EE /* IOHelper.swift in Sources */,
 				88860EC02A12B1F5002822E1 /* oilWidgetPreferencePane.swift in Sources */,
@@ -355,7 +368,9 @@
 				88EB391E2A172430004D60EE /* Manager.swift in Sources */,
 				88860EB92A127F9E002822E1 /* BarGraph.swift in Sources */,
 				883EBC312A11FD1900235B35 /* oilItem.swift in Sources */,
+				88EB392C2A182DBD004D60EE /* Double.swift in Sources */,
 				88860EBE2A12B087002822E1 /* Preferences.swift in Sources */,
+				88EB392E2A1831A6004D60EE /* Disk.swift in Sources */,
 				88EB39212A172AA5004D60EE /* CPU.swift in Sources */,
 				88EB39112A16E0AA004D60EE /* FanData.swift in Sources */,
 				88EB38F32A145227004D60EE /* Options.swift in Sources */,
@@ -366,6 +381,7 @@
 				88EB39052A16DD46004D60EE /* Temperature.swift in Sources */,
 				88EB39232A17F471004D60EE /* Fan.swift in Sources */,
 				88EB38F72A14C89A004D60EE /* GPU.swift in Sources */,
+				88EB39282A1827F1004D60EE /* System.swift in Sources */,
 				88EB39032A16D7E6004D60EE /* SMCKit.swift in Sources */,
 				88EB39252A17F5D4004D60EE /* TextItem.swift in Sources */,
 				88EB39162A16E328004D60EE /* NSNotification.swift in Sources */,

@@ -19,15 +19,10 @@ internal class CPUManager: Manager {
     var temp: Double? = nil
     var tempString: String? = nil
     var usageHistory: [Int] = []
-    var system: System
 
-    required init() {
-        system = System()
-    }
-    
     func reload() {
-        let temp_usage: (system: Double, user: Double, idle: Double, nice: Double) =
-            system.usageCPU()
+        var temp_usage: (system: Double, user: Double, idle: Double, nice: Double) =
+            SystemManager.shared.usageCPU()
         usage = Int(temp_usage.system + temp_usage.user)
         usageString = String(format: "%02d%%", usage ?? 0)
         usageHistory = (usageHistory + [usage ?? 0])

@@ -21,10 +21,11 @@ internal class FanManager: Manager {
     var tempString: String? = nil
     
     func reload() {
-        NSLog("[oil] FanManager: \(SmcControl.shared.fans.compactMap{ $0.currentSpeed })")
         usage = SmcControl.shared.fans[0].currentSpeed
         usageHistory = (usageHistory + [usage ?? 0])
             .suffix(Defaults[.cpuGraphBoxCount])
-        usageString = "\(SmcControl.shared.fans[0].currentSpeedString) \(SmcControl.shared.fans[1].currentSpeedString)"
+        usageString = SmcControl.shared.fans.reduce("") {
+            $0 + " " + $1.currentSpeedString
+        }
     }
 }

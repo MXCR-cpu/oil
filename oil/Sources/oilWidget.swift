@@ -73,7 +73,9 @@ class oilWidget: PKWidget {
         let items: [StatusItem] = [
             GraphItem(manager: CPUManager(), graph: BarGraph()),
             GraphItem(manager: GPUManager(), graph: BarGraph()),
-            TextItem(manager: FanManager())
+            TextItem(manager: FanManager()),
+            TextItem(manager: MemoryManager()),
+            TextItem(manager: DiskManager())
         ]
         for item in items {
             item.didLoad()
