@@ -16,7 +16,6 @@ import TinyConstraints
 internal class GraphItem: StatusItem {
     private var manager: Manager
     private var graph: Graph
-    private var run: Bool = true
     private var usageHistory: [Int] = []
     private var stackView: NSStackView = NSStackView(frame: .zero)
     private var bodyView: NSStackView = NSStackView(frame: .zero)
@@ -56,9 +55,7 @@ internal class GraphItem: StatusItem {
         reload()
     }
 
-    func didUnload() {
-        run = false
-    }
+    func didUnload() {}
     
     /// Utility
     private func configureLabel(label: NSTextField) {
@@ -75,7 +72,8 @@ internal class GraphItem: StatusItem {
         bodyView.orientation = .horizontal
         bodyView.alignment = .centerY
         bodyView.distribution = .fillProportionally
-        bodyView.width(CGFloat(Defaults[.cpuGraphWidth] * Defaults[.cpuGraphBoxCount]))
+        bodyView.width(CGFloat(Defaults[.cpuGraphWidth] *
+                               Defaults[.cpuGraphBoxCount]))
         stackView.orientation = .horizontal
         stackView.alignment = .centerY
         stackView.distribution = .fillProportionally
@@ -115,17 +113,15 @@ internal class GraphItem: StatusItem {
     }
     
     private func updateValueLabel() {
-        valueLabel.stringValue = String(
-            format: "%02d%%",
-            manager.usage ?? 0
-        )
+        //valueLabel.stringValue = String(format: "%02d%%",
+        //                                manager.usage ?? 0)
+        valueLabel.stringValue = manager.usageString ?? "NaN"
     }
     
     private func updateTempLabel() {
-        tempLabel.stringValue = String(
-            format: "%02.01f°C",
-            manager.temp ?? 0.0
-        )
+        //tempLabel.stringValue = String(format: "%02.01f°C",
+        //                               manager.temp ?? 0.0)
+        tempLabel.stringValue = manager.tempString ?? "NaN"
     }
     
     private func updateGraph() {

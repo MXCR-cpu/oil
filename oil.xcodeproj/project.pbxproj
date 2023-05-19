@@ -38,6 +38,8 @@
 		88EB391C2A1723F1004D60EE /* GraphItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB391B2A1723F1004D60EE /* GraphItem.swift */; };
 		88EB391E2A172430004D60EE /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB391D2A172430004D60EE /* Manager.swift */; };
 		88EB39212A172AA5004D60EE /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39202A172AA5004D60EE /* CPU.swift */; };
+		88EB39232A17F471004D60EE /* Fan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39222A17F471004D60EE /* Fan.swift */; };
+		88EB39252A17F5D4004D60EE /* TextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39242A17F5D4004D60EE /* TextItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		88EB391B2A1723F1004D60EE /* GraphItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphItem.swift; sourceTree = "<group>"; };
 		88EB391D2A172430004D60EE /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		88EB39202A172AA5004D60EE /* CPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
+		88EB39222A17F471004D60EE /* Fan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fan.swift; sourceTree = "<group>"; };
+		88EB39242A17F5D4004D60EE /* TextItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +136,7 @@
 		883EBC282A11F92E00235B35 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				88EB391B2A1723F1004D60EE /* GraphItem.swift */,
+				88EB39262A17F5E8004D60EE /* IItemTypes */,
 				88EB391F2A172826004D60EE /* Manager */,
 				88EB39142A16E314004D60EE /* Extension */,
 				88BD7A6A2A136221006F7DF6 /* Graphs */,
@@ -226,8 +230,18 @@
 			children = (
 				88EB39202A172AA5004D60EE /* CPU.swift */,
 				88EB38F62A14C89A004D60EE /* GPU.swift */,
+				88EB39222A17F471004D60EE /* Fan.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		88EB39262A17F5E8004D60EE /* IItemTypes */ = {
+			isa = PBXGroup;
+			children = (
+				88EB391B2A1723F1004D60EE /* GraphItem.swift */,
+				88EB39242A17F5D4004D60EE /* TextItem.swift */,
+			);
+			path = IItemTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,8 +364,10 @@
 				883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */,
 				88860EBB2A12ADA5002822E1 /* Graph.swift in Sources */,
 				88EB39052A16DD46004D60EE /* Temperature.swift in Sources */,
+				88EB39232A17F471004D60EE /* Fan.swift in Sources */,
 				88EB38F72A14C89A004D60EE /* GPU.swift in Sources */,
 				88EB39032A16D7E6004D60EE /* SMCKit.swift in Sources */,
+				88EB39252A17F5D4004D60EE /* TextItem.swift in Sources */,
 				88EB39162A16E328004D60EE /* NSNotification.swift in Sources */,
 				88EB39072A16DDB8004D60EE /* SMCControl.swift in Sources */,
 			);

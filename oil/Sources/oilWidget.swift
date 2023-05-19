@@ -72,7 +72,8 @@ class oilWidget: PKWidget {
         clearItems()
         let items: [StatusItem] = [
             GraphItem(manager: CPUManager(), graph: BarGraph()),
-            GraphItem(manager: GPUManager(), graph: BarGraph())
+            GraphItem(manager: GPUManager(), graph: BarGraph()),
+            TextItem(manager: FanManager())
         ]
         for item in items {
             item.didLoad()
@@ -82,9 +83,4 @@ class oilWidget: PKWidget {
         stackView.height(30)
         reloadCall()
     }
-    
-    @objc private func printMessage() {
-        NSLog("[oilWidget]: Hello, World!")
-    }
-    
 }

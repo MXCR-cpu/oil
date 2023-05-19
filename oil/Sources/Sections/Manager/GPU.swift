@@ -13,13 +13,14 @@ import Defaults
 
 internal class GPUManager: Manager {
     var usage: Int? = nil
+    var usageString: String? = nil
     var temp: Double? = nil
+    var tempString: String? = nil
     var usageHistory: [Int] = []
 
-    required init() {}
-    
     func reload() {
-        guard let propertyList = IOHelper.getPropertyList(for: kIOAcceleratorClassName) else {
+        guard let propertyList =
+                IOHelper.getPropertyList(for: kIOAcceleratorClassName) else {
             return
         }
         
@@ -40,5 +41,7 @@ internal class GPUManager: Manager {
         }
         usageHistory = (usageHistory + [usage ?? 0])
             .suffix(Defaults[.cpuGraphBoxCount])
+        usageString = String(format: "%02d%%", usage ?? 0)
+        tempString = String(format: "%02.01f°C", temp ?? 0)
     }
 }
