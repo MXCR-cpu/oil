@@ -13,9 +13,9 @@ import Defaults
 
 internal class GPUManager: Manager {
     var usage: Int? = nil
-    var usageString: String? = nil
+    var usageString: [String]? = nil
     var temp: Double? = nil
-    var tempString: String? = nil
+    //var tempString: String? = nil
     var usageHistory: [Int] = []
 
     func reload() {
@@ -41,7 +41,10 @@ internal class GPUManager: Manager {
         }
         usageHistory = (usageHistory + [usage ?? 0])
             .suffix(Defaults[.cpuGraphBoxCount])
-        usageString = String(format: "%02d%%", usage ?? 0)
-        tempString = String(format: "%02.01f°C", temp ?? 0)
+        usageString = [
+            String(format: "%02d%%", usage ?? 0),
+            String(format: "%02.01f°C", temp ?? 0)
+        ]
+        //tempString = String(format: "%02.01f°C", temp ?? 0)
     }
 }

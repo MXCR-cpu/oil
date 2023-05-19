@@ -9,10 +9,10 @@ import Foundation
 
 internal class DiskManager: Manager {
     var usage: Int? = nil
-    var usageString: String? = nil
+    var usageString: [String]? = nil
     var usageHistory: [Int] = []
     var temp: Double? = nil
-    var tempString: String? = nil
+    //var tempString: String? = nil
     
     func reload() {
         guard let volumes =
@@ -32,6 +32,9 @@ internal class DiskManager: Manager {
             let freeSize = attributes[FileAttributeKey.systemFreeSize] as? UInt64
         else { return }
         
-        usageString = "\(Int((size - freeSize) / 1_000_000_000)) GB \(String(format: "%02d%%", Int(((size - freeSize) * 100) / (size))))"
+        usageString = [
+            "\(Int((size - freeSize) / 1_000_000_000)) GB",
+            String(format: "%02d%%", Int(((size - freeSize) * 100) / (size)))
+        ]
     }
 }

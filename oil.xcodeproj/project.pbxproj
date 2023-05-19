@@ -144,7 +144,7 @@
 		883EBC282A11F92E00235B35 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				88EB39262A17F5E8004D60EE /* IItemTypes */,
+				88EB39262A17F5E8004D60EE /* ItemTypes */,
 				88EB391F2A172826004D60EE /* Manager */,
 				88EB39142A16E314004D60EE /* Extension */,
 				88BD7A6A2A136221006F7DF6 /* Graphs */,
@@ -247,13 +247,13 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		88EB39262A17F5E8004D60EE /* IItemTypes */ = {
+		88EB39262A17F5E8004D60EE /* ItemTypes */ = {
 			isa = PBXGroup;
 			children = (
 				88EB391B2A1723F1004D60EE /* GraphItem.swift */,
 				88EB39242A17F5D4004D60EE /* TextItem.swift */,
 			);
-			path = IItemTypes;
+			path = ItemTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

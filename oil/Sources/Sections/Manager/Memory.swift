@@ -10,10 +10,10 @@ import SystemKit
 
 internal class MemoryManager: Manager {
     var usage: Int? = nil
-    var usageString: String? = nil
+    var usageString: [String]? = nil
     var usageHistory: [Int] = []
     var temp: Double? = nil
-    var tempString: String? = nil
+    //var tempString: String? = nil
     private var free: Double = 0
     private var active: Double = 0
     private var inactive: Double = 0
@@ -39,6 +39,9 @@ internal class MemoryManager: Manager {
          compressed,
          appMemory,
          cachedFiles) = System.memoryUsage()
-        usageString = "\(used.memoryString) \(String(format: "%02d%%", usedPercentage))"
+        usageString = [
+            "\(used.memoryString)",
+            String(format: "%02d%%", usedPercentage)
+        ]
     }
 }

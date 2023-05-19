@@ -11,8 +11,8 @@ import AppKit
 internal class TextItem: StatusItem {
     private var manager: Manager
     private var stackView: NSStackView = NSStackView(frame: .zero)
-    private var valueLabel: NSTextField =
-        NSTextField(labelWithString: "-%")
+    private var label: NSTextField =
+        NSTextField(labelWithString: "NaN")
     var enabled: Bool { return true }
     var title: String { return "TextItem" }
     var view: NSView { return stackView }
@@ -30,7 +30,7 @@ internal class TextItem: StatusItem {
     }
     
     func didLoad() {
-        configureLabel(label: valueLabel)
+        configureLabel(label: label)
         configureStackView()
         reload()
     }
@@ -51,12 +51,14 @@ internal class TextItem: StatusItem {
         stackView.alignment = .centerY
         stackView.distribution = .fillProportionally
         stackView.spacing = 5
-        stackView.addArrangedSubview(valueLabel)
+        stackView.addArrangedSubview(label)
     }
 
     private func preferenceUpdate() {}
 
     private func updateValueLabel() {
-        valueLabel.stringValue = manager.usageString ?? "NaN"
+        label.stringValue = manager.usageString?.reduce("") {
+            $0 + " " + $1
+        } ?? "NaN"
     }
 }

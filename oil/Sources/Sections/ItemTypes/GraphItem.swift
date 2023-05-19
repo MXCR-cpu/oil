@@ -19,10 +19,13 @@ internal class GraphItem: StatusItem {
     private var usageHistory: [Int] = []
     private var stackView: NSStackView = NSStackView(frame: .zero)
     private var bodyView: NSStackView = NSStackView(frame: .zero)
+    private var label: NSTextField = NSTextField(labelWithString: "NaN")
+    /*
     private var valueLabel: NSTextField =
         NSTextField(labelWithString: "-%")
     private var tempLabel: NSTextField =
         NSTextField(labelWithString: "-")
+    */
     var enabled: Bool {
         return true
     }
@@ -42,15 +45,21 @@ internal class GraphItem: StatusItem {
 
     func reload() {
         manager.reload()
+        updateLabel()
+        /*
         updateValueLabel()
         updateTempLabel()
+        */
         preferenceUpdate()
         graphRedraw()
     }
 
     func didLoad() {
+        /*
         configureLabel(label: valueLabel)
         configureLabel(label: tempLabel)
+        */
+        configureLabel(label: label)
         configureStackView()
         reload()
     }
@@ -78,8 +87,11 @@ internal class GraphItem: StatusItem {
         stackView.alignment = .centerY
         stackView.distribution = .fillProportionally
         stackView.spacing = 5
+        /*
         stackView.addArrangedSubview(valueLabel)
         stackView.addArrangedSubview(tempLabel)
+        */
+        stackView.addArrangedSubview(label)
         stackView.addArrangedSubview(bodyView)
     }
 
@@ -97,11 +109,19 @@ internal class GraphItem: StatusItem {
             removeViewFromStackView(view: bodyView)
         }
         if Defaults[.shouldDisplayCpuNumber] &&
+            !stackView.arrangedSubviews.contains(label) {
+            stackView.insertArrangedSubview(label, at: 0)
+        } else if !Defaults[.shouldDisplayCpuNumber] && stackView.arrangedSubviews.contains(label) {
+            removeViewFromStackView(view: label)
+        }
+        /*
+        if Defaults[.shouldDisplayCpuNumber] &&
             !stackView.arrangedSubviews.contains(valueLabel) {
             stackView.insertArrangedSubview(valueLabel, at: 0)
         } else if !Defaults[.shouldDisplayCpuNumber] && stackView.arrangedSubviews.contains(valueLabel) {
             removeViewFromStackView(view: valueLabel)
         }
+        */
     }
     
     private func removeViewFromStackView(view: NSView) {
@@ -112,17 +132,22 @@ internal class GraphItem: StatusItem {
         }
     }
     
-    private func updateValueLabel() {
+    private func updateLabel() {
         //valueLabel.stringValue = String(format: "%02d%%",
         //                                manager.usage ?? 0)
-        valueLabel.stringValue = manager.usageString ?? "NaN"
+        //valueLabel.stringValue = manager.usageString ?? "NaN"
+        label.stringValue = manager.usageString?.reduce("") {
+            $0 + " " + $1
+        } ?? "NaN"
     }
     
+    /*
     private func updateTempLabel() {
         //tempLabel.stringValue = String(format: "%02.01f°C",
         //                               manager.temp ?? 0.0)
         tempLabel.stringValue = manager.tempString ?? "NaN"
     }
+    */
     
     private func updateGraph() {
         if graph.stepSize != Defaults[.cpuGraphWidth] ||
