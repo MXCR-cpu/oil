@@ -55,6 +55,7 @@ class oilWidget: PKWidget {
     }
     
     private func reloadCall() {
+        SmcControl.shared.refresh()
         for item in loadedItems {
             item.reload()
         }
@@ -69,14 +70,15 @@ class oilWidget: PKWidget {
     
     @objc private func loadStatusElement() {
         clearItems()
-        let cpu_item = GraphItem(manager: CPUManager(), graph: BarGraph())
-        cpu_item.didLoad()
-        loadedItems.append(cpu_item)
-        stackView.addArrangedSubview(cpu_item.view)
-        let gpu_item = GraphItem(manager: GPUManager(), graph: BarGraph())
-        gpu_item.didLoad()
-        loadedItems.append(gpu_item)
-        stackView.addArrangedSubview(gpu_item.view)
+        let items: [StatusItem] = [
+            GraphItem(manager: CPUManager(), graph: BarGraph()),
+            GraphItem(manager: GPUManager(), graph: BarGraph())
+        ]
+        for item in items {
+            item.didLoad()
+            loadedItems.append(item)
+            stackView.addArrangedSubview(item.view)
+        }
         stackView.height(30)
         reloadCall()
     }

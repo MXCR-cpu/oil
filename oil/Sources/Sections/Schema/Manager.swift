@@ -9,7 +9,7 @@ import Foundation
 
 protocol Manager {
     var usage: Int? { get }
-    var temp: Int? { get }
+    var temp: Double? { get }
     var usageHistory: [Int] { get }
     init()
     func reload()

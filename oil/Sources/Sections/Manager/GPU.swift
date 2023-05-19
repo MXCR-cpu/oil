@@ -13,7 +13,7 @@ import Defaults
 
 internal class GPUManager: Manager {
     var usage: Int? = nil
-    var temp: Int? = nil
+    var temp: Double? = nil
     var usageHistory: [Int] = []
 
     required init() {}
@@ -33,9 +33,9 @@ internal class GPUManager: Manager {
             else {
                 return 0
             }
-            usage = (usage ?? 0) < usagePercentage ? usagePercentage : usage
-            temp = statistics["Temperature(C)"] as? Int ??
-                Int(SmcControl.shared.gpuProximityTemperature ?? 0)
+            usage = usagePercentage
+            temp = statistics["Temperature(C)"] as? Double ??
+                SmcControl.shared.gpuProximityTemperature
             return 0
         }
         usageHistory = (usageHistory + [usage ?? 0])
