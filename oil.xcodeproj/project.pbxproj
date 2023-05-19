@@ -144,11 +144,11 @@
 		883EBC282A11F92E00235B35 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				88EB39262A17F5E8004D60EE /* ItemTypes */,
-				88EB391F2A172826004D60EE /* Manager */,
-				88EB39142A16E314004D60EE /* Extension */,
+				88EB39262A17F5E8004D60EE /* Items */,
+				88EB391F2A172826004D60EE /* Managers */,
+				88EB39142A16E314004D60EE /* Extensions */,
 				88BD7A6A2A136221006F7DF6 /* Graphs */,
-				88EB390D2A16DFD8004D60EE /* Schema */,
+				88EB390D2A16DFD8004D60EE /* Schemas */,
 				883EBC322A12155800235B35 /* Utilities */,
 			);
 			path = Sections;
@@ -213,7 +213,7 @@
 			path = Graphs;
 			sourceTree = "<group>";
 		};
-		88EB390D2A16DFD8004D60EE /* Schema */ = {
+		88EB390D2A16DFD8004D60EE /* Schemas */ = {
 			isa = PBXGroup;
 			children = (
 				88EB391D2A172430004D60EE /* Manager.swift */,
@@ -223,19 +223,19 @@
 				88EB390E2A16DFF7004D60EE /* TemperatureData.swift */,
 				88EB39102A16E0AA004D60EE /* FanData.swift */,
 			);
-			path = Schema;
+			path = Schemas;
 			sourceTree = "<group>";
 		};
-		88EB39142A16E314004D60EE /* Extension */ = {
+		88EB39142A16E314004D60EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				88EB39152A16E328004D60EE /* NSNotification.swift */,
 				88EB392B2A182DBD004D60EE /* Double.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		88EB391F2A172826004D60EE /* Manager */ = {
+		88EB391F2A172826004D60EE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				88EB39202A172AA5004D60EE /* CPU.swift */,
@@ -244,16 +244,16 @@
 				88EB39292A182902004D60EE /* Memory.swift */,
 				88EB392D2A1831A6004D60EE /* Disk.swift */,
 			);
-			path = Manager;
+			path = Managers;
 			sourceTree = "<group>";
 		};
-		88EB39262A17F5E8004D60EE /* ItemTypes */ = {
+		88EB39262A17F5E8004D60EE /* Items */ = {
 			isa = PBXGroup;
 			children = (
 				88EB391B2A1723F1004D60EE /* GraphItem.swift */,
 				88EB39242A17F5D4004D60EE /* TextItem.swift */,
 			);
-			path = ItemTypes;
+			path = Items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
