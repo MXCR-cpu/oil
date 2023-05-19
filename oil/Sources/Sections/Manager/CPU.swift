@@ -1,5 +1,5 @@
 //
-//  CPUManager.swift
+//  CPU.swift
 //  oil
 //
 //  Created by Maximus on 5/18/23.

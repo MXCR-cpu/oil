@@ -1,5 +1,5 @@
 //
-//  GPUManager.swift
+//  GPU.swift
 //  oil
 //
 //  Created by Maximus on 5/17/23.

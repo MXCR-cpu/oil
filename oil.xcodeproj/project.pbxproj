@@ -11,7 +11,6 @@
 		883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC1A2A11F80000235B35 /* oilWidget.swift */; };
 		883EBC242A11F81300235B35 /* PockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 883EBC232A11F81300235B35 /* PockKit */; };
 		883EBC272A11F86400235B35 /* SystemKit in Frameworks */ = {isa = PBXBuildFile; productRef = 883EBC262A11F86400235B35 /* SystemKit */; };
-		883EBC2A2A11F94600235B35 /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC292A11F94600235B35 /* CPU.swift */; };
 		883EBC2D2A11FBBE00235B35 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2C2A11FBBE00235B35 /* AppKit.framework */; };
 		883EBC2F2A11FC1200235B35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2E2A11FC1200235B35 /* Foundation.framework */; };
 		883EBC312A11FD1900235B35 /* oilItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC302A11FD1900235B35 /* oilItem.swift */; };
@@ -38,7 +37,7 @@
 		88EB39162A16E328004D60EE /* NSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39152A16E328004D60EE /* NSNotification.swift */; };
 		88EB391C2A1723F1004D60EE /* GraphItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB391B2A1723F1004D60EE /* GraphItem.swift */; };
 		88EB391E2A172430004D60EE /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB391D2A172430004D60EE /* Manager.swift */; };
-		88EB39212A172AA5004D60EE /* CPUManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39202A172AA5004D60EE /* CPUManager.swift */; };
+		88EB39212A172AA5004D60EE /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39202A172AA5004D60EE /* CPU.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +45,6 @@
 		883EBC162A11F80000235B35 /* oil.pock */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oil.pock; sourceTree = BUILT_PRODUCTS_DIR; };
 		883EBC1A2A11F80000235B35 /* oilWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilWidget.swift; sourceTree = "<group>"; };
 		883EBC1C2A11F80000235B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		883EBC292A11F94600235B35 /* CPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
 		883EBC2C2A11FBBE00235B35 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		883EBC2E2A11FC1200235B35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		883EBC302A11FD1900235B35 /* oilItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilItem.swift; sourceTree = "<group>"; };
@@ -70,7 +68,7 @@
 		88EB39152A16E328004D60EE /* NSNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.swift; sourceTree = "<group>"; };
 		88EB391B2A1723F1004D60EE /* GraphItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphItem.swift; sourceTree = "<group>"; };
 		88EB391D2A172430004D60EE /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
-		88EB39202A172AA5004D60EE /* CPUManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUManager.swift; sourceTree = "<group>"; };
+		88EB39202A172AA5004D60EE /* CPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				88EB391B2A1723F1004D60EE /* GraphItem.swift */,
-				883EBC292A11F94600235B35 /* CPU.swift */,
 				88EB391F2A172826004D60EE /* Manager */,
 				88EB39142A16E314004D60EE /* Extension */,
 				88BD7A6A2A136221006F7DF6 /* Graphs */,
@@ -227,8 +224,8 @@
 		88EB391F2A172826004D60EE /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				88EB39202A172AA5004D60EE /* CPU.swift */,
 				88EB38F62A14C89A004D60EE /* GPU.swift */,
-				88EB39202A172AA5004D60EE /* CPUManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -345,11 +342,10 @@
 				88860EB92A127F9E002822E1 /* BarGraph.swift in Sources */,
 				883EBC312A11FD1900235B35 /* oilItem.swift in Sources */,
 				88860EBE2A12B087002822E1 /* Preferences.swift in Sources */,
-				88EB39212A172AA5004D60EE /* CPUManager.swift in Sources */,
+				88EB39212A172AA5004D60EE /* CPU.swift in Sources */,
 				88EB39112A16E0AA004D60EE /* FanData.swift in Sources */,
 				88EB38F32A145227004D60EE /* Options.swift in Sources */,
 				88EB39132A16E1D1004D60EE /* JSONCodable.swift in Sources */,
-				883EBC2A2A11F94600235B35 /* CPU.swift in Sources */,
 				88EB390F2A16DFF7004D60EE /* TemperatureData.swift in Sources */,
 				883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */,
 				88860EBB2A12ADA5002822E1 /* Graph.swift in Sources */,
