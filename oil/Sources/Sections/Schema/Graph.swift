@@ -13,4 +13,5 @@ protocol Graph {
     var stepSize: Int { get }
     var historyLength: Int { get }
     func generateGraph(data: [Int])
+    func resize()
 }

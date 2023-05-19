@@ -13,12 +13,9 @@ import Defaults
 import IOKit
 import TinyConstraints
 
-internal class CPUItem: StatusItem {
-    private var system: System = System()
-    private var barGraph: BarGraph = BarGraph()
-    private var usage:
-        (system: Double, user: Double, idle: Double, nice: Double) = (0.0, 0.0, 0.0, 0.0)
-    private var temp: Double? = nil
+internal class GraphItem: StatusItem {
+    private var manager: Manager
+    private var graph: Graph
     private var run: Bool = true
     private var usageHistory: [Int] = []
     private var stackView: NSStackView = NSStackView(frame: .zero)
@@ -37,18 +34,15 @@ internal class CPUItem: StatusItem {
         return stackView
     }
     
+    init(manager: Manager, graph: Graph) {
+        self.manager = manager
+        self.graph = graph
+    }
+    
     func action() {}
 
     func reload() {
-        usage = system.usageCPU()
-        usageHistory = (
-            usageHistory + [Int((usage.system + usage.user))]
-        ).suffix(barGraph.historyLength)
-        SmcControl.shared.refresh()
-        temp = (SmcControl.shared.cpuDieTemperature ?? 0) > 0 ?
-            SmcControl.shared.cpuDieTemperature :
-            SmcControl.shared.cpuProximityTemperature
-        NSLog("[oil] CPU temp: \(String(describing: temp))")
+        manager.reload()
         updateValueLabel()
         updateTempLabel()
         preferenceUpdate()
@@ -77,7 +71,7 @@ internal class CPUItem: StatusItem {
     }
 
     private func configureStackView() {
-        bodyView.addArrangedSubview(barGraph.view)
+        bodyView.addArrangedSubview(graph.view)
         bodyView.orientation = .horizontal
         bodyView.alignment = .centerY
         bodyView.distribution = .fillProportionally
@@ -94,7 +88,7 @@ internal class CPUItem: StatusItem {
     private func graphRedraw() {
         updateGraph()
         if !Defaults[.shouldDisplayCpuGraph] { return }
-        barGraph.generateGraph(data: usageHistory)
+        graph.generateGraph(data: manager.usageHistory)
     }
     
     private func preferenceUpdate() {
@@ -123,24 +117,24 @@ internal class CPUItem: StatusItem {
     private func updateValueLabel() {
         valueLabel.stringValue = String(
             format: "%02d%%",
-            Int(usage.system + usage.user)
+            manager.usage ?? 0
         )
     }
     
     private func updateTempLabel() {
         tempLabel.stringValue = String(
             format: "%02.01f°C",
-            temp ?? 0.0
+            manager.temp ?? 0.0
         )
     }
     
     private func updateGraph() {
-        if barGraph.stepSize != Defaults[.cpuGraphWidth] ||
-            barGraph.historyLength != Defaults[.cpuGraphBoxCount] {
-            bodyView.removeArrangedSubview(barGraph.view)
+        if graph.stepSize != Defaults[.cpuGraphWidth] ||
+            graph.historyLength != Defaults[.cpuGraphBoxCount] {
+            bodyView.removeArrangedSubview(graph.view)
             bodyView.subviews.remove(at: 0)
-            barGraph = BarGraph()
-            bodyView.addArrangedSubview(barGraph.view)
+            graph.resize()
+            bodyView.addArrangedSubview(graph.view)
         }
     }
 }

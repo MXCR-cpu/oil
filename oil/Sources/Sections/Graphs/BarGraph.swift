@@ -13,12 +13,11 @@ class BarGraph: Graph {
     internal var view: NSView = NSView(
         frame: NSRect(x: 0, y: 0, width: 0, height: 0)
     )
-    internal var stepSize: Int
-    internal var historyLength: Int
+    internal var stepSize: Int = 0
+    internal var historyLength: Int = 0
     
-    init(stepSize: Int, historyLength: Int) {
-        self.stepSize = stepSize
-        self.historyLength = historyLength
+    init() {
+        self.resize()
     }
     
     deinit {
@@ -47,5 +46,10 @@ class BarGraph: Graph {
             }
         }
         view.layer?.backgroundColor = NSColor.clear.cgColor
+    }
+    
+    func resize() {
+        self.stepSize = Defaults[.cpuGraphWidth]
+        self.historyLength = Defaults[.cpuGraphBoxCount]
     }
 }

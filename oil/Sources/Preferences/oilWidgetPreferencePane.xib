@@ -14,6 +14,7 @@
                 <outlet property="refreshRate" destination="YrJ-vb-3LJ" id="JDe-2o-hiR"/>
                 <outlet property="showCpuGraph" destination="RUW-NR-BhP" id="Dhu-zA-jc3"/>
                 <outlet property="showCpuNumber" destination="Vm9-7C-gQh" id="XVl-mF-eOM"/>
+                <outlet property="showCpuTemp" destination="lMg-82-wM5" id="gBw-eX-vEm"/>
                 <outlet property="view" destination="c22-O7-iKe" id="eQA-au-e6h"/>
             </connections>
         </customObject>
@@ -137,7 +138,7 @@
                                     <rect key="frame" x="80" y="152" width="300" height="20"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2dw-qV-i0F">
-                                            <rect key="frame" x="-93" y="0.0" width="154" height="20"/>
+                                            <rect key="frame" x="-2" y="0.0" width="154" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="1Wx-5V-xks"/>
                                                 <constraint firstAttribute="height" constant="20" id="sKN-et-szd"/>
@@ -191,7 +192,7 @@
                                     <rect key="frame" x="80" y="112" width="300" height="20"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qr5-HL-t4E">
-                                            <rect key="frame" x="-2" y="0.0" width="154" height="20"/>
+                                            <rect key="frame" x="5" y="0.0" width="154" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="YuR-tu-ubp"/>
                                                 <constraint firstAttribute="width" constant="150" id="tHW-xs-WrO"/>
@@ -241,7 +242,7 @@
                                     <rect key="frame" x="80" y="72" width="300" height="20"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l3F-2o-WEg">
-                                            <rect key="frame" x="-2" y="0.0" width="154" height="20"/>
+                                            <rect key="frame" x="40" y="0.0" width="154" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="TaV-rc-Tjk"/>
                                                 <constraint firstAttribute="width" constant="150" id="plN-jb-hHP"/>
@@ -257,12 +258,12 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="bhl-gP-GFN"/>
                                             </constraints>
-                                            <popUpButtonCell key="cell" type="push" title="Bar" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" tag="331" imageScaling="proportionallyDown" inset="2" selectedItem="YQf-Pl-O1o" id="iSH-oe-Hby">
+                                            <popUpButtonCell key="cell" type="push" title="Bar" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="331" imageScaling="proportionallyDown" inset="2" selectedItem="YQf-Pl-O1o" id="iSH-oe-Hby">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="menu"/>
                                                 <menu key="menu" id="5Dv-Bx-1Bj">
                                                     <items>
-                                                        <menuItem title="Bar" tag="331" id="YQf-Pl-O1o"/>
+                                                        <menuItem title="Bar" state="on" tag="331" id="YQf-Pl-O1o"/>
                                                         <menuItem title="Line" tag="332" id="H19-dZ-JbC"/>
                                                         <menuItem title="Spline" tag="333" id="HOn-3b-fHd">
                                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -292,7 +293,7 @@
                                     <rect key="frame" x="80" y="32" width="300" height="20"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B03-bH-LMk">
-                                            <rect key="frame" x="-2" y="0.0" width="154" height="20"/>
+                                            <rect key="frame" x="40" y="0.0" width="154" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="5YP-5o-SRL"/>
                                                 <constraint firstAttribute="height" constant="20" id="sD7-t9-jsg"/>
@@ -304,7 +305,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2sB-zZ-2Z6">
-                                            <rect key="frame" x="155" y="-4" width="107" height="25"/>
+                                            <rect key="frame" x="197" y="-4" width="107" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="jFn-vL-VRI"/>
                                             </constraints>
@@ -337,6 +338,20 @@
                                         <real value="3.4028234663852886e+38"/>
                                     </customSpacing>
                                 </stackView>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lMg-82-wM5" userLabel="Show Temperature">
+                                    <rect key="frame" x="18" y="-1" width="202" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="200" id="8CJ-2y-L0s"/>
+                                        <constraint firstAttribute="height" constant="20" id="ciU-8R-Nyf"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="check" title="Show Temperature" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="vLu-3K-OHh" userLabel="Show Temperature">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="didChangeCheckboxValue:" target="-2" id="E5q-7P-OKE"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="EFF-0W-hdi" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="80" id="0Zb-d3-RBe"/>
@@ -344,6 +359,7 @@
                                 <constraint firstItem="GPJ-Wm-WTb" firstAttribute="top" secondItem="e6e-Ha-vPo" secondAttribute="bottom" constant="20" id="3HZ-U1-mVY"/>
                                 <constraint firstItem="RUW-NR-BhP" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="20" id="B7Z-HO-Dut"/>
                                 <constraint firstItem="tO1-7N-WuP" firstAttribute="top" secondItem="EFF-0W-hdi" secondAttribute="bottom" constant="20" id="BNL-fF-G4L"/>
+                                <constraint firstItem="lMg-82-wM5" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="20" id="DIK-ex-D8X"/>
                                 <constraint firstItem="e6e-Ha-vPo" firstAttribute="top" secondItem="tO1-7N-WuP" secondAttribute="bottom" constant="20" id="KRn-M8-Sgk"/>
                                 <constraint firstItem="Vm9-7C-gQh" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="20" id="OxZ-U0-4tZ"/>
                                 <constraint firstItem="e6e-Ha-vPo" firstAttribute="leading" secondItem="aTE-4N-b5W" secondAttribute="leading" constant="80" id="YYb-hK-l8b"/>
@@ -360,8 +376,10 @@
                                 <integer value="1000"/>
                                 <integer value="1000"/>
                                 <integer value="1000"/>
+                                <integer value="1000"/>
                             </visibilityPriorities>
                             <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>
                                 <real value="3.4028234663852886e+38"/>

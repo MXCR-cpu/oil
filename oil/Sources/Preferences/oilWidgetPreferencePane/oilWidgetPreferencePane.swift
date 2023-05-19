@@ -23,9 +23,14 @@ class oilWidgetPreferencePane:
     @IBOutlet weak var cpuGraphBoxCount: NSComboBox!
     @IBOutlet weak var cpuGraphType: NSPopUpButton!
     @IBOutlet weak var cpuGraphFunction: NSPopUpButton!
+    @IBOutlet weak var showCpuTemp: NSButton!
     /*
-    @IBOutlet weak var cpuGraphType: NSComboBox!
-    @IBOutlet weak var cpuGraphFunction: NSComboBox!
+    @IBOutlet weak var showGpuNumber: NSButton!
+    @IBOutlet weak var showGpuGraph: NSButton!
+    @IBOutlet weak var gpuGraphWidth: NSComboBox!
+    @IBOutlet weak var gpuGraphBoxCount: NSComboBox!
+    @IBOutlet weak var gpuGraphType: NSPopUpButton!
+    @IBOutlet weak var gpuGraphFunction: NSPopUpButton!
     */
     
     func reset() {
@@ -57,6 +62,7 @@ class oilWidgetPreferencePane:
         self.cpuGraphFunction.enclosingMenuItem?.state = .init(
             rawValue: Defaults[.cpuGraphFunction].rawValue
         )
+        self.showCpuTemp.state = Defaults[.shouldDisplayCpuTemp] ? .on : .off
     }
     
     @IBAction func didChangeCheckboxValue(_ checkbox: NSButton) {
@@ -66,6 +72,8 @@ class oilWidgetPreferencePane:
             key = .shouldDisplayCpuNumber
         case 3:
             key = .shouldDisplayCpuGraph
+        case 4:
+            key = .shouldDisplayCpuTemp
         default:
             return
         }

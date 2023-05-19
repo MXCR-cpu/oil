@@ -17,6 +17,7 @@ extension Defaults.Keys {
     static let cpuGraphBoxCount = Key<Int>("cpuGraphBoxCount", default: 5)
     static let cpuGraphType = Key<GraphType>("cpuGraphType", default: .bar)
     static let cpuGraphFunction = Key<GraphFunction>("cpuGraphFunction", default: .linear)
+    static let shouldDisplayCpuTemp = Key<Bool>("shouldDisplayCpuGraph", default: true)
     
     static let shouldDisplayGpuNumber = Key<Bool>("shouldDisplayGpuNumber", default: true)
     static let shouldDisplayGpuGraph = Key<Bool>("shouldDisplayGpuGraph", default: true)

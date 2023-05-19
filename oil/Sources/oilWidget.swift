@@ -7,15 +7,16 @@
 //
 
 import Foundation
+import Defaults
 import AppKit
 import PockKit
 import SystemKit
 import TinyConstraints
 
 class oilWidget: PKWidget {
-    
     static var identifier: String = "mxcr.cpu.oil"
     var customizationLabel: String = "oil"
+    var run: Bool = true
     var view: NSView!
     private var stackView: NSStackView {
         return view as! NSStackView
@@ -53,17 +54,31 @@ class oilWidget: PKWidget {
         loadedItems.removeAll()
     }
     
+    private func reloadCall() {
+        for item in loadedItems {
+            item.reload()
+        }
+        if run {
+            DispatchQueue.main.asyncAfter(
+                deadline: .now() + Double(Defaults[.refreshRate])
+            ) {
+                self.reloadCall()
+            }
+        }
+    }
+    
     @objc private func loadStatusElement() {
         clearItems()
-        let cpu_item = CPUItem()
+        let cpu_item = GraphItem(manager: CPUManager(), graph: BarGraph())
         cpu_item.didLoad()
         loadedItems.append(cpu_item)
         stackView.addArrangedSubview(cpu_item.view)
-        let gpu_item = GPUItem()
+        let gpu_item = GraphItem(manager: GPUManager(), graph: BarGraph())
         gpu_item.didLoad()
         loadedItems.append(gpu_item)
         stackView.addArrangedSubview(gpu_item.view)
         stackView.height(30)
+        reloadCall()
     }
     
     @objc private func printMessage() {
