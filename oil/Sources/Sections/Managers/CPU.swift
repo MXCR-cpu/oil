@@ -17,7 +17,6 @@ internal class CPUManager: Manager {
     var usage: Int? = nil
     var usageString: [String]? = nil
     var temp: Double? = nil
-    //var tempString: String? = nil
     var usageHistory: [Int] = []
 
     func reload() {

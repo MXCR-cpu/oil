@@ -13,7 +13,6 @@ internal class MemoryManager: Manager {
     var usageString: [String]? = nil
     var usageHistory: [Int] = []
     var temp: Double? = nil
-    //var tempString: String? = nil
     private var free: Double = 0
     private var active: Double = 0
     private var inactive: Double = 0

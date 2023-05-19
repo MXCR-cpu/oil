@@ -12,14 +12,12 @@ internal class DiskManager: Manager {
     var usageString: [String]? = nil
     var usageHistory: [Int] = []
     var temp: Double? = nil
-    //var tempString: String? = nil
     
     func reload() {
         guard let volumes =
                 (try? FileManager.default.contentsOfDirectory(atPath: "/Volumes"))
         else { return }
         
-        //NSLog("[oil] volumes: \(volumes)")
         if volumes[0].starts(with: ".") ||
             volumes[0].contains("com.apple") { return }
 

@@ -18,7 +18,6 @@ internal class FanManager: Manager {
     var usageString: [String]? = nil
     var usageHistory: [Int] = []
     var temp: Double? = nil
-    //var tempString: String? = nil
     
     func reload() {
         usage = SmcControl.shared.fans[0].currentSpeed
