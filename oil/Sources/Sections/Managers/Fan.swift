@@ -14,6 +14,7 @@ import IOKit
 import TinyConstraints
 
 internal class FanManager: Manager {
+    var title: String { return "FanManager" }
     var usage: Int? = nil
     var usageString: [String]? = nil
     var usageHistory: [Int] = []

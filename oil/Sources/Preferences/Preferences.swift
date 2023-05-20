@@ -11,6 +11,8 @@ import Defaults
 extension Defaults.Keys {
     static let refreshRate = Key<Int>("refreshRate", default: 1)
 
+    static let textDisplay = Key<DisplayText>("textDisplay", default: .stacked)
+    
     static let shouldDisplayCpuNumber = Key<Bool>("shouldDisplayCpuNumber", default: true)
     static let shouldDisplayCpuGraph = Key<Bool>("shouldDisplayCpuGraph", default: true)
     static let cpuGraphWidth = Key<Int>("cpuGraphWidth", default: 10)

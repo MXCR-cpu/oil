@@ -14,6 +14,7 @@ import IOKit
 import TinyConstraints
 
 internal class CPUManager: Manager {
+    var title: String { return "CPUManager" }
     var usage: Int? = nil
     var usageString: [String]? = nil
     var temp: Double? = nil

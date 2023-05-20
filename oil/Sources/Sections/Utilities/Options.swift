@@ -18,3 +18,8 @@ enum GraphFunction: Int, Defaults.Serializable {
     case linear = 1
     case squareRoot = 2
 }
+
+enum DisplayText: Int, Defaults.Serializable {
+    case line = 1
+    case stacked = 2
+}

@@ -7,12 +7,16 @@
 
 import Foundation
 import AppKit
+import SwiftUI
+import Defaults
 
 internal class TextItem: StatusItem {
     private var manager: Manager
-    private var stackView: NSStackView = NSStackView(frame: .zero)
+    private var stackView: NSStackView =
+        NSStackView(frame: NSRect(x: 0, y:0, width: 18, height: 18))
     private var label: NSTextField =
         NSTextField(labelWithString: "NaN")
+    private var labelArray: [NSTextField] = []
     var enabled: Bool { return true }
     var title: String { return "TextItem" }
     var view: NSView { return stackView }
@@ -25,40 +29,56 @@ internal class TextItem: StatusItem {
     
     func reload() {
         manager.reload()
-        updateValueLabel()
+        updateLabel()
         preferenceUpdate()
     }
     
     func didLoad() {
-        configureLabel(label: label)
+        manager.reload()
         configureStackView()
-        reload()
     }
     
     func didUnload() {}
     
     private func configureLabel(label: NSTextField) {
-        label.font = NSFont.monospacedDigitSystemFont(
-            ofSize: 13,
-            weight: .regular
-        )
-        label.maximumNumberOfLines = 1
+        switch Defaults[.textDisplay] {
+        case .line:
+            label.font = NSFont.monospacedDigitSystemFont(ofSize: 13,
+                                                          weight: .regular)
+        case .stacked:
+            label.font = NSFont.monospacedDigitSystemFont(ofSize: 8,
+                                                          weight: .regular)
+        }
         label.sizeToFit()
     }
     
     private func configureStackView() {
-        stackView.orientation = .horizontal
-        stackView.alignment = .centerY
-        stackView.distribution = .fillProportionally
-        stackView.spacing = 5
-        stackView.addArrangedSubview(label)
+        switch Defaults[.textDisplay] {
+        case .line:
+            stackView.orientation = .horizontal
+            stackView.distribution = .fillProportionally
+            stackView.alignment = .centerY
+        case .stacked:
+            stackView.orientation = .vertical
+            stackView.alignment = .right
+        }
+        stackView.spacing = 3
+        labelArray = manager.usageString?.compactMap {
+            let textField = NSTextField(labelWithString: $0)
+            configureLabel(label: textField)
+            stackView.addArrangedSubview(textField)
+            return textField
+        } ?? []
     }
 
     private func preferenceUpdate() {}
 
-    private func updateValueLabel() {
-        label.stringValue = manager.usageString?.reduce("") {
-            $0 + " " + $1
-        } ?? "NaN"
+    private func updateLabel() {
+        guard let newStringArray = manager.usageString else {
+            return
+        }
+        for idx in 0..<labelArray.count {
+            labelArray[idx].stringValue = newStringArray[idx]
+        }
     }
 }

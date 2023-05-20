@@ -9,6 +9,7 @@ import Foundation
 import SystemKit
 
 internal class MemoryManager: Manager {
+    var title: String { return "MemoryManager" }
     var usage: Int? = nil
     var usageString: [String]? = nil
     var usageHistory: [Int] = []
