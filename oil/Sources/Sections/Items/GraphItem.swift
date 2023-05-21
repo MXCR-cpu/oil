@@ -50,7 +50,6 @@ internal class GraphItem: StatusItem {
 
     func didUnload() {
         textView?.didUnload()
-        //removeViewFromStackView(view: textView)
         removeViewFromStackView(view: graphView)
         enabled = false
     }

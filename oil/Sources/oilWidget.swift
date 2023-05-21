@@ -57,11 +57,10 @@ class oilWidget: PKWidget {
     private func reloadCall() {
         SmcControl.shared.refresh()
         for item in loadedItems {
-            if (Defaults[.itemsDisplay] &
-                item.manager.id) != 0 && !item.enabled {
+            if !item.enabled {
                 item.didLoad()
-                item.reload()
-            } else if (Defaults[.itemsDisplay] &
+            }
+            if (Defaults[.itemsDisplay] &
                 item.manager.id) != 0 {
                 item.reload()
             } else if item.enabled {
