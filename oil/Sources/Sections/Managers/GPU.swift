@@ -23,19 +23,22 @@ internal class GPUManager: Manager {
                 IOHelper.getPropertyList(for: kIOAcceleratorClassName) else {
             return
         }
-        /* Perhaps utilize a better way to collect the data from the list */
-        guard
-            let statistics =
-                propertyList[0]["PerformanceStatistics"] as? [String: Any],
-            let usagePercentage =
-                statistics["Device Utilization %"] as? Int ??
+        let st = propertyList.compactMap {
+            guard
+                let statistics =
+                    $0["PerformanceStatistics"] as? [String: Any],
+                let usagePercentage =
+                    statistics["Device Utilization %"] as? Int ??
                     statistics["GPU Activity(%)"] as? Int
-        else {
-            return
+            else {
+                return (usage: 0, temp: 0.0)
+            }
+            return (usage: usagePercentage,
+                    temp: statistics["Temperature(C)"] as? Double ??
+                    SmcControl.shared.gpuProximityTemperature ?? 0)
         }
-        usage = usagePercentage
-        temp = statistics["Temperature(C)"] as? Double ??
-            SmcControl.shared.gpuProximityTemperature
+        usage = st[0].usage
+        temp = st[0].temp
         usageHistory = (usageHistory + [usage ?? 0])
             .suffix(Defaults[.graphLength])
         usageString = [
