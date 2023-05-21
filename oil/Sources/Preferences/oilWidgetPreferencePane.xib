@@ -102,12 +102,12 @@
                             </connections>
                         </button>
                         <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="35" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-b4-b5x" userLabel="Length">
-                            <rect key="frame" x="30" y="116" width="200" height="20"/>
+                            <rect key="frame" x="60" y="116" width="150" height="20"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5JQ-To-oJJ">
-                                    <rect key="frame" x="-2" y="2" width="104" height="16"/>
+                                    <rect key="frame" x="-2" y="2" width="79" height="16"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="100" id="0N3-PP-Np5"/>
+                                        <constraint firstAttribute="width" constant="75" id="0N3-PP-Np5"/>
                                     </constraints>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Length" id="jUU-HE-7JV">
                                         <font key="font" usesAppearanceFont="YES"/>
@@ -116,9 +116,9 @@
                                     </textFieldCell>
                                 </textField>
                                 <comboBox verticalHuggingPriority="750" tag="31" translatesAutoresizingMaskIntoConstraints="NO" id="Gka-ZH-vhY">
-                                    <rect key="frame" x="99" y="-2" width="104" height="23"/>
+                                    <rect key="frame" x="74" y="-2" width="79" height="23"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="100" id="bNt-Ha-puI"/>
+                                        <constraint firstAttribute="width" constant="75" id="bNt-Ha-puI"/>
                                     </constraints>
                                     <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="5" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="cYQ-cR-vYn">
                                         <font key="font" metaFont="system"/>
@@ -139,8 +139,6 @@
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="6RV-tc-5Cn"/>
-                                <constraint firstItem="Gka-ZH-vhY" firstAttribute="leading" secondItem="5JQ-To-oJJ" secondAttribute="trailing" id="SEa-Ob-fuo"/>
-                                <constraint firstItem="Gka-ZH-vhY" firstAttribute="leading" secondItem="5JQ-To-oJJ" secondAttribute="trailing" id="gpZ-TJ-nTC"/>
                                 <constraint firstItem="Gka-ZH-vhY" firstAttribute="leading" secondItem="5JQ-To-oJJ" secondAttribute="trailing" id="zpS-ck-Iuo"/>
                             </constraints>
                             <visibilityPriorities>
@@ -153,13 +151,12 @@
                             </customSpacing>
                         </stackView>
                         <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSs-0o-Awf" userLabel="Box Width">
-                            <rect key="frame" x="30" y="86" width="200" height="20"/>
+                            <rect key="frame" x="60" y="86" width="150" height="20"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FCb-HS-02v">
-                                    <rect key="frame" x="-2" y="2" width="104" height="16"/>
+                                    <rect key="frame" x="-2" y="2" width="79" height="16"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="2Ge-FD-Nra"/>
-                                        <constraint firstAttribute="width" constant="100" id="6uO-3x-dpu"/>
+                                        <constraint firstAttribute="width" constant="75" id="6uO-3x-dpu"/>
                                     </constraints>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Box Width" id="8tT-6Z-cm1">
                                         <font key="font" usesAppearanceFont="YES"/>
@@ -168,9 +165,9 @@
                                     </textFieldCell>
                                 </textField>
                                 <comboBox verticalHuggingPriority="750" tag="32" translatesAutoresizingMaskIntoConstraints="NO" id="vGs-45-bVM">
-                                    <rect key="frame" x="99" y="-2" width="104" height="23"/>
+                                    <rect key="frame" x="74" y="-2" width="79" height="23"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="100" id="A0N-ic-2Zp"/>
+                                        <constraint firstAttribute="width" constant="75" id="A0N-ic-2Zp"/>
                                     </constraints>
                                     <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="5" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="SgM-m2-gHQ">
                                         <font key="font" metaFont="system"/>
@@ -202,12 +199,12 @@
                             </customSpacing>
                         </stackView>
                         <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z2R-6q-vBM" userLabel="Type">
-                            <rect key="frame" x="30" y="56" width="200" height="20"/>
+                            <rect key="frame" x="60" y="56" width="150" height="20"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XlU-X5-OTo">
-                                    <rect key="frame" x="-2" y="4" width="104" height="16"/>
+                                    <rect key="frame" x="-2" y="4" width="79" height="16"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="100" id="95I-Pc-ZlT"/>
+                                        <constraint firstAttribute="width" constant="75" id="95I-Pc-ZlT"/>
                                     </constraints>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Type" id="RbL-CQ-kbY">
                                         <font key="font" usesAppearanceFont="YES"/>
@@ -216,9 +213,9 @@
                                     </textFieldCell>
                                 </textField>
                                 <popUpButton verticalHuggingPriority="750" tag="33" translatesAutoresizingMaskIntoConstraints="NO" id="NT5-ab-GtU" userLabel="Type">
-                                    <rect key="frame" x="97" y="-4" width="107" height="25"/>
+                                    <rect key="frame" x="72" y="-4" width="82" height="25"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="100" id="Olw-aU-f5x"/>
+                                        <constraint firstAttribute="width" constant="75" id="Olw-aU-f5x"/>
                                     </constraints>
                                     <popUpButtonCell key="cell" type="push" title="Bar" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="iKU-5l-Quy" id="h2L-QA-bfZ">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -359,15 +356,15 @@
                         <constraint firstItem="GkN-wR-Z7l" firstAttribute="top" secondItem="taS-k9-wHN" secondAttribute="bottom" constant="10" id="FR2-CX-vJR"/>
                         <constraint firstItem="L30-0H-2sV" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="20" id="IdN-RA-V5E"/>
                         <constraint firstItem="pJH-hw-oMt" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="20" id="Ks1-T5-c4U"/>
-                        <constraint firstItem="z2R-6q-vBM" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="30" id="L2E-eg-vSK"/>
+                        <constraint firstItem="z2R-6q-vBM" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="60" id="L2E-eg-vSK"/>
                         <constraint firstItem="L30-0H-2sV" firstAttribute="top" secondItem="pJH-hw-oMt" secondAttribute="bottom" constant="10" id="Mkm-Lt-FLn"/>
                         <constraint firstItem="taS-k9-wHN" firstAttribute="top" secondItem="z2R-6q-vBM" secondAttribute="bottom" constant="10" id="N0n-zH-9f3"/>
-                        <constraint firstItem="bsa-b4-b5x" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="30" id="Pnm-uI-Cdu"/>
+                        <constraint firstItem="bsa-b4-b5x" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="60" id="Pnm-uI-Cdu"/>
                         <constraint firstItem="z2R-6q-vBM" firstAttribute="top" secondItem="RSs-0o-Awf" secondAttribute="bottom" constant="10" id="S7o-RD-dgI"/>
                         <constraint firstItem="RSs-0o-Awf" firstAttribute="top" secondItem="bsa-b4-b5x" secondAttribute="bottom" constant="10" id="XOG-QS-XS1"/>
                         <constraint firstItem="GkN-wR-Z7l" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" id="elf-qZ-vzl"/>
                         <constraint firstItem="IOc-qJ-NYD" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="20" id="f2n-0e-vHO"/>
-                        <constraint firstItem="RSs-0o-Awf" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="30" id="fcK-w6-1iv"/>
+                        <constraint firstItem="RSs-0o-Awf" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="60" id="fcK-w6-1iv"/>
                         <constraint firstItem="bsa-b4-b5x" firstAttribute="top" secondItem="IOc-qJ-NYD" secondAttribute="bottom" constant="10" id="nmQ-Tk-zf6"/>
                     </constraints>
                     <visibilityPriorities>

@@ -15,6 +15,7 @@ import TinyConstraints
 
 internal class CPUManager: Manager {
     var title: String { return "CPUManager" }
+    var id: Int { return 1 << 0 }
     var usage: Int? = nil
     var usageString: [String]? = nil
     var temp: Double? = nil

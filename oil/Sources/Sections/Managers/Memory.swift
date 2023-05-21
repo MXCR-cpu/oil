@@ -10,6 +10,7 @@ import SystemKit
 
 internal class MemoryManager: Manager {
     var title: String { return "MemoryManager" }
+    var id: Int { return 1 << 3 }
     var usage: Int? = nil
     var usageString: [String]? = nil
     var usageHistory: [Int] = []

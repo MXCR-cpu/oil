@@ -11,13 +11,16 @@ import SwiftUI
 import Defaults
 
 internal class TextItem: StatusItem {
-    private var manager: Manager
+    var manager: Manager
     private var stackView: NSStackView =
-        NSStackView(frame: NSRect(x: 0, y:0, width: 18, height: 18))
+        NSStackView(frame: NSRect(x: 0,
+                                  y: 0,
+                                  width: 18,
+                                  height: 18))
     private var label: NSTextField =
         NSTextField(labelWithString: "NaN")
     private var labelArray: [NSTextField] = []
-    var enabled: Bool { return true }
+    var enabled: Bool = true
     var title: String { return "TextItem" }
     var view: NSView { return stackView }
     
@@ -36,9 +39,15 @@ internal class TextItem: StatusItem {
     func didLoad() {
         manager.reload()
         configureStackView()
+        enabled = true
     }
     
-    func didUnload() {}
+    func didUnload() {
+        for label in labelArray {
+            removeViewFromStackView(view: label)
+        }
+        enabled = false
+    }
     
     private func configureLabel(label: NSTextField) {
         label.font = NSFont.monospacedDigitSystemFont(ofSize: Defaults[.stackedText] ?
@@ -76,4 +85,17 @@ internal class TextItem: StatusItem {
             labelArray[idx].stringValue = newStringArray[idx]
         }
     }
+
+    private func removeViewFromStackView(view: NSView) {
+        let labelPos: Int = stackView
+            .arrangedSubviews
+            .firstIndex(of: view) ?? -1
+        stackView.removeArrangedSubview(view)
+        if labelPos >= 0 {
+            stackView
+                .subviews
+                .remove(at: labelPos)
+        }
+    }
+
 }

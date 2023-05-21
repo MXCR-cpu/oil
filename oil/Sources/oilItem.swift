@@ -17,7 +17,8 @@ class StatusItemView: PKView {
 }
 
 protocol StatusItem: AnyObject {
-    var enabled: Bool   { get }
+    var manager: Manager { get }
+    var enabled: Bool   { get set }
     var title:   String { get }
     var view:    NSView { get }
     func action()

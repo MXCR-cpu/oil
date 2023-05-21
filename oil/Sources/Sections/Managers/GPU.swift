@@ -13,6 +13,7 @@ import Defaults
 
 internal class GPUManager: Manager {
     var title: String { return "GPUManager" }
+    var id: Int { return 1 << 1 }
     var usage: Int? = nil
     var usageString: [String]? = nil
     var temp: Double? = nil

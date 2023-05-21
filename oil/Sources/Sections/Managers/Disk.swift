@@ -9,6 +9,7 @@ import Foundation
 
 internal class DiskManager: Manager {
     var title: String { return "DiskManager" }
+    var id: Int { return 1 << 4 }
     var usage: Int? = nil
     var usageString: [String]? = nil
     var usageHistory: [Int] = []

@@ -14,15 +14,14 @@ import IOKit
 import TinyConstraints
 
 internal class GraphItem: StatusItem {
-    private var manager: Manager
+    var manager: Manager
     private var graph: Graph
     private var usageHistory: [Int] = []
     private var stackView: NSStackView = NSStackView(frame: .zero)
     private var graphView: NSStackView = NSStackView(frame: .zero)
-    //private var textView: NSStackView = NSStackView(frame: .zero)
     private var textView: TextItem? = nil
     private var labelArray: [NSTextField] = []
-    var enabled: Bool { return true }
+    var enabled: Bool = true
     var title: String { return "CPUItem" }
     var view: NSView { return stackView }
     
@@ -46,10 +45,14 @@ internal class GraphItem: StatusItem {
 
     func didLoad() {
         configureStackView()
+        enabled = true
     }
 
     func didUnload() {
         textView?.didUnload()
+        //removeViewFromStackView(view: textView)
+        removeViewFromStackView(view: graphView)
+        enabled = false
     }
     
     /// Utility
@@ -104,10 +107,14 @@ internal class GraphItem: StatusItem {
     }
     
     private func removeViewFromStackView(view: NSView) {
-        let labelPos: Int = stackView.arrangedSubviews.firstIndex(of: view) ?? -1
+        let labelPos: Int = stackView
+            .arrangedSubviews
+            .firstIndex(of: view) ?? -1
         stackView.removeArrangedSubview(view)
         if labelPos >= 0 {
-            stackView.subviews.remove(at: labelPos)
+            stackView
+                .subviews
+                .remove(at: labelPos)
         }
     }
     

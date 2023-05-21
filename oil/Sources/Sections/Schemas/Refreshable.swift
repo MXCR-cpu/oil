@@ -18,6 +18,8 @@ protocol Refreshable: RefreshableObjC {
 
 extension Refreshable {
     func initObserver(for name: NSNotification.Name) {
-        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: name, object: nil)
+        NotificationCenter
+            .default
+            .addObserver(self, selector: #selector(refresh), name: name, object: nil)
     }
 }

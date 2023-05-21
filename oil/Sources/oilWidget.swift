@@ -57,12 +57,21 @@ class oilWidget: PKWidget {
     private func reloadCall() {
         SmcControl.shared.refresh()
         for item in loadedItems {
-            item.reload()
+            if (Defaults[.itemsDisplay] &
+                item.manager.id) != 0 && !item.enabled {
+                item.didLoad()
+                item.reload()
+            } else if (Defaults[.itemsDisplay] &
+                item.manager.id) != 0 {
+                item.reload()
+            } else if item.enabled {
+                item.didUnload()
+            }
         }
         if run {
-            DispatchQueue.main.asyncAfter(
-                deadline: .now() + Double(Defaults[.refreshRate])
-            ) {
+            DispatchQueue
+                .main
+                .asyncAfter(deadline: .now() + Double(Defaults[.refreshRate])) {
                 self.reloadCall()
             }
         }

@@ -15,6 +15,7 @@ import TinyConstraints
 
 internal class FanManager: Manager {
     var title: String { return "FanManager" }
+    var id: Int { return 1 << 2 }
     var usage: Int? = nil
     var usageString: [String]? = nil
     var usageHistory: [Int] = []

@@ -9,6 +9,7 @@ import Foundation
 
 protocol Manager {
     var title: String { get }
+    var id: Int { get }
     var usage: Int? { get }
     var usageString: [String]? { get }
     var usageHistory: [Int] { get }

@@ -16,7 +16,11 @@ enum IOHelper {
             serviceDict?.release()
         }
 
-        if IORegistryEntryCreateCFProperties(entry, &serviceDict, kCFAllocatorDefault, 0) != kIOReturnSuccess {
+        if IORegistryEntryCreateCFProperties(entry,
+                                             &serviceDict,
+                                             kCFAllocatorDefault,
+                                             0) !=
+            kIOReturnSuccess {
             return nil
         }
 
@@ -30,11 +34,10 @@ enum IOHelper {
             IOObjectRelease(iterator)
         }
 
-        guard IOServiceGetMatchingServices(
-            kIOMainPortDefault,
-            IOServiceMatching(service),
-            &iterator
-        ) == kIOReturnSuccess else {
+        guard IOServiceGetMatchingServices(kIOMainPortDefault,
+                                           IOServiceMatching(service),
+                                           &iterator) ==
+                kIOReturnSuccess else {
             return nil
         }
 
