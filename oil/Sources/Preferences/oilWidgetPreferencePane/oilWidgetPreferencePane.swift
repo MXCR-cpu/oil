@@ -17,6 +17,7 @@ class oilWidgetPreferencePane:
     static var nibName: NSNib.Name = "oilWidgetPreferencePane"
     @IBOutlet weak var stackedText: NSButton!
     @IBOutlet weak var refreshRate: NSComboBox!
+    @IBOutlet weak var displayGraph: NSButton!
     @IBOutlet weak var graphLength: NSComboBox!
     @IBOutlet weak var graphWidth: NSComboBox!
     @IBOutlet weak var graphType: NSPopUpButton!
@@ -58,6 +59,8 @@ class oilWidgetPreferencePane:
         switch checkbox.tag {
         case 1:
             Defaults[.stackedText] = checkbox.state == .on
+        case 3:
+            Defaults[.displayGraph] = checkbox.state == .on
         default:
             Defaults[.itemsDisplay] = Defaults[.itemsDisplay] ^ (1 << (checkbox.tag - 41))
         }

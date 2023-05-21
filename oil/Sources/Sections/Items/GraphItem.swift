@@ -38,17 +38,19 @@ internal class GraphItem: StatusItem {
 
     func reload() {
         preferenceUpdate()
-        //manager.reload()
         updateLabel()
-        graphRedraw()
+        if Defaults[.displayGraph] {
+            graphRedraw()
+        }
     }
 
     func didLoad() {
-        //manager.reload()
         configureStackView()
     }
 
-    func didUnload() {}
+    func didUnload() {
+        textView?.didUnload()
+    }
     
     /// Utility
     private func configureLabel(label: NSTextField) {
@@ -61,39 +63,28 @@ internal class GraphItem: StatusItem {
     }
 
     private func configureStackView() {
-        /*
-        if Defaults[.stackedText] {
-            textView.orientation = .horizontal
-            textView.distribution = .fillProportionally
-            textView.alignment = .centerY
-        } else {
-            textView.orientation = .vertical
-            textView.alignment = .right
-        }
-        textView.spacing = 3
-        */
         textView = TextItem(manager: manager)
         textView?.didLoad()
         labelArray = manager.usageString?.compactMap {
             let textField = NSTextField(labelWithString: $0)
             configureLabel(label: textField)
-            //textView.addArrangedSubview(textField)
             return textField
         } ?? []
-        graphView.addArrangedSubview(graph.view)
-        graphView.orientation = .horizontal
-        graphView.alignment = .centerY
-        graphView.distribution = .fillProportionally
-        graphView.width(CGFloat(Defaults[.graphWidth] *
-                               Defaults[.graphLength]))
         stackView.orientation = .horizontal
         stackView.alignment = .centerY
         stackView.distribution = .fillProportionally
         stackView.spacing = 5
-        //stackView.addArrangedSubview(textView)
         stackView.addArrangedSubview(textView?.view ??
                                      NSStackView(frame: .zero))
-        stackView.addArrangedSubview(graphView)
+        if Defaults[.displayGraph] {
+            graphView.addArrangedSubview(graph.view)
+            graphView.orientation = .horizontal
+            graphView.alignment = .centerY
+            graphView.distribution = .fillProportionally
+            graphView.width(CGFloat(Defaults[.graphWidth] *
+                                    Defaults[.graphLength]))
+            stackView.addArrangedSubview(graphView)
+        }
     }
 
     private func graphRedraw() {
@@ -110,15 +101,6 @@ internal class GraphItem: StatusItem {
                     stackView.arrangedSubviews.contains(graphView) {
             removeViewFromStackView(view: graphView)
         }
-        /*
-        if Defaults[.shouldDisplayCpuNumber] &&
-            !stackView.arrangedSubviews.contains(textView) {
-            stackView.insertArrangedSubview(textView, at: 0)
-        } else if !Defaults[.shouldDisplayCpuNumber] &&
-                    stackView.arrangedSubviews.contains(textView) {
-            removeViewFromStackView(view: textView)
-        }
-        */
     }
     
     private func removeViewFromStackView(view: NSView) {
@@ -130,14 +112,6 @@ internal class GraphItem: StatusItem {
     }
     
     private func updateLabel() {
-        /*
-        guard let newStringArray = manager.usageString else {
-            return
-        }
-        for idx in 0..<labelArray.count {
-            labelArray[idx].stringValue = newStringArray[idx]
-        }
-        */
         textView?.reload()
     }
 

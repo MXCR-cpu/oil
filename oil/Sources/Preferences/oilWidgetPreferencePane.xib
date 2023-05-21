@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="oilWidgetPreferencePane" customModule="oil" customModuleProvider="target">
             <connections>
+                <outlet property="displayGraph" destination="IOc-qJ-NYD" id="eEf-Gy-eKv"/>
                 <outlet property="graphLength" destination="Gka-ZH-vhY" id="wQA-Vh-R1p"/>
                 <outlet property="graphType" destination="NT5-ab-GtU" id="GSZ-74-mEk"/>
                 <outlet property="graphWidth" destination="vGs-45-bVM" id="KQu-cG-ogg"/>
@@ -23,13 +24,13 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView translatesAutoresizingMaskIntoConstraints="NO" id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="447" height="262"/>
+            <rect key="frame" x="0.0" y="0.0" width="447" height="258"/>
             <subviews>
                 <stackView distribution="equalSpacing" orientation="vertical" alignment="centerX" spacing="77" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5GW-OY-Emk" userLabel="Base">
-                    <rect key="frame" x="20" y="20" width="407" height="222"/>
+                    <rect key="frame" x="20" y="20" width="407" height="218"/>
                     <subviews>
                         <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="pJH-hw-oMt">
-                            <rect key="frame" x="18" y="205" width="202" height="18"/>
+                            <rect key="frame" x="18" y="201" width="202" height="18"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="200" id="tdz-Ey-7q8"/>
                             </constraints>
@@ -42,7 +43,7 @@
                             </connections>
                         </button>
                         <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L30-0H-2sV" userLabel="Refresh">
-                            <rect key="frame" x="20" y="176" width="255" height="20"/>
+                            <rect key="frame" x="20" y="172" width="255" height="20"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gy0-Fv-azv">
                                     <rect key="frame" x="-2" y="2" width="204" height="16"/>
@@ -87,18 +88,19 @@
                                 <real value="3.4028234663852886e+38"/>
                             </customSpacing>
                         </stackView>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="woY-SD-3SP">
-                            <rect key="frame" x="18" y="146" width="54" height="20"/>
+                        <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-qJ-NYD">
+                            <rect key="frame" x="18" y="145" width="202" height="18"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="50" id="FPS-gs-KU1"/>
-                                <constraint firstAttribute="height" constant="20" id="cJb-cQ-YQj"/>
+                                <constraint firstAttribute="width" constant="200" id="cf1-yF-Afo"/>
                             </constraints>
-                            <textFieldCell key="cell" lineBreakMode="clipping" title="Graph" id="7ut-fH-k9j">
-                                <font key="font" usesAppearanceFont="YES"/>
-                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                        </textField>
+                            <buttonCell key="cell" type="check" title="Graph" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="lft-2v-uMe">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="didChangeCheckboxValue:" target="-2" id="s0B-OK-cZF"/>
+                            </connections>
+                        </button>
                         <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="35" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-b4-b5x" userLabel="Length">
                             <rect key="frame" x="30" y="116" width="200" height="20"/>
                             <subviews>
@@ -351,10 +353,8 @@
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="woY-SD-3SP" firstAttribute="top" secondItem="L30-0H-2sV" secondAttribute="bottom" constant="10" id="2nT-YR-M7c"/>
                         <constraint firstAttribute="trailing" secondItem="GkN-wR-Z7l" secondAttribute="trailing" id="4w9-l8-Xwu"/>
-                        <constraint firstItem="bsa-b4-b5x" firstAttribute="top" secondItem="woY-SD-3SP" secondAttribute="bottom" constant="10" id="6R2-xV-a0u"/>
-                        <constraint firstItem="woY-SD-3SP" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="20" id="85S-g0-Snn"/>
+                        <constraint firstItem="IOc-qJ-NYD" firstAttribute="top" secondItem="L30-0H-2sV" secondAttribute="bottom" constant="10" id="8aX-Ty-O2a"/>
                         <constraint firstItem="taS-k9-wHN" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="20" id="BXz-NN-Wv8"/>
                         <constraint firstItem="GkN-wR-Z7l" firstAttribute="top" secondItem="taS-k9-wHN" secondAttribute="bottom" constant="10" id="FR2-CX-vJR"/>
                         <constraint firstItem="L30-0H-2sV" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="20" id="IdN-RA-V5E"/>
@@ -363,11 +363,12 @@
                         <constraint firstItem="L30-0H-2sV" firstAttribute="top" secondItem="pJH-hw-oMt" secondAttribute="bottom" constant="10" id="Mkm-Lt-FLn"/>
                         <constraint firstItem="taS-k9-wHN" firstAttribute="top" secondItem="z2R-6q-vBM" secondAttribute="bottom" constant="10" id="N0n-zH-9f3"/>
                         <constraint firstItem="bsa-b4-b5x" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="30" id="Pnm-uI-Cdu"/>
-                        <constraint firstItem="woY-SD-3SP" firstAttribute="top" secondItem="L30-0H-2sV" secondAttribute="bottom" constant="10" id="R6r-Wn-DS6"/>
                         <constraint firstItem="z2R-6q-vBM" firstAttribute="top" secondItem="RSs-0o-Awf" secondAttribute="bottom" constant="10" id="S7o-RD-dgI"/>
                         <constraint firstItem="RSs-0o-Awf" firstAttribute="top" secondItem="bsa-b4-b5x" secondAttribute="bottom" constant="10" id="XOG-QS-XS1"/>
                         <constraint firstItem="GkN-wR-Z7l" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" id="elf-qZ-vzl"/>
+                        <constraint firstItem="IOc-qJ-NYD" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="20" id="f2n-0e-vHO"/>
                         <constraint firstItem="RSs-0o-Awf" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="30" id="fcK-w6-1iv"/>
+                        <constraint firstItem="bsa-b4-b5x" firstAttribute="top" secondItem="IOc-qJ-NYD" secondAttribute="bottom" constant="10" id="nmQ-Tk-zf6"/>
                     </constraints>
                     <visibilityPriorities>
                         <integer value="1000"/>
