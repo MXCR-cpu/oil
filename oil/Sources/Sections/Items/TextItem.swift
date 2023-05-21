@@ -41,26 +41,21 @@ internal class TextItem: StatusItem {
     func didUnload() {}
     
     private func configureLabel(label: NSTextField) {
-        switch Defaults[.textDisplay] {
-        case .line:
-            label.font = NSFont.monospacedDigitSystemFont(ofSize: 13,
-                                                          weight: .regular)
-        case .stacked:
-            label.font = NSFont.monospacedDigitSystemFont(ofSize: 8,
-                                                          weight: .regular)
-        }
+        label.font = NSFont.monospacedDigitSystemFont(ofSize: Defaults[.stackedText] ?
+                                                        8 :
+                                                        13,
+                                                      weight: .regular)
         label.sizeToFit()
     }
     
     private func configureStackView() {
-        switch Defaults[.textDisplay] {
-        case .line:
+        if Defaults[.stackedText] {
+            stackView.orientation = .vertical
+            stackView.alignment = .right
+        } else {
             stackView.orientation = .horizontal
             stackView.distribution = .fillProportionally
             stackView.alignment = .centerY
-        case .stacked:
-            stackView.orientation = .vertical
-            stackView.alignment = .right
         }
         stackView.spacing = 3
         labelArray = manager.usageString?.compactMap {

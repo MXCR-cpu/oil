@@ -18,13 +18,9 @@ internal class DiskManager: Manager {
         guard let volumes =
                 (try? FileManager.default.contentsOfDirectory(atPath: "/Volumes"))
         else { return }
-        
         if volumes[0].starts(with: ".") ||
             volumes[0].contains("com.apple") { return }
-
         let path = "/Volumes/" + volumes[0]
-        let url = URL(fileURLWithPath: path)
-
         guard
             let attributes = try? FileManager.default.attributesOfFileSystem(forPath: path),
             let size = attributes[FileAttributeKey.systemSize] as? UInt64,

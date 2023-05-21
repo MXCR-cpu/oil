@@ -49,7 +49,7 @@ class BarGraph: Graph {
     }
     
     func resize() {
-        self.stepSize = Defaults[.cpuGraphWidth]
-        self.historyLength = Defaults[.cpuGraphBoxCount]
+        self.stepSize = Defaults[.graphWidth]
+        self.historyLength = Defaults[.graphLength]
     }
 }

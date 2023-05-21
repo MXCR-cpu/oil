@@ -44,6 +44,7 @@
 		88EB392A2A182902004D60EE /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39292A182902004D60EE /* Memory.swift */; };
 		88EB392C2A182DBD004D60EE /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB392B2A182DBD004D60EE /* Double.swift */; };
 		88EB392E2A1831A6004D60EE /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB392D2A1831A6004D60EE /* Disk.swift */; };
+		88EB39332A1970E1004D60EE /* example.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88EB39312A1970E1004D60EE /* example.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		88EB39292A182902004D60EE /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		88EB392B2A182DBD004D60EE /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		88EB392D2A1831A6004D60EE /* Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
+		88EB39322A1970E1004D60EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = example.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				8829C7BC2A12F883009DE392 /* oilWidgetPreferencePane.xib */,
+				88EB39312A1970E1004D60EE /* example.xib */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88EB39332A1970E1004D60EE /* example.xib in Resources */,
 				8829C7BD2A12F883009DE392 /* oilWidgetPreferencePane.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +394,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		88EB39312A1970E1004D60EE /* example.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88EB39322A1970E1004D60EE /* Base */,
+			);
+			name = example.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		883EBC1D2A11F80000235B35 /* Debug */ = {

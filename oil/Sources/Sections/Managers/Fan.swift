@@ -23,7 +23,7 @@ internal class FanManager: Manager {
     func reload() {
         usage = SmcControl.shared.fans[0].currentSpeed
         usageHistory = (usageHistory + [usage ?? 0])
-            .suffix(Defaults[.cpuGraphBoxCount])
+            .suffix(Defaults[.graphLength])
         usageString = SmcControl.shared.fans.compactMap {
             $0.currentSpeedString
         }
