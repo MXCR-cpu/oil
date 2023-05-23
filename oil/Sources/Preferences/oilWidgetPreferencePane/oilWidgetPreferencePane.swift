@@ -40,20 +40,11 @@ class oilWidgetPreferencePane:
     
     private func loadBoxStates() {
         self.stackedText.state = Defaults[.stackedText] ? .on : .off
-        self.refreshRate.enclosingMenuItem?.state =
-            .init(rawValue: Defaults[.refreshRate])
-        self.graphLength.enclosingMenuItem?.state =
-            .init(rawValue: Defaults[.graphLength])
-        self.graphLength
-            .enclosingMenuItem?
-            .setAccessibilityPlaceholderValue("\(Defaults[.graphLength])")
-        self.graphWidth.enclosingMenuItem?.state =
-            .init(rawValue: Defaults[.graphWidth])
-        self.graphWidth
-            .enclosingMenuItem?
-            .setAccessibilityPlaceholderValue("\(Defaults[.graphWidth])")
-        self.graphType.enclosingMenuItem?.state =
-            .init(rawValue: Defaults[.graphType].rawValue)
+        self.refreshRate.stringValue = "\(Defaults[.refreshRate])"
+        self.displayGraph.state = Defaults[.displayGraph] ? .on : .off
+        self.graphLength.stringValue = "\(Defaults[.graphLength])"
+        self.graphWidth.stringValue = "\(Defaults[.graphWidth])"
+        self.graphType.selectItem(withTag: Defaults[.graphType].rawValue + 330)
         self.useCPU.state = (Defaults[.itemsDisplay] & (1 << 0)) != 0 ? .on : .off
         self.useGPU.state = (Defaults[.itemsDisplay] & (1 << 1)) != 0 ? .on : .off
         self.useFan.state = (Defaults[.itemsDisplay] & (1 << 2)) != 0 ? .on : .off
@@ -68,8 +59,8 @@ class oilWidgetPreferencePane:
         case 3:
             Defaults[.displayGraph] = checkbox.state == .on
         default:
-            Defaults[.itemsDisplay] = Defaults[.itemsDisplay] ^
-                (1 << (checkbox.tag - 41))
+            Defaults[.itemsDisplay] =
+                Defaults[.itemsDisplay] ^ (1 << (checkbox.tag - 41))
         }
         loadBoxStates()
     }
@@ -77,20 +68,11 @@ class oilWidgetPreferencePane:
     @IBAction func didChangeComboboxValue(_ combobox: NSComboBox) {
         switch combobox.tag {
         case 2:
-            Defaults[.refreshRate] = combobox
-                .enclosingMenuItem?
-                .state
-                .rawValue ?? Defaults[.refreshRate]
+            Defaults[.refreshRate] = Int(combobox.stringValue) ?? 1
         case 31:
-            Defaults[.graphLength] = combobox
-                .enclosingMenuItem?
-                .state
-                .rawValue ?? Defaults[.graphLength]
+            Defaults[.graphLength] = Int(combobox.stringValue) ?? 5
         case 32:
-            Defaults[.graphWidth] = combobox
-                .enclosingMenuItem?
-                .state
-                .rawValue ?? Defaults[.graphWidth]
+            Defaults[.graphWidth] = Int(combobox.stringValue) ?? 10
         default:
             return
         }
@@ -98,10 +80,19 @@ class oilWidgetPreferencePane:
     }
     
     @IBAction func didChangePopupValue(_ popup: NSPopUpButton) {
-        Defaults[.graphType] = GraphType(rawValue: popup
-            .enclosingMenuItem?
-            .state
-            .rawValue ?? 1) ?? Defaults[.graphType]
+        NSLog("[oil] change the Pop Up Value")
+        switch popup.selectedItem?.tag ?? 331 {
+        case 331:
+            Defaults[.graphType] = .bar
+        case 332:
+            Defaults[.graphType] = .line
+        case 333:
+            Defaults[.graphType] = .spline
+        case 334:
+            Defaults[.graphType] = .horizon
+        default:
+            break
+        }
         loadBoxStates()
     }
 }

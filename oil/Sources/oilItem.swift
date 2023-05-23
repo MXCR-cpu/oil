@@ -18,11 +18,12 @@ class StatusItemView: PKView {
 
 protocol StatusItem: AnyObject {
     var manager: Manager { get }
+    var update: Bool { get }
     var enabled: Bool   { get set }
-    var title:   String { get }
     var view:    NSView { get }
     func action()
     func reload()
     func didLoad()
     func didUnload()
+    func updateCall()
 }

@@ -20,8 +20,8 @@ internal class TextItem: StatusItem {
     private var label: NSTextField =
         NSTextField(labelWithString: "NaN")
     private var labelArray: [NSTextField] = []
+    var update : Bool = false
     var enabled: Bool = true
-    var title: String { return "TextItem" }
     var view: NSView { return stackView }
     
     init(manager: Manager) {
@@ -48,6 +48,8 @@ internal class TextItem: StatusItem {
         }
         enabled = false
     }
+    
+    func updateCall() {}
     
     private func configureLabel(label: NSTextField) {
         label.font = NSFont.monospacedDigitSystemFont(ofSize: Defaults[.stackedText] ?
@@ -97,5 +99,4 @@ internal class TextItem: StatusItem {
                 .remove(at: labelPos)
         }
     }
-
 }

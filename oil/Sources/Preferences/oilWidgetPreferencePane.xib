@@ -61,7 +61,7 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="imh-u1-Tte"/>
                                     </constraints>
-                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="1" drawsBackground="YES" completes="NO" numberOfVisibleItems="3" id="fJu-fs-bFb">
+                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="3" id="fJu-fs-bFb">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -72,7 +72,7 @@
                                         </objectValues>
                                     </comboBoxCell>
                                     <connections>
-                                        <action selector="didChange:" target="-2" id="yM5-Vv-Baf"/>
+                                        <action selector="didChangeComboboxValue:" target="-2" id="Za2-TW-IUq"/>
                                     </connections>
                                 </comboBox>
                             </subviews>
@@ -120,7 +120,7 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="75" id="bNt-Ha-puI"/>
                                     </constraints>
-                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="5" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="cYQ-cR-vYn">
+                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="cYQ-cR-vYn">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -133,7 +133,7 @@
                                         </objectValues>
                                     </comboBoxCell>
                                     <connections>
-                                        <action selector="didChange:" target="-2" id="1Ja-O8-R9X"/>
+                                        <action selector="didChangeComboboxValue:" target="-2" id="1uv-qi-il4"/>
                                     </connections>
                                 </comboBox>
                             </subviews>
@@ -169,7 +169,7 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="75" id="A0N-ic-2Zp"/>
                                     </constraints>
-                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="5" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="SgM-m2-gHQ">
+                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="SgM-m2-gHQ">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -181,7 +181,7 @@
                                         </objectValues>
                                     </comboBoxCell>
                                     <connections>
-                                        <action selector="didChange:" target="-2" id="0BQ-Hn-nPm"/>
+                                        <action selector="didChangeComboboxValue:" target="-2" id="mGA-lh-dA0"/>
                                     </connections>
                                 </comboBox>
                             </subviews>
@@ -217,22 +217,22 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="75" id="Olw-aU-f5x"/>
                                     </constraints>
-                                    <popUpButtonCell key="cell" type="push" title="Bar" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="iKU-5l-Quy" id="h2L-QA-bfZ">
+                                    <popUpButtonCell key="cell" type="push" title="Bar" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="331" imageScaling="proportionallyDown" inset="2" selectedItem="iKU-5l-Quy" id="h2L-QA-bfZ">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
                                         <menu key="menu" id="ud7-64-RE2">
                                             <items>
-                                                <menuItem title="Bar" state="on" id="iKU-5l-Quy" userLabel="Bar"/>
-                                                <menuItem title="Line" id="Ffh-Ml-mMP" userLabel="Line"/>
-                                                <menuItem title="Spline" id="xiD-cj-IOy" userLabel="Spline"/>
-                                                <menuItem title="Horizon" id="iPy-y6-wLo" userLabel="Horizon">
+                                                <menuItem title="Bar" state="on" tag="331" id="iKU-5l-Quy" userLabel="Bar"/>
+                                                <menuItem title="Line" tag="332" id="Ffh-Ml-mMP" userLabel="Line"/>
+                                                <menuItem title="Spline" tag="333" id="xiD-cj-IOy" userLabel="Spline"/>
+                                                <menuItem title="Horizon" tag="334" id="iPy-y6-wLo" userLabel="Horizon">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                 </menuItem>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
                                     <connections>
-                                        <action selector="didChangePopupValue:" target="-2" id="XO2-Ul-vjn"/>
+                                        <action selector="didChangePopupValue:" target="-2" id="53v-g8-3Sj"/>
                                     </connections>
                                 </popUpButton>
                             </subviews>

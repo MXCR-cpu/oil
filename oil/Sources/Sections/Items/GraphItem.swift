@@ -21,8 +21,8 @@ internal class GraphItem: StatusItem {
     private var graphView: NSStackView = NSStackView(frame: .zero)
     private var textView: TextItem? = nil
     private var labelArray: [NSTextField] = []
+    var update: Bool = false
     var enabled: Bool = true
-    var title: String { return "CPUItem" }
     var view: NSView { return stackView }
     
     init(manager: Manager, graph: Graph) {
@@ -36,11 +36,15 @@ internal class GraphItem: StatusItem {
     }
 
     func reload() {
-        preferenceUpdate()
         updateLabel()
-        if Defaults[.displayGraph] {
-            graphRedraw()
+        if graph.display {
+            graph.generateGraph(data: manager.usageHistory)
         }
+        update =
+            Defaults[.graphWidth] != graph.stepSize ||
+            Defaults[.graphLength] != graph.historyLength ||
+            Defaults[.displayGraph] != graph.display ||
+            Defaults[.graphType] != graph.type
     }
 
     func didLoad() {
@@ -50,16 +54,24 @@ internal class GraphItem: StatusItem {
 
     func didUnload() {
         textView?.didUnload()
-        removeViewFromStackView(view: graphView)
+        if stackView.arrangedSubviews.contains(graphView) {
+            removeViewFromStackView(view: graphView)
+        }
         enabled = false
+    }
+    
+    func updateCall() {
+        //NSLog("[oil] \(manager.title): updateGraph()")
+        updateGraph()
+        update = false
+        //NSLog("[oil] \(manager.title): Exiting updateCall()")
     }
     
     /// Utility
     private func configureLabel(label: NSTextField) {
-        label.font = NSFont.monospacedDigitSystemFont(ofSize: Defaults[.stackedText] ?
-                                                        13 :
-                                                        8,
-                                                      weight: .regular)
+        label.font = NSFont
+            .monospacedDigitSystemFont(ofSize: Defaults[.stackedText] ? 13 : 8,
+                                       weight: .regular)
         label.maximumNumberOfLines = 1
         label.sizeToFit()
     }
@@ -78,7 +90,8 @@ internal class GraphItem: StatusItem {
         stackView.spacing = 5
         stackView.addArrangedSubview(textView?.view ??
                                      NSStackView(frame: .zero))
-        if Defaults[.displayGraph] {
+        if graph.display {
+            graphView = NSStackView(frame: .zero)
             graphView.addArrangedSubview(graph.view)
             graphView.orientation = .horizontal
             graphView.alignment = .centerY
@@ -89,22 +102,6 @@ internal class GraphItem: StatusItem {
         }
     }
 
-    private func graphRedraw() {
-        updateGraph()
-        if !Defaults[.displayGraph] { return }
-        graph.generateGraph(data: manager.usageHistory)
-    }
-    
-    private func preferenceUpdate() {
-        if Defaults[.displayGraph] &&
-            !stackView.arrangedSubviews.contains(graphView) {
-            stackView.addArrangedSubview(graphView)
-        } else if !Defaults[.displayGraph] &&
-                    stackView.arrangedSubviews.contains(graphView) {
-            removeViewFromStackView(view: graphView)
-        }
-    }
-    
     private func removeViewFromStackView(view: NSView) {
         let labelPos: Int = stackView
             .arrangedSubviews
@@ -117,19 +114,33 @@ internal class GraphItem: StatusItem {
         }
     }
     
+    private func removeViewFromParentView(parentView: NSStackView,
+                                          childView: NSView) {
+        let labelPos: Int = parentView
+            .arrangedSubviews
+            .firstIndex(of: childView) ?? -1
+        parentView.removeArrangedSubview(childView)
+        if labelPos >= 0 {
+            parentView
+                .subviews
+                .remove(at: labelPos)
+        }
+    }
+    
     private func updateLabel() {
         textView?.reload()
     }
 
-    
     private func updateGraph() {
-        if graph.stepSize != Defaults[.graphWidth] ||
-            graph.historyLength != Defaults[.graphLength] {
-            graphView.removeArrangedSubview(graph.view)
-            graphView.subviews.remove(at: 0)
-            graph.resize()
-            graphView.addArrangedSubview(graph.view)
+        //NSLog("[oil] \(manager.title): running removeViewFromParentView()")
+        if graphView.arrangedSubviews.contains(graph.view) {
+            removeViewFromParentView(parentView: graphView,
+                                     childView: graph.view)
         }
+        //NSLog("[oil] \(manager.title): graph.resize()")
+        graph.resize()
+        graphView.addArrangedSubview(graph.view)
+        //NSLog("[oil] \(manager.title): Exiting updateGraph()")
     }
 }
 

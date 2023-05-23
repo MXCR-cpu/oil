@@ -7,11 +7,33 @@
 
 import Foundation
 import AppKit
+import Defaults
 
-protocol Graph {
-    var view: NSView { get }
-    var stepSize: Int { get }
-    var historyLength: Int { get }
-    func generateGraph(data: [Int])
-    func resize()
+class Graph {
+    internal var view: NSView = NSView(frame: .zero)
+    internal var stepSize: Int = 0
+    internal var historyLength: Int = 0
+    internal var display: Bool = false
+    var type: GraphType
+    
+    init() {
+        type = .base
+        resize()
+    }
+    
+    deinit {
+        view = NSView(frame: .zero)
+    }
+    
+    func generateGraph(data: [Int]) {}
+    
+    func resize() {
+        self.stepSize = Defaults[.graphWidth]
+        self.historyLength = Defaults[.graphLength]
+        self.display = Defaults[.displayGraph]
+        self.view = NSView(frame: NSRect(x: 0,
+                                         y: 0,
+                                         width: self.stepSize * self.historyLength,
+                                         height: 18))
+    }
 }

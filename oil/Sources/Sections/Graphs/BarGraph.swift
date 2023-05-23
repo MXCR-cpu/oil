@@ -10,21 +10,12 @@ import AppKit
 import Defaults
 
 class BarGraph: Graph {
-    internal var view: NSView = NSView(
-        frame: NSRect(x: 0, y: 0, width: 0, height: 0)
-    )
-    internal var stepSize: Int = 0
-    internal var historyLength: Int = 0
-    
-    init() {
-        self.resize()
+    override init() {
+        super.init()
+        type = .bar
     }
-    
-    deinit {
-        view = NSView(frame: .zero)
-    }
-    
-    func generateGraph(data: [Int]) {
+
+    override func generateGraph(data: [Int]) {
         for i in 0...(data.count-1) {
             let boxLayer: CALayer = CALayer()
             boxLayer.frame = NSRect(
@@ -45,11 +36,5 @@ class BarGraph: Graph {
                 view.layer?.addSublayer(boxLayer)
             }
         }
-        view.layer?.backgroundColor = NSColor.clear.cgColor
-    }
-    
-    func resize() {
-        self.stepSize = Defaults[.graphWidth]
-        self.historyLength = Defaults[.graphLength]
     }
 }

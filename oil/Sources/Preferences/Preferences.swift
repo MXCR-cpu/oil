@@ -14,6 +14,6 @@ extension Defaults.Keys {
     static let displayGraph = Key<Bool>("displayGraph", default: true)
     static let graphWidth = Key<Int>("grapWidth", default: 10)
     static let graphLength = Key<Int>("graphLength", default: 5)
-    static let graphType = Key<GraphType>("graphLength", default: .bar)
+    static let graphType = Key<GraphType>("graphType", default: .bar)
     static let itemsDisplay = Key<Int>("itemsDisplay", default: 31)
 }

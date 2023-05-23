@@ -45,6 +45,7 @@
 		88EB392C2A182DBD004D60EE /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB392B2A182DBD004D60EE /* Double.swift */; };
 		88EB392E2A1831A6004D60EE /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB392D2A1831A6004D60EE /* Disk.swift */; };
 		88EB39332A1970E1004D60EE /* example.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88EB39312A1970E1004D60EE /* example.xib */; };
+		88EB39352A1B5A35004D60EE /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39342A1B5A35004D60EE /* LineGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		88EB392B2A182DBD004D60EE /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		88EB392D2A1831A6004D60EE /* Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
 		88EB39322A1970E1004D60EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = example.xib; sourceTree = "<group>"; };
+		88EB39342A1B5A35004D60EE /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				88860EB82A127F9E002822E1 /* BarGraph.swift */,
+				88EB39342A1B5A35004D60EE /* LineGraph.swift */,
 			);
 			path = Graphs;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				88EB38F32A145227004D60EE /* Options.swift in Sources */,
 				88EB39132A16E1D1004D60EE /* JSONCodable.swift in Sources */,
 				88EB390F2A16DFF7004D60EE /* TemperatureData.swift in Sources */,
+				88EB39352A1B5A35004D60EE /* LineGraph.swift in Sources */,
 				883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */,
 				88860EBB2A12ADA5002822E1 /* Graph.swift in Sources */,
 				88EB39052A16DD46004D60EE /* Temperature.swift in Sources */,

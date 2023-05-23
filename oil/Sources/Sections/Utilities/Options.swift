@@ -9,6 +9,7 @@ import Foundation
 import Defaults
 
 enum GraphType: Int, Defaults.Serializable {
+    case base = 0
     case bar = 1
     case line = 2
     case spline = 3
