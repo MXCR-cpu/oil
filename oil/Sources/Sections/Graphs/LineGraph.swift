@@ -17,20 +17,7 @@ class LineGraph: Graph {
         type = .line
     }
     
-    override func generateGraph(data: [Int]) {
-        let shapeLayer: CAShapeLayer = CAShapeLayer()
-        shapeLayer.path = self.draw(data: data).cgPath
-        shapeLayer.fillColor = CGColor.white
-        //shapeLayer.strokeColor = CGColor.white
-        //shapeLayer.lineWidth = 0.5
-        if let oldLayer = view.layer?.sublayers?[0] {
-            view.layer?.replaceSublayer(oldLayer, with: shapeLayer)
-        } else {
-            view.layer?.addSublayer(shapeLayer)
-        }
-    }
-    
-    private func draw(data: [Int]) -> Path {
+    override func draw(data: [Int]) -> Path {
         var path: Path = Path()
         path.move(to: .zero)
         for i in 0..<data.count {
@@ -42,7 +29,6 @@ class LineGraph: Graph {
         path.addLine(to: CGPoint(x: (data.count - 1) * stepSize, y: 0))
         path.addLine(to: .zero)
         path.closeSubpath()
-        NSLog("[oil] CustomPathView: path drawn")
         return path
     }
 }

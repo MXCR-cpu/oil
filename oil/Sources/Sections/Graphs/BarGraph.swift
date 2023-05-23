@@ -8,6 +8,7 @@
 import Foundation
 import AppKit
 import Defaults
+import SwiftUI
 
 class BarGraph: Graph {
     override init() {
@@ -15,26 +16,23 @@ class BarGraph: Graph {
         type = .bar
     }
 
-    override func generateGraph(data: [Int]) {
-        for i in 0...(data.count-1) {
-            let boxLayer: CALayer = CALayer()
-            boxLayer.frame = NSRect(
-                x: stepSize * i,
-                y: 0,
-                width: stepSize,
-                height: max(
-                    Int((18 * Double(data[data.count-1-i])) / 100),
-                    1
-                )
-            )
-            boxLayer.backgroundColor = NSColor.white.cgColor
-            boxLayer.borderWidth = 0.0
-            view.layer?.addSublayer(boxLayer)
-            if let old_layer = view.layer?.sublayers?[i] {
-                view.layer?.replaceSublayer(old_layer, with: boxLayer)
-            } else {
-                view.layer?.addSublayer(boxLayer)
-            }
-        }
+    override func draw(data: [Int]) -> Path {
+        var path: Path = Path()
+        var index: Int = 0
+        var halfStep: Double = Double(stepSize / 2)
+        path.move(to: CGPoint(x: stepSize * data.count, y: 0))
+        path.addLines(data.compactMap {
+            index += 1
+            return [
+                CGPoint(x: stepSize * (data.count-index+1),
+                        y: Int(18 * Double($0) / 100)),
+                CGPoint(x: stepSize * (data.count-index),
+                        y: Int(18 * Double($0) / 100)),
+            ]
+        }.flatMap { $0 })
+        path.addLine(to: .zero)
+        path.addLine(to: CGPoint(x: stepSize * data.count, y: 0))
+        path.closeSubpath()
+        return path
     }
 }
