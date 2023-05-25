@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="oilWidgetPreferencePane" customModule="oil" customModuleProvider="target">
+            <connections>
+                <outlet property="displayGraph" destination="IOc-qJ-NYD" id="eEf-Gy-eKv"/>
+                <outlet property="graphFill" destination="q9w-on-bfL" id="AvR-iW-3nJ"/>
+                <outlet property="graphLength" destination="Gka-ZH-vhY" id="wQA-Vh-R1p"/>
+                <outlet property="graphType" destination="NT5-ab-GtU" id="GSZ-74-mEk"/>
+                <outlet property="graphWidth" destination="vGs-45-bVM" id="KQu-cG-ogg"/>
+                <outlet property="refreshRate" destination="bPe-0H-iNv" id="YjQ-Vw-9jv"/>
+                <outlet property="stackedText" destination="pJH-hw-oMt" id="k6j-JD-5pR"/>
+                <outlet property="useCPU" destination="gjt-UQ-7K4" id="63G-BY-Dt6"/>
+                <outlet property="useDisk" destination="GsF-TU-0AK" id="ss3-Rm-aqV"/>
+                <outlet property="useFan" destination="Ev0-HK-IwB" id="KY7-RB-37F"/>
+                <outlet property="useGPU" destination="FYo-2c-DHx" id="nXI-39-XdJ"/>
+                <outlet property="useMemory" destination="vSv-Sk-Q3q" id="IIa-4t-tQM"/>
+                <outlet property="view" destination="c22-O7-iKe" id="eQA-au-e6h"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="232"/>
+            <subviews>
+                <stackView distribution="equalSpacing" orientation="vertical" alignment="centerX" spacing="77" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5GW-OY-Emk" userLabel="Base">
+                    <rect key="frame" x="20" y="20" width="400" height="192"/>
+                    <subviews>
+                        <button verticalHuggingPriority="751" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="pJH-hw-oMt">
+                            <rect key="frame" x="18" y="175" width="202" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="tdz-Ey-7q8"/>
+                            </constraints>
+                            <buttonCell key="cell" type="check" title="Vertically Stack Text" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="JBk-lC-Sty">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="didChangeCheckboxValue:" target="-2" id="b9V-zm-Ra0"/>
+                            </connections>
+                        </button>
+                        <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L30-0H-2sV" userLabel="Refresh">
+                            <rect key="frame" x="20" y="146" width="255" height="20"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gy0-Fv-azv">
+                                    <rect key="frame" x="-2" y="2" width="204" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="200" id="dhl-l4-AEi"/>
+                                    </constraints>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Refresh Interval Length (sec)" id="lnZ-pZ-zfs">
+                                        <font key="font" usesAppearanceFont="YES"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <comboBox verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="bPe-0H-iNv">
+                                    <rect key="frame" x="204" y="-2" width="54" height="23"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="imh-u1-Tte"/>
+                                    </constraints>
+                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="3" id="fJu-fs-bFb">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <objectValues>
+                                            <string>1</string>
+                                            <string>3</string>
+                                            <string>5</string>
+                                        </objectValues>
+                                    </comboBoxCell>
+                                    <connections>
+                                        <action selector="didChangeComboboxValue:" target="-2" id="Za2-TW-IUq"/>
+                                    </connections>
+                                </comboBox>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="tLj-d3-5U0"/>
+                            </constraints>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                        <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-qJ-NYD">
+                            <rect key="frame" x="18" y="119" width="202" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="cf1-yF-Afo"/>
+                            </constraints>
+                            <buttonCell key="cell" type="check" title="Graph" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="lft-2v-uMe">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="didChangeCheckboxValue:" target="-2" id="s0B-OK-cZF"/>
+                            </connections>
+                        </button>
+                        <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dxc-7P-x10" userLabel="Options1">
+                            <rect key="frame" x="40" y="90" width="283" height="20"/>
+                            <subviews>
+                                <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="35" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-b4-b5x" userLabel="Length">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="20"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5JQ-To-oJJ">
+                                            <rect key="frame" x="-2" y="2" width="54" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="0N3-PP-Np5"/>
+                                            </constraints>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Length" id="jUU-HE-7JV">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <comboBox verticalHuggingPriority="750" tag="31" translatesAutoresizingMaskIntoConstraints="NO" id="Gka-ZH-vhY">
+                                            <rect key="frame" x="49" y="-2" width="79" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="bNt-Ha-puI"/>
+                                            </constraints>
+                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="cYQ-cR-vYn">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <objectValues>
+                                                    <string>1</string>
+                                                    <string>3</string>
+                                                    <string>6</string>
+                                                    <string>9</string>
+                                                    <string>12</string>
+                                                </objectValues>
+                                            </comboBoxCell>
+                                            <connections>
+                                                <action selector="didChangeComboboxValue:" target="-2" id="1uv-qi-il4"/>
+                                            </connections>
+                                        </comboBox>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="6RV-tc-5Cn"/>
+                                        <constraint firstItem="Gka-ZH-vhY" firstAttribute="leading" secondItem="5JQ-To-oJJ" secondAttribute="trailing" id="zpS-ck-Iuo"/>
+                                    </constraints>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
+                                <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSs-0o-Awf" userLabel="Box Width">
+                                    <rect key="frame" x="133" y="0.0" width="150" height="20"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FCb-HS-02v">
+                                            <rect key="frame" x="-2" y="2" width="79" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="6uO-3x-dpu"/>
+                                            </constraints>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Box Width" id="8tT-6Z-cm1">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <comboBox verticalHuggingPriority="750" tag="32" translatesAutoresizingMaskIntoConstraints="NO" id="vGs-45-bVM">
+                                            <rect key="frame" x="74" y="-2" width="79" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="A0N-ic-2Zp"/>
+                                            </constraints>
+                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="SgM-m2-gHQ">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <objectValues>
+                                                    <string>1</string>
+                                                    <string>5</string>
+                                                    <string>10</string>
+                                                    <string>15</string>
+                                                </objectValues>
+                                            </comboBoxCell>
+                                            <connections>
+                                                <action selector="didChangeComboboxValue:" target="-2" id="mGA-lh-dA0"/>
+                                            </connections>
+                                        </comboBox>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vGs-45-bVM" firstAttribute="leading" secondItem="FCb-HS-02v" secondAttribute="trailing" id="ETR-UQ-0Rp"/>
+                                        <constraint firstAttribute="height" constant="20" id="nHb-MI-FSD"/>
+                                    </constraints>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Bdm-V5-U92"/>
+                            </constraints>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                        <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YUM-c7-qlb" userLabel="Options2">
+                            <rect key="frame" x="40" y="60" width="320" height="20"/>
+                            <subviews>
+                                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z2R-6q-vBM" userLabel="Type">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XlU-X5-OTo">
+                                            <rect key="frame" x="-2" y="4" width="79" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="95I-Pc-ZlT"/>
+                                            </constraints>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Type" id="RbL-CQ-kbY">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <popUpButton verticalHuggingPriority="750" tag="33" translatesAutoresizingMaskIntoConstraints="NO" id="NT5-ab-GtU" userLabel="Type">
+                                            <rect key="frame" x="72" y="-4" width="82" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="Olw-aU-f5x"/>
+                                            </constraints>
+                                            <popUpButtonCell key="cell" type="push" title="Bar" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="331" imageScaling="proportionallyDown" inset="2" selectedItem="iKU-5l-Quy" id="h2L-QA-bfZ">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" id="ud7-64-RE2">
+                                                    <items>
+                                                        <menuItem title="Bar" state="on" tag="331" id="iKU-5l-Quy" userLabel="Bar"/>
+                                                        <menuItem title="Line" tag="332" id="Ffh-Ml-mMP" userLabel="Line"/>
+                                                        <menuItem title="Spline" tag="333" id="xiD-cj-IOy" userLabel="Spline"/>
+                                                        <menuItem title="Horizon" tag="334" id="iPy-y6-wLo" userLabel="Horizon">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                            <connections>
+                                                <action selector="didChangePopupValue:" target="-2" id="53v-g8-3Sj"/>
+                                            </connections>
+                                        </popUpButton>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NT5-ab-GtU" firstAttribute="leading" secondItem="XlU-X5-OTo" secondAttribute="trailing" id="aIa-7N-le8"/>
+                                        <constraint firstAttribute="height" constant="20" id="osp-J3-1yJ"/>
+                                    </constraints>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
+                                <button verticalHuggingPriority="750" tag="34" translatesAutoresizingMaskIntoConstraints="NO" id="q9w-on-bfL">
+                                    <rect key="frame" x="156" y="3" width="164" height="18"/>
+                                    <buttonCell key="cell" type="check" title="Fill" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="rMO-nR-7h5">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="didChangeCheckboxValue:" target="-2" id="JDS-tX-Vcg"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="XsL-bG-Jhs"/>
+                            </constraints>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="taS-k9-wHN">
+                            <rect key="frame" x="18" y="30" width="54" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="3bw-X7-mUG"/>
+                                <constraint firstAttribute="width" constant="50" id="rG1-3A-fVl"/>
+                            </constraints>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Items" id="fru-6M-jNz">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GkN-wR-Z7l" userLabel="Items">
+                            <rect key="frame" x="47" y="0.0" width="307" height="20"/>
+                            <subviews>
+                                <button verticalHuggingPriority="750" tag="41" translatesAutoresizingMaskIntoConstraints="NO" id="gjt-UQ-7K4" userLabel="CPU">
+                                    <rect key="frame" x="-2" y="3" width="52" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="vXa-ao-owG"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="check" title="CPU" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LM8-lR-qji">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="didChangeCheckboxValue:" target="-2" id="m8I-jS-z64"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" tag="42" translatesAutoresizingMaskIntoConstraints="NO" id="FYo-2c-DHx" userLabel="GPU">
+                                    <rect key="frame" x="56" y="3" width="52" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="qzn-GR-sE7"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="check" title="GPU" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="PGv-EE-77Z">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="didChangeCheckboxValue:" target="-2" id="jm1-Ul-xdf"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" tag="43" translatesAutoresizingMaskIntoConstraints="NO" id="Ev0-HK-IwB" userLabel="Fan">
+                                    <rect key="frame" x="114" y="3" width="52" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="QGv-mV-Scn"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="check" title="Fan" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ORo-hz-99L">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="didChangeCheckboxValue:" target="-2" id="W7I-xt-ffD"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" tag="44" translatesAutoresizingMaskIntoConstraints="NO" id="vSv-Sk-Q3q" userLabel="Memory">
+                                    <rect key="frame" x="172" y="3" width="77" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="75" id="yic-fX-S52"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="check" title="Memory" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="8Rf-9a-rVr">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="didChangeCheckboxValue:" target="-2" id="idW-Z3-2GQ"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" tag="45" translatesAutoresizingMaskIntoConstraints="NO" id="GsF-TU-0AK" userLabel="Disk">
+                                    <rect key="frame" x="255" y="3" width="52" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="JsB-5D-S36"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="check" title="Disk" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="BMX-nl-5YM">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="didChangeCheckboxValue:" target="-2" id="e66-3h-kyy"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="xZn-zD-yOY"/>
+                            </constraints>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="IOc-qJ-NYD" firstAttribute="top" secondItem="L30-0H-2sV" secondAttribute="bottom" constant="10" id="8aX-Ty-O2a"/>
+                        <constraint firstItem="taS-k9-wHN" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="20" id="BXz-NN-Wv8"/>
+                        <constraint firstItem="L30-0H-2sV" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="20" id="IdN-RA-V5E"/>
+                        <constraint firstItem="pJH-hw-oMt" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="20" id="Ks1-T5-c4U"/>
+                        <constraint firstItem="L30-0H-2sV" firstAttribute="top" secondItem="pJH-hw-oMt" secondAttribute="bottom" constant="10" id="Mkm-Lt-FLn"/>
+                        <constraint firstItem="GkN-wR-Z7l" firstAttribute="top" secondItem="taS-k9-wHN" secondAttribute="bottom" constant="10" id="Tik-Tt-85X"/>
+                        <constraint firstItem="Dxc-7P-x10" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="40" id="aG4-fQ-hkt"/>
+                        <constraint firstItem="YUM-c7-qlb" firstAttribute="top" secondItem="Dxc-7P-x10" secondAttribute="bottom" constant="10" id="bD0-0H-lpg"/>
+                        <constraint firstItem="taS-k9-wHN" firstAttribute="top" secondItem="YUM-c7-qlb" secondAttribute="bottom" constant="10" id="ePM-Re-d2E"/>
+                        <constraint firstItem="IOc-qJ-NYD" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="20" id="f2n-0e-vHO"/>
+                        <constraint firstItem="YUM-c7-qlb" firstAttribute="leading" secondItem="5GW-OY-Emk" secondAttribute="leading" constant="40" id="mvB-W4-xBN"/>
+                        <constraint firstItem="Dxc-7P-x10" firstAttribute="top" secondItem="IOc-qJ-NYD" secondAttribute="bottom" constant="10" id="ogZ-X5-Fe1"/>
+                        <constraint firstItem="pJH-hw-oMt" firstAttribute="top" secondItem="5GW-OY-Emk" secondAttribute="top" id="x7e-W1-25s"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <real value="502"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5GW-OY-Emk" secondAttribute="trailing" constant="20" id="Flk-OX-Pka"/>
+                <constraint firstItem="5GW-OY-Emk" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="KbG-va-vrO"/>
+                <constraint firstAttribute="bottom" secondItem="5GW-OY-Emk" secondAttribute="bottom" constant="20" id="MtN-xc-fN3"/>
+                <constraint firstItem="5GW-OY-Emk" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="mwb-EU-bIa"/>
+            </constraints>
+            <point key="canvasLocation" x="-969.5" y="340.5"/>
+        </customView>
+    </objects>
+</document>

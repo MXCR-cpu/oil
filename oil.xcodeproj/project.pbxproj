@@ -7,23 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8829C7BD2A12F883009DE392 /* oilWidgetPreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8829C7BC2A12F883009DE392 /* oilWidgetPreferencePane.xib */; };
 		883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC1A2A11F80000235B35 /* oilWidget.swift */; };
 		883EBC242A11F81300235B35 /* PockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 883EBC232A11F81300235B35 /* PockKit */; };
 		883EBC272A11F86400235B35 /* SystemKit in Frameworks */ = {isa = PBXBuildFile; productRef = 883EBC262A11F86400235B35 /* SystemKit */; };
-		883EBC2A2A11F94600235B35 /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC292A11F94600235B35 /* CPU.swift */; };
 		883EBC2D2A11FBBE00235B35 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2C2A11FBBE00235B35 /* AppKit.framework */; };
 		883EBC2F2A11FC1200235B35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2E2A11FC1200235B35 /* Foundation.framework */; };
 		883EBC312A11FD1900235B35 /* oilItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC302A11FD1900235B35 /* oilItem.swift */; };
+		88860EB02A123AC8002822E1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88860EAF2A123AC8002822E1 /* SpriteKit.framework */; };
+		88860EB42A12672A002822E1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88860EB32A12672A002822E1 /* SwiftUI.framework */; };
+		88860EB72A126909002822E1 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2C2A11FBBE00235B35 /* AppKit.framework */; };
+		88860EB92A127F9E002822E1 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EB82A127F9E002822E1 /* BarGraph.swift */; };
+		88860EBB2A12ADA5002822E1 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBA2A12ADA5002822E1 /* Graph.swift */; };
+		88860EBE2A12B087002822E1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBD2A12B087002822E1 /* Preferences.swift */; };
+		88860EC02A12B1F5002822E1 /* oilWidgetPreferencePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */; };
+		88860EC92A12D792002822E1 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 88860EC82A12D792002822E1 /* Defaults */; };
+		88EB38F32A145227004D60EE /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB38F22A145227004D60EE /* Options.swift */; };
+		88EB38F72A14C89A004D60EE /* GPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB38F62A14C89A004D60EE /* GPU.swift */; };
+		88EB38F92A14D89E004D60EE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EB38F82A14D89E004D60EE /* CoreFoundation.framework */; };
+		88EB39012A162BCA004D60EE /* IOHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39002A162BCA004D60EE /* IOHelper.swift */; };
+		88EB39032A16D7E6004D60EE /* SMCKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39022A16D7E6004D60EE /* SMCKit.swift */; };
+		88EB39052A16DD46004D60EE /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39042A16DD46004D60EE /* Temperature.swift */; };
+		88EB39072A16DDB8004D60EE /* SMCControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39062A16DDB8004D60EE /* SMCControl.swift */; };
+		88EB390A2A16DE35004D60EE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 88EB39092A16DE35004D60EE /* SwiftyJSON */; };
+		88EB390C2A16DF66004D60EE /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB390B2A16DF66004D60EE /* Refreshable.swift */; };
+		88EB390F2A16DFF7004D60EE /* TemperatureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB390E2A16DFF7004D60EE /* TemperatureData.swift */; };
+		88EB39112A16E0AA004D60EE /* FanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39102A16E0AA004D60EE /* FanData.swift */; };
+		88EB39132A16E1D1004D60EE /* JSONCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39122A16E1D1004D60EE /* JSONCodable.swift */; };
+		88EB39162A16E328004D60EE /* NSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39152A16E328004D60EE /* NSNotification.swift */; };
+		88EB391C2A1723F1004D60EE /* GraphItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB391B2A1723F1004D60EE /* GraphItem.swift */; };
+		88EB391E2A172430004D60EE /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB391D2A172430004D60EE /* Manager.swift */; };
+		88EB39212A172AA5004D60EE /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39202A172AA5004D60EE /* CPU.swift */; };
+		88EB39232A17F471004D60EE /* Fan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39222A17F471004D60EE /* Fan.swift */; };
+		88EB39252A17F5D4004D60EE /* TextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39242A17F5D4004D60EE /* TextItem.swift */; };
+		88EB39282A1827F1004D60EE /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39272A1827F1004D60EE /* System.swift */; };
+		88EB392A2A182902004D60EE /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39292A182902004D60EE /* Memory.swift */; };
+		88EB392C2A182DBD004D60EE /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB392B2A182DBD004D60EE /* Double.swift */; };
+		88EB392E2A1831A6004D60EE /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB392D2A1831A6004D60EE /* Disk.swift */; };
+		88EB39352A1B5A35004D60EE /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39342A1B5A35004D60EE /* LineGraph.swift */; };
+		88F120E72A1D8DB60033170E /* SplineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F120E62A1D8DB60033170E /* SplineGraph.swift */; };
+		88F120E92A1DE5BB0033170E /* HorizonGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F120E82A1DE5BB0033170E /* HorizonGraph.swift */; };
+		88F120EC2A1EBDFF0033170E /* LASwift in Frameworks */ = {isa = PBXBuildFile; productRef = 88F120EB2A1EBDFF0033170E /* LASwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8829C7BC2A12F883009DE392 /* oilWidgetPreferencePane.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = oilWidgetPreferencePane.xib; path = /Users/iMac/Desktop/Dev/Swift_Dev/oil/oil/Sources/Preferences/oilWidgetPreferencePane.xib; sourceTree = "<absolute>"; };
 		883EBC162A11F80000235B35 /* oil.pock */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oil.pock; sourceTree = BUILT_PRODUCTS_DIR; };
 		883EBC1A2A11F80000235B35 /* oilWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilWidget.swift; sourceTree = "<group>"; };
 		883EBC1C2A11F80000235B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		883EBC292A11F94600235B35 /* CPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
 		883EBC2C2A11FBBE00235B35 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		883EBC2E2A11FC1200235B35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		883EBC302A11FD1900235B35 /* oilItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilItem.swift; sourceTree = "<group>"; };
+		88860EAF2A123AC8002822E1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		88860EB32A12672A002822E1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		88860EB82A127F9E002822E1 /* BarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
+		88860EBA2A12ADA5002822E1 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		88860EBD2A12B087002822E1 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilWidgetPreferencePane.swift; sourceTree = "<group>"; };
+		88EB38F22A145227004D60EE /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		88EB38F62A14C89A004D60EE /* GPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPU.swift; sourceTree = "<group>"; };
+		88EB38F82A14D89E004D60EE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		88EB39002A162BCA004D60EE /* IOHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOHelper.swift; sourceTree = "<group>"; };
+		88EB39022A16D7E6004D60EE /* SMCKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMCKit.swift; sourceTree = "<group>"; };
+		88EB39042A16DD46004D60EE /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		88EB39062A16DDB8004D60EE /* SMCControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMCControl.swift; sourceTree = "<group>"; };
+		88EB390B2A16DF66004D60EE /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		88EB390E2A16DFF7004D60EE /* TemperatureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureData.swift; sourceTree = "<group>"; };
+		88EB39102A16E0AA004D60EE /* FanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanData.swift; sourceTree = "<group>"; };
+		88EB39122A16E1D1004D60EE /* JSONCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodable.swift; sourceTree = "<group>"; };
+		88EB39152A16E328004D60EE /* NSNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.swift; sourceTree = "<group>"; };
+		88EB391B2A1723F1004D60EE /* GraphItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphItem.swift; sourceTree = "<group>"; };
+		88EB391D2A172430004D60EE /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		88EB39202A172AA5004D60EE /* CPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
+		88EB39222A17F471004D60EE /* Fan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fan.swift; sourceTree = "<group>"; };
+		88EB39242A17F5D4004D60EE /* TextItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextItem.swift; sourceTree = "<group>"; };
+		88EB39272A1827F1004D60EE /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		88EB39292A182902004D60EE /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		88EB392B2A182DBD004D60EE /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		88EB392D2A1831A6004D60EE /* Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
+		88EB39342A1B5A35004D60EE /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
+		88F120E62A1D8DB60033170E /* SplineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplineGraph.swift; sourceTree = "<group>"; };
+		88F120E82A1DE5BB0033170E /* HorizonGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,9 +95,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88860EC92A12D792002822E1 /* Defaults in Frameworks */,
+				88860EB72A126909002822E1 /* AppKit.framework in Frameworks */,
+				88EB38F92A14D89E004D60EE /* CoreFoundation.framework in Frameworks */,
 				883EBC2D2A11FBBE00235B35 /* AppKit.framework in Frameworks */,
+				88860EB02A123AC8002822E1 /* SpriteKit.framework in Frameworks */,
+				88F120EC2A1EBDFF0033170E /* LASwift in Frameworks */,
 				883EBC272A11F86400235B35 /* SystemKit in Frameworks */,
 				883EBC242A11F81300235B35 /* PockKit in Frameworks */,
+				88860EB42A12672A002822E1 /* SwiftUI.framework in Frameworks */,
+				88EB390A2A16DE35004D60EE /* SwiftyJSON in Frameworks */,
 				883EBC2F2A11FC1200235B35 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,10 +141,10 @@
 		883EBC192A11F80000235B35 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				883EBC322A12155800235B35 /* Utilities */,
-				883EBC302A11FD1900235B35 /* oilItem.swift */,
-				883EBC282A11F92E00235B35 /* Sections */,
 				883EBC1A2A11F80000235B35 /* oilWidget.swift */,
+				883EBC302A11FD1900235B35 /* oilItem.swift */,
+				88860EBC2A12AF5D002822E1 /* Preferences */,
+				883EBC282A11F92E00235B35 /* Sections */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -81,7 +152,12 @@
 		883EBC282A11F92E00235B35 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				883EBC292A11F94600235B35 /* CPU.swift */,
+				88EB39262A17F5E8004D60EE /* Items */,
+				88EB391F2A172826004D60EE /* Managers */,
+				88EB39142A16E314004D60EE /* Extensions */,
+				88BD7A6A2A136221006F7DF6 /* Graphs */,
+				88EB390D2A16DFD8004D60EE /* Schemas */,
+				883EBC322A12155800235B35 /* Utilities */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -89,6 +165,9 @@
 		883EBC2B2A11FBBE00235B35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88EB38F82A14D89E004D60EE /* CoreFoundation.framework */,
+				88860EB32A12672A002822E1 /* SwiftUI.framework */,
+				88860EAF2A123AC8002822E1 /* SpriteKit.framework */,
 				883EBC2E2A11FC1200235B35 /* Foundation.framework */,
 				883EBC2C2A11FBBE00235B35 /* AppKit.framework */,
 			);
@@ -98,8 +177,94 @@
 		883EBC322A12155800235B35 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				88EB39042A16DD46004D60EE /* Temperature.swift */,
+				88EB39022A16D7E6004D60EE /* SMCKit.swift */,
+				88EB39062A16DDB8004D60EE /* SMCControl.swift */,
+				88EB39002A162BCA004D60EE /* IOHelper.swift */,
+				88EB38F22A145227004D60EE /* Options.swift */,
+				88EB39272A1827F1004D60EE /* System.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		88860EBC2A12AF5D002822E1 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				88860EBD2A12B087002822E1 /* Preferences.swift */,
+				88BD7A5E2A134009006F7DF6 /* oilWidgetPreferencePane */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		88BD7A5E2A134009006F7DF6 /* oilWidgetPreferencePane */ = {
+			isa = PBXGroup;
+			children = (
+				88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */,
+				88BD7A5F2A134016006F7DF6 /* Base.lproj */,
+			);
+			path = oilWidgetPreferencePane;
+			sourceTree = "<group>";
+		};
+		88BD7A5F2A134016006F7DF6 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				8829C7BC2A12F883009DE392 /* oilWidgetPreferencePane.xib */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		88BD7A6A2A136221006F7DF6 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				88860EB82A127F9E002822E1 /* BarGraph.swift */,
+				88EB39342A1B5A35004D60EE /* LineGraph.swift */,
+				88F120E62A1D8DB60033170E /* SplineGraph.swift */,
+				88F120E82A1DE5BB0033170E /* HorizonGraph.swift */,
+			);
+			path = Graphs;
+			sourceTree = "<group>";
+		};
+		88EB390D2A16DFD8004D60EE /* Schemas */ = {
+			isa = PBXGroup;
+			children = (
+				88EB391D2A172430004D60EE /* Manager.swift */,
+				88860EBA2A12ADA5002822E1 /* Graph.swift */,
+				88EB390B2A16DF66004D60EE /* Refreshable.swift */,
+				88EB39122A16E1D1004D60EE /* JSONCodable.swift */,
+				88EB390E2A16DFF7004D60EE /* TemperatureData.swift */,
+				88EB39102A16E0AA004D60EE /* FanData.swift */,
+			);
+			path = Schemas;
+			sourceTree = "<group>";
+		};
+		88EB39142A16E314004D60EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88EB39152A16E328004D60EE /* NSNotification.swift */,
+				88EB392B2A182DBD004D60EE /* Double.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88EB391F2A172826004D60EE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				88EB39202A172AA5004D60EE /* CPU.swift */,
+				88EB38F62A14C89A004D60EE /* GPU.swift */,
+				88EB39222A17F471004D60EE /* Fan.swift */,
+				88EB39292A182902004D60EE /* Memory.swift */,
+				88EB392D2A1831A6004D60EE /* Disk.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		88EB39262A17F5E8004D60EE /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				88EB391B2A1723F1004D60EE /* GraphItem.swift */,
+				88EB39242A17F5D4004D60EE /* TextItem.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +287,9 @@
 			packageProductDependencies = (
 				883EBC232A11F81300235B35 /* PockKit */,
 				883EBC262A11F86400235B35 /* SystemKit */,
+				88860EC82A12D792002822E1 /* Defaults */,
+				88EB39092A16DE35004D60EE /* SwiftyJSON */,
+				88F120EB2A1EBDFF0033170E /* LASwift */,
 			);
 			productName = oil;
 			productReference = 883EBC162A11F80000235B35 /* oil.pock */;
@@ -139,6 +307,7 @@
 				TargetAttributes = {
 					883EBC152A11F80000235B35 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -154,6 +323,9 @@
 			packageReferences = (
 				883EBC222A11F81300235B35 /* XCRemoteSwiftPackageReference "pockkit" */,
 				883EBC252A11F86400235B35 /* XCRemoteSwiftPackageReference "SystemKit" */,
+				88860EC72A12D792002822E1 /* XCRemoteSwiftPackageReference "Defaults" */,
+				88EB39082A16DE35004D60EE /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				88F120EA2A1EBDFF0033170E /* XCRemoteSwiftPackageReference "LASwift" */,
 			);
 			productRefGroup = 883EBC172A11F80000235B35 /* Products */;
 			projectDirPath = "";
@@ -169,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8829C7BD2A12F883009DE392 /* oilWidgetPreferencePane.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +364,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Install widget.\necho \"[${PRODUCT_NAME}.pock] Starting installation\"\nFILEPATH=$TARGET_BUILD_DIR/$PRODUCT_NAME.pock \nopen \"$FILEPATH\"";
+			shellScript = "# Install widget.\necho \"[${PRODUCT_NAME}.pock] Starting installation\"\nFILEPATH=$TARGET_BUILD_DIR/$PRODUCT_NAME.pock \nopen \"$FILEPATH\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -200,9 +373,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88EB392A2A182902004D60EE /* Memory.swift in Sources */,
+				88EB390C2A16DF66004D60EE /* Refreshable.swift in Sources */,
+				88EB39012A162BCA004D60EE /* IOHelper.swift in Sources */,
+				88860EC02A12B1F5002822E1 /* oilWidgetPreferencePane.swift in Sources */,
+				88EB391C2A1723F1004D60EE /* GraphItem.swift in Sources */,
+				88EB391E2A172430004D60EE /* Manager.swift in Sources */,
+				88860EB92A127F9E002822E1 /* BarGraph.swift in Sources */,
 				883EBC312A11FD1900235B35 /* oilItem.swift in Sources */,
-				883EBC2A2A11F94600235B35 /* CPU.swift in Sources */,
+				88EB392C2A182DBD004D60EE /* Double.swift in Sources */,
+				88F120E72A1D8DB60033170E /* SplineGraph.swift in Sources */,
+				88860EBE2A12B087002822E1 /* Preferences.swift in Sources */,
+				88EB392E2A1831A6004D60EE /* Disk.swift in Sources */,
+				88EB39212A172AA5004D60EE /* CPU.swift in Sources */,
+				88EB39112A16E0AA004D60EE /* FanData.swift in Sources */,
+				88EB38F32A145227004D60EE /* Options.swift in Sources */,
+				88EB39132A16E1D1004D60EE /* JSONCodable.swift in Sources */,
+				88EB390F2A16DFF7004D60EE /* TemperatureData.swift in Sources */,
+				88EB39352A1B5A35004D60EE /* LineGraph.swift in Sources */,
 				883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */,
+				88860EBB2A12ADA5002822E1 /* Graph.swift in Sources */,
+				88EB39052A16DD46004D60EE /* Temperature.swift in Sources */,
+				88EB39232A17F471004D60EE /* Fan.swift in Sources */,
+				88EB38F72A14C89A004D60EE /* GPU.swift in Sources */,
+				88EB39282A1827F1004D60EE /* System.swift in Sources */,
+				88EB39032A16D7E6004D60EE /* SMCKit.swift in Sources */,
+				88F120E92A1DE5BB0033170E /* HorizonGraph.swift in Sources */,
+				88EB39252A17F5D4004D60EE /* TextItem.swift in Sources */,
+				88EB39162A16E328004D60EE /* NSNotification.swift in Sources */,
+				88EB39072A16DDB8004D60EE /* SMCControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -333,6 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mxcr.cpu.oil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = pock;
 			};
@@ -342,6 +543,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -398,6 +600,30 @@
 				kind = branch;
 			};
 		};
+		88860EC72A12D792002822E1 /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		88EB39082A16DE35004D60EE /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		88F120EA2A1EBDFF0033170E /* XCRemoteSwiftPackageReference "LASwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AlexanderTar/LASwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -410,6 +636,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 883EBC252A11F86400235B35 /* XCRemoteSwiftPackageReference "SystemKit" */;
 			productName = SystemKit;
+		};
+		88860EC82A12D792002822E1 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88860EC72A12D792002822E1 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		88EB39092A16DE35004D60EE /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88EB39082A16DE35004D60EE /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		88F120EB2A1EBDFF0033170E /* LASwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88F120EA2A1EBDFF0033170E /* XCRemoteSwiftPackageReference "LASwift" */;
+			productName = LASwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
