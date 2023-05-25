@@ -119,9 +119,9 @@ class oilWidget: PKWidget {
         case .line:
             return LineGraph()
         case .spline:
-            return Graph()
+            return SplineGraph()
         case .horizon:
-            return Graph()
+            return HorizonGraph()
         }
     }
 }

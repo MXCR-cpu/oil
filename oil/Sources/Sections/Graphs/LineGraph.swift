@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Cocoa
 import AppKit
 import Defaults
 import SwiftUI
@@ -19,16 +18,17 @@ class LineGraph: Graph {
     
     override func draw(data: [Int]) -> Path {
         var path: Path = Path()
-        path.move(to: .zero)
-        for i in 0..<data.count {
-            path.addLine(to: CGPoint(x: stepSize * i,
-                                     y: max(Int(Double(18 * data[data.count-1-i]) /
-                                                100),
-                                            1)))
+        var index: Int = 0
+        path.addLines(data.compactMap {
+            index += 1
+            return CGPoint(x: stepSize * (data.count-index),
+                           y: Int(18 * Double($0) / 100))
+        })
+        if Defaults[.graphFill] {
+            path.addLine(to: .zero)
+            path.addLine(to: CGPoint(x: stepSize * (data.count - 1), y: 0))
+            path.closeSubpath()
         }
-        path.addLine(to: CGPoint(x: (data.count - 1) * stepSize, y: 0))
-        path.addLine(to: .zero)
-        path.closeSubpath()
         return path
     }
 }

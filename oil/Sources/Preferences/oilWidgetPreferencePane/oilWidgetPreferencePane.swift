@@ -21,6 +21,7 @@ class oilWidgetPreferencePane:
     @IBOutlet weak var graphLength: NSComboBox!
     @IBOutlet weak var graphWidth: NSComboBox!
     @IBOutlet weak var graphType: NSPopUpButton!
+    @IBOutlet weak var graphFill: NSButton!
     @IBOutlet weak var useCPU: NSButton!
     @IBOutlet weak var useGPU: NSButton!
     @IBOutlet weak var useFan: NSButton!
@@ -45,6 +46,7 @@ class oilWidgetPreferencePane:
         self.graphLength.stringValue = "\(Defaults[.graphLength])"
         self.graphWidth.stringValue = "\(Defaults[.graphWidth])"
         self.graphType.selectItem(withTag: Defaults[.graphType].rawValue + 330)
+        self.graphFill.state = Defaults[.graphFill] ? .on : .off
         self.useCPU.state = (Defaults[.itemsDisplay] & (1 << 0)) != 0 ? .on : .off
         self.useGPU.state = (Defaults[.itemsDisplay] & (1 << 1)) != 0 ? .on : .off
         self.useFan.state = (Defaults[.itemsDisplay] & (1 << 2)) != 0 ? .on : .off
@@ -58,6 +60,8 @@ class oilWidgetPreferencePane:
             Defaults[.stackedText] = checkbox.state == .on
         case 3:
             Defaults[.displayGraph] = checkbox.state == .on
+        case 34:
+            Defaults[.graphFill] = checkbox.state == .on
         default:
             Defaults[.itemsDisplay] =
                 Defaults[.itemsDisplay] ^ (1 << (checkbox.tag - 41))

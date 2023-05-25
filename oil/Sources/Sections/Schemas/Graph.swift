@@ -29,9 +29,12 @@ class Graph {
     func generateGraph(data: [Int]) {
         let shapeLayer: CAShapeLayer = CAShapeLayer()
         shapeLayer.path = self.draw(data: data).cgPath
-        shapeLayer.fillColor = CGColor.white
-        //shapeLayer.strokeColor = CGColor.white
-        //shapeLayer.lineWidth = 0.5
+        if Defaults[.graphFill] {
+            shapeLayer.fillColor = CGColor.white
+        } else {
+            shapeLayer.strokeColor = CGColor.white
+            shapeLayer.lineWidth = 1
+        }
         if let oldLayer = view.layer?.sublayers?[0] {
             view.layer?.replaceSublayer(oldLayer, with: shapeLayer)
         } else {
@@ -45,7 +48,7 @@ class Graph {
         self.display = Defaults[.displayGraph]
         self.view = NSView(frame: NSRect(x: 0,
                                          y: 0,
-                                         width: self.stepSize * self.historyLength,
+                                         width: self.stepSize * (self.historyLength - 1),
                                          height: 18))
     }
     

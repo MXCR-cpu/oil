@@ -61,10 +61,8 @@ internal class GraphItem: StatusItem {
     }
     
     func updateCall() {
-        //NSLog("[oil] \(manager.title): updateGraph()")
         updateGraph()
         update = false
-        //NSLog("[oil] \(manager.title): Exiting updateCall()")
     }
     
     /// Utility
