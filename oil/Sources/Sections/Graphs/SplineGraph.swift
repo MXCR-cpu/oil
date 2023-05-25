@@ -30,7 +30,7 @@ class SplineGraph: Graph {
     }
     
     override func draw(data: [Int]) -> Path {
-        var index: Int = -1
+        var index: Int = 0
         var points: [CGPoint] = data.compactMap {
             index += 1
             return CGPoint(x: CGFloat(stepSize * (data.count - index)),
@@ -50,9 +50,9 @@ class SplineGraph: Graph {
         var path: Path = createSplinePath(points: points,
                                           controlPoints: controlPoints)
         if Defaults[.graphFill] {
-            path.addLine(to: .zero)
             path.addLine(to: CGPoint(x: stepSize * (historyLength - 1),
                                      y: 0))
+            path.addLine(to: .zero)
             path.closeSubpath()
         }
         return path
