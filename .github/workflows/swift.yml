@@ -11,7 +11,5 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v3
-    - name: Set Up Xcode
-      run: xcode-select --install
     - name: Build
       run: xcodebuild build -project oil.xcodeproj -scheme oil
