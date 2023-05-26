@@ -1,8 +1,4 @@
-# This workflow will build a Swift project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
-
-name: Swift
-
+name: Xcode Build
 on:
   push:
     branches: [ "master" ]
@@ -10,13 +6,12 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-
+  test-build:
     runs-on: macos-latest
-
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout Code
+      uses: actions/checkout@v3
+    - name: Set Up Xcode
+      run: xcode-select --install
     - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      run: xcodebuild build -project oil.xcodeproj -scheme oil
