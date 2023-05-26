@@ -33,11 +33,11 @@ class SplineGraph: Graph {
         var index: Int = 0
         var points: [CGPoint] = data.compactMap {
             index += 1
-            return CGPoint(x: CGFloat(stepSize * (data.count - index)),
+            return CGPoint(x: CGFloat(stepSize * (historyLength - index)),
                            y: getY(val: $0))
         }
         for i in (points.count)..<historyLength {
-            points.append(CGPoint(x: CGFloat(stepSize * (historyLength - i)),
+            points.append(CGPoint(x: CGFloat(stepSize * (historyLength - i - 1)),
                                   y: 0))
         }
         points.reverse()
