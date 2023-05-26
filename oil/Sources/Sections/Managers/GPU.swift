@@ -38,8 +38,12 @@ internal class GPUManager: Manager {
                     temp: statistics["Temperature(C)"] as? Double ??
                     SmcControl.shared.gpuProximityTemperature ?? 0)
         }
-        usage = st[0].usage
-        temp = st[0].temp
+        usage = st.reduce(0, { partialResult, a in
+            return a.usage > partialResult ? a.usage : partialResult
+        })
+        temp = st.reduce(0, { partialResult, a in
+            return a.temp > partialResult ? a.temp : partialResult
+        })
         usageHistory = (usageHistory + [usage ?? 0])
             .suffix(Defaults[.graphLength])
         usageString = [
