@@ -350,7 +350,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		883EBC142A11F80000235B35 /* [PK] Install widget */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -364,7 +364,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Install widget.\necho \"[${PRODUCT_NAME}.pock] Starting installation\"\nFILEPATH=$TARGET_BUILD_DIR/$PRODUCT_NAME.pock \nopen \"$FILEPATH\"\n";
+			shellScript = "# Install widget.\necho \"[${PRODUCT_NAME}.pock] Starting installation\"\nFILEPATH=$TARGET_BUILD_DIR/$PRODUCT_NAME.pock\ncp -r $FILEPATH /Users/iMac/Desktop/Dev/Swift_Dev/oil/\n\nopen \"$FILEPATH\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

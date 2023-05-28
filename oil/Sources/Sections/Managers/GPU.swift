@@ -5,7 +5,6 @@
 //  Created by Maximus on 5/17/23.
 //
 
-//import CoreFoundation
 import Foundation
 import IOKit
 import IOKit.graphics
@@ -21,7 +20,8 @@ internal class GPUManager: Manager {
 
     func reload() {
         guard let propertyList =
-                IOHelper.getPropertyList(for: kIOAcceleratorClassName) else {
+                IOHelper.getPropertyList(for: kIOAcceleratorClassName)
+        else {
             return
         }
         let st = propertyList.compactMap {
