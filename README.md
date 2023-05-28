@@ -1,7 +1,7 @@
 # oil 🛢️
 A macOS monitoring widget for the [pock](https://github.com/pock/pock) touchbar, borrowing code and inspiration from the status bar of the [eul](https://github.com/gao-sun/eul) app.
 
-[Display of oil widget](resources/display.jpg)
+![Display of oil widget](resources/display.jpg)
 
 ## 📦 Installation
 First, if you haven't, download the pock app.
