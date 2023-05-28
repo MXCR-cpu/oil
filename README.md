@@ -3,6 +3,8 @@ A macOS monitoring widget for the [pock](https://github.com/pock/pock) touchbar,
 
 ![Display of oil widget](resources/display.png)
 
+*Here the widget is configured to display CPU, GPU, Fan, Memory, and Disk usage in that order*
+
 ## 📦 Installation
 First, if you haven't, download the pock app.
 ```sh
