@@ -1,0 +1,351 @@
+#
+#	File:		Read Me
+#
+#	Contains:	"Read Me" File for vBasicOps Library
+#
+#	Version		Version 1.0
+#
+#	Copyright:	© 1999 by Apple Computer, Inc., all rights reserved.
+#
+#	File Ownership:
+#
+#		DRI:				Behzad Razban
+#
+#		Other Contact:		William Cheng
+#
+#		Technology:			AltiVec
+#
+#	DRI:		Behzad Razban
+#
+#	Writers:
+#
+#		(BR)	Behzad Razban
+#		(WC)	William Cheng
+#		(RM)	Robert Murley
+#
+#	Change History (most recent first):
+#
+#		 <4>	10/20/99	RM		Brought function descriptions up to date.
+#		 <3>	10/19/99	RM		Brought function table up to date.
+#		 <2>	  8/4/99	RM		Upgrade to Release 1.0 <1>First Checkin
+#		 <1>	 5/25/99	RM		First Checkin.
+#
+
+
+                     "Read Me" File for vBasicOps Library
+
+
+This 'Read Me' file for 'vBasicOps, library provides basic information on
+this library. 'vBasicOps' provides algebraic functions (such as Add, Subtract,
+Divide, Multiply) for data types which are not covered by AltiVec's instruction
+set. For example 64-bit and 128-bit arithmetic for both signed and unsigned 
+data types are provided in 'vBasicOps' library. This file includes the following 
+sections: 
+
+  1. Descriptions of functions
+  2. Test methodology
+  3. Future releases
+  4. Compiler version
+  
+////////////////////////////////////////////////////////////////////////////////
+//                      1. Descriptions of Functions                          //
+////////////////////////////////////////////////////////////////////////////////
+
+This library is a collection of algebraic functions, which utilize AltiVec 
+instructions, and are desgined to facilitate vector processing in mathematical   
+programming. 
+
+Following table shows which functions are done by hardware and which ones are
+performed by 'vBasicOps' library:
+
+Legend:
+	H/W   = Hardware
+	LIB  = vBasicOps Library
+	NRel  = Next Release of vBasicOps Library
+	N/A   = Not Applicable
+
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+| Data Type/    | U8  | S8  | U16 | S16 | U32 | S32 | U64 | S64 | U128 | S128 |
+| Function      |     |     |     |     |     |     |     |     |      |      |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+|    Add        | H/W | H/W | H/W | H/W | H/W | H/W | LIB | LIB | LIB  |  LIB |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+|    AddS       | H/W | H/W | H/W | H/W | H/W | H/W | LIB | LIB | LIB  | LIB  |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+|    Sub        | H/W | H/W | H/W | H/W | H/W | H/W | LIB | LIB | LIB  | LIB  |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+|    SubS       | H/W | H/W | H/W | H/W | H/W | H/W | LIB | LIB | LIB  | LIB  |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+|  Mul(Half)    | LIB | LIB | LIB | LIB | LIB | LIB | LIB | LIB | LIB  | LIB  |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+|Mul Even (Full)| H/W | H/W | H/W | H/W | LIB | LIB | LIB | LIB |  N/A |  N/A |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+|Mul Odd  (Full)| H/W | H/W | H/W | H/W | LIB | LIB | LIB | LIB |  N/A |  N/A |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+|    Divide     | LIB | LIB | LIB | LIB | LIB | LIB | LIB | LIB | LIB  | LIB  |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+| Logical Shift | H/W | H/W | H/W | H/W | H/W | H/W | LIB | LIB | H/W  | H/W  |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+|Algebraic Shift| H/W | H/W | H/W | H/W | H/W | H/W | LIB | LIB | LIB  | LIB  |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+|    Rotate     | H/W | H/W | H/W | H/W | H/W | H/W | LIB | LIB | LIB  | LIB  |
++---------------+-----+-----+-----+-----+-----+-----+-----+-----+------+------+
+
+
+Here is a short description of operations.
+ 
+				
+      Add:      It takes two vectors of data elements and adds each element         
+                of the second vector to the corresponding element of the first      
+                vector and puts the result in the associated data element of the    
+                destination register.
+				
+      Subtract: It takes two vectors of data elements and subtracts each element    
+                of the second vector from the corresponding element of the first    
+                vector and puts the result in the associated data element of the    
+                destination register. 				
+                                                                                    
+      Multiply: It takes two vectors of data elements and multiplies each element   
+                of the first vector by the corresponding element of the second      
+                vector.  Half-multiply puts the low-order half of the result in 
+				the associated data element of the destination register, while 
+				full multiply puts the entire result into the assiciated double-
+				width data element of the destination register.
+				
+      Divide:   It takes two vectors of data elements and divides each element      
+                of the first vector by the corresponding element of the second      
+                vector and puts the result in the associated data element of the    
+                destination register. A pointer is passed to the function to get   
+                the remainder.
+				
+      Shift:    It takes a vector of two 64-bit data elements or one 128-bit
+	            data element and shifts it right or left, in a logical or 
+				algebraic manner, using a shift factor that is passed as an
+				argument to the function.
+				
+      Rotate:   It takes a vector of two 64-bit data elements or one 128-bit
+	            data element and rotates it right or left, using a shift 
+				factor that is passed as an argument to the function.
+				
+				
+
+/////////////////////////////////////////////////////////////////////////////////////
+//   Following abbreviations are used in the names of functions in this library:   //
+//                                                                                 //
+//      v            Vector                                                        //
+//      U            Unsigned                                                      //
+//      S            Signed                                                        //
+//      8            8-bit                                                         //
+//      16           16-bit                                                        //
+//      32           32-bit                                                        //
+//      64           64-bit                                                        //
+//      128          128-bit                                                       //
+//      Add          Addition                                                      //
+//      AddS         Addition with Saturation                                      //
+//      Sub          Subtraction                                                   //
+//      SubS         Subtraction with Saturation                                   //
+//      Mul          Multiplication                                                //
+//      Divide       Division                                                      //
+//      Half         Half (multiplication, width of result is the same as width of //
+//                      operands)                                                  //                         
+//      Full         Full (multiplication, width of result is twice width of each  //
+//                      operand)                                                   //
+//      Even         Multiplication is performed on EVEN data elements of vector   //
+//                      (Please note that Big endian is used. So the left-most     //
+//                      data element is labled as element 0)                       //
+//      Odd          Multiplication is performed on ODD  data elements of vector.  //
+//                                                                                 //
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Following table depicts the data types used for arguments of functions and the
+data type of the result which is returned:
+                                                             
+   +-----------------+---------------+---------------+---------------+-----------------+
+   | Library         |   argument 1  |   argument 2  |    Result     | Remainder (Div) |
+   | Function        |               |               |               |    Points to    |     
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vU64Add       |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned long | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vU64AddS      |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned long | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vU128Add      |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned long | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vU128AddS     |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned long | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vS64Add       |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vS64AddS      |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vS128Add      |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vS128AddS     |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vU64Sub       |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned long | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vU64SubS      |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned long | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vU128Sub      |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned long | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vU128SubS     |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned long | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vS64Sub       |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vS64SubS      |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vS128Sub      |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |   vS128SubS     |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU8HalfMultiply  |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned char | unsigned char | unsigned char |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS8HalfMultiply  |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed char  |  signed char  |  signed char  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU16HalfMultiply |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned short| unsigned short| unsigned short|                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS16HalfMultiply |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed short |  signed short |  signed short |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU32HalfMultiply |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned long | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS32HalfMultiply |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU32FullMulEven  |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned short| unsigned short| unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU32FullMulOdd   |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned short| unsigned short| unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS32FullMulEven  |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS32FullMulOdd   |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU64FullMulEven  |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned short| unsigned short| unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU64FullMulOdd   |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned short| unsigned short| unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU64HalfMultiply |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned short| unsigned short| unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS64HalfMultiply |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed short |  signed short |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS64FullMulEven  |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed short |  signed short |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS64FullMulOdd   |    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed short |  signed short |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU128HalfMultiply|    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned long | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS128HalfMultiply|    vector     |     vector    |     vector    |       N/A       |
+   |                 |  signed long  |  signed long  |  signed long  |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU8Divide        |    vector     |     vector    |     vector    |     vector      |
+   |                 | unsigned char | unsigned char | unsigned char |  unsigned char  |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS8Divide        |    vector     |     vector    |     vector    |     vector      |
+   |                 |  signed char  |  signed char  |  signed char  |   signed char   |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU16Divide       |    vector     |     vector    |     vector    |      vector     |
+   |                 | unsigned short| unsigned short| unsigned short|  unsigned short |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS16Divide       |    vector     |     vector    |     vector    |      vector     |
+   |                 |  signed short |  signed short |  signed short |   signed short  |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU32Divide       |    vector     |     vector    |     vector    |      vector     |
+   |                 | unsigned long | unsigned long | unsigned long |  unsigned long  |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS32Divide       |    vector     |     vector    |     vector    |      vector     |
+   |                 |  signed long  |  signed long  |  signed long  |   signed long   |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU64Divide       |    vector     |     vector    |     vector    |      vector     |
+   |                 | unsigned long | unsigned long | unsigned long |  unsigned long  |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS64Divide       |    vector     |     vector    |     vector    |      vector     |
+   |                 |  signed long  |  signed long  |  signed long  |   signed long   |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vU128Divide      |    vector     |     vector    |     vector    |      vector     |
+   |                 | unsigned long | unsigned long | unsigned long |  unsigned long  |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vS128Divide      |    vector     |     vector    |     vector    |      vector     |
+   |                 |  signed long  |  signed long  |  signed long  |   signed long   |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vLL64Shift       |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vA64Shift        |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vLR64Shift       |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vLL64Shift2      |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vA64Shift2       |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vLR64Shift2      |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vA128Shift       |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vL64Rotate       |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vR64Rotate       |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vL64Rotate2      |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vR64Rotate2      |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vL128Rotate      |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+   |vR128Rotate      |    vector     |     vector    |     vector    |       N/A       |
+   |                 | unsigned long | unsigned char | unsigned long |                 |
+   +-----------------+---------------+---------------+---------------+-----------------+
+  
+           
+
+////////////////////////////////////////////////////////////////////////////////
+//                           2. Test Methodology                              //
+////////////////////////////////////////////////////////////////////////////////
+
+A set of comprehensive automatic test programs are written to test these library
+functions. All edge cases are tested first and then inputs are generated using a
+random number generator and the results of vBasicOps library functions are compared 
+with the results produced by previously tested scalar codes which perform the same
+functions.			 

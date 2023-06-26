@@ -1,0 +1,5197 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<struct name='vImageChannelDescription' type64='{vImageChannelDescription=&quot;min&quot;d&quot;zero&quot;d&quot;full&quot;d&quot;max&quot;d}'/>
+<struct name='vImageRGBPrimaries' type64='{vImageRGBPrimaries=&quot;red_x&quot;f&quot;green_x&quot;f&quot;blue_x&quot;f&quot;white_x&quot;f&quot;red_y&quot;f&quot;green_y&quot;f&quot;blue_y&quot;f&quot;white_y&quot;f}'/>
+<struct name='vImageTransferFunction' type64='{vImageTransferFunction=&quot;c0&quot;d&quot;c1&quot;d&quot;c2&quot;d&quot;c3&quot;d&quot;gamma&quot;d&quot;cutoff&quot;d&quot;c4&quot;d&quot;c5&quot;d}'/>
+<struct name='vImageWhitePoint' type64='{vImageWhitePoint=&quot;white_x&quot;f&quot;white_y&quot;f}'/>
+<struct name='vImage_ARGBToYpCbCr' type64='{vImage_ARGBToYpCbCr=&quot;opaque&quot;[128C]}'/>
+<struct name='vImage_ARGBToYpCbCrMatrix' type64='{vImage_ARGBToYpCbCrMatrix=&quot;R_Yp&quot;f&quot;G_Yp&quot;f&quot;B_Yp&quot;f&quot;R_Cb&quot;f&quot;G_Cb&quot;f&quot;B_Cb_R_Cr&quot;f&quot;G_Cr&quot;f&quot;B_Cr&quot;f}'/>
+<struct name='vImage_AffineTransform' type64='{vImage_AffineTransform=&quot;a&quot;f&quot;b&quot;f&quot;c&quot;f&quot;d&quot;f&quot;tx&quot;f&quot;ty&quot;f}'/>
+<struct name='vImage_AffineTransform_Double' type64='{vImage_AffineTransform_Double=&quot;a&quot;d&quot;b&quot;d&quot;c&quot;d&quot;d&quot;d&quot;tx&quot;d&quot;ty&quot;d}'/>
+<struct name='vImage_Buffer' type64='{vImage_Buffer=&quot;data&quot;^v&quot;height&quot;Q&quot;width&quot;Q&quot;rowBytes&quot;Q}'/>
+<struct name='vImage_CGAffineTransform' type64='{vImage_AffineTransform_Double=&quot;a&quot;d&quot;b&quot;d&quot;c&quot;d&quot;d&quot;d&quot;tx&quot;d&quot;ty&quot;d}'/>
+<struct name='vImage_CGImageFormat' type64='{vImage_CGImageFormat=&quot;bitsPerComponent&quot;I&quot;bitsPerPixel&quot;I&quot;colorSpace&quot;^{CGColorSpace}&quot;bitmapInfo&quot;I&quot;version&quot;I&quot;decode&quot;^d&quot;renderingIntent&quot;i}'/>
+<struct name='vImage_PerpsectiveTransform' type64='{vImage_PerpsectiveTransform=&quot;a&quot;f&quot;b&quot;f&quot;c&quot;f&quot;d&quot;f&quot;tx&quot;f&quot;ty&quot;f&quot;vx&quot;f&quot;vy&quot;f&quot;v&quot;f}'/>
+<struct name='vImage_YpCbCrPixelRange' type64='{vImage_YpCbCrPixelRange=&quot;Yp_bias&quot;i&quot;CbCr_bias&quot;i&quot;YpRangeMax&quot;i&quot;CbCrRangeMax&quot;i&quot;YpMax&quot;i&quot;YpMin&quot;i&quot;CbCrMax&quot;i&quot;CbCrMin&quot;i}'/>
+<struct name='vImage_YpCbCrToARGB' type64='{vImage_YpCbCrToARGB=&quot;opaque&quot;[128C]}'/>
+<struct name='vImage_YpCbCrToARGBMatrix' type64='{vImage_YpCbCrToARGBMatrix=&quot;Yp&quot;f&quot;Cr_R&quot;f&quot;Cr_G&quot;f&quot;Cb_G&quot;f&quot;Cb_B&quot;f}'/>
+<opaque name='vImageCVImageFormatRef' type64='^{vImageCVImageFormat=}'/>
+<opaque name='vImageConstCVImageFormatRef' type64='^{vImageCVImageFormat=}'/>
+<opaque name='vImageConverterRef' type64='^{vImageConverter=}'/>
+<opaque name='vImage_MultidimensionalTable' type64='^{vImage_MultidimensionalTableData=}'/>
+<constant name='kvImageDecodeArray_16Q12Format' type64='^d'/>
+<constant name='kvImage_ARGBToYpCbCrMatrix_ITU_R_601_4' type64='^{vImage_ARGBToYpCbCrMatrix=ffffffff}'/>
+<constant name='kvImage_ARGBToYpCbCrMatrix_ITU_R_709_2' type64='^{vImage_ARGBToYpCbCrMatrix=ffffffff}'/>
+<constant name='kvImage_YpCbCrToARGBMatrix_ITU_R_601_4' type64='^{vImage_YpCbCrToARGBMatrix=fffff}'/>
+<constant name='kvImage_YpCbCrToARGBMatrix_ITU_R_709_2' type64='^{vImage_YpCbCrToARGBMatrix=fffff}'/>
+<enum name='kRotate0DegreesClockwise' value64='0'/>
+<enum name='kRotate0DegreesCounterClockwise' value64='0'/>
+<enum name='kRotate180DegreesClockwise' value64='2'/>
+<enum name='kRotate180DegreesCounterClockwise' value64='2'/>
+<enum name='kRotate270DegreesClockwise' value64='1'/>
+<enum name='kRotate270DegreesCounterClockwise' value64='3'/>
+<enum name='kRotate90DegreesClockwise' value64='3'/>
+<enum name='kRotate90DegreesCounterClockwise' value64='1'/>
+<enum name='kvImage420Yp8_Cb8_Cr8' value64='3'/>
+<enum name='kvImage420Yp8_CbCr8' value64='4'/>
+<enum name='kvImage422CbYpCrYp16' value64='13'/>
+<enum name='kvImage422CbYpCrYp8' value64='0'/>
+<enum name='kvImage422CbYpCrYp8_AA8' value64='2'/>
+<enum name='kvImage422CrYpCbYpCbYpCbYpCrYpCrYp10' value64='9'/>
+<enum name='kvImage422YpCbYpCr8' value64='1'/>
+<enum name='kvImage444AYpCbCr16' value64='14'/>
+<enum name='kvImage444AYpCbCr8' value64='5'/>
+<enum name='kvImage444CbYpCrA8' value64='7'/>
+<enum name='kvImage444CrYpCb10' value64='8'/>
+<enum name='kvImage444CrYpCb8' value64='6'/>
+<enum name='kvImageARGB16Q12' value64='2'/>
+<enum name='kvImageARGB16U' value64='1'/>
+<enum name='kvImageARGB8888' value64='0'/>
+<enum name='kvImageBackgroundColorFill' value64='4'/>
+<enum name='kvImageBufferSizeMismatch' value64='-21774'/>
+<enum name='kvImageBufferTypeCode_Alpha' value64='17'/>
+<enum name='kvImageBufferTypeCode_CGFormat' value64='24'/>
+<enum name='kvImageBufferTypeCode_CMYK_Black' value64='4'/>
+<enum name='kvImageBufferTypeCode_CMYK_Cyan' value64='1'/>
+<enum name='kvImageBufferTypeCode_CMYK_Magenta' value64='2'/>
+<enum name='kvImageBufferTypeCode_CMYK_Yellow' value64='3'/>
+<enum name='kvImageBufferTypeCode_CVPixelBuffer_YCbCr' value64='19'/>
+<enum name='kvImageBufferTypeCode_Cb' value64='22'/>
+<enum name='kvImageBufferTypeCode_Chroma' value64='21'/>
+<enum name='kvImageBufferTypeCode_Chunky' value64='25'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel1' value64='1'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel10' value64='10'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel11' value64='11'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel12' value64='12'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel13' value64='13'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel14' value64='14'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel15' value64='15'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel16' value64='16'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel2' value64='2'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel3' value64='3'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel4' value64='4'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel5' value64='5'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel6' value64='6'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel7' value64='7'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel8' value64='8'/>
+<enum name='kvImageBufferTypeCode_ColorSpaceChannel9' value64='9'/>
+<enum name='kvImageBufferTypeCode_Cr' value64='23'/>
+<enum name='kvImageBufferTypeCode_EndOfList' value64='0'/>
+<enum name='kvImageBufferTypeCode_Indexed' value64='18'/>
+<enum name='kvImageBufferTypeCode_LAB_A' value64='2'/>
+<enum name='kvImageBufferTypeCode_LAB_B' value64='3'/>
+<enum name='kvImageBufferTypeCode_LAB_L' value64='1'/>
+<enum name='kvImageBufferTypeCode_Luminance' value64='20'/>
+<enum name='kvImageBufferTypeCode_Monochrome' value64='1'/>
+<enum name='kvImageBufferTypeCode_RGB_Blue' value64='3'/>
+<enum name='kvImageBufferTypeCode_RGB_Green' value64='2'/>
+<enum name='kvImageBufferTypeCode_RGB_Red' value64='1'/>
+<enum name='kvImageBufferTypeCode_UniqueFormatCount' value64='26'/>
+<enum name='kvImageBufferTypeCode_XYZ_X' value64='1'/>
+<enum name='kvImageBufferTypeCode_XYZ_Y' value64='2'/>
+<enum name='kvImageBufferTypeCode_XYZ_Z' value64='3'/>
+<enum name='kvImageCVImageFormat_AlphaIsOneHint' value64='-21604'/>
+<enum name='kvImageCVImageFormat_ChromaSiting' value64='-21601'/>
+<enum name='kvImageCVImageFormat_ColorSpace' value64='-21602'/>
+<enum name='kvImageCVImageFormat_ConversionMatrix' value64='-21600'/>
+<enum name='kvImageCVImageFormat_NoError' value64='0'/>
+<enum name='kvImageCVImageFormat_VideoChannelDescription' value64='-21603'/>
+<enum name='kvImageColorSyncIsAbsent' value64='-21779'/>
+<enum name='kvImageConvert_DitherAtkinson' value64='4'/>
+<enum name='kvImageConvert_DitherFloydSteinberg' value64='3'/>
+<enum name='kvImageConvert_DitherNone' value64='0'/>
+<enum name='kvImageConvert_DitherOrdered' value64='1'/>
+<enum name='kvImageConvert_DitherOrderedReproducible' value64='2'/>
+<enum name='kvImageConvert_OrderedGaussianBlue' value64='0'/>
+<enum name='kvImageConvert_OrderedNoiseShapeMask' value64='-268435456'/>
+<enum name='kvImageConvert_OrderedUniformBlue' value64='268435456'/>
+<enum name='kvImageCopyInPlace' value64='2'/>
+<enum name='kvImageCoreVideoIsAbsent' value64='-21784'/>
+<enum name='kvImageDoNotClamp' value64='2048'/>
+<enum name='kvImageDoNotTile' value64='16'/>
+<enum name='kvImageEdgeExtend' value64='8'/>
+<enum name='kvImageFullInterpolation' value64='1'/>
+<enum name='kvImageGamma_11_over_5_half_precision' value64='5'/>
+<enum name='kvImageGamma_11_over_9_half_precision' value64='8'/>
+<enum name='kvImageGamma_5_over_11_half_precision' value64='4'/>
+<enum name='kvImageGamma_5_over_9_half_precision' value64='2'/>
+<enum name='kvImageGamma_9_over_11_half_precision' value64='9'/>
+<enum name='kvImageGamma_9_over_5_half_precision' value64='3'/>
+<enum name='kvImageGamma_BT709_forward_half_precision' value64='10'/>
+<enum name='kvImageGamma_BT709_reverse_half_precision' value64='11'/>
+<enum name='kvImageGamma_UseGammaValue' value64='0'/>
+<enum name='kvImageGamma_UseGammaValue_half_precision' value64='1'/>
+<enum name='kvImageGamma_sRGB_forward_half_precision' value64='6'/>
+<enum name='kvImageGamma_sRGB_reverse_half_precision' value64='7'/>
+<enum name='kvImageGetTempBufferSize' value64='128'/>
+<enum name='kvImageHDRContent' value64='1024'/>
+<enum name='kvImageHalfInterpolation' value64='2'/>
+<enum name='kvImageHighQualityResampling' value64='32'/>
+<enum name='kvImageInternalError' value64='-21776'/>
+<enum name='kvImageInterpolationLinear' value64='1'/>
+<enum name='kvImageInterpolationNearest' value64='0'/>
+<enum name='kvImageInvalidCVImageFormat' value64='-21782'/>
+<enum name='kvImageInvalidEdgeStyle' value64='-21768'/>
+<enum name='kvImageInvalidImageFormat' value64='-21778'/>
+<enum name='kvImageInvalidImageObject' value64='-21781'/>
+<enum name='kvImageInvalidKernelSize' value64='-21767'/>
+<enum name='kvImageInvalidOffset_X' value64='-21769'/>
+<enum name='kvImageInvalidOffset_Y' value64='-21770'/>
+<enum name='kvImageInvalidParameter' value64='-21773'/>
+<enum name='kvImageInvalidRowBytes' value64='-21777'/>
+<enum name='kvImageLeaveAlphaUnchanged' value64='1'/>
+<enum name='kvImageMDTableHint_16Q12' value64='1'/>
+<enum name='kvImageMDTableHint_Float' value64='2'/>
+<enum name='kvImageMatrixType_ARGBToYpCbCrMatrix' value64='1'/>
+<enum name='kvImageMatrixType_None' value64='0'/>
+<enum name='kvImageMemoryAllocationError' value64='-21771'/>
+<enum name='kvImageNoAllocate' value64='512'/>
+<enum name='kvImageNoError' value64='0'/>
+<enum name='kvImageNoFlags' value64='0'/>
+<enum name='kvImageNoInterpolation' value64='0'/>
+<enum name='kvImageNullPointerArgument' value64='-21772'/>
+<enum name='kvImageOutOfPlaceOperationRequired' value64='-21780'/>
+<enum name='kvImagePrintDiagnosticsToConsole' value64='256'/>
+<enum name='kvImageRoiLargerThanInputBuffer' value64='-21766'/>
+<enum name='kvImageTruncateKernel' value64='64'/>
+<enum name='kvImageUnknownFlagsBit' value64='-21775'/>
+<enum name='kvImageUnsupportedConversion' value64='-21783'/>
+<enum name='kvImageUseFP16Accumulator' value64='4096'/>
+<enum name='kvImage_PNG_FILTER_VALUE_AVG' value64='3'/>
+<enum name='kvImage_PNG_FILTER_VALUE_NONE' value64='0'/>
+<enum name='kvImage_PNG_FILTER_VALUE_PAETH' value64='4'/>
+<enum name='kvImage_PNG_FILTER_VALUE_SUB' value64='1'/>
+<enum name='kvImage_PNG_FILTER_VALUE_UP' value64='2'/>
+<function name='vImageAffineWarpCG_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpCG_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpCG_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpCG_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpCG_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpCG_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpD_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpD_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpD_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpD_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpD_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpD_CbCr16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpD_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpD_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarpD_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform_Double=dddddd}'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarp_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform=ffffff}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarp_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform=ffffff}'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarp_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform=ffffff}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarp_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform=ffffff}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarp_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform=ffffff}'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarp_CbCr16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform=ffffff}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarp_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform=ffffff}'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarp_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform=ffffff}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAffineWarp_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_AffineTransform=ffffff}'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAlphaBlend_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAlphaBlend_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAlphaBlend_NonpremultipliedToPremultiplied_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAlphaBlend_NonpremultipliedToPremultiplied_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAlphaBlend_NonpremultipliedToPremultiplied_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAlphaBlend_NonpremultipliedToPremultiplied_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAlphaBlend_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageAlphaBlend_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBoxConvolve_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBoxConvolve_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBufferFill_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBufferFill_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBufferFill_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBufferFill_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBufferFill_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBufferFill_CbCr16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBufferFill_CbCr16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBufferFill_CbCr8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBuffer_CopyToCVPixelBuffer'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^{__CVBuffer=}'/>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='^d'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBuffer_GetSize'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<retval type64='{CGSize=dd}'/>
+</function>
+<function name='vImageBuffer_Init'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBuffer_InitForCopyFromCVPixelBuffer'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImageConverter=}'/>
+<arg type64='^{__CVBuffer=}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBuffer_InitForCopyToCVPixelBuffer'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImageConverter=}'/>
+<arg type64='^{__CVBuffer=}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBuffer_InitWithCGImage'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^d'/>
+<arg type64='^{CGImage=}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageBuffer_InitWithCVPixelBuffer'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^{__CVBuffer=}'/>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='^d'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageByteSwap_Planar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageCGImageFormat_GetComponentCount'>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<retval type64='I'/>
+</function>
+<function name='vImageCGImageFormat_IsEqual'>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<retval type64='B'/>
+</function>
+<function name='vImageCVImageFormat_Copy'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<retval already_retained='true' type64='^{vImageCVImageFormat=}'/>
+</function>
+<function name='vImageCVImageFormat_CopyChannelDescription'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='^{vImageChannelDescription=dddd}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageCVImageFormat_CopyConversionMatrix'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageCVImageFormat_Create'>
+<arg type64='I'/>
+<arg type64='^{vImage_ARGBToYpCbCrMatrix=ffffffff}'/>
+<arg type64='^{__CFString=}'/>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='i'/>
+<retval already_retained='true' type64='^{vImageCVImageFormat=}'/>
+</function>
+<function name='vImageCVImageFormat_CreateWithCVPixelBuffer'>
+<arg type64='^{__CVBuffer=}'/>
+<retval already_retained='true' type64='^{vImageCVImageFormat=}'/>
+</function>
+<function name='vImageCVImageFormat_GetAlphaHint'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<retval type64='i'/>
+</function>
+<function name='vImageCVImageFormat_GetChannelCount'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<retval type64='I'/>
+</function>
+<function name='vImageCVImageFormat_GetChannelDescription'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='I'/>
+<retval type64='^{vImageChannelDescription=dddd}'/>
+</function>
+<function name='vImageCVImageFormat_GetChannelNames'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<retval type64='^I'/>
+</function>
+<function name='vImageCVImageFormat_GetChromaSiting'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<retval type64='^{__CFString=}'/>
+</function>
+<function name='vImageCVImageFormat_GetColorSpace'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<retval type64='^{CGColorSpace=}'/>
+</function>
+<function name='vImageCVImageFormat_GetConversionMatrix'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='^I'/>
+<retval type64='^v'/>
+</function>
+<function name='vImageCVImageFormat_GetFormatCode'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<retval type64='I'/>
+</function>
+<function name='vImageCVImageFormat_GetUserData'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<retval type64='^v'/>
+</function>
+<function name='vImageCVImageFormat_Release'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<retval type64='v'/>
+</function>
+<function name='vImageCVImageFormat_Retain'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<retval type64='v'/>
+</function>
+<function name='vImageCVImageFormat_SetAlphaHint'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='i'/>
+<retval type64='q'/>
+</function>
+<function name='vImageCVImageFormat_SetChromaSiting'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='^{__CFString=}'/>
+<retval type64='q'/>
+</function>
+<function name='vImageCVImageFormat_SetColorSpace'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='q'/>
+</function>
+<function name='vImageCVImageFormat_SetUserData'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='^v'/>
+<arg function_pointer='true' type64='^?'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<retval type64='q'/>
+</function>
+<function name='vImageClipToAlpha_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageClipToAlpha_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageClipToAlpha_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageClipToAlpha_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageClipToAlpha_RGBA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageClipToAlpha_RGBAFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageClip_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageContrastStretch_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageContrastStretch_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageContrastStretch_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageContrastStretch_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_12UTo16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16Fto16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16Fto16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16Q12to16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16Q12to16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16Q12to8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16Q12toF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16SToF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16UTo12U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16UToF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16UToPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16Uto16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_16Uto16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_420Yp8_Cb8_Cr8ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_420Yp8_CbCr8ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_422CbYpCrYp16ToARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_422CbYpCrYp16ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_422CbYpCrYp8ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_422CbYpCrYp8_AA8ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_422CrYpCbYpCbYpCbYpCrYpCrYp10ToARGB16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_422CrYpCbYpCbYpCbYpCrYpCrYp10ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_422YpCbYpCr8ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_444AYpCbCr16ToARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_444AYpCbCr16ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_444AYpCbCr8ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_444CbYpCrA8ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_444CrYpCb10ToARGB16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_444CrYpCb10ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_444CrYpCb8ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_8to16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB1555toARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB1555toPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB1555toRGB565'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16Q12To422CrYpCbYpCbYpCbYpCrYpCrYp10'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16Q12To444CrYpCb10'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16Q12ToARGB2101010'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16Q12ToRGBA1010102'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16Q12ToXRGB2101010'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16UTo422CbYpCrYp16'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16UTo444AYpCbCr16'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16UToARGB2101010'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16UToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16UToRGBA1010102'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16UToXRGB2101010'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16UtoARGB8888_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16UtoPlanar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB16UtoRGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB2101010ToARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB2101010ToARGB16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB2101010ToARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB2101010ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB2101010ToARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To420Yp8_Cb8_Cr8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To420Yp8_CbCr8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To422CbYpCrYp16'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To422CbYpCrYp8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To422CbYpCrYp8_AA8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To422CrYpCbYpCbYpCbYpCrYpCrYp10'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To422YpCbYpCr8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To444AYpCbCr16'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To444AYpCbCr8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To444CbYpCrA8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To444CrYpCb10'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888To444CrYpCb8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888ToARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888ToARGB2101010'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888ToRGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888ToRGBA1010102'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888ToXRGB2101010'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888toARGB1555'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888toARGB1555_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888toPlanar16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888toPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888toPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888toRGB565'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888toRGB565_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGB8888toRGB888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGBFFFFToARGB2101010'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGBFFFFToXRGB2101010'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGBFFFFtoARGB8888_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGBFFFFtoPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGBFFFFtoPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGBFFFFtoRGBFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ARGBToYpCbCr_GenerateConversion'>
+<arg type64='^{vImage_ARGBToYpCbCrMatrix=ffffffff}'/>
+<arg type64='^{vImage_YpCbCrPixelRange=iiiiiiii}'/>
+<arg type64='^{vImage_ARGBToYpCbCr=[128C]}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_AnyToAny'>
+<arg type64='^{vImageConverter=}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_BGRA16UtoRGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_BGRA8888toRGB565'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_BGRA8888toRGB565_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_BGRA8888toRGB888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_BGRAFFFFtoRGBFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_BGRX8888ToPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_BGRXFFFFToPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ChunkyToPlanar8'>
+<arg type64='^^v'/>
+<arg type64='^^{vImage_Buffer}'/>
+<arg type64='I'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_ChunkyToPlanarF'>
+<arg type64='^^v'/>
+<arg type64='^^{vImage_Buffer}'/>
+<arg type64='I'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_FTo16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_FTo16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Fto16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Indexed1toPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Indexed2toPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Indexed4toPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar16FtoPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar16FtoPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar16Q12toARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar16Q12toARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar16Q12toRGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar16Q12toRGB888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar16UtoARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar16UtoPlanar8_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar16UtoRGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar1toPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar2toPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar4toPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8To16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8ToARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8ToBGRX8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8ToBGRXFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8ToXRGB8888'>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8ToXRGBFFFF'>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toARGB1555'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toIndexed1'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='*'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toIndexed2'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='*'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toIndexed4'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='*'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toPlanar1'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toPlanar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toPlanar2'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toPlanar4'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toRGB565'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_Planar8toRGB888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarFToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarFToBGRX8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarFToBGRXFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarFToXRGB8888'>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarFToXRGBFFFF'>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarFtoARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarFtoPlanar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarFtoPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarFtoPlanar8_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarFtoRGBFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarToChunky8'>
+<arg type64='^^{vImage_Buffer}'/>
+<arg type64='^^v'/>
+<arg type64='I'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_PlanarToChunkyF'>
+<arg type64='^^{vImage_Buffer}'/>
+<arg type64='^^v'/>
+<arg type64='I'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB16UToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB16UtoARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='S'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB16UtoBGRA16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='S'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB16UtoPlanar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB16UtoRGB888_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB16UtoRGBA16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='S'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB565toARGB1555'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB565toARGB8888'>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB565toBGRA8888'>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB565toPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB565toRGB888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB565toRGBA5551'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB565toRGBA8888'>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB888toARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB888toBGRA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB888toPlanar16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB888toPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB888toRGB565_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGB888toRGBA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBA1010102ToARGB16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBA1010102ToARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBA1010102ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBA16UtoRGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBA5551toRGB565'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBA5551toRGBA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBA8888toRGB565'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBA8888toRGB565_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBA8888toRGB888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBA8888toRGBA5551'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBA8888toRGBA5551_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBAFFFFtoRGBFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBFFFtoARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBFFFtoBGRAFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBFFFtoPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBFFFtoRGB888_dithered'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_RGBFFFtoRGBAFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_XRGB2101010ToARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_XRGB2101010ToARGB16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='s'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_XRGB2101010ToARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='S'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_XRGB2101010ToARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_XRGB2101010ToARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_XRGB8888ToPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_XRGBFFFFToPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvert_YpCbCrToARGB_GenerateConversion'>
+<arg type64='^{vImage_YpCbCrToARGBMatrix=fffff}'/>
+<arg type64='^{vImage_YpCbCrPixelRange=iiiiiiii}'/>
+<arg type64='^{vImage_YpCbCrToARGB=[128C]}'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConverter_CreateForCGToCVImageFormat'>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='^d'/>
+<arg type64='I'/>
+<arg type64='^q'/>
+<retval already_retained='true' type64='^{vImageConverter=}'/>
+</function>
+<function name='vImageConverter_CreateForCVToCGImageFormat'>
+<arg type64='^{vImageCVImageFormat=}'/>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^d'/>
+<arg type64='I'/>
+<arg type64='^q'/>
+<retval already_retained='true' type64='^{vImageConverter=}'/>
+</function>
+<function name='vImageConverter_CreateWithCGColorConversionInfo'>
+<arg type64='^{CGColorConversionInfo=}'/>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^d'/>
+<arg type64='I'/>
+<arg type64='^q'/>
+<retval already_retained='true' type64='^{vImageConverter=}'/>
+</function>
+<function name='vImageConverter_CreateWithCGImageFormat'>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^d'/>
+<arg type64='I'/>
+<arg type64='^q'/>
+<retval already_retained='true' type64='^{vImageConverter=}'/>
+</function>
+<function name='vImageConverter_CreateWithColorSyncCodeFragment'>
+<arg type64='@'/>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg type64='^d'/>
+<arg type64='I'/>
+<arg type64='^q'/>
+<retval already_retained='true' type64='^{vImageConverter=}'/>
+</function>
+<function name='vImageConverter_GetDestinationBufferOrder'>
+<arg type64='^{vImageConverter=}'/>
+<retval type64='^I'/>
+</function>
+<function name='vImageConverter_GetNumberOfDestinationBuffers'>
+<arg type64='^{vImageConverter=}'/>
+<retval type64='Q'/>
+</function>
+<function name='vImageConverter_GetNumberOfSourceBuffers'>
+<arg type64='^{vImageConverter=}'/>
+<retval type64='Q'/>
+</function>
+<function name='vImageConverter_GetSourceBufferOrder'>
+<arg type64='^{vImageConverter=}'/>
+<retval type64='^I'/>
+</function>
+<function name='vImageConverter_MustOperateOutOfPlace'>
+<arg type64='^{vImageConverter=}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConverter_Release'>
+<arg type64='^{vImageConverter=}'/>
+<retval type64='v'/>
+</function>
+<function name='vImageConverter_Retain'>
+<arg type64='^{vImageConverter=}'/>
+<retval type64='v'/>
+</function>
+<function name='vImageConvolveFloatKernel_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolveMultiKernel_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^^s'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='^i'/>
+<arg type64='^i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolveMultiKernel_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolveWithBias_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolveWithBias_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolveWithBias_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolveWithBias_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolveWithBias_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolveWithBias_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolve_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolve_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolve_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolve_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolve_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='i'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageConvolve_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageCopyBuffer'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageCreateCGImageFromBuffer'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_CGImageFormat=II^{CGColorSpace}II^di}'/>
+<arg function_pointer='true' type64='^?'>
+<arg type64='^v'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<arg type64='^v'/>
+<arg type64='I'/>
+<arg type64='^q'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='vImageCreateGammaFunction'>
+<arg type64='f'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='^v'/>
+</function>
+<function name='vImageCreateMonochromeColorSpaceWithWhitePointAndTransferFunction'>
+<arg type64='^{vImageWhitePoint=ff}'/>
+<arg type64='^{vImageTransferFunction=dddddddd}'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<arg type64='^q'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='vImageCreateRGBColorSpaceWithPrimariesAndTransferFunction'>
+<arg type64='^{vImageRGBPrimaries=ffffffff}'/>
+<arg type64='^{vImageTransferFunction=dddddddd}'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<arg type64='^q'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='vImageDestroyGammaFunction'>
+<arg type64='^v'/>
+<retval type64='v'/>
+</function>
+<function name='vImageDestroyResamplingFilter'>
+<arg type64='^v'/>
+<retval type64='v'/>
+</function>
+<function name='vImageDilate_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='*'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageDilate_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageDilate_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='*'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageDilate_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageEndsInContrastStretch_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^I'/>
+<arg type64='^I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageEndsInContrastStretch_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^I'/>
+<arg type64='^I'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageEndsInContrastStretch_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageEndsInContrastStretch_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageEqualization_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageEqualization_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageEqualization_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageEqualization_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageErode_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='*'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageErode_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageErode_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='*'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageErode_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageExtractChannel_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageExtractChannel_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageExtractChannel_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_ARGB16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^s'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^S'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_ARGB8888ToRGB888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_ARGBFFFFToRGBFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_BGRA8888ToRGB888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_BGRAFFFFToRGBFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_RGBA16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^s'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_RGBA16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^S'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_RGBA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_RGBA8888ToRGB888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_RGBAFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFlatten_RGBAFFFFToRGBFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFloodFill_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^S'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFloodFill_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='*'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFloodFill_Planar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='S'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageFloodFill_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='C'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageGamma_Planar8toPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageGamma_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageGamma_PlanarFtoPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageGetPerspectiveWarp'>
+<arg type64='^[2f]'/>
+<arg type64='^[2f]'/>
+<arg type64='^{vImage_PerpsectiveTransform=fffffffff}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageGetResamplingFilterExtent'>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='Q'/>
+</function>
+<function name='vImageGetResamplingFilterSize'>
+<arg type64='f'/>
+<arg function_pointer='true' type64='^?'>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='Q'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='Q'/>
+</function>
+<function name='vImageHistogramCalculation_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^^Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHistogramCalculation_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^^Q'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHistogramCalculation_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHistogramCalculation_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^Q'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHistogramSpecification_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^^Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHistogramSpecification_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^^Q'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHistogramSpecification_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHistogramSpecification_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^Q'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalReflect_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalReflect_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalReflect_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalReflect_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalReflect_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalReflect_CbCr16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalReflect_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalReflect_Planar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalReflect_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalReflect_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShearD_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShearD_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShearD_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShearD_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShearD_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShearD_CbCr16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShearD_CbCr16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShearD_CbCr16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShearD_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShearD_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShearD_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_CbCr16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_CbCr16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_CbCr16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_CbCr8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_Planar16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_Planar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageHorizontalShear_XRGB2101010W'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageInterpolatedLookupTable_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageLookupTable_8to64U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageLookupTable_Planar16'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageLookupTable_Planar8toPlanar128'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^[4f]'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageLookupTable_Planar8toPlanar16'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageLookupTable_Planar8toPlanar24'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageLookupTable_Planar8toPlanar48'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageLookupTable_Planar8toPlanar96'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^[4f]'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageLookupTable_Planar8toPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageLookupTable_PlanarFtoPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMatrixMultiply_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^s'/>
+<arg type64='i'/>
+<arg type64='^s'/>
+<arg type64='^i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMatrixMultiply_ARGB8888ToPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^s'/>
+<arg type64='i'/>
+<arg type64='^s'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMatrixMultiply_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMatrixMultiply_ARGBFFFFToPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMatrixMultiply_Planar16S'>
+<arg type64='^^{vImage_Buffer}'/>
+<arg type64='^^{vImage_Buffer}'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='^s'/>
+<arg type64='i'/>
+<arg type64='^s'/>
+<arg type64='^i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMatrixMultiply_Planar8'>
+<arg type64='^^{vImage_Buffer}'/>
+<arg type64='^^{vImage_Buffer}'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='^s'/>
+<arg type64='i'/>
+<arg type64='^s'/>
+<arg type64='^i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMatrixMultiply_PlanarF'>
+<arg type64='^^{vImage_Buffer}'/>
+<arg type64='^^{vImage_Buffer}'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMax_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMax_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMax_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMax_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMin_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMin_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMin_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMin_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMultiDimensionalInterpolatedLookupTable_Planar16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_MultidimensionalTableData=}'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMultiDimensionalInterpolatedLookupTable_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_MultidimensionalTableData=}'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMultidimensionalTable_Create'>
+<arg type64='^S'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='*'/>
+<arg type64='i'/>
+<arg type64='I'/>
+<arg type64='^q'/>
+<retval type64='^{vImage_MultidimensionalTableData=}'/>
+</function>
+<function name='vImageMultidimensionalTable_Release'>
+<arg type64='^{vImage_MultidimensionalTableData=}'/>
+<retval type64='q'/>
+</function>
+<function name='vImageMultidimensionalTable_Retain'>
+<arg type64='^{vImage_MultidimensionalTableData=}'/>
+<retval type64='q'/>
+</function>
+<function name='vImageNewResamplingFilter'>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='^v'/>
+</function>
+<function name='vImageNewResamplingFilterForFunctionUsingBuffer'>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg function_pointer='true' type64='^?'>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='Q'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannelsWithPixel_ARGB16U'>
+<arg type64='^S'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannelsWithPixel_ARGB8888'>
+<arg type64='*'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannelsWithPixel_ARGBFFFF'>
+<arg type64='^f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannelsWithScalar_ARGB8888'>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannelsWithScalar_ARGBFFFF'>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannelsWithScalar_Planar16F'>
+<arg type64='S'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannelsWithScalar_Planar16S'>
+<arg type64='s'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannelsWithScalar_Planar16U'>
+<arg type64='S'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannelsWithScalar_Planar8'>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannelsWithScalar_PlanarF'>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannels_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageOverwriteChannels_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePNGDecompressionFilter'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePermuteChannelsWithMaskedInsert_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePermuteChannelsWithMaskedInsert_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePermuteChannelsWithMaskedInsert_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='C'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePermuteChannels_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePermuteChannels_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePermuteChannels_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePermuteChannels_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePermuteChannels_RGB888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePerspectiveWarp_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_PerpsectiveTransform=fffffffff}'/>
+<arg type64='i'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePerspectiveWarp_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_PerpsectiveTransform=fffffffff}'/>
+<arg type64='i'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePerspectiveWarp_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_PerpsectiveTransform=fffffffff}'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePerspectiveWarp_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_PerpsectiveTransform=fffffffff}'/>
+<arg type64='i'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePerspectiveWarp_Planar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_PerpsectiveTransform=fffffffff}'/>
+<arg type64='i'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePerspectiveWarp_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='^{vImage_PerpsectiveTransform=fffffffff}'/>
+<arg type64='i'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePiecewiseGamma_Planar16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='^f'/>
+<arg type64='s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePiecewiseGamma_Planar16Q12toPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='^f'/>
+<arg type64='s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePiecewiseGamma_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='^f'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePiecewiseGamma_Planar8toPlanar16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='^f'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePiecewiseGamma_Planar8toPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='^f'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePiecewiseGamma_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePiecewiseGamma_PlanarFtoPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePiecewisePolynomial_Planar8toPlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePiecewisePolynomial_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePiecewisePolynomial_PlanarFtoPlanar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePiecewiseRational_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^^f'/>
+<arg type64='^^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlendDarken_RGBA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlendLighten_RGBA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlendMultiply_RGBA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlendScreen_RGBA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlendWithPermute_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlendWithPermute_RGBA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='B'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlend_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlend_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlend_BGRA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlend_BGRAFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlend_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedAlphaBlend_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedConstAlphaBlend_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedConstAlphaBlend_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedConstAlphaBlend_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultipliedConstAlphaBlend_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='f'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultiplyData_ARGB16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultiplyData_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultiplyData_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultiplyData_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultiplyData_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultiplyData_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultiplyData_RGBA16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultiplyData_RGBA16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultiplyData_RGBA16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultiplyData_RGBA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImagePremultiplyData_RGBAFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRichardsonLucyDeConvolve_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^s'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRichardsonLucyDeConvolve_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRichardsonLucyDeConvolve_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^s'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRichardsonLucyDeConvolve_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate90_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate90_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate90_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate90_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate90_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate90_CbCr16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate90_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate90_Planar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate90_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate90_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate_CbCr16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageRotate_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_CbCr16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_CbCr16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_CbCr8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_Planar16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_Planar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageScale_XRGB2101010W'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageSelectChannels_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageSelectChannels_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageSepConvolve_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageSepConvolve_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageSepConvolve_Planar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageSepConvolve_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageSepConvolve_Planar8to16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageSepConvolve_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageSymmetricPiecewiseGamma_Planar16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='^f'/>
+<arg type64='s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageSymmetricPiecewiseGamma_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='^f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageSymmetricPiecewisePolynomial_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^^f'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageTableLookUp_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='*'/>
+<arg type64='*'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageTableLookUp_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageTentConvolve_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageTentConvolve_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageUnpremultiplyData_ARGB16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageUnpremultiplyData_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageUnpremultiplyData_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageUnpremultiplyData_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageUnpremultiplyData_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageUnpremultiplyData_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageUnpremultiplyData_RGBA16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageUnpremultiplyData_RGBA16Q12'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageUnpremultiplyData_RGBA16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageUnpremultiplyData_RGBA8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageUnpremultiplyData_RGBAFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalReflect_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalReflect_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalReflect_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalReflect_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalReflect_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalReflect_CbCr16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalReflect_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalReflect_Planar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalReflect_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalReflect_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShearD_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShearD_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShearD_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShearD_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShearD_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShearD_CbCr16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShearD_CbCr16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShearD_CbCr16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShearD_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShearD_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShearD_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_ARGB16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_ARGB16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_ARGB16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_ARGB8888'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_ARGBFFFF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_CbCr16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_CbCr16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_CbCr16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='^S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_CbCr8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='*'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_Planar16F'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_Planar16S'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='s'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_Planar16U'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_Planar8'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='C'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_PlanarF'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='vImageVerticalShear_XRGB2101010W'>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='^{vImage_Buffer=^vQQQ}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='^v'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+</signatures>

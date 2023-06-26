@@ -2,13 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>PKWidgetPreferenceClass</key>
-	<string>oil.oilWidgetPreferencePane</string>
-	<key>CFBundlePackageType</key>
-	<string>BNDL</string>
-	<key>NSPrincipalClass</key>
-	<string>oil.oilWidget</string>
 	<key>PKWidgetAuthor</key>
 	<string>Maximus</string>
+	<key>PKWidgetPreferenceClass</key>
+	<string>oil.oilWidgetPreferencePane</string>
 </dict>
 </plist>

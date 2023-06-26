@@ -1,0 +1,4148 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<struct name='CGColorDataFormat' type64='{CGColorDataFormat=&quot;version&quot;I&quot;colorspace_info&quot;^v&quot;bitmap_info&quot;I&quot;bits_per_component&quot;Q&quot;bytes_per_row&quot;Q&quot;intent&quot;i&quot;decode&quot;^d}'/>
+<struct name='CGDataConsumerCallbacks' type64='{CGDataConsumerCallbacks=&quot;putBytes&quot;^?&quot;releaseConsumer&quot;^?}'/>
+<struct name='CGDataProviderDirectCallbacks' type64='{CGDataProviderDirectCallbacks=&quot;version&quot;I&quot;getBytePointer&quot;^?&quot;releaseBytePointer&quot;^?&quot;getBytesAtPosition&quot;^?&quot;releaseInfo&quot;^?}'/>
+<struct name='CGDataProviderSequentialCallbacks' type64='{CGDataProviderSequentialCallbacks=&quot;version&quot;I&quot;getBytes&quot;^?&quot;skipForward&quot;^?&quot;rewind&quot;^?&quot;releaseInfo&quot;^?}'/>
+<struct name='CGDeviceColor' type64='{CGDeviceColor=&quot;red&quot;f&quot;green&quot;f&quot;blue&quot;f}'/>
+<struct name='CGEventTapInformation' type64='{__CGEventTapInformation=&quot;eventTapID&quot;I&quot;tapPoint&quot;I&quot;options&quot;I&quot;eventsOfInterest&quot;Q&quot;tappingProcess&quot;i&quot;processBeingTapped&quot;i&quot;enabled&quot;B&quot;minUsecLatency&quot;f&quot;avgUsecLatency&quot;f&quot;maxUsecLatency&quot;f}'/>
+<struct name='CGFunctionCallbacks' type64='{CGFunctionCallbacks=&quot;version&quot;I&quot;evaluate&quot;^?&quot;releaseInfo&quot;^?}'/>
+<struct name='CGPSConverterCallbacks' type64='{CGPSConverterCallbacks=&quot;version&quot;I&quot;beginDocument&quot;^?&quot;endDocument&quot;^?&quot;beginPage&quot;^?&quot;endPage&quot;^?&quot;noteProgress&quot;^?&quot;noteMessage&quot;^?&quot;releaseInfo&quot;^?}'/>
+<struct name='CGPathElement' type64='{CGPathElement=&quot;type&quot;i&quot;points&quot;^{CGPoint}}'/>
+<struct name='CGPatternCallbacks' type64='{CGPatternCallbacks=&quot;version&quot;I&quot;drawPattern&quot;^?&quot;releaseInfo&quot;^?}'/>
+<struct name='CGScreenUpdateMoveDelta' type64='{CGScreenUpdateMoveDelta=&quot;dX&quot;i&quot;dY&quot;i}'/>
+<cftype gettypeid_func='CGColorConversionInfoGetTypeID' name='CGColorConversionInfoRef' tollfree='__NSCFType' type64='^{CGColorConversionInfo=}'/>
+<cftype gettypeid_func='CGColorGetTypeID' name='CGColorRef' tollfree='__NSCFType' type64='^{CGColor=}'/>
+<cftype gettypeid_func='CGColorSpaceGetTypeID' name='CGColorSpaceRef' tollfree='__NSCFType' type64='^{CGColorSpace=}'/>
+<cftype gettypeid_func='CGContextGetTypeID' name='CGContextRef' tollfree='__NSCFType' type64='^{CGContext=}'/>
+<cftype gettypeid_func='CGDataConsumerGetTypeID' name='CGDataConsumerRef' tollfree='__NSCFType' type64='^{CGDataConsumer=}'/>
+<cftype gettypeid_func='CGDataProviderGetTypeID' name='CGDataProviderRef' tollfree='__NSCFType' type64='^{CGDataProvider=}'/>
+<cftype gettypeid_func='CGDisplayModeGetTypeID' name='CGDisplayModeRef' tollfree='__NSCFType' type64='^{CGDisplayMode=}'/>
+<cftype gettypeid_func='CGDisplayStreamGetTypeID' name='CGDisplayStreamRef' tollfree='__NSCFType' type64='^{CGDisplayStream=}'/>
+<cftype gettypeid_func='CGDisplayStreamUpdateGetTypeID' name='CGDisplayStreamUpdateRef' tollfree='__NSCFType' type64='^{CGDisplayStreamUpdate=}'/>
+<cftype gettypeid_func='CGEventGetTypeID' name='CGEventRef' tollfree='__NSCFType' type64='^{__CGEvent=}'/>
+<cftype gettypeid_func='CGEventSourceGetTypeID' name='CGEventSourceRef' tollfree='__NSCFType' type64='^{__CGEventSource=}'/>
+<cftype gettypeid_func='CGFontGetTypeID' name='CGFontRef' tollfree='__NSCFType' type64='^{CGFont=}'/>
+<cftype gettypeid_func='CGFunctionGetTypeID' name='CGFunctionRef' tollfree='__NSCFType' type64='^{CGFunction=}'/>
+<cftype gettypeid_func='CGGradientGetTypeID' name='CGGradientRef' tollfree='__NSCFType' type64='^{CGGradient=}'/>
+<cftype gettypeid_func='CGImageGetTypeID' name='CGImageRef' tollfree='__NSCFType' type64='^{CGImage=}'/>
+<cftype gettypeid_func='CGLayerGetTypeID' name='CGLayerRef' tollfree='__NSCFType' type64='^{CGLayer=}'/>
+<cftype gettypeid_func='CGPathGetTypeID' name='CGMutablePathRef' tollfree='__NSCFType' type64='^{CGPath=}'/>
+<cftype gettypeid_func='CGPDFDocumentGetTypeID' name='CGPDFDocumentRef' tollfree='__NSCFType' type64='^{CGPDFDocument=}'/>
+<cftype gettypeid_func='CGPDFPageGetTypeID' name='CGPDFPageRef' tollfree='__NSCFType' type64='^{CGPDFPage=}'/>
+<cftype gettypeid_func='CGPSConverterGetTypeID' name='CGPSConverterRef' tollfree='__NSCFType' type64='^{CGPSConverter=}'/>
+<cftype gettypeid_func='CGPathGetTypeID' name='CGPathRef' tollfree='__NSCFType' type64='^{CGPath=}'/>
+<cftype gettypeid_func='CGPatternGetTypeID' name='CGPatternRef' tollfree='__NSCFType' type64='^{CGPattern=}'/>
+<cftype gettypeid_func='CGShadingGetTypeID' name='CGShadingRef' tollfree='__NSCFType' type64='^{CGShading=}'/>
+<opaque name='CGDisplayConfigRef' type64='^{_CGDisplayConfigRef=}'/>
+<opaque name='CGEventTapProxy' type64='^{__CGEventTapProxy=}'/>
+<opaque name='CGPDFArrayRef' type64='^{CGPDFArray=}'/>
+<opaque name='CGPDFContentStreamRef' type64='^{CGPDFContentStream=}'/>
+<opaque name='CGPDFDictionaryRef' type64='^{CGPDFDictionary=}'/>
+<opaque name='CGPDFObjectRef' type64='^{CGPDFObject=}'/>
+<opaque name='CGPDFOperatorTableRef' type64='^{CGPDFOperatorTable=}'/>
+<opaque name='CGPDFScannerRef' type64='^{CGPDFScanner=}'/>
+<opaque name='CGPDFStreamRef' type64='^{CGPDFStream=}'/>
+<opaque name='CGPDFStringRef' type64='^{CGPDFString=}'/>
+<opaque name='ColorSyncProfileRef' type64='^{ColorSyncProfile=}'/>
+<opaque name='IOSurfaceRef' type64='^{__IOSurface=}'/>
+<constant name='CGAffineTransformIdentity' type64='{CGAffineTransform=dddddd}'/>
+<constant name='CGPointZero' type64='{CGPoint=dd}'/>
+<constant name='CGRectInfinite' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<constant name='CGRectNull' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<constant name='CGRectZero' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<constant name='CGSizeZero' type64='{CGSize=dd}'/>
+<constant name='kCGColorBlack' type64='^{__CFString=}'/>
+<constant name='kCGColorClear' type64='^{__CFString=}'/>
+<constant name='kCGColorConversionBlackPointCompensation' type64='^{__CFString=}'/>
+<constant name='kCGColorConversionTRCSize' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceACESCGLinear' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceAdobeRGB1998' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceDCIP3' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceDisplayP3' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceDisplayP3_HLG' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceDisplayP3_PQ' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceDisplayP3_PQ_EOTF' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceExtendedDisplayP3' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceExtendedGray' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceExtendedITUR_2020' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceExtendedLinearDisplayP3' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceExtendedLinearGray' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceExtendedLinearITUR_2020' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceExtendedLinearSRGB' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceExtendedRange' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceExtendedSRGB' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceGenericCMYK' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceGenericGray' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceGenericGrayGamma2_2' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceGenericLab' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceGenericRGB' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceGenericRGBLinear' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceGenericXYZ' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceITUR_2020' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceITUR_2020_HLG' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceITUR_2020_PQ' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceITUR_2020_PQ_EOTF' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceITUR_2020_sRGBGamma' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceITUR_2100_HLG' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceITUR_2100_PQ' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceITUR_709' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceITUR_709_HLG' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceITUR_709_PQ' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceLinearDisplayP3' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceLinearGray' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceLinearITUR_2020' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceLinearSRGB' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceROMMRGB' type64='^{__CFString=}'/>
+<constant name='kCGColorSpaceSRGB' type64='^{__CFString=}'/>
+<constant name='kCGColorWhite' type64='^{__CFString=}'/>
+<constant name='kCGDisplayShowDuplicateLowResolutionModes' type64='^{__CFString=}'/>
+<constant name='kCGDisplayStreamColorSpace' type64='^{__CFString=}'/>
+<constant name='kCGDisplayStreamDestinationRect' type64='^{__CFString=}'/>
+<constant name='kCGDisplayStreamMinimumFrameTime' type64='^{__CFString=}'/>
+<constant name='kCGDisplayStreamPreserveAspectRatio' type64='^{__CFString=}'/>
+<constant name='kCGDisplayStreamQueueDepth' type64='^{__CFString=}'/>
+<constant name='kCGDisplayStreamShowCursor' type64='^{__CFString=}'/>
+<constant name='kCGDisplayStreamSourceRect' type64='^{__CFString=}'/>
+<constant name='kCGDisplayStreamYCbCrMatrix' type64='^{__CFString=}'/>
+<constant name='kCGDisplayStreamYCbCrMatrix_ITU_R_601_4' type64='^{__CFString=}'/>
+<constant name='kCGDisplayStreamYCbCrMatrix_ITU_R_709_2' type64='^{__CFString=}'/>
+<constant name='kCGDisplayStreamYCbCrMatrix_SMPTE_240M_1995' type64='^{__CFString=}'/>
+<constant name='kCGFontVariationAxisDefaultValue' type64='^{__CFString=}'/>
+<constant name='kCGFontVariationAxisMaxValue' type64='^{__CFString=}'/>
+<constant name='kCGFontVariationAxisMinValue' type64='^{__CFString=}'/>
+<constant name='kCGFontVariationAxisName' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextAccessPermissions' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextAllowsCopying' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextAllowsPrinting' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextArtBox' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextAuthor' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextBleedBox' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextCreateLinearizedPDF' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextCreatePDFA' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextCreator' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextCropBox' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextEncryptionKeyLength' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextKeywords' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextMediaBox' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextOutputIntent' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextOutputIntents' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextOwnerPassword' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextSubject' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextTitle' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextTrimBox' type64='^{__CFString=}'/>
+<constant name='kCGPDFContextUserPassword' type64='^{__CFString=}'/>
+<constant name='kCGPDFOutlineChildren' type64='^{__CFString=}'/>
+<constant name='kCGPDFOutlineDestination' type64='^{__CFString=}'/>
+<constant name='kCGPDFOutlineDestinationRect' type64='^{__CFString=}'/>
+<constant name='kCGPDFOutlineTitle' type64='^{__CFString=}'/>
+<constant name='kCGPDFTagPropertyActualText' type64='^{__CFString=}'/>
+<constant name='kCGPDFTagPropertyAlternativeText' type64='^{__CFString=}'/>
+<constant name='kCGPDFTagPropertyLanguageText' type64='^{__CFString=}'/>
+<constant name='kCGPDFTagPropertyTitleText' type64='^{__CFString=}'/>
+<constant name='kCGPDFXDestinationOutputProfile' type64='^{__CFString=}'/>
+<constant name='kCGPDFXInfo' type64='^{__CFString=}'/>
+<constant name='kCGPDFXOutputCondition' type64='^{__CFString=}'/>
+<constant name='kCGPDFXOutputConditionIdentifier' type64='^{__CFString=}'/>
+<constant name='kCGPDFXOutputIntentSubtype' type64='^{__CFString=}'/>
+<constant name='kCGPDFXRegistryName' type64='^{__CFString=}'/>
+<constant name='kCGWindowAlpha' type64='^{__CFString=}'/>
+<constant name='kCGWindowBackingLocationVideoMemory' type64='^{__CFString=}'/>
+<constant name='kCGWindowBounds' type64='^{__CFString=}'/>
+<constant name='kCGWindowIsOnscreen' type64='^{__CFString=}'/>
+<constant name='kCGWindowLayer' type64='^{__CFString=}'/>
+<constant name='kCGWindowMemoryUsage' type64='^{__CFString=}'/>
+<constant name='kCGWindowName' type64='^{__CFString=}'/>
+<constant name='kCGWindowNumber' type64='^{__CFString=}'/>
+<constant name='kCGWindowOwnerName' type64='^{__CFString=}'/>
+<constant name='kCGWindowOwnerPID' type64='^{__CFString=}'/>
+<constant name='kCGWindowSharingState' type64='^{__CFString=}'/>
+<constant name='kCGWindowStoreType' type64='^{__CFString=}'/>
+<constant name='kCGWindowWorkspace' type64='^{__CFString=}'/>
+<enum name='CGGlyphMax' value64='1'/>
+<enum name='CGGlyphMin' value64='0'/>
+<enum name='CGPDFDataFormatJPEG2000' value64='2'/>
+<enum name='CGPDFDataFormatJPEGEncoded' value64='1'/>
+<enum name='CGPDFDataFormatRaw' value64='0'/>
+<enum name='CGPDFTagTypeAnnotation' value64='507'/>
+<enum name='CGPDFTagTypeArt' value64='102'/>
+<enum name='CGPDFTagTypeBibliography' value64='504'/>
+<enum name='CGPDFTagTypeBlockQuote' value64='105'/>
+<enum name='CGPDFTagTypeCaption' value64='106'/>
+<enum name='CGPDFTagTypeCode' value64='505'/>
+<enum name='CGPDFTagTypeDiv' value64='104'/>
+<enum name='CGPDFTagTypeDocument' value64='100'/>
+<enum name='CGPDFTagTypeFigure' value64='700'/>
+<enum name='CGPDFTagTypeForm' value64='702'/>
+<enum name='CGPDFTagTypeFormula' value64='701'/>
+<enum name='CGPDFTagTypeHeader' value64='201'/>
+<enum name='CGPDFTagTypeHeader1' value64='202'/>
+<enum name='CGPDFTagTypeHeader2' value64='203'/>
+<enum name='CGPDFTagTypeHeader3' value64='204'/>
+<enum name='CGPDFTagTypeHeader4' value64='205'/>
+<enum name='CGPDFTagTypeHeader5' value64='206'/>
+<enum name='CGPDFTagTypeHeader6' value64='207'/>
+<enum name='CGPDFTagTypeIndex' value64='109'/>
+<enum name='CGPDFTagTypeLabel' value64='302'/>
+<enum name='CGPDFTagTypeLink' value64='506'/>
+<enum name='CGPDFTagTypeList' value64='300'/>
+<enum name='CGPDFTagTypeListBody' value64='303'/>
+<enum name='CGPDFTagTypeListItem' value64='301'/>
+<enum name='CGPDFTagTypeNonStructure' value64='110'/>
+<enum name='CGPDFTagTypeNote' value64='502'/>
+<enum name='CGPDFTagTypeParagraph' value64='200'/>
+<enum name='CGPDFTagTypePart' value64='101'/>
+<enum name='CGPDFTagTypePrivate' value64='111'/>
+<enum name='CGPDFTagTypeQuote' value64='501'/>
+<enum name='CGPDFTagTypeReference' value64='503'/>
+<enum name='CGPDFTagTypeRuby' value64='600'/>
+<enum name='CGPDFTagTypeRubyAnnotationText' value64='602'/>
+<enum name='CGPDFTagTypeRubyBaseText' value64='601'/>
+<enum name='CGPDFTagTypeRubyPunctuation' value64='603'/>
+<enum name='CGPDFTagTypeSection' value64='103'/>
+<enum name='CGPDFTagTypeSpan' value64='500'/>
+<enum name='CGPDFTagTypeTOC' value64='107'/>
+<enum name='CGPDFTagTypeTOCI' value64='108'/>
+<enum name='CGPDFTagTypeTable' value64='400'/>
+<enum name='CGPDFTagTypeTableBody' value64='405'/>
+<enum name='CGPDFTagTypeTableDataCell' value64='403'/>
+<enum name='CGPDFTagTypeTableFooter' value64='406'/>
+<enum name='CGPDFTagTypeTableHeader' value64='404'/>
+<enum name='CGPDFTagTypeTableHeaderCell' value64='402'/>
+<enum name='CGPDFTagTypeTableRow' value64='401'/>
+<enum name='CGPDFTagTypeWarichu' value64='604'/>
+<enum name='CGPDFTagTypeWarichuPunctiation' value64='606'/>
+<enum name='CGPDFTagTypeWarichuText' value64='605'/>
+<enum name='kCGAnnotatedSessionEventTap' value64='2'/>
+<enum name='kCGAssistiveTechHighWindowLevelKey' value64='20'/>
+<enum name='kCGBackingStoreBuffered' value64='2'/>
+<enum name='kCGBackingStoreNonretained' value64='1'/>
+<enum name='kCGBackingStoreRetained' value64='0'/>
+<enum name='kCGBackstopMenuLevelKey' value64='3'/>
+<enum name='kCGBaseWindowLevelKey' value64='0'/>
+<enum name='kCGBitmapAlphaInfoMask' value64='31'/>
+<enum name='kCGBitmapByteOrder16Big' value64='12288'/>
+<enum name='kCGBitmapByteOrder16Host' value64='4096'/>
+<enum name='kCGBitmapByteOrder16Little' value64='4096'/>
+<enum name='kCGBitmapByteOrder32Big' value64='16384'/>
+<enum name='kCGBitmapByteOrder32Host' value64='8192'/>
+<enum name='kCGBitmapByteOrder32Little' value64='8192'/>
+<enum name='kCGBitmapByteOrderDefault' value64='0'/>
+<enum name='kCGBitmapByteOrderMask' value64='28672'/>
+<enum name='kCGBitmapFloatComponents' value64='256'/>
+<enum name='kCGBitmapFloatInfoMask' value64='3840'/>
+<enum name='kCGBlendModeClear' value64='16'/>
+<enum name='kCGBlendModeColor' value64='14'/>
+<enum name='kCGBlendModeColorBurn' value64='7'/>
+<enum name='kCGBlendModeColorDodge' value64='6'/>
+<enum name='kCGBlendModeCopy' value64='17'/>
+<enum name='kCGBlendModeDarken' value64='4'/>
+<enum name='kCGBlendModeDestinationAtop' value64='24'/>
+<enum name='kCGBlendModeDestinationIn' value64='22'/>
+<enum name='kCGBlendModeDestinationOut' value64='23'/>
+<enum name='kCGBlendModeDestinationOver' value64='21'/>
+<enum name='kCGBlendModeDifference' value64='10'/>
+<enum name='kCGBlendModeExclusion' value64='11'/>
+<enum name='kCGBlendModeHardLight' value64='9'/>
+<enum name='kCGBlendModeHue' value64='12'/>
+<enum name='kCGBlendModeLighten' value64='5'/>
+<enum name='kCGBlendModeLuminosity' value64='15'/>
+<enum name='kCGBlendModeMultiply' value64='1'/>
+<enum name='kCGBlendModeNormal' value64='0'/>
+<enum name='kCGBlendModeOverlay' value64='3'/>
+<enum name='kCGBlendModePlusDarker' value64='26'/>
+<enum name='kCGBlendModePlusLighter' value64='27'/>
+<enum name='kCGBlendModeSaturation' value64='13'/>
+<enum name='kCGBlendModeScreen' value64='2'/>
+<enum name='kCGBlendModeSoftLight' value64='8'/>
+<enum name='kCGBlendModeSourceAtop' value64='20'/>
+<enum name='kCGBlendModeSourceIn' value64='18'/>
+<enum name='kCGBlendModeSourceOut' value64='19'/>
+<enum name='kCGBlendModeXOR' value64='25'/>
+<enum name='kCGCaptureNoFill' value64='1'/>
+<enum name='kCGCaptureNoOptions' value64='0'/>
+<enum name='kCGColorConversionTransformApplySpace' value64='2'/>
+<enum name='kCGColorConversionTransformFromSpace' value64='0'/>
+<enum name='kCGColorConversionTransformToSpace' value64='1'/>
+<enum name='kCGColorSpaceModelCMYK' value64='2'/>
+<enum name='kCGColorSpaceModelDeviceN' value64='4'/>
+<enum name='kCGColorSpaceModelIndexed' value64='5'/>
+<enum name='kCGColorSpaceModelLab' value64='3'/>
+<enum name='kCGColorSpaceModelMonochrome' value64='0'/>
+<enum name='kCGColorSpaceModelPattern' value64='6'/>
+<enum name='kCGColorSpaceModelRGB' value64='1'/>
+<enum name='kCGColorSpaceModelUnknown' value64='-1'/>
+<enum name='kCGColorSpaceModelXYZ' value64='7'/>
+<enum name='kCGConfigureForAppOnly' value64='0'/>
+<enum name='kCGConfigureForSession' value64='1'/>
+<enum name='kCGConfigurePermanently' value64='2'/>
+<enum name='kCGCursorWindowLevelKey' value64='19'/>
+<enum name='kCGDesktopIconWindowLevelKey' value64='18'/>
+<enum name='kCGDesktopWindowLevelKey' value64='2'/>
+<enum ignore='true' name='kCGDirectMainDisplay' suggestion='Call CGMainDisplayID.'/>
+<enum name='kCGDisplayAddFlag' value64='16'/>
+<enum name='kCGDisplayBeginConfigurationFlag' value64='1'/>
+<enum name='kCGDisplayDesktopShapeChangedFlag' value64='4096'/>
+<enum name='kCGDisplayDisabledFlag' value64='512'/>
+<enum name='kCGDisplayEnabledFlag' value64='256'/>
+<enum name='kCGDisplayMirrorFlag' value64='1024'/>
+<enum name='kCGDisplayMovedFlag' value64='2'/>
+<enum name='kCGDisplayRemoveFlag' value64='32'/>
+<enum name='kCGDisplaySetMainFlag' value64='4'/>
+<enum name='kCGDisplaySetModeFlag' value64='8'/>
+<enum name='kCGDisplayStreamFrameStatusFrameBlank' value64='2'/>
+<enum name='kCGDisplayStreamFrameStatusFrameComplete' value64='0'/>
+<enum name='kCGDisplayStreamFrameStatusFrameIdle' value64='1'/>
+<enum name='kCGDisplayStreamFrameStatusStopped' value64='3'/>
+<enum name='kCGDisplayStreamUpdateDirtyRects' value64='2'/>
+<enum name='kCGDisplayStreamUpdateMovedRects' value64='1'/>
+<enum name='kCGDisplayStreamUpdateReducedDirtyRects' value64='3'/>
+<enum name='kCGDisplayStreamUpdateRefreshedRects' value64='0'/>
+<enum name='kCGDisplayUnMirrorFlag' value64='2048'/>
+<enum name='kCGDockWindowLevelKey' value64='7'/>
+<enum name='kCGDraggingWindowLevelKey' value64='12'/>
+<enum name='kCGEncodingFontSpecific' value64='0'/>
+<enum name='kCGEncodingMacRoman' value64='1'/>
+<enum name='kCGErrorCannotComplete' value64='1004'/>
+<enum name='kCGErrorFailure' value64='1000'/>
+<enum name='kCGErrorIllegalArgument' value64='1001'/>
+<enum name='kCGErrorInvalidConnection' value64='1002'/>
+<enum name='kCGErrorInvalidContext' value64='1003'/>
+<enum name='kCGErrorInvalidOperation' value64='1010'/>
+<enum name='kCGErrorNoneAvailable' value64='1011'/>
+<enum name='kCGErrorNotImplemented' value64='1006'/>
+<enum name='kCGErrorRangeCheck' value64='1007'/>
+<enum name='kCGErrorSuccess' value64='0'/>
+<enum name='kCGErrorTypeCheck' value64='1008'/>
+<enum name='kCGEventFilterMaskPermitLocalKeyboardEvents' value64='2'/>
+<enum name='kCGEventFilterMaskPermitLocalMouseEvents' value64='1'/>
+<enum name='kCGEventFilterMaskPermitSystemDefinedEvents' value64='4'/>
+<enum name='kCGEventFlagMaskAlphaShift' value64='65536'/>
+<enum name='kCGEventFlagMaskAlternate' value64='524288'/>
+<enum name='kCGEventFlagMaskCommand' value64='1048576'/>
+<enum name='kCGEventFlagMaskControl' value64='262144'/>
+<enum name='kCGEventFlagMaskHelp' value64='4194304'/>
+<enum name='kCGEventFlagMaskNonCoalesced' value64='256'/>
+<enum name='kCGEventFlagMaskNumericPad' value64='2097152'/>
+<enum name='kCGEventFlagMaskSecondaryFn' value64='8388608'/>
+<enum name='kCGEventFlagMaskShift' value64='131072'/>
+<enum name='kCGEventFlagsChanged' value64='12'/>
+<enum name='kCGEventKeyDown' value64='10'/>
+<enum name='kCGEventKeyUp' value64='11'/>
+<enum name='kCGEventLeftMouseDown' value64='1'/>
+<enum name='kCGEventLeftMouseDragged' value64='6'/>
+<enum name='kCGEventLeftMouseUp' value64='2'/>
+<enum name='kCGEventMouseMoved' value64='5'/>
+<enum name='kCGEventMouseSubtypeDefault' value64='0'/>
+<enum name='kCGEventMouseSubtypeTabletPoint' value64='1'/>
+<enum name='kCGEventMouseSubtypeTabletProximity' value64='2'/>
+<enum name='kCGEventNull' value64='0'/>
+<enum name='kCGEventOtherMouseDown' value64='25'/>
+<enum name='kCGEventOtherMouseDragged' value64='27'/>
+<enum name='kCGEventOtherMouseUp' value64='26'/>
+<enum name='kCGEventRightMouseDown' value64='3'/>
+<enum name='kCGEventRightMouseDragged' value64='7'/>
+<enum name='kCGEventRightMouseUp' value64='4'/>
+<enum name='kCGEventScrollWheel' value64='22'/>
+<enum name='kCGEventSourceGroupID' value64='44'/>
+<enum name='kCGEventSourceStateCombinedSessionState' value64='0'/>
+<enum name='kCGEventSourceStateHIDSystemState' value64='1'/>
+<enum name='kCGEventSourceStateID' value64='45'/>
+<enum name='kCGEventSourceStatePrivate' value64='-1'/>
+<enum name='kCGEventSourceUnixProcessID' value64='41'/>
+<enum name='kCGEventSourceUserData' value64='42'/>
+<enum name='kCGEventSourceUserID' value64='43'/>
+<enum name='kCGEventSuppressionStateRemoteMouseDrag' value64='1'/>
+<enum name='kCGEventSuppressionStateSuppressionInterval' value64='0'/>
+<enum name='kCGEventTabletPointer' value64='23'/>
+<enum name='kCGEventTabletProximity' value64='24'/>
+<enum name='kCGEventTapDisabledByTimeout' value64='-2'/>
+<enum name='kCGEventTapDisabledByUserInput' value64='-1'/>
+<enum name='kCGEventTapOptionDefault' value64='0'/>
+<enum name='kCGEventTapOptionListenOnly' value64='1'/>
+<enum name='kCGEventTargetProcessSerialNumber' value64='39'/>
+<enum name='kCGEventTargetUnixProcessID' value64='40'/>
+<enum name='kCGEventUnacceleratedPointerMovementX' value64='170'/>
+<enum name='kCGEventUnacceleratedPointerMovementY' value64='171'/>
+<enum name='kCGFloatingWindowLevelKey' value64='5'/>
+<enum name='kCGFontIndexInvalid' value64='65535'/>
+<enum name='kCGFontIndexMax' value64='65534'/>
+<enum name='kCGFontPostScriptFormatType1' value64='1'/>
+<enum name='kCGFontPostScriptFormatType3' value64='3'/>
+<enum name='kCGFontPostScriptFormatType42' value64='42'/>
+<enum name='kCGGesturePhaseBegan' value64='1'/>
+<enum name='kCGGesturePhaseCancelled' value64='8'/>
+<enum name='kCGGesturePhaseChanged' value64='2'/>
+<enum name='kCGGesturePhaseEnded' value64='4'/>
+<enum name='kCGGesturePhaseMayBegin' value64='128'/>
+<enum name='kCGGesturePhaseNone' value64='0'/>
+<enum name='kCGGlyphMax' value64='65534'/>
+<enum name='kCGGradientDrawsAfterEndLocation' value64='2'/>
+<enum name='kCGGradientDrawsBeforeStartLocation' value64='1'/>
+<enum name='kCGHIDEventTap' value64='0'/>
+<enum name='kCGHeadInsertEventTap' value64='0'/>
+<enum name='kCGHelpWindowLevelKey' value64='16'/>
+<enum name='kCGImageAlphaFirst' value64='4'/>
+<enum name='kCGImageAlphaLast' value64='3'/>
+<enum name='kCGImageAlphaNone' value64='0'/>
+<enum name='kCGImageAlphaNoneSkipFirst' value64='6'/>
+<enum name='kCGImageAlphaNoneSkipLast' value64='5'/>
+<enum name='kCGImageAlphaOnly' value64='7'/>
+<enum name='kCGImageAlphaPremultipliedFirst' value64='2'/>
+<enum name='kCGImageAlphaPremultipliedLast' value64='1'/>
+<enum name='kCGImageByteOrder16Big' value64='12288'/>
+<enum name='kCGImageByteOrder16Little' value64='4096'/>
+<enum name='kCGImageByteOrder32Big' value64='16384'/>
+<enum name='kCGImageByteOrder32Little' value64='8192'/>
+<enum name='kCGImageByteOrderDefault' value64='0'/>
+<enum name='kCGImageByteOrderMask' value64='28672'/>
+<enum name='kCGImagePixelFormatMask' value64='983040'/>
+<enum name='kCGImagePixelFormatPacked' value64='0'/>
+<enum name='kCGImagePixelFormatRGB101010' value64='196608'/>
+<enum name='kCGImagePixelFormatRGB555' value64='65536'/>
+<enum name='kCGImagePixelFormatRGB565' value64='131072'/>
+<enum name='kCGImagePixelFormatRGBCIF10' value64='262144'/>
+<enum name='kCGInterpolationDefault' value64='0'/>
+<enum name='kCGInterpolationHigh' value64='3'/>
+<enum name='kCGInterpolationLow' value64='2'/>
+<enum name='kCGInterpolationMedium' value64='4'/>
+<enum name='kCGInterpolationNone' value64='1'/>
+<enum name='kCGKeyboardEventAutorepeat' value64='8'/>
+<enum name='kCGKeyboardEventKeyboardType' value64='10'/>
+<enum name='kCGKeyboardEventKeycode' value64='9'/>
+<enum name='kCGLineCapButt' value64='0'/>
+<enum name='kCGLineCapRound' value64='1'/>
+<enum name='kCGLineCapSquare' value64='2'/>
+<enum name='kCGLineJoinBevel' value64='2'/>
+<enum name='kCGLineJoinMiter' value64='0'/>
+<enum name='kCGLineJoinRound' value64='1'/>
+<enum name='kCGMainMenuWindowLevelKey' value64='8'/>
+<enum name='kCGMaximumWindowLevelKey' value64='14'/>
+<enum name='kCGMinimumWindowLevelKey' value64='1'/>
+<enum name='kCGModalPanelWindowLevelKey' value64='10'/>
+<enum name='kCGMomentumScrollPhaseBegin' value64='1'/>
+<enum name='kCGMomentumScrollPhaseContinue' value64='2'/>
+<enum name='kCGMomentumScrollPhaseEnd' value64='3'/>
+<enum name='kCGMomentumScrollPhaseNone' value64='0'/>
+<enum name='kCGMouseButtonCenter' value64='2'/>
+<enum name='kCGMouseButtonLeft' value64='0'/>
+<enum name='kCGMouseButtonRight' value64='1'/>
+<enum name='kCGMouseEventButtonNumber' value64='3'/>
+<enum name='kCGMouseEventClickState' value64='1'/>
+<enum name='kCGMouseEventDeltaX' value64='4'/>
+<enum name='kCGMouseEventDeltaY' value64='5'/>
+<enum name='kCGMouseEventInstantMouser' value64='6'/>
+<enum name='kCGMouseEventNumber' value64='0'/>
+<enum name='kCGMouseEventPressure' value64='2'/>
+<enum name='kCGMouseEventSubtype' value64='7'/>
+<enum name='kCGMouseEventWindowUnderMousePointer' value64='91'/>
+<enum name='kCGMouseEventWindowUnderMousePointerThatCanHandleThisEvent' value64='92'/>
+<enum name='kCGNormalWindowLevelKey' value64='4'/>
+<enum name='kCGNumberOfEventSuppressionStates' value64='2'/>
+<enum name='kCGNumberOfWindowLevelKeys' value64='21'/>
+<enum name='kCGOverlayWindowLevelKey' value64='15'/>
+<enum name='kCGPDFAllowsCommenting' value64='64'/>
+<enum name='kCGPDFAllowsContentAccessibility' value64='32'/>
+<enum name='kCGPDFAllowsContentCopying' value64='16'/>
+<enum name='kCGPDFAllowsDocumentAssembly' value64='8'/>
+<enum name='kCGPDFAllowsDocumentChanges' value64='4'/>
+<enum name='kCGPDFAllowsFormFieldEntry' value64='128'/>
+<enum name='kCGPDFAllowsHighQualityPrinting' value64='2'/>
+<enum name='kCGPDFAllowsLowQualityPrinting' value64='1'/>
+<enum name='kCGPDFArtBox' value64='4'/>
+<enum name='kCGPDFBleedBox' value64='2'/>
+<enum name='kCGPDFCropBox' value64='1'/>
+<enum name='kCGPDFMediaBox' value64='0'/>
+<enum name='kCGPDFObjectTypeArray' value64='7'/>
+<enum name='kCGPDFObjectTypeBoolean' value64='2'/>
+<enum name='kCGPDFObjectTypeDictionary' value64='8'/>
+<enum name='kCGPDFObjectTypeInteger' value64='3'/>
+<enum name='kCGPDFObjectTypeName' value64='5'/>
+<enum name='kCGPDFObjectTypeNull' value64='1'/>
+<enum name='kCGPDFObjectTypeReal' value64='4'/>
+<enum name='kCGPDFObjectTypeStream' value64='9'/>
+<enum name='kCGPDFObjectTypeString' value64='6'/>
+<enum name='kCGPDFTrimBox' value64='3'/>
+<enum name='kCGPathEOFill' value64='1'/>
+<enum name='kCGPathEOFillStroke' value64='4'/>
+<enum name='kCGPathElementAddCurveToPoint' value64='3'/>
+<enum name='kCGPathElementAddLineToPoint' value64='1'/>
+<enum name='kCGPathElementAddQuadCurveToPoint' value64='2'/>
+<enum name='kCGPathElementCloseSubpath' value64='4'/>
+<enum name='kCGPathElementMoveToPoint' value64='0'/>
+<enum name='kCGPathFill' value64='0'/>
+<enum name='kCGPathFillStroke' value64='3'/>
+<enum name='kCGPathStroke' value64='2'/>
+<enum name='kCGPatternTilingConstantSpacing' value64='2'/>
+<enum name='kCGPatternTilingConstantSpacingMinimalDistortion' value64='1'/>
+<enum name='kCGPatternTilingNoDistortion' value64='0'/>
+<enum name='kCGPopUpMenuWindowLevelKey' value64='11'/>
+<enum name='kCGRenderingIntentAbsoluteColorimetric' value64='1'/>
+<enum name='kCGRenderingIntentDefault' value64='0'/>
+<enum name='kCGRenderingIntentPerceptual' value64='3'/>
+<enum name='kCGRenderingIntentRelativeColorimetric' value64='2'/>
+<enum name='kCGRenderingIntentSaturation' value64='4'/>
+<enum name='kCGScreenSaverWindowLevelKey' value64='13'/>
+<enum name='kCGScreenUpdateOperationMove' value64='1'/>
+<enum name='kCGScreenUpdateOperationReducedDirtyRectangleCount' value64='-2147483648'/>
+<enum name='kCGScreenUpdateOperationRefresh' value64='0'/>
+<enum name='kCGScrollEventUnitLine' value64='1'/>
+<enum name='kCGScrollEventUnitPixel' value64='0'/>
+<enum name='kCGScrollPhaseBegan' value64='1'/>
+<enum name='kCGScrollPhaseCancelled' value64='8'/>
+<enum name='kCGScrollPhaseChanged' value64='2'/>
+<enum name='kCGScrollPhaseEnded' value64='4'/>
+<enum name='kCGScrollPhaseMayBegin' value64='128'/>
+<enum name='kCGScrollWheelEventDeltaAxis1' value64='11'/>
+<enum name='kCGScrollWheelEventDeltaAxis2' value64='12'/>
+<enum name='kCGScrollWheelEventDeltaAxis3' value64='13'/>
+<enum name='kCGScrollWheelEventFixedPtDeltaAxis1' value64='93'/>
+<enum name='kCGScrollWheelEventFixedPtDeltaAxis2' value64='94'/>
+<enum name='kCGScrollWheelEventFixedPtDeltaAxis3' value64='95'/>
+<enum name='kCGScrollWheelEventInstantMouser' value64='14'/>
+<enum name='kCGScrollWheelEventIsContinuous' value64='88'/>
+<enum name='kCGScrollWheelEventMomentumPhase' value64='123'/>
+<enum name='kCGScrollWheelEventPointDeltaAxis1' value64='96'/>
+<enum name='kCGScrollWheelEventPointDeltaAxis2' value64='97'/>
+<enum name='kCGScrollWheelEventPointDeltaAxis3' value64='98'/>
+<enum name='kCGScrollWheelEventScrollCount' value64='100'/>
+<enum name='kCGScrollWheelEventScrollPhase' value64='99'/>
+<enum name='kCGSessionEventTap' value64='1'/>
+<enum name='kCGStatusWindowLevelKey' value64='9'/>
+<enum name='kCGTabletEventDeviceID' value64='24'/>
+<enum name='kCGTabletEventPointButtons' value64='18'/>
+<enum name='kCGTabletEventPointPressure' value64='19'/>
+<enum name='kCGTabletEventPointX' value64='15'/>
+<enum name='kCGTabletEventPointY' value64='16'/>
+<enum name='kCGTabletEventPointZ' value64='17'/>
+<enum name='kCGTabletEventRotation' value64='22'/>
+<enum name='kCGTabletEventTangentialPressure' value64='23'/>
+<enum name='kCGTabletEventTiltX' value64='20'/>
+<enum name='kCGTabletEventTiltY' value64='21'/>
+<enum name='kCGTabletEventVendor1' value64='25'/>
+<enum name='kCGTabletEventVendor2' value64='26'/>
+<enum name='kCGTabletEventVendor3' value64='27'/>
+<enum name='kCGTabletProximityEventCapabilityMask' value64='36'/>
+<enum name='kCGTabletProximityEventDeviceID' value64='31'/>
+<enum name='kCGTabletProximityEventEnterProximity' value64='38'/>
+<enum name='kCGTabletProximityEventPointerID' value64='30'/>
+<enum name='kCGTabletProximityEventPointerType' value64='37'/>
+<enum name='kCGTabletProximityEventSystemTabletID' value64='32'/>
+<enum name='kCGTabletProximityEventTabletID' value64='29'/>
+<enum name='kCGTabletProximityEventVendorID' value64='28'/>
+<enum name='kCGTabletProximityEventVendorPointerSerialNumber' value64='34'/>
+<enum name='kCGTabletProximityEventVendorPointerType' value64='33'/>
+<enum name='kCGTabletProximityEventVendorUniqueID' value64='35'/>
+<enum name='kCGTailAppendEventTap' value64='1'/>
+<enum name='kCGTextClip' value64='7'/>
+<enum name='kCGTextFill' value64='0'/>
+<enum name='kCGTextFillClip' value64='4'/>
+<enum name='kCGTextFillStroke' value64='2'/>
+<enum name='kCGTextFillStrokeClip' value64='6'/>
+<enum name='kCGTextInvisible' value64='3'/>
+<enum name='kCGTextStroke' value64='1'/>
+<enum name='kCGTextStrokeClip' value64='5'/>
+<enum name='kCGTornOffMenuWindowLevelKey' value64='6'/>
+<enum name='kCGUtilityWindowLevelKey' value64='17'/>
+<enum name='kCGWindowImageBestResolution' value64='8'/>
+<enum name='kCGWindowImageBoundsIgnoreFraming' value64='1'/>
+<enum name='kCGWindowImageDefault' value64='0'/>
+<enum name='kCGWindowImageNominalResolution' value64='16'/>
+<enum name='kCGWindowImageOnlyShadows' value64='4'/>
+<enum name='kCGWindowImageShouldBeOpaque' value64='2'/>
+<enum name='kCGWindowListExcludeDesktopElements' value64='16'/>
+<enum name='kCGWindowListOptionAll' value64='0'/>
+<enum name='kCGWindowListOptionIncludingWindow' value64='8'/>
+<enum name='kCGWindowListOptionOnScreenAboveWindow' value64='2'/>
+<enum name='kCGWindowListOptionOnScreenBelowWindow' value64='4'/>
+<enum name='kCGWindowListOptionOnScreenOnly' value64='1'/>
+<enum name='kCGWindowSharingNone' value64='0'/>
+<enum name='kCGWindowSharingReadOnly' value64='1'/>
+<enum name='kCGWindowSharingReadWrite' value64='2'/>
+<function name='CGAcquireDisplayFadeReservation'>
+<arg type64='f'/>
+<arg type64='^I' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGAffineTransformConcat'>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformDecompose'>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<retval type64='{CGAffineTransformComponents={CGSize=dd}dd{CGVector=dd}}'/>
+</function>
+<function name='CGAffineTransformEqualToTransform'>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<retval type64='B'/>
+</function>
+<function name='CGAffineTransformInvert'>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformIsIdentity'>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<retval type64='B'/>
+</function>
+<function name='CGAffineTransformMake'>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformMakeRotation'>
+<arg type64='d'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformMakeScale'>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformMakeTranslation'>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformMakeWithComponents'>
+<arg type64='{CGAffineTransformComponents={CGSize=dd}dd{CGVector=dd}}'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformRotate'>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<arg type64='d'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformScale'>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformTranslate'>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAssociateMouseAndMouseCursorPosition'>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGBeginDisplayConfiguration'>
+<arg type64='^^{_CGDisplayConfigRef}' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGBitmapContextCreate'>
+<arg c_array_of_variable_length='true' type64='^v' type_modifier='n'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='I'/>
+<retval already_retained='true' type64='^{CGContext=}'/>
+</function>
+<function name='CGBitmapContextCreateImage'>
+<arg type64='^{CGContext=}'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGBitmapContextCreateWithData'>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='I'/>
+<arg function_pointer='true' type64='^?'>
+<arg type64='^v'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<arg type64='^v'/>
+<retval already_retained='true' type64='^{CGContext=}'/>
+</function>
+<function name='CGBitmapContextGetAlphaInfo'>
+<arg type64='^{CGContext=}'/>
+<retval type64='I'/>
+</function>
+<function name='CGBitmapContextGetBitmapInfo'>
+<arg type64='^{CGContext=}'/>
+<retval type64='I'/>
+</function>
+<function name='CGBitmapContextGetBitsPerComponent'>
+<arg type64='^{CGContext=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGBitmapContextGetBitsPerPixel'>
+<arg type64='^{CGContext=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGBitmapContextGetBytesPerRow'>
+<arg type64='^{CGContext=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGBitmapContextGetColorSpace'>
+<arg type64='^{CGContext=}'/>
+<retval type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGBitmapContextGetData'>
+<arg type64='^{CGContext=}'/>
+<retval type64='^v'/>
+</function>
+<function name='CGBitmapContextGetHeight'>
+<arg type64='^{CGContext=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGBitmapContextGetWidth'>
+<arg type64='^{CGContext=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGCancelDisplayConfiguration'>
+<arg type64='^{_CGDisplayConfigRef=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGCaptureAllDisplays'>
+<retval type64='i'/>
+</function>
+<function name='CGCaptureAllDisplaysWithOptions'>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGColorConversionInfoCreate'>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='^{CGColorSpace=}'/>
+<retval already_retained='true' type64='^{CGColorConversionInfo=}'/>
+</function>
+<function name='CGColorConversionInfoCreateFromList' variadic='true'>
+<arg type64='^{__CFDictionary=}'/>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='I'/>
+<arg type64='i'/>
+<retval already_retained='true' type64='^{CGColorConversionInfo=}'/>
+</function>
+<function name='CGColorConversionInfoCreateFromListWithArguments'>
+<arg type64='^{__CFDictionary=}'/>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='I'/>
+<arg type64='i'/>
+<arg type64='^{__va_list_tag=II^v^v}'/>
+<retval already_retained='true' type64='^{CGColorConversionInfo=}'/>
+</function>
+<function name='CGColorConversionInfoCreateWithOptions'>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval already_retained='true' type64='^{CGColorConversionInfo=}'/>
+</function>
+<function name='CGColorConversionInfoGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGColorCreate'>
+<arg type64='^{CGColorSpace=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<retval already_retained='true' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateCopy'>
+<arg type64='^{CGColor=}'/>
+<retval already_retained='true' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateCopyByMatchingToColorSpace'>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='i'/>
+<arg type64='^{CGColor=}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval already_retained='true' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateCopyWithAlpha'>
+<arg type64='^{CGColor=}'/>
+<arg type64='d'/>
+<retval already_retained='true' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateGenericCMYK'>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval already_retained='true' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateGenericGray'>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval already_retained='true' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateGenericGrayGamma2_2'>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval already_retained='true' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateGenericRGB'>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval already_retained='true' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateSRGB'>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval already_retained='true' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateWithPattern'>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='^{CGPattern=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<retval already_retained='true' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorEqualToColor'>
+<arg type64='^{CGColor=}'/>
+<arg type64='^{CGColor=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGColorGetAlpha'>
+<arg type64='^{CGColor=}'/>
+<retval type64='d'/>
+</function>
+<function name='CGColorGetColorSpace'>
+<arg type64='^{CGColor=}'/>
+<retval type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorGetComponents'>
+<arg type64='^{CGColor=}'/>
+<retval type64='^d'/>
+</function>
+<function name='CGColorGetConstantColor'>
+<arg type64='^{__CFString=}'/>
+<retval type64='^{CGColor=}'/>
+</function>
+<function name='CGColorGetNumberOfComponents'>
+<arg type64='^{CGColor=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGColorGetPattern'>
+<arg type64='^{CGColor=}'/>
+<retval type64='^{CGPattern=}'/>
+</function>
+<function name='CGColorGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGColorRelease'>
+<arg type64='^{CGColor=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGColorRetain'>
+<arg type64='^{CGColor=}'/>
+<retval type64='^{CGColor=}'/>
+</function>
+<function name='CGColorSpaceCopyICCData'>
+<arg type64='^{CGColorSpace=}'/>
+<retval already_retained='true' type64='^{__CFData=}'/>
+</function>
+<function name='CGColorSpaceCopyICCProfile'>
+<arg type64='^{CGColorSpace=}'/>
+<retval already_retained='true' type64='^{__CFData=}'/>
+</function>
+<function name='CGColorSpaceCopyName'>
+<arg type64='^{CGColorSpace=}'/>
+<retval already_retained='true' type64='^{__CFString=}'/>
+</function>
+<function name='CGColorSpaceCopyPropertyList'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='^v'/>
+</function>
+<function name='CGColorSpaceCreateCalibratedGray'>
+<arg c_array_of_fixed_length='3' type64='^d' type_modifier='n'/>
+<arg c_array_of_fixed_length='3' type64='^d' type_modifier='n'/>
+<arg type64='d'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateCalibratedRGB'>
+<arg c_array_of_fixed_length='3' type64='^d' type_modifier='n'/>
+<arg c_array_of_fixed_length='3' type64='^d' type_modifier='n'/>
+<arg c_array_of_fixed_length='3' type64='^d' type_modifier='n'/>
+<arg c_array_of_fixed_length='3' type64='^d' type_modifier='n'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateCopyWithStandardRange'>
+<arg type64='^{CGColorSpace=}'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateDeviceCMYK'>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateDeviceGray'>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateDeviceRGB'>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateExtended'>
+<arg type64='^{CGColorSpace=}'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateExtendedLinearized'>
+<arg type64='^{CGColorSpace=}'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateICCBased'>
+<arg type64='Q'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<arg type64='^{CGDataProvider=}'/>
+<arg type64='^{CGColorSpace=}'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateIndexed'>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='Q'/>
+<arg c_array_of_variable_length='true' type64='*' type_modifier='n'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateLab'>
+<arg c_array_of_fixed_length='3' type64='^d' type_modifier='n'/>
+<arg c_array_of_fixed_length='3' type64='^d' type_modifier='n'/>
+<arg c_array_of_fixed_length='4' type64='^d' type_modifier='n'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateLinearized'>
+<arg type64='^{CGColorSpace=}'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreatePattern'>
+<arg type64='^{CGColorSpace=}'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateWithColorSyncProfile'>
+<arg type64='^{ColorSyncProfile=}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateWithICCData'>
+<arg type64='@'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateWithICCProfile'>
+<arg type64='^{__CFData=}'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateWithName'>
+<arg type64='^{__CFString=}'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateWithPlatformColorSpace'>
+<arg type64='i'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateWithPropertyList'>
+<arg type64='^v'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceGetBaseColorSpace'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceGetColorTable'>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='*'/>
+<retval type64='v'/>
+</function>
+<function name='CGColorSpaceGetColorTableCount'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGColorSpaceGetModel'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGColorSpaceGetName'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='^{__CFString=}'/>
+</function>
+<function name='CGColorSpaceGetNumberOfComponents'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGColorSpaceGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGColorSpaceIsHDR'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGColorSpaceIsHLGBased'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGColorSpaceIsPQBased'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGColorSpaceIsWideGamutRGB'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGColorSpaceRelease'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGColorSpaceRetain'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceSupportsOutput'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGColorSpaceUsesExtendedRange'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGColorSpaceUsesITUR_2100TF'>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGCompleteDisplayConfiguration'>
+<arg type64='^{_CGDisplayConfigRef=}'/>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGConfigureDisplayFadeEffect'>
+<arg type64='^{_CGDisplayConfigRef=}'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<retval type64='i'/>
+</function>
+<function name='CGConfigureDisplayMirrorOfDisplay'>
+<arg type64='^{_CGDisplayConfigRef=}'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGConfigureDisplayMode'>
+<arg type64='^{_CGDisplayConfigRef=}'/>
+<arg type64='I'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGConfigureDisplayOrigin'>
+<arg type64='^{_CGDisplayConfigRef=}'/>
+<arg type64='I'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<retval type64='i'/>
+</function>
+<function name='CGConfigureDisplayStereoOperation'>
+<arg type64='^{_CGDisplayConfigRef=}'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGConfigureDisplayWithDisplayMode'>
+<arg type64='^{_CGDisplayConfigRef=}'/>
+<arg type64='I'/>
+<arg type64='^{CGDisplayMode=}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGContextAddArc'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='i'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextAddArcToPoint'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextAddCurveToPoint'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextAddEllipseInRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextAddLineToPoint'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextAddLines'>
+<arg type64='^{CGContext=}'/>
+<arg c_array_length_in_arg='2' type64='^{CGPoint=dd}' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextAddPath'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGPath=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextAddQuadCurveToPoint'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextAddRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextAddRects'>
+<arg type64='^{CGContext=}'/>
+<arg c_array_length_in_arg='2' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextBeginPage'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='n'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextBeginPath'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextBeginTransparencyLayer'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextBeginTransparencyLayerWithRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextClearRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextClip'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextClipToMask'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^{CGImage=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextClipToRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextClipToRects'>
+<arg type64='^{CGContext=}'/>
+<arg c_array_length_in_arg='2' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextClosePath'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextConcatCTM'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextConvertPointToDeviceSpace'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGPoint=dd}'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='CGContextConvertPointToUserSpace'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGPoint=dd}'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='CGContextConvertRectToDeviceSpace'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGContextConvertRectToUserSpace'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGContextConvertSizeToDeviceSpace'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGSize=dd}'/>
+<retval type64='{CGSize=dd}'/>
+</function>
+<function name='CGContextConvertSizeToUserSpace'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGSize=dd}'/>
+<retval type64='{CGSize=dd}'/>
+</function>
+<function name='CGContextCopyPath'>
+<arg type64='^{CGContext=}'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGContextDrawConicGradient'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGGradient=}'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextDrawImage'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^{CGImage=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextDrawLayerAtPoint'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='^{CGLayer=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextDrawLayerInRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^{CGLayer=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextDrawLinearGradient'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGGradient=}'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='I'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextDrawPDFDocument'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^{CGPDFDocument=}'/>
+<arg type64='i'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextDrawPDFPage'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGPDFPage=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextDrawPath'>
+<arg type64='^{CGContext=}'/>
+<arg type64='i'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextDrawRadialGradient'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGGradient=}'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='d'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='d'/>
+<arg type64='I'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextDrawShading'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGShading=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextDrawTiledImage'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^{CGImage=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextEOClip'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextEOFillPath'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextEndPage'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextEndTransparencyLayer'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextFillEllipseInRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextFillPath'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextFillRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextFillRects'>
+<arg type64='^{CGContext=}'/>
+<arg c_array_length_in_arg='2' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextFlush'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextGetCTM'>
+<arg type64='^{CGContext=}'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGContextGetClipBoundingBox'>
+<arg type64='^{CGContext=}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGContextGetInterpolationQuality'>
+<arg type64='^{CGContext=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGContextGetPathBoundingBox'>
+<arg type64='^{CGContext=}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGContextGetPathCurrentPoint'>
+<arg type64='^{CGContext=}'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='CGContextGetTextMatrix'>
+<arg type64='^{CGContext=}'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGContextGetTextPosition'>
+<arg type64='^{CGContext=}'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='CGContextGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGContextGetUserSpaceToDeviceSpaceTransform'>
+<arg type64='^{CGContext=}'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGContextIsPathEmpty'>
+<arg type64='^{CGContext=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGContextMoveToPoint'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextPathContainsPoint'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='i'/>
+<retval type64='B'/>
+</function>
+<function name='CGContextRelease'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextReplacePathWithStrokedPath'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextResetClip'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextRestoreGState'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextRetain'>
+<arg type64='^{CGContext=}'/>
+<retval type64='^{CGContext=}'/>
+</function>
+<function name='CGContextRotateCTM'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSaveGState'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextScaleCTM'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSelectFont'>
+<arg type64='^{CGContext=}'/>
+<arg type64='*'/>
+<arg type64='d'/>
+<arg type64='i'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetAllowsAntialiasing'>
+<arg type64='^{CGContext=}'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetAllowsFontSmoothing'>
+<arg type64='^{CGContext=}'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetAllowsFontSubpixelPositioning'>
+<arg type64='^{CGContext=}'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetAllowsFontSubpixelQuantization'>
+<arg type64='^{CGContext=}'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetAlpha'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetBlendMode'>
+<arg type64='^{CGContext=}'/>
+<arg type64='i'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetCMYKFillColor'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetCMYKStrokeColor'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetCharacterSpacing'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetFillColor'>
+<arg type64='^{CGContext=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetFillColorSpace'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetFillColorWithColor'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGColor=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetFillPattern'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGPattern=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetFlatness'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetFont'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGFont=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetFontSize'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetGrayFillColor'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetGrayStrokeColor'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetInterpolationQuality'>
+<arg type64='^{CGContext=}'/>
+<arg type64='i'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetLineCap'>
+<arg type64='^{CGContext=}'/>
+<arg type64='i'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetLineDash'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg c_array_length_in_arg='3' type64='^d' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetLineJoin'>
+<arg type64='^{CGContext=}'/>
+<arg type64='i'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetLineWidth'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetMiterLimit'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetPatternPhase'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGSize=dd}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetRGBFillColor'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetRGBStrokeColor'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetRenderingIntent'>
+<arg type64='^{CGContext=}'/>
+<arg type64='i'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetShadow'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGSize=dd}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetShadowWithColor'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGSize=dd}'/>
+<arg type64='d'/>
+<arg type64='^{CGColor=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetShouldAntialias'>
+<arg type64='^{CGContext=}'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetShouldSmoothFonts'>
+<arg type64='^{CGContext=}'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetShouldSubpixelPositionFonts'>
+<arg type64='^{CGContext=}'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetShouldSubpixelQuantizeFonts'>
+<arg type64='^{CGContext=}'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetStrokeColor'>
+<arg type64='^{CGContext=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetStrokeColorSpace'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGColorSpace=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetStrokeColorWithColor'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGColor=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetStrokePattern'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{CGPattern=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetTextDrawingMode'>
+<arg type64='^{CGContext=}'/>
+<arg type64='i'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetTextMatrix'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSetTextPosition'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextShowGlyphs'>
+<arg type64='^{CGContext=}'/>
+<arg c_array_length_in_arg='2' type64='^S' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextShowGlyphsAtPoint'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg c_array_length_in_arg='4' type64='^S' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextShowGlyphsAtPositions'>
+<arg type64='^{CGContext=}'/>
+<arg c_array_length_in_arg='3' type64='^S' type_modifier='n'/>
+<arg c_array_length_in_arg='3' type64='^{CGPoint=dd}' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextShowGlyphsWithAdvances'>
+<arg type64='^{CGContext=}'/>
+<arg c_array_length_in_arg='3' type64='^S' type_modifier='n'/>
+<arg c_array_length_in_arg='3' type64='^{CGSize=dd}' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextShowText'>
+<arg type64='^{CGContext=}'/>
+<arg c_array_length_in_arg='2' type64='*' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextShowTextAtPoint'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg c_array_length_in_arg='4' type64='*' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextStrokeEllipseInRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextStrokeLineSegments'>
+<arg type64='^{CGContext=}'/>
+<arg c_array_length_in_arg='2' type64='^{CGPoint=dd}' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextStrokePath'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextStrokeRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextStrokeRectWithWidth'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextSynchronize'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGContextTranslateCTM'>
+<arg type64='^{CGContext=}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGConvertColorDataWithFormat'>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^v'/>
+<arg type64='{_CGColorDataFormat=I^vIQQi^d}'/>
+<arg type64='^v'/>
+<arg type64='{_CGColorDataFormat=I^vIQQi^d}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGCursorIsDrawnInFramebuffer'>
+<retval type64='I'/>
+</function>
+<function name='CGCursorIsVisible'>
+<retval type64='I'/>
+</function>
+<function name='CGDataConsumerCreate'>
+<arg type64='^v' type_modifier='n'/>
+<arg type64='^{CGDataConsumerCallbacks=^?^?}' type_modifier='n'/>
+<retval already_retained='true' type64='^{CGDataConsumer=}'/>
+</function>
+<function name='CGDataConsumerCreateWithCFData'>
+<arg type64='^{__CFData=}'/>
+<retval already_retained='true' type64='^{CGDataConsumer=}'/>
+</function>
+<function name='CGDataConsumerCreateWithURL'>
+<arg type64='^{__CFURL=}'/>
+<retval already_retained='true' type64='^{CGDataConsumer=}'/>
+</function>
+<function name='CGDataConsumerGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGDataConsumerRelease'>
+<arg type64='^{CGDataConsumer=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGDataConsumerRetain'>
+<arg type64='^{CGDataConsumer=}'/>
+<retval type64='^{CGDataConsumer=}'/>
+</function>
+<function name='CGDataProviderCopyData'>
+<arg type64='^{CGDataProvider=}'/>
+<retval already_retained='true' type64='^{__CFData=}'/>
+</function>
+<function name='CGDataProviderCreateDirect'>
+<arg type64='^v'/>
+<arg type64='q'/>
+<arg type64='^{CGDataProviderDirectCallbacks=I^?^?^?^?}'/>
+<retval already_retained='true' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderCreateSequential'>
+<arg type64='^v'/>
+<arg type64='^{CGDataProviderSequentialCallbacks=I^?^?^?^?}'/>
+<retval already_retained='true' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderCreateWithCFData'>
+<arg type64='^{__CFData=}'/>
+<retval already_retained='true' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderCreateWithData'>
+<arg type64='^v'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<arg function_pointer='true' type64='^?'>
+<arg type64='^v'/>
+<arg type64='^v'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</arg>
+<retval already_retained='true' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderCreateWithFilename'>
+<arg type64='*'/>
+<retval already_retained='true' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderCreateWithURL'>
+<arg type64='^{__CFURL=}'/>
+<retval already_retained='true' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderGetInfo'>
+<arg type64='^{CGDataProvider=}'/>
+<retval type64='^v'/>
+</function>
+<function name='CGDataProviderGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGDataProviderRelease'>
+<arg type64='^{CGDataProvider=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGDataProviderRetain'>
+<arg type64='^{CGDataProvider=}'/>
+<retval type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDirectDisplayCopyCurrentMetalDevice'>
+<arg type64='I'/>
+<retval type64='@'/>
+</function>
+<function name='CGDisplayAvailableModes'>
+<arg type64='I'/>
+<retval type64='^{__CFArray=}'/>
+</function>
+<function name='CGDisplayBestModeForParameters'>
+<arg type64='I'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^I' type_modifier='o'/>
+<retval type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGDisplayBestModeForParametersAndRefreshRate'>
+<arg type64='I'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='d'/>
+<arg type64='^I' type_modifier='o'/>
+<retval type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGDisplayBounds'>
+<arg type64='I'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGDisplayCapture'>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayCaptureWithOptions'>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayCopyAllDisplayModes'>
+<arg type64='I'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval already_retained='true' type64='^{__CFArray=}'/>
+</function>
+<function name='CGDisplayCopyColorSpace'>
+<arg type64='I'/>
+<retval already_retained='true' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGDisplayCopyDisplayMode'>
+<arg type64='I'/>
+<retval already_retained='true' type64='^{CGDisplayMode=}'/>
+</function>
+<function name='CGDisplayCreateImage'>
+<arg type64='I'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGDisplayCreateImageForRect'>
+<arg type64='I'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGDisplayCurrentMode'>
+<arg type64='I'/>
+<retval type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGDisplayFade'>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayFadeOperationInProgress'>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayGammaTableCapacity'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayGetDrawingContext'>
+<arg type64='I'/>
+<retval type64='^{CGContext=}'/>
+</function>
+<function name='CGDisplayHideCursor'>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayIDToOpenGLDisplayMask'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayIOServicePort'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayIsActive'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayIsAlwaysInMirrorSet'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayIsAsleep'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayIsBuiltin'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayIsCaptured'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayIsInHWMirrorSet'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayIsInMirrorSet'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayIsMain'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayIsOnline'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayIsStereo'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayMirrorsDisplay'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayModeCopyPixelEncoding'>
+<arg type64='^{CGDisplayMode=}'/>
+<retval already_retained='true' type64='^{__CFString=}'/>
+</function>
+<function name='CGDisplayModeGetHeight'>
+<arg type64='^{CGDisplayMode=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGDisplayModeGetIODisplayModeID'>
+<arg type64='^{CGDisplayMode=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayModeGetIOFlags'>
+<arg type64='^{CGDisplayMode=}'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayModeGetPixelHeight'>
+<arg type64='^{CGDisplayMode=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGDisplayModeGetPixelWidth'>
+<arg type64='^{CGDisplayMode=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGDisplayModeGetRefreshRate'>
+<arg type64='^{CGDisplayMode=}'/>
+<retval type64='d'/>
+</function>
+<function name='CGDisplayModeGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGDisplayModeGetWidth'>
+<arg type64='^{CGDisplayMode=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGDisplayModeIsUsableForDesktopGUI'>
+<arg type64='^{CGDisplayMode=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGDisplayModeRelease'>
+<arg type64='^{CGDisplayMode=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGDisplayModeRetain'>
+<arg type64='^{CGDisplayMode=}'/>
+<retval type64='^{CGDisplayMode=}'/>
+</function>
+<function name='CGDisplayModelNumber'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayMoveCursorToPoint'>
+<arg type64='I'/>
+<arg type64='{CGPoint=dd}'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayPixelsHigh'>
+<arg type64='I'/>
+<retval type64='Q'/>
+</function>
+<function name='CGDisplayPixelsWide'>
+<arg type64='I'/>
+<retval type64='Q'/>
+</function>
+<function name='CGDisplayPrimaryDisplay'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayRegisterReconfigurationCallback'>
+<arg function_pointer='true' type64='^?' type_modifier='n'>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<arg type64='^v' type_modifier='n'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayRelease'>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayRemoveReconfigurationCallback'>
+<arg function_pointer='true' type64='^?' type_modifier='n'>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<arg type64='^v' type_modifier='n'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayRestoreColorSyncSettings'>
+<retval type64='v'/>
+</function>
+<function name='CGDisplayRotation'>
+<arg type64='I'/>
+<retval type64='d'/>
+</function>
+<function name='CGDisplayScreenSize'>
+<arg type64='I'/>
+<retval type64='{CGSize=dd}'/>
+</function>
+<function name='CGDisplaySerialNumber'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplaySetDisplayMode'>
+<arg type64='I'/>
+<arg type64='^{CGDisplayMode=}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplaySetStereoOperation'>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayShowCursor'>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayStreamCreate'>
+<arg type64='I'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='i'/>
+<arg type64='^{__CFDictionary=}'/>
+<arg function_pointer='true' type64='@?'>
+<arg type64='i'/>
+<arg type64='Q'/>
+<arg type64='^{__IOSurface=}'/>
+<arg type64='^{CGDisplayStreamUpdate=}'/>
+<retval type64='v'/>
+</arg>
+<retval already_retained='true' type64='^{CGDisplayStream=}'/>
+</function>
+<function name='CGDisplayStreamCreateWithDispatchQueue'>
+<arg type64='I'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='i'/>
+<arg type64='^{__CFDictionary=}'/>
+<arg type64='@'/>
+<arg function_pointer='true' type64='@?'>
+<arg type64='i'/>
+<arg type64='Q'/>
+<arg type64='^{__IOSurface=}'/>
+<arg type64='^{CGDisplayStreamUpdate=}'/>
+<retval type64='v'/>
+</arg>
+<retval already_retained='true' type64='^{CGDisplayStream=}'/>
+</function>
+<function name='CGDisplayStreamGetRunLoopSource'>
+<arg type64='^{CGDisplayStream=}'/>
+<retval type64='^{__CFRunLoopSource=}'/>
+</function>
+<function name='CGDisplayStreamGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGDisplayStreamStart'>
+<arg type64='^{CGDisplayStream=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayStreamStop'>
+<arg type64='^{CGDisplayStream=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayStreamUpdateCreateMergedUpdate'>
+<arg type64='^{CGDisplayStreamUpdate=}'/>
+<arg type64='^{CGDisplayStreamUpdate=}'/>
+<retval already_retained='true' type64='^{CGDisplayStreamUpdate=}'/>
+</function>
+<function name='CGDisplayStreamUpdateGetDropCount'>
+<arg type64='^{CGDisplayStreamUpdate=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGDisplayStreamUpdateGetMovedRectsDelta'>
+<arg type64='^{CGDisplayStreamUpdate=}'/>
+<arg type64='^d'/>
+<arg type64='^d'/>
+<retval type64='v'/>
+</function>
+<function name='CGDisplayStreamUpdateGetRects'>
+<arg type64='^{CGDisplayStreamUpdate=}'/>
+<arg type64='i'/>
+<arg type64='^Q'/>
+<retval type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGDisplayStreamUpdateGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGDisplaySwitchToMode'>
+<arg type64='I'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGDisplayUnitNumber'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayUsesOpenGLAcceleration'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGDisplayVendorNumber'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGEnableEventStateCombining'>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGErrorSetCallback'>
+<arg function_pointer='true' type64='^?'>
+<retval type64='v'/>
+</arg>
+<retval type64='v'/>
+</function>
+<function name='CGEventCreate'>
+<arg type64='^{__CGEventSource=}'/>
+<retval already_retained='true' type64='^{__CGEvent=}'/>
+</function>
+<function name='CGEventCreateCopy'>
+<arg type64='^{__CGEvent=}'/>
+<retval already_retained='true' type64='^{__CGEvent=}'/>
+</function>
+<function name='CGEventCreateData'>
+<arg type64='^{__CFAllocator=}'/>
+<arg type64='^{__CGEvent=}'/>
+<retval already_retained='true' type64='^{__CFData=}'/>
+</function>
+<function name='CGEventCreateFromData'>
+<arg type64='^{__CFAllocator=}'/>
+<arg type64='^{__CFData=}'/>
+<retval already_retained='true' type64='^{__CGEvent=}'/>
+</function>
+<function name='CGEventCreateKeyboardEvent'>
+<arg type64='^{__CGEventSource=}'/>
+<arg type64='S'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{__CGEvent=}'/>
+</function>
+<function name='CGEventCreateMouseEvent'>
+<arg type64='^{__CGEventSource=}'/>
+<arg type64='I'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='I'/>
+<retval already_retained='true' type64='^{__CGEvent=}'/>
+</function>
+<function name='CGEventCreateScrollWheelEvent' variadic='true'>
+<arg type64='^{__CGEventSource=}'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='i'/>
+<retval already_retained='true' type64='^{__CGEvent=}'/>
+</function>
+<function name='CGEventCreateScrollWheelEvent2'>
+<arg type64='^{__CGEventSource=}'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<retval already_retained='true' type64='^{__CGEvent=}'/>
+</function>
+<function name='CGEventCreateSourceFromEvent'>
+<arg type64='^{__CGEvent=}'/>
+<retval already_retained='true' type64='^{__CGEventSource=}'/>
+</function>
+<function name='CGEventGetDoubleValueField'>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='I'/>
+<retval type64='d'/>
+</function>
+<function name='CGEventGetFlags'>
+<arg type64='^{__CGEvent=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGEventGetIntegerValueField'>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='I'/>
+<retval type64='q'/>
+</function>
+<function name='CGEventGetLocation'>
+<arg type64='^{__CGEvent=}'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='CGEventGetTimestamp'>
+<arg type64='^{__CGEvent=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGEventGetType'>
+<arg type64='^{__CGEvent=}'/>
+<retval type64='I'/>
+</function>
+<function name='CGEventGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGEventGetUnflippedLocation'>
+<arg type64='^{__CGEvent=}'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='CGEventKeyboardGetUnicodeString'>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='Q'/>
+<arg type64='^Q' type_modifier='o'/>
+<arg c_array_length_in_arg='1' type64='^S' type_modifier='o'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventKeyboardSetUnicodeString'>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='Q'/>
+<arg c_array_length_in_arg='1' type64='^S' type_modifier='n'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventPost'>
+<arg type64='I'/>
+<arg type64='^{__CGEvent=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventPostToPSN'>
+<arg type64='^{ProcessSerialNumber=II}' type_modifier='n'/>
+<arg type64='^{__CGEvent=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventPostToPid'>
+<arg type64='i'/>
+<arg type64='^{__CGEvent=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSetDoubleValueField'>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='I'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSetFlags'>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSetIntegerValueField'>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='I'/>
+<arg type64='q'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSetLocation'>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='{CGPoint=dd}'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSetSource'>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='^{__CGEventSource=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSetTimestamp'>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSetType'>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='I'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSourceButtonState'>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='B'/>
+</function>
+<function name='CGEventSourceCounterForEventType'>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGEventSourceCreate'>
+<arg type64='i'/>
+<retval already_retained='true' type64='^{__CGEventSource=}'/>
+</function>
+<function name='CGEventSourceFlagsState'>
+<arg type64='i'/>
+<retval type64='Q'/>
+</function>
+<function name='CGEventSourceGetKeyboardType'>
+<arg type64='^{__CGEventSource=}'/>
+<retval type64='I'/>
+</function>
+<function name='CGEventSourceGetLocalEventsFilterDuringSuppressionState'>
+<arg type64='^{__CGEventSource=}'/>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGEventSourceGetLocalEventsSuppressionInterval'>
+<arg type64='^{__CGEventSource=}'/>
+<retval type64='d'/>
+</function>
+<function name='CGEventSourceGetPixelsPerLine'>
+<arg type64='^{__CGEventSource=}'/>
+<retval type64='d'/>
+</function>
+<function name='CGEventSourceGetSourceStateID'>
+<arg type64='^{__CGEventSource=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGEventSourceGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGEventSourceGetUserData'>
+<arg type64='^{__CGEventSource=}'/>
+<retval type64='q'/>
+</function>
+<function name='CGEventSourceKeyState'>
+<arg type64='i'/>
+<arg type64='S'/>
+<retval type64='B'/>
+</function>
+<function name='CGEventSourceSecondsSinceLastEventType'>
+<arg type64='i'/>
+<arg type64='I'/>
+<retval type64='d'/>
+</function>
+<function name='CGEventSourceSetKeyboardType'>
+<arg type64='^{__CGEventSource=}'/>
+<arg type64='I'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSourceSetLocalEventsFilterDuringSuppressionState'>
+<arg type64='^{__CGEventSource=}'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSourceSetLocalEventsSuppressionInterval'>
+<arg type64='^{__CGEventSource=}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSourceSetPixelsPerLine'>
+<arg type64='^{__CGEventSource=}'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventSourceSetUserData'>
+<arg type64='^{__CGEventSource=}'/>
+<arg type64='q'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventTapCreate'>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='Q'/>
+<arg function_pointer='true' type64='^?' type_modifier='n'>
+<arg type64='^{__CGEventTapProxy=}'/>
+<arg type64='I'/>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='^v'/>
+<retval type64='^{__CGEvent=}'/>
+</arg>
+<arg type64='^v' type_modifier='n'/>
+<retval already_retained='true' type64='^{__CFMachPort=}'/>
+</function>
+<function name='CGEventTapCreateForPSN'>
+<arg type64='^{ProcessSerialNumber=II}' type_modifier='n'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='Q'/>
+<arg function_pointer='true' type64='^?' type_modifier='n'>
+<arg type64='^{__CGEventTapProxy=}'/>
+<arg type64='I'/>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='^v'/>
+<retval type64='^{__CGEvent=}'/>
+</arg>
+<arg type64='^v' type_modifier='n'/>
+<retval already_retained='true' type64='^{__CFMachPort=}'/>
+</function>
+<function name='CGEventTapCreateForPid'>
+<arg type64='i'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='Q'/>
+<arg function_pointer='true' type64='^?'>
+<arg type64='^{__CGEventTapProxy=}'/>
+<arg type64='I'/>
+<arg type64='^{__CGEvent=}'/>
+<arg type64='^v'/>
+<retval type64='^{__CGEvent=}'/>
+</arg>
+<arg type64='^v'/>
+<retval already_retained='true' type64='^{__CFMachPort=}'/>
+</function>
+<function name='CGEventTapEnable'>
+<arg type64='^{__CFMachPort=}'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</function>
+<function name='CGEventTapIsEnabled'>
+<arg type64='^{__CFMachPort=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGEventTapPostEvent'>
+<arg type64='^{__CGEventTapProxy=}'/>
+<arg type64='^{__CGEvent=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGFontCanCreatePostScriptSubset'>
+<arg type64='^{CGFont=}'/>
+<arg type64='i'/>
+<retval type64='B'/>
+</function>
+<function name='CGFontCopyFullName'>
+<arg type64='^{CGFont=}'/>
+<retval already_retained='true' type64='^{__CFString=}'/>
+</function>
+<function name='CGFontCopyGlyphNameForGlyph'>
+<arg type64='^{CGFont=}'/>
+<arg type64='S'/>
+<retval already_retained='true' type64='^{__CFString=}'/>
+</function>
+<function name='CGFontCopyPostScriptName'>
+<arg type64='^{CGFont=}'/>
+<retval already_retained='true' type64='^{__CFString=}'/>
+</function>
+<function name='CGFontCopyTableForTag'>
+<arg type64='^{CGFont=}'/>
+<arg type64='I'/>
+<retval already_retained='true' type64='^{__CFData=}'/>
+</function>
+<function name='CGFontCopyTableTags'>
+<arg type64='^{CGFont=}'/>
+<retval already_retained='true' type64='^{__CFArray=}'/>
+</function>
+<function name='CGFontCopyVariationAxes'>
+<arg type64='^{CGFont=}'/>
+<retval already_retained='true' type64='^{__CFArray=}'/>
+</function>
+<function name='CGFontCopyVariations'>
+<arg type64='^{CGFont=}'/>
+<retval already_retained='true' type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGFontCreateCopyWithVariations'>
+<arg type64='^{CGFont=}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval already_retained='true' type64='^{CGFont=}'/>
+</function>
+<function name='CGFontCreatePostScriptEncoding'>
+<arg type64='^{CGFont=}'/>
+<arg c_array_of_variable_length='true' type64='^S' type_modifier='n'/>
+<retval already_retained='true' type64='^{__CFData=}'/>
+</function>
+<function name='CGFontCreatePostScriptSubset'>
+<arg type64='^{CGFont=}'/>
+<arg type64='^{__CFString=}'/>
+<arg type64='i'/>
+<arg c_array_length_in_arg='4' type64='^S' type_modifier='n'/>
+<arg type64='Q'/>
+<arg c_array_of_variable_length='true' type64='^S' type_modifier='n'/>
+<retval already_retained='true' type64='^{__CFData=}'/>
+</function>
+<function name='CGFontCreateWithDataProvider'>
+<arg type64='^{CGDataProvider=}'/>
+<retval already_retained='true' type64='^{CGFont=}'/>
+</function>
+<function name='CGFontCreateWithFontName'>
+<arg type64='^{__CFString=}'/>
+<retval already_retained='true' type64='^{CGFont=}'/>
+</function>
+<function name='CGFontCreateWithPlatformFont'>
+<arg type64='i'/>
+<retval already_retained='true' type64='^{CGFont=}'/>
+</function>
+<function name='CGFontGetAscent'>
+<arg type64='^{CGFont=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGFontGetCapHeight'>
+<arg type64='^{CGFont=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGFontGetDescent'>
+<arg type64='^{CGFont=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGFontGetFontBBox'>
+<arg type64='^{CGFont=}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGFontGetGlyphAdvances'>
+<arg type64='^{CGFont=}'/>
+<arg c_array_length_in_arg='2' type64='^S' type_modifier='n'/>
+<arg type64='Q'/>
+<arg c_array_length_in_arg='2' type64='^i' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGFontGetGlyphBBoxes'>
+<arg type64='^{CGFont=}'/>
+<arg c_array_length_in_arg='2' type64='^S' type_modifier='n'/>
+<arg type64='Q'/>
+<arg c_array_length_in_arg='2' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGFontGetGlyphWithGlyphName'>
+<arg type64='^{CGFont=}'/>
+<arg type64='^{__CFString=}'/>
+<retval type64='S'/>
+</function>
+<function name='CGFontGetItalicAngle'>
+<arg type64='^{CGFont=}'/>
+<retval type64='d'/>
+</function>
+<function name='CGFontGetLeading'>
+<arg type64='^{CGFont=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGFontGetNumberOfGlyphs'>
+<arg type64='^{CGFont=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGFontGetStemV'>
+<arg type64='^{CGFont=}'/>
+<retval type64='d'/>
+</function>
+<function name='CGFontGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGFontGetUnitsPerEm'>
+<arg type64='^{CGFont=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGFontGetXHeight'>
+<arg type64='^{CGFont=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGFontRelease'>
+<arg type64='^{CGFont=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGFontRetain'>
+<arg type64='^{CGFont=}'/>
+<retval type64='^{CGFont=}'/>
+</function>
+<function name='CGFunctionCreate'>
+<arg type64='^v' type_modifier='n'/>
+<arg type64='Q'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<arg type64='Q'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<arg type64='^{CGFunctionCallbacks=I^?^?}' type_modifier='n'/>
+<retval already_retained='true' type64='^{CGFunction=}'/>
+</function>
+<function name='CGFunctionGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGFunctionRelease'>
+<arg type64='^{CGFunction=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGFunctionRetain'>
+<arg type64='^{CGFunction=}'/>
+<retval type64='^{CGFunction=}'/>
+</function>
+<function name='CGGetActiveDisplayList'>
+<arg type64='I'/>
+<arg c_array_length_in_arg='0' type64='^I' type_modifier='o'/>
+<arg type64='^I' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGGetDisplayTransferByFormula'>
+<arg type64='I'/>
+<arg type64='^f' type_modifier='o'/>
+<arg type64='^f' type_modifier='o'/>
+<arg type64='^f' type_modifier='o'/>
+<arg type64='^f' type_modifier='o'/>
+<arg type64='^f' type_modifier='o'/>
+<arg type64='^f' type_modifier='o'/>
+<arg type64='^f' type_modifier='o'/>
+<arg type64='^f' type_modifier='o'/>
+<arg type64='^f' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGGetDisplayTransferByTable'>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg c_array_length_in_arg='1' type64='^f' type_modifier='o'/>
+<arg c_array_length_in_arg='1' type64='^f' type_modifier='o'/>
+<arg c_array_length_in_arg='1' type64='^f' type_modifier='o'/>
+<arg type64='^I' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGGetDisplaysWithOpenGLDisplayMask'>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg c_array_length_in_arg='1' type64='^I' type_modifier='o'/>
+<arg type64='^I' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGGetDisplaysWithPoint'>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='I'/>
+<arg c_array_length_in_arg='1' type64='^I' type_modifier='o'/>
+<arg type64='^I' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGGetDisplaysWithRect'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='I'/>
+<arg c_array_length_in_arg='1' type64='^I' type_modifier='o'/>
+<arg type64='^I' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGGetEventTapList'>
+<arg type64='I'/>
+<arg c_array_length_in_arg='0' type64='^{__CGEventTapInformation=IIIQiiBfff}' type_modifier='n'/>
+<arg type64='^I' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGGetLastMouseDelta'>
+<arg type64='^i' type_modifier='o'/>
+<arg type64='^i' type_modifier='o'/>
+<retval type64='v'/>
+</function>
+<function name='CGGetOnlineDisplayList'>
+<arg type64='I'/>
+<arg c_array_length_in_arg='0' type64='^I' type_modifier='o'/>
+<arg type64='^I' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGGradientCreateWithColorComponents'>
+<arg type64='^{CGColorSpace=}'/>
+<arg c_array_length_in_arg='3' type64='^d' type_modifier='n'/>
+<arg c_array_length_in_arg='3' type64='^d' type_modifier='n'/>
+<arg type64='Q'/>
+<retval already_retained='true' type64='^{CGGradient=}'/>
+</function>
+<function name='CGGradientCreateWithColors'>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='^{__CFArray=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<retval already_retained='true' type64='^{CGGradient=}'/>
+</function>
+<function name='CGGradientGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGGradientRelease'>
+<arg type64='^{CGGradient=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGGradientRetain'>
+<arg type64='^{CGGradient=}'/>
+<retval type64='^{CGGradient=}'/>
+</function>
+<function name='CGImageCreate'>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='I'/>
+<arg type64='^{CGDataProvider=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<arg type64='B'/>
+<arg type64='i'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateCopy'>
+<arg type64='^{CGImage=}'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateCopyWithColorSpace'>
+<arg type64='^{CGImage=}'/>
+<arg type64='^{CGColorSpace=}'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateWithImageInRect'>
+<arg type64='^{CGImage=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateWithJPEGDataProvider'>
+<arg type64='^{CGDataProvider=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<arg type64='B'/>
+<arg type64='i'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateWithMask'>
+<arg type64='^{CGImage=}'/>
+<arg type64='^{CGImage=}'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateWithMaskingColors'>
+<arg type64='^{CGImage=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateWithPNGDataProvider'>
+<arg type64='^{CGDataProvider=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<arg type64='B'/>
+<arg type64='i'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageGetAlphaInfo'>
+<arg type64='^{CGImage=}'/>
+<retval type64='I'/>
+</function>
+<function name='CGImageGetBitmapInfo'>
+<arg type64='^{CGImage=}'/>
+<retval type64='I'/>
+</function>
+<function name='CGImageGetBitsPerComponent'>
+<arg type64='^{CGImage=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGImageGetBitsPerPixel'>
+<arg type64='^{CGImage=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGImageGetByteOrderInfo'>
+<arg type64='^{CGImage=}'/>
+<retval type64='I'/>
+</function>
+<function name='CGImageGetBytesPerRow'>
+<arg type64='^{CGImage=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGImageGetColorSpace'>
+<arg type64='^{CGImage=}'/>
+<retval type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGImageGetDataProvider'>
+<arg type64='^{CGImage=}'/>
+<retval type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGImageGetDecode'>
+<arg type64='^{CGImage=}'/>
+<retval type64='^d'/>
+</function>
+<function name='CGImageGetHeight'>
+<arg type64='^{CGImage=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGImageGetPixelFormatInfo'>
+<arg type64='^{CGImage=}'/>
+<retval type64='I'/>
+</function>
+<function name='CGImageGetRenderingIntent'>
+<arg type64='^{CGImage=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGImageGetShouldInterpolate'>
+<arg type64='^{CGImage=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGImageGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGImageGetUTType'>
+<arg type64='^{CGImage=}'/>
+<retval type64='^{__CFString=}'/>
+</function>
+<function name='CGImageGetWidth'>
+<arg type64='^{CGImage=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGImageIsMask'>
+<arg type64='^{CGImage=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGImageMaskCreate'>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<arg type64='^{CGDataProvider=}'/>
+<arg c_array_of_variable_length='true' type64='^d' type_modifier='n'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageRelease'>
+<arg type64='^{CGImage=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGImageRetain'>
+<arg type64='^{CGImage=}'/>
+<retval type64='^{CGImage=}'/>
+</function>
+<function name='CGInhibitLocalEvents'>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGLayerCreateWithContext'>
+<arg type64='^{CGContext=}'/>
+<arg type64='{CGSize=dd}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval already_retained='true' type64='^{CGLayer=}'/>
+</function>
+<function name='CGLayerGetContext'>
+<arg type64='^{CGLayer=}'/>
+<retval type64='^{CGContext=}'/>
+</function>
+<function name='CGLayerGetSize'>
+<arg type64='^{CGLayer=}'/>
+<retval type64='{CGSize=dd}'/>
+</function>
+<function name='CGLayerGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGLayerRelease'>
+<arg type64='^{CGLayer=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGLayerRetain'>
+<arg type64='^{CGLayer=}'/>
+<retval type64='^{CGLayer=}'/>
+</function>
+<function name='CGMainDisplayID'>
+<retval type64='I'/>
+</function>
+<function name='CGOpenGLDisplayMaskToDisplayID'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGPDFArrayApplyBlock'>
+<arg type64='^{CGPDFArray=}'/>
+<arg function_pointer='true' type64='@?'>
+<arg type64='Q'/>
+<arg type64='^{CGPDFObject=}'/>
+<arg type64='^v'/>
+<retval type64='B'/>
+</arg>
+<arg type64='^v'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFArrayGetArray'>
+<arg type64='^{CGPDFArray=}'/>
+<arg type64='Q'/>
+<arg type64='^^{CGPDFArray}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFArrayGetBoolean'>
+<arg type64='^{CGPDFArray=}'/>
+<arg type64='Q'/>
+<arg type64='*' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFArrayGetCount'>
+<arg type64='^{CGPDFArray=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGPDFArrayGetDictionary'>
+<arg type64='^{CGPDFArray=}'/>
+<arg type64='Q'/>
+<arg type64='^^{CGPDFDictionary}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFArrayGetInteger'>
+<arg type64='^{CGPDFArray=}'/>
+<arg type64='Q'/>
+<arg type64='^q' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFArrayGetName'>
+<arg type64='^{CGPDFArray=}'/>
+<arg type64='Q'/>
+<arg type64='^*' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFArrayGetNull'>
+<arg type64='^{CGPDFArray=}'/>
+<arg type64='Q'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFArrayGetNumber'>
+<arg type64='^{CGPDFArray=}'/>
+<arg type64='Q'/>
+<arg type64='^d' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFArrayGetObject'>
+<arg type64='^{CGPDFArray=}'/>
+<arg type64='Q'/>
+<arg type64='^^{CGPDFObject}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFArrayGetStream'>
+<arg type64='^{CGPDFArray=}'/>
+<arg type64='Q'/>
+<arg type64='^^{CGPDFStream}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFArrayGetString'>
+<arg type64='^{CGPDFArray=}'/>
+<arg type64='Q'/>
+<arg type64='^^{CGPDFString}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFContentStreamCreateWithPage'>
+<arg type64='^{CGPDFPage=}'/>
+<retval already_retained='true' type64='^{CGPDFContentStream=}'/>
+</function>
+<function name='CGPDFContentStreamCreateWithStream'>
+<arg type64='^{CGPDFStream=}'/>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg type64='^{CGPDFContentStream=}'/>
+<retval already_retained='true' type64='^{CGPDFContentStream=}'/>
+</function>
+<function name='CGPDFContentStreamGetResource'>
+<arg type64='^{CGPDFContentStream=}'/>
+<arg type64='*'/>
+<arg type64='*'/>
+<retval type64='^{CGPDFObject=}'/>
+</function>
+<function name='CGPDFContentStreamGetStreams'>
+<arg type64='^{CGPDFContentStream=}'/>
+<retval type64='^{__CFArray=}'/>
+</function>
+<function name='CGPDFContentStreamRelease'>
+<arg type64='^{CGPDFContentStream=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFContentStreamRetain'>
+<arg type64='^{CGPDFContentStream=}'/>
+<retval type64='^{CGPDFContentStream=}'/>
+</function>
+<function name='CGPDFContextAddDestinationAtPoint'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{__CFString=}'/>
+<arg type64='{CGPoint=dd}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFContextAddDocumentMetadata'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{__CFData=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFContextBeginPage'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFContextBeginTag'>
+<arg type64='^{CGContext=}'/>
+<arg type64='i'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFContextClose'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFContextCreate'>
+<arg type64='^{CGDataConsumer=}'/>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='n'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval already_retained='true' type64='^{CGContext=}'/>
+</function>
+<function name='CGPDFContextCreateWithURL'>
+<arg type64='^{__CFURL=}'/>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='n'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval already_retained='true' type64='^{CGContext=}'/>
+</function>
+<function name='CGPDFContextEndPage'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFContextEndTag'>
+<arg type64='^{CGContext=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFContextSetDestinationForRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{__CFString=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFContextSetOutline'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFContextSetURLForRect'>
+<arg type64='^{CGContext=}'/>
+<arg type64='^{__CFURL=}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFDictionaryApplyBlock'>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg function_pointer='true' type64='@?'>
+<arg type64='*'/>
+<arg type64='^{CGPDFObject=}'/>
+<arg type64='^v'/>
+<retval type64='B'/>
+</arg>
+<arg type64='^v'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFDictionaryApplyFunction'>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg function_pointer='true' type64='^?' type_modifier='n'>
+<arg type64='*'/>
+<arg type64='^{CGPDFObject=}'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<arg type64='^v' type_modifier='n'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFDictionaryGetArray'>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg type64='*' type_modifier='n'/>
+<arg type64='^^{CGPDFArray}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetBoolean'>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg type64='*' type_modifier='n'/>
+<arg type64='*' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetCount'>
+<arg type64='^{CGPDFDictionary=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGPDFDictionaryGetDictionary'>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg type64='*' type_modifier='n'/>
+<arg type64='^^{CGPDFDictionary}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetInteger'>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg type64='*' type_modifier='n'/>
+<arg type64='^q' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetName'>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg type64='*' type_modifier='n'/>
+<arg type64='^*' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetNumber'>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg type64='*' type_modifier='n'/>
+<arg type64='^d' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetObject'>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg type64='*' type_modifier='n'/>
+<arg type64='^^{CGPDFObject}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetStream'>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg type64='*' type_modifier='n'/>
+<arg type64='^^{CGPDFStream}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetString'>
+<arg type64='^{CGPDFDictionary=}'/>
+<arg type64='*' type_modifier='n'/>
+<arg type64='^^{CGPDFString}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDocumentAllowsCopying'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDocumentAllowsPrinting'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDocumentCreateWithProvider'>
+<arg type64='^{CGDataProvider=}'/>
+<retval already_retained='true' type64='^{CGPDFDocument=}'/>
+</function>
+<function name='CGPDFDocumentCreateWithURL'>
+<arg type64='^{__CFURL=}'/>
+<retval already_retained='true' type64='^{CGPDFDocument=}'/>
+</function>
+<function name='CGPDFDocumentGetAccessPermissions'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='I'/>
+</function>
+<function name='CGPDFDocumentGetArtBox'>
+<arg type64='^{CGPDFDocument=}'/>
+<arg type64='i'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGPDFDocumentGetBleedBox'>
+<arg type64='^{CGPDFDocument=}'/>
+<arg type64='i'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGPDFDocumentGetCatalog'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='^{CGPDFDictionary=}'/>
+</function>
+<function name='CGPDFDocumentGetCropBox'>
+<arg type64='^{CGPDFDocument=}'/>
+<arg type64='i'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGPDFDocumentGetID'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='^{CGPDFArray=}'/>
+</function>
+<function name='CGPDFDocumentGetInfo'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='^{CGPDFDictionary=}'/>
+</function>
+<function name='CGPDFDocumentGetMediaBox'>
+<arg type64='^{CGPDFDocument=}'/>
+<arg type64='i'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGPDFDocumentGetNumberOfPages'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGPDFDocumentGetOutline'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGPDFDocumentGetPage'>
+<arg type64='^{CGPDFDocument=}'/>
+<arg type64='Q'/>
+<retval type64='^{CGPDFPage=}'/>
+</function>
+<function name='CGPDFDocumentGetRotationAngle'>
+<arg type64='^{CGPDFDocument=}'/>
+<arg type64='i'/>
+<retval type64='i'/>
+</function>
+<function name='CGPDFDocumentGetTrimBox'>
+<arg type64='^{CGPDFDocument=}'/>
+<arg type64='i'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGPDFDocumentGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGPDFDocumentGetVersion'>
+<arg type64='^{CGPDFDocument=}'/>
+<arg type64='^i' type_modifier='o'/>
+<arg type64='^i' type_modifier='o'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFDocumentIsEncrypted'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDocumentIsUnlocked'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFDocumentRelease'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFDocumentRetain'>
+<arg type64='^{CGPDFDocument=}'/>
+<retval type64='^{CGPDFDocument=}'/>
+</function>
+<function name='CGPDFDocumentUnlockWithPassword'>
+<arg type64='^{CGPDFDocument=}'/>
+<arg type64='*'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFObjectGetType'>
+<arg type64='^{CGPDFObject=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGPDFObjectGetValue'>
+<arg type64='^{CGPDFObject=}'/>
+<arg type64='i'/>
+<arg type64='^v' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFOperatorTableCreate'>
+<retval already_retained='true' type64='^{CGPDFOperatorTable=}'/>
+</function>
+<function name='CGPDFOperatorTableRelease'>
+<arg type64='^{CGPDFOperatorTable=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFOperatorTableRetain'>
+<arg type64='^{CGPDFOperatorTable=}'/>
+<retval type64='^{CGPDFOperatorTable=}'/>
+</function>
+<function name='CGPDFOperatorTableSetCallback'>
+<arg type64='^{CGPDFOperatorTable=}'/>
+<arg type64='*'/>
+<arg function_pointer='true' type64='^?' type_modifier='n'>
+<arg type64='^{CGPDFScanner=}'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<retval type64='v'/>
+</function>
+<function name='CGPDFPageGetBoxRect'>
+<arg type64='^{CGPDFPage=}'/>
+<arg type64='i'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGPDFPageGetDictionary'>
+<arg type64='^{CGPDFPage=}'/>
+<retval type64='^{CGPDFDictionary=}'/>
+</function>
+<function name='CGPDFPageGetDocument'>
+<arg type64='^{CGPDFPage=}'/>
+<retval type64='^{CGPDFDocument=}'/>
+</function>
+<function name='CGPDFPageGetDrawingTransform'>
+<arg type64='^{CGPDFPage=}'/>
+<arg type64='i'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='i'/>
+<arg type64='B'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGPDFPageGetPageNumber'>
+<arg type64='^{CGPDFPage=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGPDFPageGetRotationAngle'>
+<arg type64='^{CGPDFPage=}'/>
+<retval type64='i'/>
+</function>
+<function name='CGPDFPageGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGPDFPageRelease'>
+<arg type64='^{CGPDFPage=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFPageRetain'>
+<arg type64='^{CGPDFPage=}'/>
+<retval type64='^{CGPDFPage=}'/>
+</function>
+<function name='CGPDFScannerCreate'>
+<arg type64='^{CGPDFContentStream=}'/>
+<arg type64='^{CGPDFOperatorTable=}'/>
+<arg type64='^v' type_modifier='n'/>
+<retval already_retained='true' type64='^{CGPDFScanner=}'/>
+</function>
+<function name='CGPDFScannerGetContentStream'>
+<arg type64='^{CGPDFScanner=}'/>
+<retval type64='^{CGPDFContentStream=}'/>
+</function>
+<function name='CGPDFScannerPopArray'>
+<arg type64='^{CGPDFScanner=}'/>
+<arg type64='^^{CGPDFArray}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFScannerPopBoolean'>
+<arg type64='^{CGPDFScanner=}'/>
+<arg type64='*' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFScannerPopDictionary'>
+<arg type64='^{CGPDFScanner=}'/>
+<arg type64='^^{CGPDFDictionary}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFScannerPopInteger'>
+<arg type64='^{CGPDFScanner=}'/>
+<arg type64='^q' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFScannerPopName'>
+<arg type64='^{CGPDFScanner=}'/>
+<arg type64='^*' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFScannerPopNumber'>
+<arg type64='^{CGPDFScanner=}'/>
+<arg type64='^d' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFScannerPopObject'>
+<arg type64='^{CGPDFScanner=}'/>
+<arg type64='^^{CGPDFObject}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFScannerPopStream'>
+<arg type64='^{CGPDFScanner=}'/>
+<arg type64='^^{CGPDFStream}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFScannerPopString'>
+<arg type64='^{CGPDFScanner=}'/>
+<arg type64='^^{CGPDFString}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFScannerRelease'>
+<arg type64='^{CGPDFScanner=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFScannerRetain'>
+<arg type64='^{CGPDFScanner=}'/>
+<retval type64='^{CGPDFScanner=}'/>
+</function>
+<function name='CGPDFScannerScan'>
+<arg type64='^{CGPDFScanner=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGPDFScannerStop'>
+<arg type64='^{CGPDFScanner=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPDFStreamCopyData'>
+<arg type64='^{CGPDFStream=}'/>
+<arg type64='^i' type_modifier='o'/>
+<retval already_retained='true' type64='^{__CFData=}'/>
+</function>
+<function name='CGPDFStreamGetDictionary'>
+<arg type64='^{CGPDFStream=}'/>
+<retval type64='^{CGPDFDictionary=}'/>
+</function>
+<function name='CGPDFStringCopyDate'>
+<arg type64='^{CGPDFString=}'/>
+<retval already_retained='true' type64='^{__CFDate=}'/>
+</function>
+<function name='CGPDFStringCopyTextString'>
+<arg type64='^{CGPDFString=}'/>
+<retval already_retained='true' type64='^{__CFString=}'/>
+</function>
+<function name='CGPDFStringGetBytePtr'>
+<arg type64='^{CGPDFString=}'/>
+<retval type64='*'/>
+</function>
+<function name='CGPDFStringGetLength'>
+<arg type64='^{CGPDFString=}'/>
+<retval type64='Q'/>
+</function>
+<function name='CGPDFTagTypeGetName'>
+<arg type64='i'/>
+<retval type64='*'/>
+</function>
+<function name='CGPSConverterAbort'>
+<arg type64='^{CGPSConverter=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGPSConverterConvert'>
+<arg type64='^{CGPSConverter=}'/>
+<arg type64='^{CGDataProvider=}'/>
+<arg type64='^{CGDataConsumer=}'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGPSConverterCreate'>
+<arg type64='^v' type_modifier='n'/>
+<arg type64='^{CGPSConverterCallbacks=I^?^?^?^?^?^?^?}' type_modifier='n'/>
+<arg type64='^{__CFDictionary=}'/>
+<retval already_retained='true' type64='^{CGPSConverter=}'/>
+</function>
+<function name='CGPSConverterGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGPSConverterIsConverting'>
+<arg type64='^{CGPSConverter=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGPathAddArc'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathAddArcToPoint'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathAddCurveToPoint'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathAddEllipseInRect'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathAddLineToPoint'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathAddLines'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg c_array_length_in_arg='3' type64='^{CGPoint=dd}' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathAddPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg type64='^{CGPath=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathAddQuadCurveToPoint'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathAddRect'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathAddRects'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg c_array_length_in_arg='3' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='n'/>
+<arg type64='Q'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathAddRelativeArc'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathAddRoundedRect'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathApply'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^v' type_modifier='n'/>
+<arg function_pointer='true' type64='^?' type_modifier='n'>
+<arg type64='^v'/>
+<arg type64='^{CGPathElement=i^{CGPoint}}'/>
+<retval type64='v'/>
+</arg>
+<retval type64='v'/>
+</function>
+<function name='CGPathApplyWithBlock'>
+<arg type64='^{CGPath=}'/>
+<arg function_pointer='true' type64='@?'>
+<arg type64='^{CGPathElement=i^{CGPoint}}'/>
+<retval type64='v'/>
+</arg>
+<retval type64='v'/>
+</function>
+<function name='CGPathCloseSubpath'>
+<arg type64='^{CGPath=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathContainsPoint'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='B'/>
+<retval type64='B'/>
+</function>
+<function name='CGPathCreateCopy'>
+<arg type64='^{CGPath=}'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyByDashingPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}'/>
+<arg type64='d'/>
+<arg type64='^d'/>
+<arg type64='Q'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyByFlattening'>
+<arg type64='^{CGPath=}'/>
+<arg type64='d'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyByIntersectingPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGPath=}'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyByNormalizing'>
+<arg type64='^{CGPath=}'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyByStrokingPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}'/>
+<arg type64='d'/>
+<arg type64='i'/>
+<arg type64='i'/>
+<arg type64='d'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyBySubtractingPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGPath=}'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyBySymmetricDifferenceOfPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGPath=}'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyByTransformingPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyByUnioningPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGPath=}'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyOfLineByIntersectingPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGPath=}'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyOfLineBySubtractingPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGPath=}'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateMutable'>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateMutableCopy'>
+<arg type64='^{CGPath=}'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateMutableCopyByTransformingPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateSeparateComponents'>
+<arg type64='^{CGPath=}'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{__CFArray=}'/>
+</function>
+<function name='CGPathCreateWithEllipseInRect'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^{CGAffineTransform=dddddd}'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateWithRect'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^{CGAffineTransform=dddddd}'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateWithRoundedRect'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='^{CGAffineTransform=dddddd}'/>
+<retval already_retained='true' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathEqualToPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGPath=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGPathGetBoundingBox'>
+<arg type64='^{CGPath=}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGPathGetCurrentPoint'>
+<arg type64='^{CGPath=}'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='CGPathGetPathBoundingBox'>
+<arg type64='^{CGPath=}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGPathGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGPathIntersectsPath'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGPath=}'/>
+<arg type64='B'/>
+<retval type64='B'/>
+</function>
+<function name='CGPathIsEmpty'>
+<arg type64='^{CGPath=}'/>
+<retval type64='B'/>
+</function>
+<function name='CGPathIsRect'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPathMoveToPoint'>
+<arg type64='^{CGPath=}'/>
+<arg type64='^{CGAffineTransform=dddddd}' type_modifier='n'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathRelease'>
+<arg type64='^{CGPath=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPathRetain'>
+<arg type64='^{CGPath=}'/>
+<retval type64='^{CGPath=}'/>
+</function>
+<function name='CGPatternCreate'>
+<arg type64='^v' type_modifier='n'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='i'/>
+<arg type64='B'/>
+<arg type64='^{CGPatternCallbacks=I^?^?}' type_modifier='n'/>
+<retval already_retained='true' type64='^{CGPattern=}'/>
+</function>
+<function name='CGPatternGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGPatternRelease'>
+<arg type64='^{CGPattern=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGPatternRetain'>
+<arg type64='^{CGPattern=}'/>
+<retval type64='^{CGPattern=}'/>
+</function>
+<function name='CGPointApplyAffineTransform'>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='CGPointCreateDictionaryRepresentation'>
+<arg type64='{CGPoint=dd}'/>
+<retval already_retained='true' type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGPointEqualToPoint'>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='{CGPoint=dd}'/>
+<retval type64='B'/>
+</function>
+<function inline='true' name='CGPointMake'>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='CGPointMakeWithDictionaryRepresentation'>
+<arg type64='^{__CFDictionary=}'/>
+<arg type64='^{CGPoint=dd}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGPostKeyboardEvent'>
+<arg type64='S'/>
+<arg type64='S'/>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGPostMouseEvent' variadic='true'>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGPostScrollWheelEvent' variadic='true'>
+<arg type64='I'/>
+<arg type64='i'/>
+<retval type64='i'/>
+</function>
+<function name='CGPreflightListenEventAccess'>
+<retval type64='B'/>
+</function>
+<function name='CGPreflightPostEventAccess'>
+<retval type64='B'/>
+</function>
+<function name='CGPreflightScreenCaptureAccess'>
+<retval type64='B'/>
+</function>
+<function name='CGRectApplyAffineTransform'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectContainsPoint'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='{CGPoint=dd}'/>
+<retval type64='B'/>
+</function>
+<function name='CGRectContainsRect'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function name='CGRectCreateDictionaryRepresentation'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval already_retained='true' type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGRectDivide'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='o'/>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='o'/>
+<arg type64='d'/>
+<arg type64='I'/>
+<retval type64='v'/>
+</function>
+<function name='CGRectEqualToRect'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function name='CGRectGetHeight'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function name='CGRectGetMaxX'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function name='CGRectGetMaxY'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function name='CGRectGetMidX'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function name='CGRectGetMidY'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function name='CGRectGetMinX'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function name='CGRectGetMinY'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function name='CGRectGetWidth'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function name='CGRectInset'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectIntegral'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectIntersection'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectIntersectsRect'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function name='CGRectIsEmpty'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function name='CGRectIsInfinite'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function name='CGRectIsNull'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function inline='true' name='CGRectMake'>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectMakeWithDictionaryRepresentation'>
+<arg type64='^{__CFDictionary=}'/>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGRectOffset'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectStandardize'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectUnion'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRegisterScreenRefreshCallback'>
+<arg function_pointer='true' type64='^?' type_modifier='n'>
+<arg type64='I'/>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<arg type64='^v' type_modifier='n'/>
+<retval type64='i'/>
+</function>
+<function name='CGReleaseAllDisplays'>
+<retval type64='i'/>
+</function>
+<function name='CGReleaseDisplayFadeReservation'>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGReleaseScreenRefreshRects'>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}' type_modifier='n'/>
+<retval type64='v'/>
+</function>
+<function name='CGRequestListenEventAccess'>
+<retval type64='B'/>
+</function>
+<function name='CGRequestPostEventAccess'>
+<retval type64='B'/>
+</function>
+<function name='CGRequestScreenCaptureAccess'>
+<retval type64='B'/>
+</function>
+<function name='CGRestorePermanentDisplayConfiguration'>
+<retval type64='v'/>
+</function>
+<function name='CGScreenRegisterMoveCallback'>
+<arg function_pointer='true' type64='^?' type_modifier='n'>
+<arg type64='{CGScreenUpdateMoveDelta=ii}'/>
+<arg type64='Q'/>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<arg type64='^v' type_modifier='n'/>
+<retval type64='i'/>
+</function>
+<function name='CGScreenUnregisterMoveCallback'>
+<arg function_pointer='true' type64='^?' type_modifier='n'>
+<arg type64='{CGScreenUpdateMoveDelta=ii}'/>
+<arg type64='Q'/>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<arg type64='^v' type_modifier='n'/>
+<retval type64='v'/>
+</function>
+<function name='CGSessionCopyCurrentDictionary'>
+<retval already_retained='true' type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGSetDisplayTransferByByteTable'>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg c_array_length_in_arg='1' type64='*' type_modifier='o'/>
+<arg c_array_length_in_arg='1' type64='*' type_modifier='o'/>
+<arg c_array_length_in_arg='1' type64='*' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGSetDisplayTransferByFormula'>
+<arg type64='I'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<retval type64='i'/>
+</function>
+<function name='CGSetDisplayTransferByTable'>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg c_array_length_in_arg='1' type64='^f' type_modifier='n'/>
+<arg c_array_length_in_arg='1' type64='^f' type_modifier='n'/>
+<arg c_array_length_in_arg='1' type64='^f' type_modifier='n'/>
+<retval type64='i'/>
+</function>
+<function name='CGSetLocalEventsFilterDuringSuppressionState'>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval type64='i'/>
+</function>
+<function name='CGSetLocalEventsSuppressionInterval'>
+<arg type64='d'/>
+<retval type64='i'/>
+</function>
+<function name='CGShadingCreateAxial'>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='^{CGFunction=}'/>
+<arg type64='B'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{CGShading=}'/>
+</function>
+<function name='CGShadingCreateRadial'>
+<arg type64='^{CGColorSpace=}'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='d'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='d'/>
+<arg type64='^{CGFunction=}'/>
+<arg type64='B'/>
+<arg type64='B'/>
+<retval already_retained='true' type64='^{CGShading=}'/>
+</function>
+<function name='CGShadingGetTypeID'>
+<retval type64='Q'/>
+</function>
+<function name='CGShadingRelease'>
+<arg type64='^{CGShading=}'/>
+<retval type64='v'/>
+</function>
+<function name='CGShadingRetain'>
+<arg type64='^{CGShading=}'/>
+<retval type64='^{CGShading=}'/>
+</function>
+<function name='CGShieldingWindowID'>
+<arg type64='I'/>
+<retval type64='I'/>
+</function>
+<function name='CGShieldingWindowLevel'>
+<retval type64='i'/>
+</function>
+<function name='CGSizeApplyAffineTransform'>
+<arg type64='{CGSize=dd}'/>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<retval type64='{CGSize=dd}'/>
+</function>
+<function name='CGSizeCreateDictionaryRepresentation'>
+<arg type64='{CGSize=dd}'/>
+<retval already_retained='true' type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGSizeEqualToSize'>
+<arg type64='{CGSize=dd}'/>
+<arg type64='{CGSize=dd}'/>
+<retval type64='B'/>
+</function>
+<function inline='true' name='CGSizeMake'>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CGSize=dd}'/>
+</function>
+<function name='CGSizeMakeWithDictionaryRepresentation'>
+<arg type64='^{__CFDictionary=}'/>
+<arg type64='^{CGSize=dd}' type_modifier='o'/>
+<retval type64='B'/>
+</function>
+<function name='CGUnregisterScreenRefreshCallback'>
+<arg function_pointer='true' type64='^?' type_modifier='n'>
+<arg type64='I'/>
+<arg type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^v'/>
+<retval type64='v'/>
+</arg>
+<arg type64='^v' type_modifier='n'/>
+<retval type64='v'/>
+</function>
+<function inline='true' name='CGVectorMake'>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CGVector=dd}'/>
+</function>
+<function name='CGWaitForScreenRefreshRects'>
+<arg type64='^^{CGRect}' type_modifier='o'/>
+<arg type64='^I' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGWaitForScreenUpdateRects'>
+<arg type64='I'/>
+<arg type64='^I' type_modifier='o'/>
+<arg c_array_length_in_arg='3' type64='^^{CGRect}' type_modifier='o'/>
+<arg type64='^Q' type_modifier='o'/>
+<arg type64='^{CGScreenUpdateMoveDelta=ii}' type_modifier='o'/>
+<retval type64='i'/>
+</function>
+<function name='CGWarpMouseCursorPosition'>
+<arg type64='{CGPoint=dd}'/>
+<retval type64='i'/>
+</function>
+<function name='CGWindowLevelForKey'>
+<arg type64='i'/>
+<retval type64='i'/>
+</function>
+<function name='CGWindowListCopyWindowInfo'>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval already_retained='true' type64='^{__CFArray=}'/>
+</function>
+<function name='CGWindowListCreate'>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval already_retained='true' type64='^{__CFArray=}'/>
+</function>
+<function name='CGWindowListCreateDescriptionFromArray'>
+<arg type64='^{__CFArray=}'/>
+<retval already_retained='true' type64='^{__CFArray=}'/>
+</function>
+<function name='CGWindowListCreateImage'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<arg type64='I'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGWindowListCreateImageFromArray'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='^{__CFArray=}'/>
+<arg type64='I'/>
+<retval already_retained='true' type64='^{CGImage=}'/>
+</function>
+<function name='CGWindowServerCFMachPort'>
+<retval type64='^{__CFMachPort=}'/>
+</function>
+<function name='CGWindowServerCreateServerPort'>
+<retval already_retained='true' type64='^{__CFMachPort=}'/>
+</function>
+</signatures>

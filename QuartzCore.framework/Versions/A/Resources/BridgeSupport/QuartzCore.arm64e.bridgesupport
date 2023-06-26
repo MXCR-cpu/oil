@@ -1,0 +1,498 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<struct name='CAFrameRateRange' type64='{CAFrameRateRange=&quot;minimum&quot;f&quot;maximum&quot;f&quot;preferred&quot;f}'/>
+<struct name='CATransform3D' type64='{CATransform3D=&quot;m11&quot;d&quot;m12&quot;d&quot;m13&quot;d&quot;m14&quot;d&quot;m21&quot;d&quot;m22&quot;d&quot;m23&quot;d&quot;m24&quot;d&quot;m31&quot;d&quot;m32&quot;d&quot;m33&quot;d&quot;m34&quot;d&quot;m41&quot;d&quot;m42&quot;d&quot;m43&quot;d&quot;m44&quot;d}'/>
+<constant name='CAFrameRateRangeDefault' type64='{CAFrameRateRange=fff}'/>
+<constant name='CATransform3DIdentity' type64='{CATransform3D=dddddddddddddddd}'/>
+<constant name='kCAAlignmentCenter' type64='@'/>
+<constant name='kCAAlignmentJustified' type64='@'/>
+<constant name='kCAAlignmentLeft' type64='@'/>
+<constant name='kCAAlignmentNatural' type64='@'/>
+<constant name='kCAAlignmentRight' type64='@'/>
+<constant name='kCAAnimationCubic' type64='@'/>
+<constant name='kCAAnimationCubicPaced' type64='@'/>
+<constant name='kCAAnimationDiscrete' type64='@'/>
+<constant name='kCAAnimationLinear' type64='@'/>
+<constant name='kCAAnimationPaced' type64='@'/>
+<constant name='kCAAnimationRotateAuto' type64='@'/>
+<constant name='kCAAnimationRotateAutoReverse' type64='@'/>
+<constant name='kCAContentsFormatGray8Uint' type64='@'/>
+<constant name='kCAContentsFormatRGBA16Float' type64='@'/>
+<constant name='kCAContentsFormatRGBA8Uint' type64='@'/>
+<constant name='kCACornerCurveCircular' type64='@'/>
+<constant name='kCACornerCurveContinuous' type64='@'/>
+<constant name='kCAEmitterLayerAdditive' type64='@'/>
+<constant name='kCAEmitterLayerBackToFront' type64='@'/>
+<constant name='kCAEmitterLayerCircle' type64='@'/>
+<constant name='kCAEmitterLayerCuboid' type64='@'/>
+<constant name='kCAEmitterLayerLine' type64='@'/>
+<constant name='kCAEmitterLayerOldestFirst' type64='@'/>
+<constant name='kCAEmitterLayerOldestLast' type64='@'/>
+<constant name='kCAEmitterLayerOutline' type64='@'/>
+<constant name='kCAEmitterLayerPoint' type64='@'/>
+<constant name='kCAEmitterLayerPoints' type64='@'/>
+<constant name='kCAEmitterLayerRectangle' type64='@'/>
+<constant name='kCAEmitterLayerSphere' type64='@'/>
+<constant name='kCAEmitterLayerSurface' type64='@'/>
+<constant name='kCAEmitterLayerUnordered' type64='@'/>
+<constant name='kCAEmitterLayerVolume' type64='@'/>
+<constant name='kCAFillModeBackwards' type64='@'/>
+<constant name='kCAFillModeBoth' type64='@'/>
+<constant name='kCAFillModeForwards' type64='@'/>
+<constant name='kCAFillModeRemoved' type64='@'/>
+<constant name='kCAFillRuleEvenOdd' type64='@'/>
+<constant name='kCAFillRuleNonZero' type64='@'/>
+<constant name='kCAFilterLinear' type64='@'/>
+<constant name='kCAFilterNearest' type64='@'/>
+<constant name='kCAFilterTrilinear' type64='@'/>
+<constant name='kCAGradientLayerAxial' type64='@'/>
+<constant name='kCAGradientLayerConic' type64='@'/>
+<constant name='kCAGradientLayerRadial' type64='@'/>
+<constant name='kCAGravityBottom' type64='@'/>
+<constant name='kCAGravityBottomLeft' type64='@'/>
+<constant name='kCAGravityBottomRight' type64='@'/>
+<constant name='kCAGravityCenter' type64='@'/>
+<constant name='kCAGravityLeft' type64='@'/>
+<constant name='kCAGravityResize' type64='@'/>
+<constant name='kCAGravityResizeAspect' type64='@'/>
+<constant name='kCAGravityResizeAspectFill' type64='@'/>
+<constant name='kCAGravityRight' type64='@'/>
+<constant name='kCAGravityTop' type64='@'/>
+<constant name='kCAGravityTopLeft' type64='@'/>
+<constant name='kCAGravityTopRight' type64='@'/>
+<constant name='kCALineCapButt' type64='@'/>
+<constant name='kCALineCapRound' type64='@'/>
+<constant name='kCALineCapSquare' type64='@'/>
+<constant name='kCALineJoinBevel' type64='@'/>
+<constant name='kCALineJoinMiter' type64='@'/>
+<constant name='kCALineJoinRound' type64='@'/>
+<constant name='kCAMediaTimingFunctionDefault' type64='@'/>
+<constant name='kCAMediaTimingFunctionEaseIn' type64='@'/>
+<constant name='kCAMediaTimingFunctionEaseInEaseOut' type64='@'/>
+<constant name='kCAMediaTimingFunctionEaseOut' type64='@'/>
+<constant name='kCAMediaTimingFunctionLinear' type64='@'/>
+<constant name='kCAOnOrderIn' type64='@'/>
+<constant name='kCAOnOrderOut' type64='@'/>
+<constant name='kCARendererColorSpace' type64='@'/>
+<constant name='kCARendererMetalCommandQueue' type64='@'/>
+<constant name='kCAScrollBoth' type64='@'/>
+<constant name='kCAScrollHorizontally' type64='@'/>
+<constant name='kCAScrollNone' type64='@'/>
+<constant name='kCAScrollVertically' type64='@'/>
+<constant name='kCATransactionAnimationDuration' type64='@'/>
+<constant name='kCATransactionAnimationTimingFunction' type64='@'/>
+<constant name='kCATransactionCompletionBlock' type64='@'/>
+<constant name='kCATransactionDisableActions' type64='@'/>
+<constant name='kCATransition' type64='@'/>
+<constant name='kCATransitionFade' type64='@'/>
+<constant name='kCATransitionFromBottom' type64='@'/>
+<constant name='kCATransitionFromLeft' type64='@'/>
+<constant name='kCATransitionFromRight' type64='@'/>
+<constant name='kCATransitionFromTop' type64='@'/>
+<constant name='kCATransitionMoveIn' type64='@'/>
+<constant name='kCATransitionPush' type64='@'/>
+<constant name='kCATransitionReveal' type64='@'/>
+<constant name='kCATruncationEnd' type64='@'/>
+<constant name='kCATruncationMiddle' type64='@'/>
+<constant name='kCATruncationNone' type64='@'/>
+<constant name='kCATruncationStart' type64='@'/>
+<constant name='kCAValueFunctionRotateX' type64='@'/>
+<constant name='kCAValueFunctionRotateY' type64='@'/>
+<constant name='kCAValueFunctionRotateZ' type64='@'/>
+<constant name='kCAValueFunctionScale' type64='@'/>
+<constant name='kCAValueFunctionScaleX' type64='@'/>
+<constant name='kCAValueFunctionScaleY' type64='@'/>
+<constant name='kCAValueFunctionScaleZ' type64='@'/>
+<constant name='kCAValueFunctionTranslate' type64='@'/>
+<constant name='kCAValueFunctionTranslateX' type64='@'/>
+<constant name='kCAValueFunctionTranslateY' type64='@'/>
+<constant name='kCAValueFunctionTranslateZ' type64='@'/>
+<enum name='CA_WARN_DEPRECATED' value64='1'/>
+<enum name='kCAConstraintHeight' value64='7'/>
+<enum name='kCAConstraintMaxX' value64='2'/>
+<enum name='kCAConstraintMaxY' value64='6'/>
+<enum name='kCAConstraintMidX' value64='1'/>
+<enum name='kCAConstraintMidY' value64='5'/>
+<enum name='kCAConstraintMinX' value64='0'/>
+<enum name='kCAConstraintMinY' value64='4'/>
+<enum name='kCAConstraintWidth' value64='3'/>
+<enum name='kCALayerBottomEdge' value64='4'/>
+<enum name='kCALayerHeightSizable' value64='16'/>
+<enum name='kCALayerLeftEdge' value64='1'/>
+<enum name='kCALayerMaxXMargin' value64='4'/>
+<enum name='kCALayerMaxXMaxYCorner' value64='8'/>
+<enum name='kCALayerMaxXMinYCorner' value64='2'/>
+<enum name='kCALayerMaxYMargin' value64='32'/>
+<enum name='kCALayerMinXMargin' value64='1'/>
+<enum name='kCALayerMinXMaxYCorner' value64='4'/>
+<enum name='kCALayerMinXMinYCorner' value64='1'/>
+<enum name='kCALayerMinYMargin' value64='8'/>
+<enum name='kCALayerNotSizable' value64='0'/>
+<enum name='kCALayerRightEdge' value64='2'/>
+<enum name='kCALayerTopEdge' value64='8'/>
+<enum name='kCALayerWidthSizable' value64='2'/>
+<function name='CACurrentMediaTime'>
+<retval type64='d'/>
+</function>
+<function name='CAFrameRateRangeIsEqualToRange'>
+<arg type64='{CAFrameRateRange=fff}'/>
+<arg type64='{CAFrameRateRange=fff}'/>
+<retval type64='B'/>
+</function>
+<function name='CAFrameRateRangeMake'>
+<arg type64='f'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<retval type64='{CAFrameRateRange=fff}'/>
+</function>
+<function name='CATransform3DConcat'>
+<arg type64='{CATransform3D=dddddddddddddddd}'/>
+<arg type64='{CATransform3D=dddddddddddddddd}'/>
+<retval type64='{CATransform3D=dddddddddddddddd}'/>
+</function>
+<function name='CATransform3DEqualToTransform'>
+<arg type64='{CATransform3D=dddddddddddddddd}'/>
+<arg type64='{CATransform3D=dddddddddddddddd}'/>
+<retval type64='B'/>
+</function>
+<function name='CATransform3DGetAffineTransform'>
+<arg type64='{CATransform3D=dddddddddddddddd}'/>
+<retval type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CATransform3DInvert'>
+<arg type64='{CATransform3D=dddddddddddddddd}'/>
+<retval type64='{CATransform3D=dddddddddddddddd}'/>
+</function>
+<function name='CATransform3DIsAffine'>
+<arg type64='{CATransform3D=dddddddddddddddd}'/>
+<retval type64='B'/>
+</function>
+<function name='CATransform3DIsIdentity'>
+<arg type64='{CATransform3D=dddddddddddddddd}'/>
+<retval type64='B'/>
+</function>
+<function name='CATransform3DMakeAffineTransform'>
+<arg type64='{CGAffineTransform=dddddd}'/>
+<retval type64='{CATransform3D=dddddddddddddddd}'/>
+</function>
+<function name='CATransform3DMakeRotation'>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CATransform3D=dddddddddddddddd}'/>
+</function>
+<function name='CATransform3DMakeScale'>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CATransform3D=dddddddddddddddd}'/>
+</function>
+<function name='CATransform3DMakeTranslation'>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CATransform3D=dddddddddddddddd}'/>
+</function>
+<function name='CATransform3DRotate'>
+<arg type64='{CATransform3D=dddddddddddddddd}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CATransform3D=dddddddddddddddd}'/>
+</function>
+<function name='CATransform3DScale'>
+<arg type64='{CATransform3D=dddddddddddddddd}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CATransform3D=dddddddddddddddd}'/>
+</function>
+<function name='CATransform3DTranslate'>
+<arg type64='{CATransform3D=dddddddddddddddd}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{CATransform3D=dddddddddddddddd}'/>
+</function>
+<class name='CAAnimation'>
+<method selector='isRemovedOnCompletion'>
+<retval type64='B'/>
+</method>
+<method selector='setRemovedOnCompletion:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='shouldArchiveValueForKey:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CADisplayLink'>
+<method selector='isPaused'>
+<retval type64='B'/>
+</method>
+<method selector='setPaused:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='CAEDRMetadata'>
+<method class_method='true' selector='isAvailable'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CAEmitterCell'>
+<method selector='isEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='setEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='shouldArchiveValueForKey:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CAEmitterLayer'>
+<method selector='preservesDepth'>
+<retval type64='B'/>
+</method>
+<method selector='setPreservesDepth:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='CALayer'>
+<method selector='allowsEdgeAntialiasing'>
+<retval type64='B'/>
+</method>
+<method selector='allowsGroupOpacity'>
+<retval type64='B'/>
+</method>
+<method selector='containsPoint:'>
+<retval type64='B'/>
+</method>
+<method selector='contentsAreFlipped'>
+<retval type64='B'/>
+</method>
+<method selector='drawsAsynchronously'>
+<retval type64='B'/>
+</method>
+<method selector='isDoubleSided'>
+<retval type64='B'/>
+</method>
+<method selector='isGeometryFlipped'>
+<retval type64='B'/>
+</method>
+<method selector='isHidden'>
+<retval type64='B'/>
+</method>
+<method selector='isOpaque'>
+<retval type64='B'/>
+</method>
+<method selector='masksToBounds'>
+<retval type64='B'/>
+</method>
+<method selector='needsDisplay'>
+<retval type64='B'/>
+</method>
+<method class_method='true' selector='needsDisplayForKey:'>
+<retval type64='B'/>
+</method>
+<method selector='needsDisplayOnBoundsChange'>
+<retval type64='B'/>
+</method>
+<method selector='needsLayout'>
+<retval type64='B'/>
+</method>
+<method selector='setAllowsEdgeAntialiasing:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setAllowsGroupOpacity:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setDoubleSided:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setDrawsAsynchronously:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setGeometryFlipped:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setHidden:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setMasksToBounds:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setNeedsDisplayOnBoundsChange:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setOpaque:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShouldRasterize:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setWantsExtendedDynamicRangeContent:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='shouldArchiveValueForKey:'>
+<retval type64='B'/>
+</method>
+<method selector='shouldRasterize'>
+<retval type64='B'/>
+</method>
+<method selector='wantsExtendedDynamicRangeContent'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CAMediaTimingFunction'>
+<method selector='getControlPointAtIndex:values:'>
+<arg c_array_of_fixed_length='2' index='1' type_modifier='o'/>
+</method>
+</class>
+<class name='CAMetalDisplayLink'>
+<method selector='isPaused'>
+<retval type64='B'/>
+</method>
+<method selector='setPaused:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='CAMetalLayer'>
+<method selector='allowsNextDrawableTimeout'>
+<retval type64='B'/>
+</method>
+<method selector='displaySyncEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='framebufferOnly'>
+<retval type64='B'/>
+</method>
+<method selector='presentsWithTransaction'>
+<retval type64='B'/>
+</method>
+<method selector='setAllowsNextDrawableTimeout:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setDisplaySyncEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setFramebufferOnly:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setPresentsWithTransaction:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setWantsExtendedDynamicRangeContent:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='wantsExtendedDynamicRangeContent'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CAOpenGLLayer'>
+<method selector='canDrawInCGLContext:pixelFormat:forLayerTime:displayTime:'>
+<arg index='0' type_modifier='n'/>
+<arg index='1' type_modifier='n'/>
+<arg index='3' type64='^{_CVTimeStamp=IiqQdq{CVSMPTETime=ssIIIssss}QQ}' type_modifier='n'/>
+<retval type64='B'/>
+</method>
+<method selector='drawInCGLContext:pixelFormat:forLayerTime:displayTime:'>
+<arg index='0' type_modifier='n'/>
+<arg index='1' type_modifier='n'/>
+<arg index='3' type64='^{_CVTimeStamp=IiqQdq{CVSMPTETime=ssIIIssss}QQ}' type_modifier='n'/>
+</method>
+<method selector='isAsynchronous'>
+<retval type64='B'/>
+</method>
+<method selector='setAsynchronous:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setWantsExtendedDynamicRangeContent:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='wantsExtendedDynamicRangeContent'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CAPropertyAnimation'>
+<method selector='isAdditive'>
+<retval type64='B'/>
+</method>
+<method selector='isCumulative'>
+<retval type64='B'/>
+</method>
+<method selector='setAdditive:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setCumulative:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='CARenderer'>
+<method selector='beginFrameAtTime:timeStamp:'>
+<arg index='1' type64='^{_CVTimeStamp=IiqQdq{CVSMPTETime=ssIIIssss}QQ}' type_modifier='n'/>
+</method>
+<method class_method='true' selector='rendererWithCGLContext:options:'>
+<arg index='0' type64='^{_CGLContextObject=}'/>
+</method>
+</class>
+<class name='CAReplicatorLayer'>
+<method selector='preservesDepth'>
+<retval type64='B'/>
+</method>
+<method selector='setPreservesDepth:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='CASpringAnimation'>
+<method selector='allowsOverdamping'>
+<retval type64='B'/>
+</method>
+<method selector='setAllowsOverdamping:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='CATextLayer'>
+<method selector='allowsFontSubpixelQuantization'>
+<retval type64='B'/>
+</method>
+<method selector='isWrapped'>
+<retval type64='B'/>
+</method>
+<method selector='setAllowsFontSubpixelQuantization:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setWrapped:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='CATransaction'>
+<method class_method='true' selector='disableActions'>
+<retval type64='B'/>
+</method>
+<method class_method='true' selector='setCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+<method class_method='true' selector='setDisableActions:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='animationDidStop:finished:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='autoreverses'>
+<retval type64='B'/>
+</method>
+<method selector='setAutoreverses:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<informal_protocol name='CAMediaTiming'>
+<method selector='autoreverses' type64='TB'/>
+</informal_protocol>
+</signatures>

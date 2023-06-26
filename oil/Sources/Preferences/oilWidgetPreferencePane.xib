@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -30,15 +31,15 @@
                 <stackView distribution="equalSpacing" orientation="vertical" alignment="centerX" spacing="77" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5GW-OY-Emk" userLabel="Base">
                     <rect key="frame" x="20" y="20" width="400" height="192"/>
                     <subviews>
-                        <button verticalHuggingPriority="751" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="pJH-hw-oMt">
+                        <button tag="1" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="pJH-hw-oMt">
                             <rect key="frame" x="18" y="175" width="202" height="18"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="200" id="tdz-Ey-7q8"/>
-                            </constraints>
                             <buttonCell key="cell" type="check" title="Vertically Stack Text" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="JBk-lC-Sty">
                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="tdz-Ey-7q8"/>
+                            </constraints>
                             <connections>
                                 <action selector="didChangeCheckboxValue:" target="-2" id="b9V-zm-Ra0"/>
                             </connections>
@@ -89,15 +90,15 @@
                                 <real value="3.4028234663852886e+38"/>
                             </customSpacing>
                         </stackView>
-                        <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-qJ-NYD">
+                        <button tag="3" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-qJ-NYD">
                             <rect key="frame" x="18" y="119" width="202" height="18"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="200" id="cf1-yF-Afo"/>
-                            </constraints>
                             <buttonCell key="cell" type="check" title="Graph" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="lft-2v-uMe">
                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="cf1-yF-Afo"/>
+                            </constraints>
                             <connections>
                                 <action selector="didChangeCheckboxValue:" target="-2" id="s0B-OK-cZF"/>
                             </connections>
@@ -232,11 +233,8 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <popUpButton verticalHuggingPriority="750" tag="33" translatesAutoresizingMaskIntoConstraints="NO" id="NT5-ab-GtU" userLabel="Type">
+                                        <popUpButton tag="33" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NT5-ab-GtU" userLabel="Type">
                                             <rect key="frame" x="72" y="-4" width="82" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="Olw-aU-f5x"/>
-                                            </constraints>
                                             <popUpButtonCell key="cell" type="push" title="Bar" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="331" imageScaling="proportionallyDown" inset="2" selectedItem="iKU-5l-Quy" id="h2L-QA-bfZ">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="menu"/>
@@ -251,6 +249,9 @@
                                                     </items>
                                                 </menu>
                                             </popUpButtonCell>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="Olw-aU-f5x"/>
+                                            </constraints>
                                             <connections>
                                                 <action selector="didChangePopupValue:" target="-2" id="53v-g8-3Sj"/>
                                             </connections>
@@ -269,7 +270,7 @@
                                         <real value="3.4028234663852886e+38"/>
                                     </customSpacing>
                                 </stackView>
-                                <button verticalHuggingPriority="750" tag="34" translatesAutoresizingMaskIntoConstraints="NO" id="q9w-on-bfL">
+                                <button tag="34" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q9w-on-bfL">
                                     <rect key="frame" x="156" y="3" width="164" height="18"/>
                                     <buttonCell key="cell" type="check" title="Fill" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="rMO-nR-7h5">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -307,67 +308,67 @@
                         <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GkN-wR-Z7l" userLabel="Items">
                             <rect key="frame" x="47" y="0.0" width="307" height="20"/>
                             <subviews>
-                                <button verticalHuggingPriority="750" tag="41" translatesAutoresizingMaskIntoConstraints="NO" id="gjt-UQ-7K4" userLabel="CPU">
+                                <button tag="41" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gjt-UQ-7K4" userLabel="CPU">
                                     <rect key="frame" x="-2" y="3" width="52" height="18"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="vXa-ao-owG"/>
-                                    </constraints>
                                     <buttonCell key="cell" type="check" title="CPU" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LM8-lR-qji">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="vXa-ao-owG"/>
+                                    </constraints>
                                     <connections>
                                         <action selector="didChangeCheckboxValue:" target="-2" id="m8I-jS-z64"/>
                                     </connections>
                                 </button>
-                                <button verticalHuggingPriority="750" tag="42" translatesAutoresizingMaskIntoConstraints="NO" id="FYo-2c-DHx" userLabel="GPU">
+                                <button tag="42" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FYo-2c-DHx" userLabel="GPU">
                                     <rect key="frame" x="56" y="3" width="52" height="18"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="qzn-GR-sE7"/>
-                                    </constraints>
                                     <buttonCell key="cell" type="check" title="GPU" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="PGv-EE-77Z">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="qzn-GR-sE7"/>
+                                    </constraints>
                                     <connections>
                                         <action selector="didChangeCheckboxValue:" target="-2" id="jm1-Ul-xdf"/>
                                     </connections>
                                 </button>
-                                <button verticalHuggingPriority="750" tag="43" translatesAutoresizingMaskIntoConstraints="NO" id="Ev0-HK-IwB" userLabel="Fan">
+                                <button tag="43" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ev0-HK-IwB" userLabel="Fan">
                                     <rect key="frame" x="114" y="3" width="52" height="18"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="QGv-mV-Scn"/>
-                                    </constraints>
                                     <buttonCell key="cell" type="check" title="Fan" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ORo-hz-99L">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="QGv-mV-Scn"/>
+                                    </constraints>
                                     <connections>
                                         <action selector="didChangeCheckboxValue:" target="-2" id="W7I-xt-ffD"/>
                                     </connections>
                                 </button>
-                                <button verticalHuggingPriority="750" tag="44" translatesAutoresizingMaskIntoConstraints="NO" id="vSv-Sk-Q3q" userLabel="Memory">
+                                <button tag="44" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vSv-Sk-Q3q" userLabel="Memory">
                                     <rect key="frame" x="172" y="3" width="77" height="18"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="75" id="yic-fX-S52"/>
-                                    </constraints>
                                     <buttonCell key="cell" type="check" title="Memory" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="8Rf-9a-rVr">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="75" id="yic-fX-S52"/>
+                                    </constraints>
                                     <connections>
                                         <action selector="didChangeCheckboxValue:" target="-2" id="idW-Z3-2GQ"/>
                                     </connections>
                                 </button>
-                                <button verticalHuggingPriority="750" tag="45" translatesAutoresizingMaskIntoConstraints="NO" id="GsF-TU-0AK" userLabel="Disk">
+                                <button tag="45" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GsF-TU-0AK" userLabel="Disk">
                                     <rect key="frame" x="255" y="3" width="52" height="18"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="JsB-5D-S36"/>
-                                    </constraints>
                                     <buttonCell key="cell" type="check" title="Disk" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="BMX-nl-5YM">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="JsB-5D-S36"/>
+                                    </constraints>
                                     <connections>
                                         <action selector="didChangeCheckboxValue:" target="-2" id="e66-3h-kyy"/>
                                     </connections>

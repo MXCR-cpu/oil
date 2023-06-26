@@ -8,15 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		8829C7BD2A12F883009DE392 /* oilWidgetPreferencePane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8829C7BC2A12F883009DE392 /* oilWidgetPreferencePane.xib */; };
+		883DE3032AD6031A003D9D27 /* CoreFoundation.framework in Resources */ = {isa = PBXBuildFile; fileRef = 88EB38F82A14D89E004D60EE /* CoreFoundation.framework */; };
+		883DE3042AD6031F003D9D27 /* SwiftUI.framework in Resources */ = {isa = PBXBuildFile; fileRef = 88860EB32A12672A002822E1 /* SwiftUI.framework */; };
+		883DE3052AD60323003D9D27 /* SpriteKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 88860EAF2A123AC8002822E1 /* SpriteKit.framework */; };
+		883DE3062AD60328003D9D27 /* AppKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 883EBC2C2A11FBBE00235B35 /* AppKit.framework */; };
+		883DE3072AD6032C003D9D27 /* Foundation.framework in Resources */ = {isa = PBXBuildFile; fileRef = 883EBC2E2A11FC1200235B35 /* Foundation.framework */; };
+		883DE3352AD6F2F6003D9D27 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2C2A11FBBE00235B35 /* AppKit.framework */; };
+		883DE3382AD6F2F8003D9D27 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EB38F82A14D89E004D60EE /* CoreFoundation.framework */; };
+		883DE33A2AD6F305003D9D27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2E2A11FC1200235B35 /* Foundation.framework */; };
+		883DE33C2AD6F306003D9D27 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88860EAF2A123AC8002822E1 /* SpriteKit.framework */; };
+		883DE33E2AD6F307003D9D27 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88860EB32A12672A002822E1 /* SwiftUI.framework */; };
+		883DE3532AD6FA98003D9D27 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883DE3522AD6FA98003D9D27 /* Accelerate.framework */; };
+		883DE3572AD6FAB6003D9D27 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883DE3562AD6FAB6003D9D27 /* IOKit.framework */; };
+		883DE35B2AD6FAC2003D9D27 /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883DE35A2AD6FAC1003D9D27 /* Combine.framework */; };
+		883DE35C2AD6FAC8003D9D27 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883DE3522AD6FA98003D9D27 /* Accelerate.framework */; };
+		883DE35D2AD6FB27003D9D27 /* Combine.framework in Resources */ = {isa = PBXBuildFile; fileRef = 883DE35A2AD6FAC1003D9D27 /* Combine.framework */; };
+		883DE35F2AD6FB30003D9D27 /* IOKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 883DE3562AD6FAB6003D9D27 /* IOKit.framework */; };
+		883DE3612AD6FB38003D9D27 /* Accelerate.framework in Resources */ = {isa = PBXBuildFile; fileRef = 883DE3522AD6FA98003D9D27 /* Accelerate.framework */; };
+		883DE3622AD6FB51003D9D27 /* QuartzCore.framework in Resources */ = {isa = PBXBuildFile; fileRef = 883DE34D2AD6FA84003D9D27 /* QuartzCore.framework */; };
+		883DE3632AD6FB66003D9D27 /* CoreGraphics.framework in Resources */ = {isa = PBXBuildFile; fileRef = 883DE34F2AD6FA85003D9D27 /* CoreGraphics.framework */; };
 		883EBC1B2A11F80000235B35 /* oilWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC1A2A11F80000235B35 /* oilWidget.swift */; };
 		883EBC242A11F81300235B35 /* PockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 883EBC232A11F81300235B35 /* PockKit */; };
 		883EBC272A11F86400235B35 /* SystemKit in Frameworks */ = {isa = PBXBuildFile; productRef = 883EBC262A11F86400235B35 /* SystemKit */; };
-		883EBC2D2A11FBBE00235B35 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2C2A11FBBE00235B35 /* AppKit.framework */; };
-		883EBC2F2A11FC1200235B35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2E2A11FC1200235B35 /* Foundation.framework */; };
 		883EBC312A11FD1900235B35 /* oilItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883EBC302A11FD1900235B35 /* oilItem.swift */; };
-		88860EB02A123AC8002822E1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88860EAF2A123AC8002822E1 /* SpriteKit.framework */; };
-		88860EB42A12672A002822E1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88860EB32A12672A002822E1 /* SwiftUI.framework */; };
-		88860EB72A126909002822E1 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883EBC2C2A11FBBE00235B35 /* AppKit.framework */; };
 		88860EB92A127F9E002822E1 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EB82A127F9E002822E1 /* BarGraph.swift */; };
 		88860EBB2A12ADA5002822E1 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBA2A12ADA5002822E1 /* Graph.swift */; };
 		88860EBE2A12B087002822E1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88860EBD2A12B087002822E1 /* Preferences.swift */; };
@@ -24,7 +38,6 @@
 		88860EC92A12D792002822E1 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 88860EC82A12D792002822E1 /* Defaults */; };
 		88EB38F32A145227004D60EE /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB38F22A145227004D60EE /* Options.swift */; };
 		88EB38F72A14C89A004D60EE /* GPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB38F62A14C89A004D60EE /* GPU.swift */; };
-		88EB38F92A14D89E004D60EE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88EB38F82A14D89E004D60EE /* CoreFoundation.framework */; };
 		88EB39012A162BCA004D60EE /* IOHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39002A162BCA004D60EE /* IOHelper.swift */; };
 		88EB39032A16D7E6004D60EE /* SMCKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39022A16D7E6004D60EE /* SMCKit.swift */; };
 		88EB39052A16DD46004D60EE /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB39042A16DD46004D60EE /* Temperature.swift */; };
@@ -52,21 +65,26 @@
 
 /* Begin PBXFileReference section */
 		8829C7BC2A12F883009DE392 /* oilWidgetPreferencePane.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = oilWidgetPreferencePane.xib; path = /Users/iMac/Desktop/Dev/Swift_Dev/oil/oil/Sources/Preferences/oilWidgetPreferencePane.xib; sourceTree = "<absolute>"; };
+		883DE34D2AD6FA84003D9D27 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
+		883DE34F2AD6FA85003D9D27 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreGraphics.framework; sourceTree = "<group>"; };
+		883DE3522AD6FA98003D9D27 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		883DE3562AD6FAB6003D9D27 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		883DE35A2AD6FAC1003D9D27 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
 		883EBC162A11F80000235B35 /* oil.pock */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oil.pock; sourceTree = BUILT_PRODUCTS_DIR; };
 		883EBC1A2A11F80000235B35 /* oilWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilWidget.swift; sourceTree = "<group>"; };
 		883EBC1C2A11F80000235B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		883EBC2C2A11FBBE00235B35 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		883EBC2E2A11FC1200235B35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		883EBC2C2A11FBBE00235B35 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		883EBC2E2A11FC1200235B35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		883EBC302A11FD1900235B35 /* oilItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilItem.swift; sourceTree = "<group>"; };
-		88860EAF2A123AC8002822E1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		88860EB32A12672A002822E1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		88860EAF2A123AC8002822E1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = "<absolute>"; };
+		88860EB32A12672A002822E1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/SwiftUI.framework; sourceTree = "<absolute>"; };
 		88860EB82A127F9E002822E1 /* BarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
 		88860EBA2A12ADA5002822E1 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		88860EBD2A12B087002822E1 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		88860EBF2A12B1F5002822E1 /* oilWidgetPreferencePane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oilWidgetPreferencePane.swift; sourceTree = "<group>"; };
 		88EB38F22A145227004D60EE /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		88EB38F62A14C89A004D60EE /* GPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPU.swift; sourceTree = "<group>"; };
-		88EB38F82A14D89E004D60EE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		88EB38F82A14D89E004D60EE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		88EB39002A162BCA004D60EE /* IOHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOHelper.swift; sourceTree = "<group>"; };
 		88EB39022A16D7E6004D60EE /* SMCKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMCKit.swift; sourceTree = "<group>"; };
 		88EB39042A16DD46004D60EE /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
@@ -95,17 +113,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883DE33E2AD6F307003D9D27 /* SwiftUI.framework in Frameworks */,
+				883DE3382AD6F2F8003D9D27 /* CoreFoundation.framework in Frameworks */,
 				88860EC92A12D792002822E1 /* Defaults in Frameworks */,
-				88860EB72A126909002822E1 /* AppKit.framework in Frameworks */,
-				88EB38F92A14D89E004D60EE /* CoreFoundation.framework in Frameworks */,
-				883EBC2D2A11FBBE00235B35 /* AppKit.framework in Frameworks */,
-				88860EB02A123AC8002822E1 /* SpriteKit.framework in Frameworks */,
+				883DE3532AD6FA98003D9D27 /* Accelerate.framework in Frameworks */,
 				88F120EC2A1EBDFF0033170E /* LASwift in Frameworks */,
 				883EBC272A11F86400235B35 /* SystemKit in Frameworks */,
+				883DE33A2AD6F305003D9D27 /* Foundation.framework in Frameworks */,
+				883DE33C2AD6F306003D9D27 /* SpriteKit.framework in Frameworks */,
+				883DE35C2AD6FAC8003D9D27 /* Accelerate.framework in Frameworks */,
+				883DE3352AD6F2F6003D9D27 /* AppKit.framework in Frameworks */,
+				883DE35B2AD6FAC2003D9D27 /* Combine.framework in Frameworks */,
 				883EBC242A11F81300235B35 /* PockKit in Frameworks */,
-				88860EB42A12672A002822E1 /* SwiftUI.framework in Frameworks */,
 				88EB390A2A16DE35004D60EE /* SwiftyJSON in Frameworks */,
-				883EBC2F2A11FC1200235B35 /* Foundation.framework in Frameworks */,
+				883DE3572AD6FAB6003D9D27 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +186,11 @@
 		883EBC2B2A11FBBE00235B35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				883DE35A2AD6FAC1003D9D27 /* Combine.framework */,
+				883DE3562AD6FAB6003D9D27 /* IOKit.framework */,
+				883DE3522AD6FA98003D9D27 /* Accelerate.framework */,
+				883DE34D2AD6FA84003D9D27 /* QuartzCore.framework */,
+				883DE34F2AD6FA85003D9D27 /* CoreGraphics.framework */,
 				88EB38F82A14D89E004D60EE /* CoreFoundation.framework */,
 				88860EB32A12672A002822E1 /* SwiftUI.framework */,
 				88860EAF2A123AC8002822E1 /* SpriteKit.framework */,
@@ -277,11 +303,17 @@
 				883EBC112A11F80000235B35 /* Sources */,
 				883EBC122A11F80000235B35 /* Frameworks */,
 				883EBC132A11F80000235B35 /* Resources */,
-				883EBC142A11F80000235B35 /* [PK] Install widget */,
+				883EBC142A11F80000235B35 /* Install widget */,
+				883DE3642AD6FF64003D9D27 /* Package Widget */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				883DE3292AD61509003D9D27 /* PBXTargetDependency */,
+				883DE3272AD61506003D9D27 /* PBXTargetDependency */,
+				883DE3252AD61502003D9D27 /* PBXTargetDependency */,
+				883DE3232AD614FE003D9D27 /* PBXTargetDependency */,
+				883DE3212AD614F8003D9D27 /* PBXTargetDependency */,
 			);
 			name = oil;
 			packageProductDependencies = (
@@ -303,7 +335,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					883EBC152A11F80000235B35 = {
 						CreatedOnToolsVersion = 14.3;
@@ -341,6 +373,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883DE3632AD6FB66003D9D27 /* CoreGraphics.framework in Resources */,
+				883DE3622AD6FB51003D9D27 /* QuartzCore.framework in Resources */,
+				883DE3612AD6FB38003D9D27 /* Accelerate.framework in Resources */,
+				883DE35F2AD6FB30003D9D27 /* IOKit.framework in Resources */,
+				883DE35D2AD6FB27003D9D27 /* Combine.framework in Resources */,
+				883DE3072AD6032C003D9D27 /* Foundation.framework in Resources */,
+				883DE3062AD60328003D9D27 /* AppKit.framework in Resources */,
+				883DE3052AD60323003D9D27 /* SpriteKit.framework in Resources */,
+				883DE3042AD6031F003D9D27 /* SwiftUI.framework in Resources */,
+				883DE3032AD6031A003D9D27 /* CoreFoundation.framework in Resources */,
 				8829C7BD2A12F883009DE392 /* oilWidgetPreferencePane.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,23 +390,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		883EBC142A11F80000235B35 /* [PK] Install widget */ = {
+		883DE3642AD6FF64003D9D27 /* Package Widget */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
 			);
-			name = "[PK] Install widget";
+			name = "Package Widget";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/oil.zip",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Packaging Project\nOIL_PATH=\"$TARGET_BUILD_DIR/$PRODUCT_NAME.pock\"\necho \"$TARGET_BUILD_DIR\" > /Users/iMac/Downloads/oil_p\nZIP_FILE=\"/Users/iMac/Downloads/oil.zip\"\nrm -rf $ZIP_FILE\nzip -r $ZIP_FILE $OIL_PATH\n";
+		};
+		883EBC142A11F80000235B35 /* Install widget */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Install widget";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# Install widget.\necho \"[${PRODUCT_NAME}.pock] Starting installation\"\nFILEPATH=$TARGET_BUILD_DIR/$PRODUCT_NAME.pock\ncp -r $FILEPATH /Users/iMac/Desktop/Dev/Swift_Dev/oil/\n\nopen \"$FILEPATH\"\n";
+			shellScript = "# Install widget.\necho \"[${PRODUCT_NAME}.pock] Starting Installation\"\nOIL_PATH=\"$TARGET_BUILD_DIR/$PRODUCT_NAME.pock\"\nopen $OIL_PATH\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -407,6 +468,29 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		883DE3212AD614F8003D9D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 883DE3202AD614F8003D9D27 /* PockKit */;
+		};
+		883DE3232AD614FE003D9D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 883DE3222AD614FE003D9D27 /* SystemKit */;
+		};
+		883DE3252AD61502003D9D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 883DE3242AD61502003D9D27 /* Defaults */;
+		};
+		883DE3272AD61506003D9D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 883DE3262AD61506003D9D27 /* SwiftyJSON */;
+		};
+		883DE3292AD61509003D9D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 883DE3282AD61509003D9D27 /* LASwift */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		883EBC1D2A11F80000235B35 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -441,9 +525,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -499,9 +585,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -514,26 +602,34 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
 		883EBC202A11F80000235B35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = oil/Sources/Preferences/oilWidgetPreferencePane.xib;
 				DEVELOPMENT_TEAM = AY25L8K9U7;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = oil/Info.plist;
+				INFOPLIST_KEY_NSPrincipalClass = oil.oilWidget;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application\\ Support/Pock/Widgets";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = mxcr.cpu.oil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = pock;
 			};
@@ -542,16 +638,22 @@
 		883EBC212A11F80000235B35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = oil/Sources/Preferences/oilWidgetPreferencePane.xib;
 				DEVELOPMENT_TEAM = AY25L8K9U7;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = oil/Info.plist;
+				INFOPLIST_KEY_NSPrincipalClass = oil.oilWidget;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application\\ Support/Pock/Widgets";
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = mxcr.cpu.oil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -627,6 +729,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		883DE3202AD614F8003D9D27 /* PockKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 883EBC222A11F81300235B35 /* XCRemoteSwiftPackageReference "pockkit" */;
+			productName = PockKit;
+		};
+		883DE3222AD614FE003D9D27 /* SystemKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 883EBC252A11F86400235B35 /* XCRemoteSwiftPackageReference "SystemKit" */;
+			productName = SystemKit;
+		};
+		883DE3242AD61502003D9D27 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88860EC72A12D792002822E1 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		883DE3262AD61506003D9D27 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88EB39082A16DE35004D60EE /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		883DE3282AD61509003D9D27 /* LASwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88F120EA2A1EBDFF0033170E /* XCRemoteSwiftPackageReference "LASwift" */;
+			productName = LASwift;
+		};
 		883EBC232A11F81300235B35 /* PockKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 883EBC222A11F81300235B35 /* XCRemoteSwiftPackageReference "pockkit" */;
